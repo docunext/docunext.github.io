@@ -1,0 +1,24 @@
+### Install
+<pre>
+apt-get install libnss-ldap
+</pre>
+
+### Configure
+I was prompted for the ldap addresses, then the distinguished name, like dc=example,dc=net, then version, I chose 3, and then it asked for a user to have root access, but I left that empty because I only want to use it for host names.
+
+### Customize
+Add "ldap" to hosts: line in /etc/nsswitch.conf, then edit /etc/ldap.conf and supply info for uri, base, ldap_version, and nss_base_hosts.
+
+Lenny uses /etc/libnss-ldap.conf
+
+### Test
+<pre class="sh_sh">
+getent hosts
+</pre>
+
+### Related Pages
+* [[LDAP]]
+* [[DNS]]
+* [[Networking]]
+* [[Setup a debian machine to use an LDAP server for Authentication]]
+

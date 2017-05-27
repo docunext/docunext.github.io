@@ -1,0 +1,123 @@
+### Installing Binaries
+I was able to get this working much better once I installed [[bash]] and followed the instructions for finding binary packages [http://www.netbsd.org/docs/pkgsrc/using.html#using-pkg here].
+
+Actually I'm now very much leaning towards installing binaries on the machine I'm using. Its much easier than I first thought.
+
+### Building from Source
+I gave up on binary packages in FreeBSD, and I'm planning to do the same with NetBSD. Hopefully my efforts will go smoothly.
+
+So far, not yet. I first ran into the problem of not having a [[C]] compiler. I've installed gcc34, and got this message:
+
+<pre class="sh_sh">
+gcc34-3.4.6nb1 has been installed in /usr/pkg/gcc34
+
+To use this compiler in pkgsrc:
+
+   1) In your "pre-configure" target:
+
+   .include "../../lang/gcc34/preconfigure.mk"
+
+   2) .include "../../lang/gcc34/buildlink3.mk"
+
+The "preconfigure.mk" makefile fragment will override the compiler tools
+selected by ../../mk/compiler.mk to use gcc version 3.4.x.
+</pre>
+
+Not exactly sure what that means. I guess I have to edit the [[make]] files in whatever package I'm trying to install?
+
+'''Aha''':
+<blockquote>
+4.2.1. Requirements
+
+To build packages from source, you need a working C compiler. On NetBSD, you need to install the “comp” and the “text” distribution sets. If you want to build X11-related packages, the “xbase” and “xcomp” distribution sets are required, too.
+</blockquote>
+
+So, how can I install these distribution sets after the fact?
+
+I keep trying to install via source but appear to be blocked by this error:
+<pre>
+configure: error: C compiler cannot create executables
+</pre>
+
+Based on [http://www.bsdnexus.com/NetBSD_onastick/install_guide.php this] guide I think its possible to extract sets right into a running system. Let's find out! I unpacked comp and text into / and everything seems OK so far.
+
+'''YES!''' Bootstrapping pkgsrc works now. :-)
+
+<pre>
+=> Automatic manual page handling
+=> Running POST-INSTALL script actions
+=> Please note the following:
+
+####
+$NetBSD: MESSAGE,v 1.5 2009/02/02 12:34:59 joerg Exp $
+
+You may wish to have the vulnerabilities file downloaded daily so that
+it remains current.  This may be done by adding an appropriate entry
+to a user's crontab(5) entry.  For example the entry
+
+# download vulnerabilities file
+0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+
+will update the vulnerability list every day at 3AM. You may wish to do
+this more often than once a day.
+
+In addition, you may wish to run the package audit from the daily
+security script.  This may be accomplished by adding the following
+lines to /etc/security.local
+
+if [ -x /usr/pkg/sbin/pkg_admin ]; then
+        /usr/pkg/sbin/pkg_admin audit
+fi
+
+Alternatively this can also be acomplished by adding an entry to a user's
+crontab(5) file. e.g.:
+
+# run audit-packages
+0 3 * * * /usr/pkg/sbin/pkg_admin audit
+
+Both pkg_admin subcommands can be run as as an unprivileged user,
+as long as the user chosen has permission to read the pkgdb and to write
+the pkg-vulnerabilites to /var/db/pkg.
+
+The behavior of pkg_admin and pkg_add can be customised with
+pkg_install.conf.  Please see pkg_install.conf(5) for details.
+
+If you want to use GPG signature verification you will need to install
+GnuPG and set the path for GPG appropriately in your pkg_install.conf.
+####
+
+=> Registering installation for pkg_install-20090911
+#### > running: /bin/sh /usr/pkgsrc/bootstrap/work/bin/install-sh -d -o root -g wheel /usr/pkg/etc
+
+####
+
+Please remember to add /usr/pkg/bin to your PATH environment variable
+and /usr/pkg/man to your MANPATH environment variable, if necessary.
+
+An example mk.conf file with the settings you provided to "bootstrap"
+has been created for you. It can be found in:
+
+      /usr/pkg/etc/mk.conf
+
+You can find extensive documentation of the NetBSD Packages Collection
+in /usr/pkgsrc/doc/pkgsrc.txt.
+
+Hopefully everything is now complete.
+Thank you
+
+####
+
+#### > bootstrap started: Tue Sep 29 15:26:03 UTC 2009
+#### > bootstrap ended:   Tue Sep 29 15:44:03 UTC 2009
+</pre>
+
+I rebooted and everything still works! Nice. I installed digest via pkgsrc and am installing vim now.
+
+### Related Pages
+* [[NetBSD]]
+* [[FreeBSD Ports]]
+
+### External Links
+* http://www.netbsd.org/docs/pkgsrc/using.html#using-pkg
+* http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/i386/5.0/All/
+

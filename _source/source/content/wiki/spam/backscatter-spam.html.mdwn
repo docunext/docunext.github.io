@@ -1,0 +1,13 @@
+This has become a problem for me lately, so I'm reading up on it.
+
+I set this in /etc/spamassassin/local.cf:
+<pre>
+score BOUNCE_MESSAGE 1.5
+score ANY_BOUNCE_MESSAGE 1
+</pre>
+
+### External Links
+* http://www.postfix.org/BACKSCATTER_README.html
+* http://wiki.apache.org/spamassassin/VBounceRuleset
+* http://taint.org/2007/05/30/164456a.html
+

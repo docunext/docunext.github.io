@@ -1,0 +1,15 @@
+Installation was a breeze, like usual on [[debian]], just:
+<pre>
+apt-get install nagios3
+</pre>
+Lots of dependencies, a quick question about [[Samba]], then I did this:
+<pre>
+cd /etc/nagios3
+htpasswd -c htpasswd.users nagiosadmin
+</pre>
+Then I was able to login via the web interface, nice! And another nice surprise - they added the default gateway as a bonus. Cool!
+
+### See Also
+* [[Nagios]]
+* [[Monit]]
+

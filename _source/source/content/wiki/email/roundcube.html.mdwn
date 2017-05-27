@@ -1,0 +1,21 @@
+### Summary
+Roundcube is a very slick webmail application written in [[PHP]], and uses a [[database]] backend. One thing I like about it is that is uses a lot of [[PEAR]] libraries. It also uses [[AJAX]] for some quality user interface features.
+
+### News
+* [http://www.docunext.com/blog/2007/12/roundcube-on-debian.html Roundcube is now available on debian!!]
+
+### My Experience
+I'm finally making the switch to RoundCube from [[SquirrelMail]], and maybe even from a desktop client to only web based! I've forked the latest [[SVN]] copy of roundcube and am naming my version [[CircleBox]]. I'm not trying to steal their thunder or anything, I'm just able to learn more about the software (and even help out with development) if I'm free to manage my own branch. That's just one of the great reasons for using open source software.
+
+As of January 2008, I've only used RoundCube to a limited degree. I like it a lot so far, but I have yet to put it through the wringer.
+
+### Plans
+I'm interested in setting up a [[WSGI]] [[NOX server]] for spell checking.
+
+### See Also
+* [[Roundcube MySQL Data Model]]
+* [[CircleBox]]
+* [[Email]]
+* [[SquirrelMail]]
+* [[Mailr]]
+

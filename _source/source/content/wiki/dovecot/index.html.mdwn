@@ -1,0 +1,188 @@
+Dovecot is a [[POP3]] and [[IMAP]] server, similar to [[Courier]]. It supports both mbox and [[maildir]] storage formats. I've never used it, but I've heard good things. I'm interested in trying it out as LDA in conjunction with [[Postfix]], as well as a [[SASL]] authentication system for [[Postfix]].
+
+#### Example Configurations
+* [[Dovecot IMAP Server and LDA for Postfix]]
+
+#### Dovecot Authentication and Authorization
+[[Email]] security is very important! Email contains lots of private information, so quality [[POP]] and [[IMAP]] servers take security seriously, and so does Dovecot.
+
+#### Authentication Mechanisms
+Dovecot supports [[SSL]] connections which can securely employ the plain and login authentication mechanisms, but it also supports the  [[CRAM-MD5]] authentication mechanism for nominally secure authentication, with limitations.
+
+#### Password Storage Schemes
+To keep the stored passwords secure, Dovecot can work with passwords that are stored crypt, md5-crypt, md5 hash, and even plain text (though personally I would not use that). Depending upon the authentication mechanism, i.e. whether it is plaintext or not, there are other password hashing schemes that are supported, such as SHA.
+
+#### User and Password Storage
+Furthermore, since there are many other network based services which rely upon secure authentication and authorization, sysadmins often integrate them to leverage one storage system, instead of many silos which all require maintenance.
+
+Thankfully, Dovecot supports a bewildering amount of authentication storage systems, for example:
+* [[MySQL]]
+* [[PAM]]
+* [[Dovecot LDAP]]
+
+I'm trying it out as an [[IMAP]] based authentication system for [[Postfix]] [[SASL]]:
+
+<pre>
+auth default {
+  mechanisms = plain
+  passdb passwd-file {
+    args = username_format=%u /etc/dovecot/imap.passwd
+  }
+  userdb prefetch {
+  }
+}
+</pre>
+
+Since I'm only authenticating the user and not accessing a [[Maildir]] or anything, I use the prefetch userdb option.
+
+I have also used [[LDAP]] and found it to work really well.
+
+### Dovecot AUTH Mechanisms
+Looks like either LOGIN or CRAM-MD5 / HMAC-MD5 are good to use.
+* http://wiki.dovecot.org/HowTo/CRAM-MD5
+
+By storing a password in the CRAM-MD5 scheme for Dovecot, either PLAIN or CRAM-MD5 authentication mechanisms will work.
+
+'''NOTE''': As of 20100926, I have re-confirmed that it is possible to use CRAM-MD5 authentication with [[LDAP]], as long as dovecotpw is used to create the password. I'm trying to find an equivalent way of generating CRAM-MD5 password hashes, but so far I haven't had any luck!
+
+#### Chroot
+<pre>
+addgroup --system dovecotauth
+adduser --system --no-create-home --shel /bin/false --ingroup dovecotauth --disabled-password --disabled-login dovecotauth
+</pre>
+
+### Dovecot LDAP
+* [[LDAP]] Authentication
+* User specific ownership of home directory and maildirectory - this can be problematic when it comes to security. See Multiple UIDs on the [http://wiki.dovecot.org/LDA Dovecot LDA] page.
+* PLAIN, LOGIN, CRAM-MD5
+* [[TLS]] [[IMAP]] connections as well as [[TLS]] [[LDAP]] connections
+
+It is possible to use CRAM-MD5 to authenticate connections to [[Postfix]] via a [[Dovecot]] [[SASL]] service to an [[LDAP]] backend, at least when LDAP is storing the passwords in plaintext or as CRAM-MD5. I'm actually quite pleased with this setup! '''As of 2010-09-26, I have confirmed that this will in fact work!''' Note however, that LDAP doesn't have CRAM-MD5 support built-in, so I'm not sure if bind authentication will work.
+
+Some more thoughts about storing passwords in plaintext in LDAP. If the password is going to be stored plaintext anywhere at all, its probably better to be inside a relatively secure directory as opposed to flowing over the open internet, except that the directory is persistent, and the transport is temporary.
+
+So, the password can be stored as CRAM-MD5 in the database, or if it absolutely has to be stored as plaintext, it can at least be encoded into base64. No security at all, but a little convenient obfuscation.
+
+I just did a little searching and read that pam_ldap supports sasl authentication:
+
+<pre>
+# SASL mechanism for PAM authentication - use is experimental
+# at present and does not support password policy control
+#pam_sasl_mech DIGEST-MD5
+</pre>
+
+including CRAM-MD5, so that's a big score for CRAM-MD5.
+
+#### Prerequisites
+* [[LDAP]] + [[SASL]] (Dovecot's [[SASL]] server works)
+* [[LDAP Schema for Courier]]
+
+#### Edit /etc/dovecot/dovecot.conf
+* Set hosts, base, user_attrs, user_filter, default_pass_scheme
+
+<pre>
+user_attrs = homeDirectory=home,uidNumber=uid,gidNumber=gid,mailMessageStore=mail
+
+user_filter = (&(objectClass=posixAccount)(uid=%u@%d))
+
+default_pass_scheme = MD5-CRYPT
+</pre>
+
+If not using CRAM-MD5, I tend to use MD5-CRYPT as I find it to be reasonably compatible with a wide variety of uses. Otherwise, SSHA is probably what I would use.
+
+In the auth section, I had to comment out all the other methods and only leave the userdb_ldap passdb_ldap uncommented. I also set the count = 1. For [[Postfix]] to access the sasl socket, I added this at the end:
+
+<pre>
+  socket listen {
+    client {
+      path = /var/spool/postfix/private/auth
+      mode = 0660
+      user = postfix
+      group = postfix
+    }
+  }
+</pre>
+
+For cram-md5, I added this:
+<pre>
+mechanisms = plain login cram-md5
+</pre>
+
+In /etc/dovecot/dovecot-ldap.conf:
+* dn = "cn=someldapuser,dc=example,dc=com"
+* dnpass = ...
+* auth_bind = no
+* ldap_version = 3
+* base = "ou=something,dc=example,dc=com"
+* user_attrs = homeDirectory=home,uidNumber=uid,gidNumber=gid,mailMessageStore=mail
+* user_filter = (&(objectClass=posixAccount)(uid=%u@%d))
+* pass_attrs = uid=user,userPassword=password
+* default_pass_scheme = PLAIN
+
+Not sure if that's all necessary, but that's what works for me.
+
+#### Example CRAM-MD5
+<pre>
+# dovecotpw -s CRAM-MD5
+Enter new password:
+Retype new password:
+{CRAM-MD5}9186d855e11eba527a7a52ca82b313e180d62234f0acc9051b527243d41e2740
+</pre>
+
+#### [[IMAP]] Server
+<pre>
+root@vpn-theuk:/etc/postfix# mkdir /var/lib/indexes
+root@vpn-theuk:/etc/postfix# chown dovecot !$
+chown dovecot /var/lib/indexes
+</pre>
+
+#### Debugging
+Various errors I ran into:
+<pre>
+Aug 25 04:25:04 vpn-theuk dovecot: Fatal: auth(default): Socket already exists: /var/spool/postfix/private/auth
+Aug 25 04:25:04 vpn-theuk dovecot: Fatal: Auth process died too early - shutting down
+</pre>
+<pre>
+fatal: no SASL authentication mechanisms
+</pre>
+
+<pre>
+Can't connect to auth server at /var/run/dovecot/auth-master: No such file or directory
+</pre>
+
+#### Dovecot Deliver
+I'm very interested in setting up [[Dovecot]]'s delivery utility with [[Postfix]], mainly because the setup I use with [[Courier]] [[Maildrop]] requires a dpkg-override. Still, using [[Dovecot]]'s deliver tool has its caveats.
+
+#### Multiple UID/GID's?
+I like each user to have their own user ID, but this definitely requires some extra work, and I'm wondering if its such a good idea. I'd previously done this because I used [[NSS-MySQL]] and user-specific [[Spamassassin]] settings. I still use [[Spamassassin]] with user-specific settings, but I also use it with a common user (like "vmail"), and I'm trying to stop using [[NSS-MySQL]] in lieu of [[NSS LDAP]] and [[PAM LDAP]].
+
+#### Many Other Benefits to Dovecot Deliver
+Little did I know that there are a bunch of benefits to using Dovecot deliver:
+
+* Automatically updates dovecot indexes
+* Can use the same virtual home directory configuration (awesome!!)
+* Support for [[Sieve]] filters!
+
+#### [[Spamassassin]] Integration
+Since I've previously integrated [[Spamassassin]] with [[Courier]] using [[Maildrop]], I think I'll have to switch to setting up [[Spamassassin]] as a after-queue filter, although there is [[Spampd]] which looks very cool.
+
+Yep, since I'm now using Dovecot's deliver LDA, my Courier Maildrop scripts for scanning mail with Spamassassin is not relevant.
+
+From what I have read, the best way to handle this issue is integrating Spamassassin as a Postfix filter / milter and then using a Seive filter to put spam flagged emails into a junk / spam folder.
+
+#### Post Login Scripting
+This is an incredible feature - it could be used to trigger actions like [[OfflineIMAP]] syncronization!
+
+I don't think that [[Dovecot]] has access to a plaintext password to be used for [[OfflineIMAP]], so it may be useful to setup a Dovecot master user to run the synchronizations. Thankfully, it is possible to restrict master user logins by IP!
+
+I think the last line of the script needs to be:
+
+<pre class="sh_sh">
+exec /usr/local/libexec/dovecot/imap "$@"
+</pre>
+
+* [[IMAP]]
+* [[Postfix]]
+* [[Courier]]
+* [[My Email Services Configurations]]
+* [[Converting from Courier IMAP to Dovecot IMAP]]

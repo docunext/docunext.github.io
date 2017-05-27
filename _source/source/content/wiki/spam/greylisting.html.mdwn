@@ -1,0 +1,10 @@
+Greylisting is the process of delaying mail for a short period of time. The reason for doing this is that many [[SPAM]] email servers won't bother trying again, whereas almost all legitimate mail servers will.
+
+### See Also
+* [[My Email Services Configurations]]
+* [[Postgrey]]
+* [[postfix-gld]]
+
+### Links
+* [http://www.informedemail.com/blog/2009/08/color-has-nothing-to-do-with-it.html Luminosity has nothing to do with it!]
+

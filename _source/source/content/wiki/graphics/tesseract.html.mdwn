@@ -1,0 +1,26 @@
+Tesseract Command:
+<pre>
+tesseract property_insurance_document.tif property_insurance_document_txt -l eng
+</pre>
+
+And the process sometimes goes like this:
+
+<pre>
+pdftoppm -r 300 some.pdf ok
+convert ok-000001.ppm ok.tiff
+mv ok.tiff ok.tif
+tesseract ok.tif ok_txt -l eng
+</pre>
+
+And for multipages:
+
+<pre>
+pdftoppm -r 300 something.pdf 200708
+find . -name '*.ppm' -exec convert {} {}.tiff \;
+find . -name '*.tiff' -exec mv {} {}.tif \;
+find . -name '*.tif' -exec tesseract {} {}_txt -l eng \;
+</pre>
+
+### Related Pages
+* [[Ocroscript]]
+

@@ -1,0 +1,19 @@
+Csync2 is a cluster synchronization tool. I use it for synchronizing simple configuration files in sync across multiple hosts. Here's what I'm currently synchronizing:
+
+<pre>
+include /etc/csync2.cfg;
+include /etc/ssh/ssh_config;
+include /etc/vim/vimrc;
+include /etc/default/ntpdate;
+include /etc/sudoers;
+include /etc/timezone;
+include /etc/subversion/config;
+include /etc/aliases;
+include /etc/postfix/main.cf;
+</pre>
+
+Csync2:
+* Uses [[SQLite]] to keep track of files
+* Is fast
+* Uses ssl and certificates for security
+

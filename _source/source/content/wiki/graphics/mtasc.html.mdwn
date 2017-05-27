@@ -1,0 +1,11 @@
+Motion Twin ActionScript Compiler
+
+This is an interesting thing, it allows programmers to write [[actionscript]] in an external editor, compile it, and then embed it into a [[SWF]] movie. I've used it a little bit, but I usually end up just embedding AS via [[ming]].
+
+Good for editing [[Actionscript]] libraries and code and then injecting / compiling them into [[SWF]]s.
+
+### Related Pages
+* [[SWF]]
+* [[Ming]]
+* [[Haxe]]
+

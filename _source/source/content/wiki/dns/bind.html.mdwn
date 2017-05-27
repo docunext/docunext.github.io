@@ -1,0 +1,130 @@
+Berkeley Internet Name Daemon or something like that. While I used to think it was too complicated ("Its beyond me - I prefer [[MyDNS]]. I do use bind-tools from debian a lot though, [[dig]] is an especially handy tool."), I'm now a very big fan - especially since it returns glue records for origin zones with external name servers, as well as has support for [[GeoIP]] [[DNS]]!
+
+### [[GeoIP]]
+There are a bunch of ways to do this:
+
+* CIDR access control lists - this was my first try; it worked, but then I read [http://phix.me/geodns/ this] which explained the data structures of the MaxMind DB versus the built-in BIND acls
+* Patching and compiling BIND - I tried this, only to realize that [[debian]] already integrates the patch - awesome!!
+* Using the MaxMind DB C-API (however, its not the same interface as the one I read about [http://bind-geoip.googlecode.com/files/bind-geoip-1.3-readme.txt here] - neither version 1.2 or 1.3) - this is what I'm planning to use now regardless; seems like they've got a good plan for the future regarding syntax and all that, without causing big disruptions with existing installations
+
+#### Setting Up GeoIP DNS with BIND on [[Debian]]
+
+Install bind9 and geoip-database:
+
+<pre class="sh_sh">
+sudo apt-get install bind9 geoip-database
+</pre>
+
+Edit the bind9 conf files (I use /etc/bind9/named.conf.zones):
+<pre class="sh_sh">
+view "na" {
+      match-clients { country_US; };
+      recursion no;
+      zone "example.org" {
+            type master;
+            file "/etc/bind/zones/example.org.na.zone";
+      };
+};
+view "other" {
+      match-clients { any; };
+      recursion no;
+      zone "example.org" {
+            type master;
+            file "/etc/bind/zones/example.org.zone";
+      };
+};
+</pre>
+
+Actually, this is a little tricky, because I use BIND to manage a whole bunch of domains. If I setup a view that matches but doesn't have an entry for the requested zone, the query is refused. So, I have to have duplicates of each zone entry - even though I only need a couple of host names to respond differently to the requests.
+
+Views can also match on the destination [[IP]]: "match-destinations", but its difficult because only one match statement needs to match to have the view get selected - and if either match-destinations or match-clients is not set, then it defaults to "any".
+
+#### BIND9 GeoIP with Split Views
+
+I based the above on what I read at the [http://www.zytrax.com/books/dns/ch7/view.html#match-clients Zytrax page on DNS BIND]:
+
+<blockquote>A view clause matches when either or both of its match-clients and match-destinations statements match and when the match-recursive-only condition is met. If either or both of match-clients and match-destinations are missing they default to any (all hosts match). The match-clients statement defines the address_match_list for the source IP address of the incoming messages. Any IP which matches will use the defined view clause. This statement may only be used in a view clause.</blockquote>
+
+The [http://www.bind9.net/manual/bind/9.3.2/Bv9ARM.ch06.html#view_statement_grammar BIND9 manual] says it differently though:
+
+<blockquote>Each view statement defines a view of the DNS namespace that will be seen by a subset of clients. A client matches a view if its source IP address matches the address_match_list of the view's match-clients clause and its destination IP address matches the address_match_list of the view's match-destinations clause. If not specified, both match-clients and match-destinations default to matching all addresses. In addition to checking IP addresses match-clients and match-destinations can also take keys which provide an mechanism for the client to select the view. A view can also be specified as match-recursive-only, which means that only recursive requests from matching clients will match that view. The order of the view statements is significant — a client request will be resolved in the context of the first view that it matches.</blockquote>
+
+While I don't think I'll setup GeoIP on some zones and not others on the same server, I may use the recursion only view to forward requests to unbound running on a different port to save IP addresses. ;-) This is basically what [http://packages.debian.org/sid/dnsproxy dnsproxy] does.
+
+<pre>
+view "private" {
+    match-clients { 192.168.0.0/16; };
+    match-recursive-only yes;
+    minimal-responses yes;
+    forward only;
+    forwarders { 192.168.8.2; };
+    allow-query { 192.168.0.0/16; };
+};
+
+view "public" {
+    recursion no;
+    zone "example.com" {
+};
+};
+</pre>
+
+See also:
+
+* http://www.yodnsconf.com/web/2010/06/geoip-dns.html
+
+### Errors
+
+#### cap_set_proc failed
+<pre>
+bind9named: cap_set_proc failed
+</pre>
+
+Not sure about that one above...
+
+#### named-checkzone
+
+Need to check a zonefile? I do sometimes... and I use '''named-checkzone'''!
+
+<pre class="sh_sh">
+# named-checkzone yodnsconf.com blah.zone
+zone yodnsconf.com/IN: loaded serial 2010092502
+OK
+</pre>
+
+### Logging
+I'm trying to reduce logging activity, but the default is to log almost everything to syslog. This is what I'm using on [[Debian]], and I had to create a /var/log/named/ folder and chown it to bind.
+
+<pre>
+
+logging{
+  channel simple_log {
+    file "/var/log/named/bind.log" versions 3 size 5m;
+    severity critical;
+    print-time yes;
+    print-severity yes;
+    print-category yes;
+  };
+  category default{
+    simple_log;
+  };
+};
+
+</pre>
+
+I put that into the /etc/bind/named.conf.options file, after the options section.
+
+### Alternatives
+* [[PowerDNS]]
+* [[NSD3]]
+* [[TinyDNS]]
+
+### See Also
+* [[Unbound]]
+* [[DNSMasq]]
+* [[GeoIP]]
+* [[YoDNSConf]]
+
+### Links
+* http://www.yodnsconf.com/
+* http://www.zytrax.com/books/dns/
+

@@ -1,0 +1,30 @@
+body {
+    background-color: #839EAB;
+}
+.header {
+    padding: 60px 25px 5px 5px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #eee;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.page-select {
+    margin-left: 20px;
+    width: 300px;
+    font-size: 12px;
+}
+
+.content {
+    padding: 10px;
+    background-color: #fff;
+    min-height: 640px;
+}
+
+pre {
+    border-color: #ddd;
+    padding-left: 2px;
+}

@@ -1,0 +1,51 @@
+Rack-xsl is middleware for [[Ruby Rack]] which filters incoming XML with XSL.
+
+I just ran into a bug in Rack-xsl when the size of a page exceeded 8192. I think its been fixed with the latest commit. [[Sinatra]] sends static files in chunks of 8192 bytes. Rack-XSLView needs the entire document before trying to transform it.
+
+I found an interesting thread on [[Google]] groups about content-length and chunked encoding while researching this. One suggestion was to not require content-length, but it is sent for static files, and it must be updated if the content is filtered. This is a key feature in my opinion. It might be possible to remove it, but I believe that prevents HTTP 1.1 connections. Not sure though...
+
+### News
+* 2011-08-14 - Including stylesheets necessary to test
+* 2011-07-10 - Fixed bug introduced with [[Rack]] version 1.3.0
+* 2010-10-16 - Finally renaming the [[Git]] repository and [[Gem]] to better names and folder structures
+* 2010-06-12 - Finally cleaned up problems caused by the use of [[Tidy]] and the odd tidy_ffi bug; should be a lot more stable now
+* 2010-03-20 - Major rewrite and addition of some working and effective tests. This should hopefully make it way more efficient based on some ideas I came up with when writing [http://www.ruby.code-experiments.com/blog/2010/03/rubys-exception-class-aka-error-handling-and-management.html this].
+* 2010 - Rack-XSLView no longer needs rack-docunext-content-length.
+
+### Rack-XSLView and [[Ruby]] 1.8 and 1.9
+I ''think'' Rack-xsl is compatible with both 1.8 and 1.9. Note: the ruby-xslt gem is not compatible with 1.9 out of the box.
+
+'''YES!''' Rack-xsl works with 1.8! I had to fix a nasty bug though, I'm waiting to release it until I test it with 1.9.
+
+### Using Rack-xsl with [[Sinatra]]
+Easy... I have a zillion examples. TODO: Put one here!
+
+### Using Rack-xsl with [[Rails 3]]
+Working on this right now... it took longer than I expected as I accidentally setup a [[Rails]] 2 environment, then switched to [[Rails 3]].
+
+'''It does work!'''
+
+In config/application.rb:
+
+<pre class="prettyprint">
+    config.middleware.use Rack::XSLView,
+      :myxsl => XML::XSLT.new(),
+      :noxsl => ['/raw/', '/s/js/', '/s/css/', '/s/img/'],
+      :passenv => ['PATH_INFO', 'RACK_MOUNT_PATH', 'RACK_ENV'],
+      :xslfile => File.open(myxslfile) {|f| f.read },
+      :excludehtml => false,
+      :reload => true,
+      :tidy => {  :doctype => 'omit',
+          :numeric_entities => 1,
+          :drop_proprietary_attributes => 1,
+          :preserve_entities => 0,
+          :input_encoding => 'utf8',
+          :char_encoding => 'utf8',
+          :output_encoding => 'utf8',
+          :error_file => '/tmp/tidyerr.txt',
+          :force_output => 1,
+          :alt_text => '',
+          :tidy_mark => 0,
+          :logical_emphasis => 1,
+        }
+</pre>

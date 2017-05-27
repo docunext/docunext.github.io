@@ -1,0 +1,3 @@
+IPSec is a great way to setup [[VPN]]s. I use it with several [[m0n0wall]] and [[pfSense]] gateway routers as well as [[Debian]] servers and have been very pleased with it.
+
+[[OCF Linux]], [[FreeBSD]], and [[OpenBSD]] all support some Hi/fn chips, so this might be a good choice for computers with a cpu that doesn't include a security block or a hardware random number generator. Nevertheless, this would accelerate compression for ipsec[http://lists.logix.cz/pipermail/cryptoapi/2006/000620.html *] (at least in openbsd) and that would be nice.

@@ -1,0 +1,146 @@
+RCov is a terrific reporting tool written in [[Ruby]] which can publish the results to [[HTML]].
+
+### Example
+Here's an example from [[Regdel]]:
+
+
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+
+        </thead>
+        <tfoot>
+          <tr>
+            <td class="left_align">TOTAL</td>
+            <td class='right_align'><tt>634</tt></td>
+            <td class='right_align'><tt>433</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>88.64%</tt></div>
+
+          <div class="percent_graph">
+            <div class="covered" style="width:89px"></div>
+            <div class="uncovered" style="width:11px"></div>
+          </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>83.37%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:83px"></div>
+            <div class="uncovered" style="width:17px"></div>
+
+          </div></td>
+          </tr>
+        </tfoot>
+        <tbody>
+
+            <tr class="all_files all_coverage 110 data even">
+              <td class="left_align">data/account_types.rb</td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+
+            <tr class="all_files all_coverage 110 data odd">
+              <td class="left_align">data/regdel-dm-modules.rb</td>
+              <td class='right_align'><tt>33</tt></td>
+              <td class='right_align'><tt>8</tt></td>
+
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+
+            <tr class="all_files all_coverage 110 data even">
+              <td class="left_align">data/regdel_dm.rb</td>
+              <td class='right_align'><tt>158</tt></td>
+              <td class='right_align'><tt>94</tt></td>
+
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+
+            <tr class="all_files all_coverage 110 helpers odd">
+              <td class="left_align">helpers/xslview.rb</td>
+              <td class='right_align'><tt>37</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+
+            <tr class="all_files all_coverage 80 90 100  even">
+              <td class="left_align">regdel.rb</td>
+              <td class='right_align'><tt>394</tt></td>
+              <td class='right_align'><tt>307</tt></td>
+
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>81.73%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:82px"></div>
+            <div class="uncovered" style="width:18px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.55%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:77px"></div>
+
+            <div class="uncovered" style="width:23px"></div>
+          </div></td>
+            </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+See: http://www.regdel.com/blog/code-coverage-results.html
+
+### Bugs
+Rcov doesn't recognize multi-line strings as having been covered:
+
+* http://rubyforge.org/tracker/index.php?func=detail&aid=23835&group_id=1750&atid=6802
+
+### Related Pages
+* [[RSpec]]
+

@@ -1,0 +1,41 @@
+This is a terrific [[Apache]] module which allows querying [[DNSRBL]] servers (at least the [[spamhaus]] servers).
+
+Looks like its working:
+
+<pre>
+194.8.74.220 - - [09/Jun/2009:22:37:20 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.informedlicensing.com/blog/2009/03/ipod-license-agreement-timeout.html" "Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)"
+194.8.74.220 - - [09/Jun/2009:22:44:58 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.informedmaintenance.com/blog/2008/09/informed-maintenance.html" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; ru) Opera 8.01"
+194.8.74.220 - - [09/Jun/2009:22:47:56 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.reaktiv8.com/blog/2008/11/voltron-rejuvenate.html" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)"
+194.8.75.155 - - [09/Jun/2009:22:48:32 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.nodows.com/blog/2008/01/freebsd-postgres-python-perl-lighttpd-nginx.html" "Mozilla/4.0 (compatible; MSIE 4.01; Digital AlphaServer 1000A 4/233; Windows NT; Powered By 64-Bit Alpha Processor)"
+194.8.74.220 - - [10/Jun/2009:00:30:44 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.proxy-sys.com/blog/2008/06/varnish.html" "Opera/9.00 (Windows NT 4.0; U; en)"
+194.8.74.220 - - [10/Jun/2009:00:46:59 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.sickofthenews.com/blog/2009/03/vindication.html" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.0.3705; .NET CLR 1.1.4322)"
+194.8.74.220 - - [10/Jun/2009:01:07:18 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.informedlicensing.com/blog/2009/03/ipod-license-agreement-timeout.html" "Mozilla/3.0 (x86 [en] Windows NT 5.1; Sun)"
+194.8.74.220 - - [10/Jun/2009:01:14:59 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.informedmaintenance.com/blog/2008/09/informed-maintenance.html" "Mozilla/4.0 (compatible; MSIE 5.01; Windows 95; MSIECrawler)"
+194.8.74.220 - - [10/Jun/2009:01:17:57 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.reaktiv8.com/blog/2008/11/voltron-rejuvenate.html" "Opera/7.54 (Windows NT 5.1; U)  [pl]"
+194.8.74.220 - - [10/Jun/2009:03:00:41 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.proxy-sys.com/blog/2008/06/varnish.html" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) Opera 7.54 [en]"
+194.8.74.220 - - [10/Jun/2009:03:16:56 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.sickofthenews.com/blog/2009/03/vindication.html" "Opera/9.00 (Windows NT 4.0; U; en)"
+194.8.74.220 - - [10/Jun/2009:03:37:18 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.informedlicensing.com/blog/2009/03/ipod-license-agreement-timeout.html" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"
+194.8.74.220 - - [10/Jun/2009:03:44:55 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.informedmaintenance.com/blog/2008/09/informed-maintenance.html" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; FunWebProducts; .NET CLR 1.1.4322; PeoplePal 6.2)"
+194.8.74.220 - - [10/Jun/2009:03:47:54 -0400] "POST /blog/cgi-bin/movabletype/mt-comments.cgi HTTP/1.0" 401 119 "http://www.reaktiv8.com/blog/2008/11/voltron-rejuvenate.html" "Mozilla/4.0 (compatible; MSIE 5.01; Windows 95; MSIECrawler)"
+</pre>
+
+Indeed it is:
+<pre>
+[Wed Jun 10 00:30:44 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.proxy-sys.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.proxy-sys.com/blog/2008/06/varnish.html
+[Wed Jun 10 00:47:00 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.sickofthenews.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.sickofthenews.com/blog/2009/03/vindication.html
+[Wed Jun 10 01:07:18 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.informedlicensing.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.informedlicensing.com/blog/2009/03/ipod-license-agreement-timeout.html
+[Wed Jun 10 01:14:59 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.informedmaintenance.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.informedmaintenance.com/blog/2008/09/informed-maintenance.html
+[Wed Jun 10 01:17:57 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.reaktiv8.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.reaktiv8.com/blog/2008/11/voltron-rejuvenate.html
+[Wed Jun 10 03:00:41 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.proxy-sys.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.proxy-sys.com/blog/2008/06/varnish.html
+[Wed Jun 10 03:16:57 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.sickofthenews.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.sickofthenews.com/blog/2009/03/vindication.html
+[Wed Jun 10 03:37:18 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.informedlicensing.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.informedlicensing.com/blog/2009/03/ipod-license-agreement-timeout.html
+[Wed Jun 10 03:44:55 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.informedmaintenance.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.informedmaintenance.com/blog/2008/09/informed-maintenance.html
+[Wed Jun 10 03:47:54 2009] [crit] [client 194.8.74.220] mod_spamhaus: address 220.74.8.194.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.reaktiv8.com/blog/cgi-bin/movabletype/mt-comments.cgi, referer: http://www.reaktiv8.com/blog/2008/11/voltron-rejuvenate.html
+</pre>
+
+Hmmm. For some reason, it stopped working in February. I'm trying to debug, but it could have been caused by my switching from one extract real ip to rpaf. Nope, that wasn't it. I just manually set my [[Unbound]] server to return 127.0.1.2 for my reversed IP + sbl-xbl.spamhaus.org and it worked fine:
+
+<pre>
+[Sun Jun 13 16:24:27 2010] [crit] [client ] mod_spamhaus: address 9.136.240.96.sbl-xbl.spamhaus.org is blacklisted. Deny connection to www.example.com/blog/cgi-bin/movabletype/mt.cgi, referer: http://www.example.com/blog/cgi-bin/movabletype/mt.cgi?__mode=view&_type=entry&id=20968&blog_id=267&saved_changes=1
+</pre>
+

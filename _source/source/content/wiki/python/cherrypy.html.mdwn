@@ -1,0 +1,30 @@
+### Summary
+CherryPy is a quick and easy way to get started developing [[WSGI]] applications in [[python]]. Although it may sound a little cheesy, I feel empowered when working on WSGI apps - the applications become much more "wholesome" for some reason, its hard to explain.
+
+### Experience with CherryPy
+Currently I'm experimenting with a possible port of [[Nexista]] to [[Python]] called schematronic, using pycoon as a guide. So far I've merely copied over a minimal amount of pycoon stuff (really just the cherrypy stuff) and am running that. Somehow it appears that both the [[schematronic]] and cherrypy modules are running as apps - a little confusing but I like where its going.
+
+* command line calls __init__.py
+* __init__.py calls cherrypyserver.py
+* cherrypyserver.py calls CherryPyWSGIServer passing schematronic as the wsgi_app
+* CherryPyWSGIServer instantiates the wsgi_app class, which has a function called __call__
+* client requests are connected directly to the wsgi_app and call the function __call__, right? [http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/441240 function emulation using __call__]
+
+from wsgiserver.py (line 647):
+<pre>
+class CherryPyWSGIServer(object):
+"""An HTTP server for WSGI.
+...
+wsgi_app: the WSGI 'application callable'; multiple WSGI applications
+        may be passed as (script_name, callable) pairs.
+"""
+</pre>
+
+### Related Pages
+* [[Python]]
+* [[Web Servers]]
+* [[Nexista]]
+
+### External Links
+* http://www.cherrypy.org/
+

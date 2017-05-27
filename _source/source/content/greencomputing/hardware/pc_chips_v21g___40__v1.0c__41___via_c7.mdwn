@@ -1,0 +1,48 @@
+'''UPDATE - This board is no longer available. However, the [Via PC2500e](http://www.my-tech-deals.com/blog/2007/11/via-c7-pc2500e.html) is basically the same thing. '''
+
+This board is very affordable ($55) but it unfortunately uses the [[VIA C7]] which cannot scale on linux at the moment. Even though all signs point to it being able to do so at some point in the future, there are issues with the cpufreq modules; missing voltage tables I believe. Also, the omission of the "est" flag in the cpuinfo output below excludes the possibility of using enhanced speedstep.
+
+Comparing this cpuinfo output to that of the [[Everex Notebooks]], it appears that the processors are the same. Perhaps it would be possible to then use ubuntu on these motherboards to override the board's bios with some of the info from the Everex dsdt and achieve better frequency scaling. That would be pretty sweet!
+
+<pre>cat /proc/cpuinfo 
+processor       : 0
+vendor_id       : CentaurHauls
+cpu family      : 6
+model           : 10
+model name      : VIA Esther processor 1500MHz
+stepping        : 9
+cpu MHz         : 1496.423
+cache size      : 128 KB
+fdiv_bug        : no
+hlt_bug         : no
+f00f_bug        : no
+coma_bug        : no
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 1
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge cmov pat clflush acpi mmx fxsr sse sse2 tm nx up pni rng rng_en ace ace_en ace2 ace2_en phe phe_en pmm pmm_en
+bogomips        : 2996.11</pre>
+
+<pre>cat /proc/acpi/processor/CPU0/info 
+processor id:            0
+acpi id:                 0
+bus mastering control:   yes
+power management:        yes
+throttling control:      yes
+limit interface:         yes</pre>
+
+<pre>cat /proc/acpi/processor/CPU0/power 
+active state:            C2
+max_cstate:              C8
+bus master activity:     ffffffff
+states:
+    C1:                  type[C1] promotion[C2] demotion[--] latency[000] usage[00017110] duration[00000000000000000000]
+   *C2:                  type[C2] promotion[C3] demotion[C1] latency[080] usage[03926912] duration[00000000054569662161]
+    C3:                  type[C3] promotion[--] demotion[C2] latency[800] usage[00000000] duration[00000000000000000000]</pre>
+
+
+I've been running m0n0wall on this board with 2 intel gigE ethernet cards and a disk-on-module IDE device, and the system consumes about 24 watts. I really hope that they update the BIOS for this board to enable ACPI frequency scaling.
+
+Unfortunately, the V21G is no longer available, hopefully the PC2500e or PC2500g will be available soon!
+

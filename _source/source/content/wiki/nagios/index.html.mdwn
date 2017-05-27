@@ -1,0 +1,42 @@
+Nagios is a great network monitoring program. We use it to alert us when there are problems with our network, from connectivity problems to latency issues.
+
+### Standard Nagios Plugins
+<pre>
+check_apt           check_dns           check_icmp          check_log           check_nt            check_radius        check_ssmtp
+check_bgpstate      check_dummy         check_ifoperstatus  check_mailq         check_ntp           check_real          check_swap
+check_breeze        check_file_age      check_ifstatus      check_mrtg          check_nwstat        check_rpc           check_tcp
+check_by_ssh        check_flexlm        check_imap          check_mrtgtraf      check_oracle        check_sensors       check_time
+check_clamd         check_fping         check_ircd          check_mysql         check_overcr        check_simap         check_udp
+check_dhcp          check_ftp           check_jabber        check_mysql_query   check_pgsql         check_smtp          check_ups
+check_dig           check_game          check_ldap          check_nagios        check_ping          check_snmp          check_users
+check_disk          check_hpjd          check_ldaps         check_nntp          check_pop           check_spop          check_wave
+check_disk_smb      check_http          check_load          check_nntps         check_procs         check_ssh
+</pre>
+
+### Custom Plugins
+[[Nagios Content Checker]]
+
+### Nagios External Commands
+Since I use debian I found this in /usr/share/doc/nagios2/README.Debian as one part of activating external commands:
+<pre class="sh_sh">
+/etc/init.d/nagios2 stop
+dpkg-statoverride --update --add nagios www-data 2710 /var/lib/nagios2/rw
+dpkg-statoverride --update --add nagios nagios 751 /var/lib/nagios2
+/etc/init.d/nagios2 start
+</pre>
+
+### My Experience with Nagios
+I started using nagios well over five years ago. When I first used it, I was zealous about [[databases]], so I didn't like its configuration of data storage mechanisms. There are plugins which can be used to generate configuration files, as well as store the monitoring data, but the built-in systems are time tested reliable!
+
+#### My Nagios Notes
+* [[Nagios3 on Debian]]
+* [[Nagios3 and NRPE]]
+
+#### Sample Nagios Configuration Examples and Notes
+* [[Nagios hosts.cfg]]
+* [[Nagios Misconfiguration Results]]
+
+### See Also
+* [[NagiosQL]]
+* [[YoDNSConf]]
+

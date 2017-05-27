@@ -1,0 +1,8 @@
+### Subversion
+Distributed Authoring and Versioning. I can't believe this page didn't already exist! Useful for making [[Subversion]] repositories public.
+
+### Cool things to do with DAV
+* Online [[filesystem]] with auto commit [[subversion]] - [[Jaderz]] a jQuery Apache2 DAV Editor
+* Integrate with [[ikiwiki]]
+* [[CalDAV]]
+

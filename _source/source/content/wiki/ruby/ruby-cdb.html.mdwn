@@ -1,0 +1,51 @@
+Ruby bindings for [[CDB]]...
+
+<pre class="sh_sh">
+./load cdbget cdb.a buffer.a unix.a byte.a
+/usr/bin/ld: errno: TLS definition in /lib/libc.so.6 section .tbss mismatches non-TLS reference in cdb.a(cdb.o)
+/lib/libc.so.6: could not read symbols: Bad value
+collect2: ld returned 1 exit status
+make: *** [cdbget] Error 1
+
+</pre>
+
+Here's the fix to this error: http://www.imminentweb.com/technologies/cdb-compilation-error-mismatches-non-tls-reference-cdba
+
+And actually the Ruby-CDB package includes a different fix:
+
+<pre class="sh_sh">
+echo gcc -O2 -include /usr/include/errno.h > cdb/conf-cc
+</pre>
+
+Yay, the example works:
+
+<pre class="sh_sh">
+ruby sample.rb
++4,4:eins->ichi
++4,2:zwei->ni
++4,3:drei->san
++4,3:vier->yon
+
++3,4:one->ichi
++3,2:two->ni
++5,3:three->san
++4,3:four->yon
+
++3,4:one->ichi
++4,3:four->yon
++4,2:five->go
++3,4:six->roku
++5,4:seven->nana
+</pre>
+
+### Alternate Library
+
+Looks like there is are alternate bindings to [[CDB]] for [[Ruby]]:
+
+* https://github.com/mbj/ruby-cdb
+
+### Links
+* http://www.mirrors.docunext.com/cgit.cgi/ruby-cdb-0.5a/tree/
+* http://raa.ruby-lang.org/project/cdb/
+* http://trixy.justinkbeck.com/2007/08/ruby-database-close-ruby-cdb.html
+

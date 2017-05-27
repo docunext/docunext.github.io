@@ -1,0 +1,5 @@
+CCK is a Drupal module and it stands for "content creation kit" and it is exactly that, almost, because if it were more aptly named, its moniker would be even more vague. Let me explain.
+
+In my humble opinion, CCK is CTCK, or content type creation kit, because with it one is defining content types, assembled from simpler data types. If you are familiar with phpMyAdmin (or data modeling in general), then the idea should be familiar. Furthermore, I was blown away by the fact that like phpMyAdmin, CCK actually creates tables and columns, rather than simply defining key/value pair relationships (not that I have anything against key/value pairs!).
+
+I feel it is also appropriate to compare CCK with the world of object oriented programming, ORMs, and MVC. With Ruby on Rails, ActiveRecord or DataMapper can be used to map data models with Ruby classes and objects. In a way, CCK is similar to the process of creating models (the "M" in MVC). In that regard, what about the "V" part of MVC? Well, that's for Drupal Views to take care of (and Drupal Panels, too).

@@ -1,0 +1,13 @@
+Powernowd seems to be working well for me so far, it has a few sane modes: 
+
+* aggressive
+* passive
+* leaps
+
+Yes, this is able to do what I'm looking for. I use these settings with [[../hardware/everex/Everex Notebooks]]: 
+
+<pre>
+OPTIONS="-n -p 10000 -u 30 -l 4 -q"
+</pre>
+
+This makes the CPU easily jump to top speed, then slow down over a long period of almost complete idle cycles.

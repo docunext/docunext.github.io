@@ -1,0 +1,51 @@
+Postfix-gld is a greylisting daemon software package. It uses [[MySQL]] as its
+database, and has some interesting and unique features:
+
+* lightgrey option
+* mx algorithm
+
+### My Experience with postfix-gld
+I've been using postfix-gld for about 12 months after using [[postgrey]] for
+equally as long. I wanted to use postfix-gld so that I could share greylist data
+across multiple servers. So far so good - its been working fine for me. The
+[[database]] has grown quite large, so I think I need to figure out how to trim
+it down some.
+
+Thanks to hostingfu.com (see link below), this script can be put into a cron job and run periodically:
+
+~~~
+#!/bin/bash
+
+# Expiring the greylist in 12 hours.
+EXPIRE_GREYLIST=43200
+
+# Expiring the whitelist in 35 days.
+EXPIRE_WHITELIST=$((35 * 86400))
+
+echo "
+DELETE FROM greylist WHERE last<$((`date +%s` - EXPIRE_WHITELIST));
+DELETE FROM greylist WHERE n=1 AND first<$((`date +%s` - EXPIRE_GREYLIST));
+" | mysql gld
+~~~
+
+I just read that page again and there is an option from the command line which
+does the same thing:
+
+    gld -k 35
+
+Actually the gld command line tool is quite useful, gld -i show database information:
+
+~~~
+# gld -i
+# of entries in the database         : 330043
+# of one hit entries in the database : 286254
+Oldest entry in database             : 756 days ago
+~~~
+
+I'm also looking into using a [[dnspl]] with postfix-gld.
+
+### Links
+
+* http://www.aaronwerley.com/coding/postfix-gld.html - I did a quick search to find information about using persistent connections with postfix-gld, and found this instead. Interesting...
+* http://hostingfu.com/article/greylisting-spams-with-postfix-gld
+

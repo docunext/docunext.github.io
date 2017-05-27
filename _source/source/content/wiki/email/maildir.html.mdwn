@@ -1,0 +1,22 @@
+Gotta start this page because maildirs rock! They are scalable, fast, and reliable. I believe that the Maildir format was developed by [[Daniel J. Berstein]] for use with [[Qmail]].
+
+### Accessing Maildirs
+Most of the time, [[IMAP]] servers and clients access maildirs.
+
+### Creating Maildirs
+I use [[maildirmake]] to create an initial maildir for a new user, then use an [[IMAP]] client to create sub-folders.
+
+### Maildir Compatible Software
+* [[Dovecot]] even created indexes within the maildirs it accesses
+* [[Qmail]]
+* [[Postfix]]
+* [[Courier]]
+* [[OfflineIMAP]]
+
+### See Also
+
+* [[Maildir ACL]]
+* [[Maildir Quotas]]
+* [[IMAP]]
+* [[Email]]
+

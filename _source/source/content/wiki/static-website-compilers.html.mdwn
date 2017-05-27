@@ -1,0 +1,41 @@
+Here is a list of the growing numbers of static website compilers available under open source licenses:
+
+* [[Hakyll]] ([[Haskell]])
+* [[Yst]] ([[Haskell]])
+* [[Jekyll Ruby]] ([[Ruby]])
+* [[Webgen]] ([[Ruby]])
+* [[Nanoc]] ([[Ruby]])
+* [[StaticMatic]] ([[Ruby]])
+* [[Middleman]] ([[Ruby]])
+* [[Yurt]] ([[Ruby]])
+* [[Website Meta Language]]
+* [[Chronicle]] ([[Perl]]?)
+* [[Ikiwiki]] ([[Perl]])
+* [[Bonsai]] ([[Ruby]])
+* [[Pekky]] ([[Ruby]])
+* [[Grackle]] ([[Lua]])
+* [[Miril]] ([[Perl]])
+* [[Chisel]] ([[Python]])
+* [[Wax]] ([[Ruby]])
+* [[Igor]] ([[Python]])
+* [[Lanyon]] ([[Python]])
+* [[Phooey]] ([[PHP]])
+* [[Golbarb]] ([[Python]])
+* [[Growl]] ([[Python]])
+* [[Blogofile]] ([[Python]])
+* [[Genstatic]] ([[Python]])
+* [[AYM CMS]] ([[Python]])
+* [[Tiny CMS]] ([[Ruby]])
+* [[Movable Type]] ([[Perl]])
+
+Its interesting how many are written in [[Ruby]] and [[Python]]! Some, like [[Movable Type]], use a [[relational database]] back-end, though it seems like most use static files as the storage system as well, which is nice because it means that the content can be managed with a [[revision control system]], like [[Git]]!
+
+Also, most of these compilers use [[Markdown]], [[Textile]], or [[HAML]], but notably, some use [[Django]] templates (mostly those coded in [[Python]]).
+
+### Mixing Static and Dynamic Content Together
+* [[DynamicMatic]]
+
+### See Also
+* [[Static]]
+* [[CMS]]
+

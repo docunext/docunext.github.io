@@ -1,0 +1,98 @@
+### Movable Type Summary
+Moveable Type is a [[blog]] engine written by [[Six Apart]]. It was released under the [[GPL]] in December 2007.  My favorite thing about it is that it renders static output.
+
+### Movable Type and [[FastCGI]]
+I'm trying to get my fork of Movable Type, [[Mutable Times]], to work with [[mod_fcgid]]. So far I keep getting errors. Apparently not all the cgi scripts will work with fastcgi period, but I think mt.cgi will.
+
+I just installed:
+* libfcgi-perl
+* libfcgi-procmanager-perl
+* libcgi-fast-perl
+
+<pre>
+apt-get install libfcgi-perl libfcgi-procmanager-perl libcgi-fast-perl
+</pre>
+
+Yes, those packages worked for me with this type of configuration:
+<pre>
+<Directory /var/www/public/a/dev/mutabletimes/>
+    Options ExecCGI FollowSymLinks
+    Allow from 192.168
+    AddHandler CGI-Script .cgi
+    <FilesMatch "^mt(?:-(?:comments|search|tb|view))?\.cgi$">
+        SetHandler fcgid-script
+    </FilesMatch>
+</Directory>
+</pre>
+
+I've found the following [[mod_fcgid]] configuration to work OK as well:
+<pre>
+<IfModule mod_fcgid.c>
+    AddHandler    fcgid-script .fcgi .php
+    IPCConnectTimeout 20
+    ProcessLifeTime 300
+    MaxRequestsPerProcess 100
+</IfModule>
+</pre>
+
+After a few months of using Movable Type with [[FastCGI]], I gave up and reverted back to regular [[CGI]]. I just got too many errors. I believe newer versions of Movable Type have better support for it. I hope so!
+
+### FastCGI with MTOS 4.25
+I'm [http://code.sixapart.com/trac/movabletype/changeset/3328 backporting these MTOS fcgi] changes to 4.23 (which [[Debian]] has). Seems to work alright so far. I like this because I like to have higher limits for other fcgi processes, but quick restarts for MTOS - I'm going to try and find a good number.
+
+Here are two new configuration options:
+<pre>
++            'FastCGIMaxTime'  => { default => 60 * 60 }, # 1 hour
++            'FastCGIMaxRequests' => { default => 1000 }, # 1000 requests
+</pre>
+
+UPDATE: MovableType 4.3 has been released [[FastCGI]] is working great.  Only issue I have is with plugins and updates, which require a server restart for new plugins or database updates to be recognized.
+
+### My Experience with and Review of Movable Type
+At first, MTOS felt a little clunky. It was slower and had a lot of seemingly unnecessary complexity. After giving it a few months of use, I absolutely love it. Six Apart has done a great job. I plan to use Movable Type for a long time into the future!
+
+Of course I have some recommendations:
+* Add a link to the edit template page from the template refresh confirmation page. I find myself refreshing templates, then returning to templates, then editing templates way too often; let's skip that middle step.
+* Use XSL instead of mtml, or at least offer the choice.
+* Give more flexibility with mt-static.
+* Uploaded asset templates.
+* Fix the Wordpress import mechanism. See [http://www.informedblogging.com/blog/2009/06/regexp-pattern-for-importing-wordpress-xml-into-movabletype.html Regexp Pattern for Importing Wordpress XML into MovableType]
+
+Hope someone is listening!
+
+### Movable Type 4.3+
+Movable Type version 4.3 was a major speed increase from previous versions. [[FastCGI]] support improved substantially.
+
+### Movable Type Errors
+* [[Movable Type Background Publishing Error]]
+* [[Movable Type Memcached Error]]
+
+### MovableType Plugins
+There are some really terrific plugins out there. Byrne Reese ([[Majordojo]] has written some of my favorites:
+
+* [[Movable Type Bob the Rebuilder]]
+* [[Movable Type Autolink]]
+* Movable Type Send to Process Queue
+
+More good ones:
+
+* [[Movable Type Post Office]]
+* [[Movable Type Custom Asset Markup]]
+* [[Movable Type Media URLs]]
+* [[Movable Type Tidings]]
+
+### Extra Perl Modules
+* [[Cache::Memcached::GetParserXS]]
+* [[Cache::Memcached::Fast]]
+
+### See Also
+* [[Movable Type Data Model]]
+* [[Melody]]
+
+### External
+
+<ul><li><a href="http://www.informedblogging.com/">Informed Blogging</a></li></ul>
+
+* http://www.mirrors.docunext.com/websvn/movabletypeopensource
+* http://github.com/docunext/docunext-mtos-templates
+

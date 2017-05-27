@@ -1,0 +1,13 @@
+Laptop Mode Tools is a great tool with a poor choice as a name. Why do I think its a bad name? Laptop mode tools can be used on desktop computers too, with the result of reducing heat and power consumption.
+
+##What is Laptop Mode Tools?
+Its a set of software utilities to allow a computer to enter "laptop mode", reducing power consumption and increasing battery lifetime. 
+
+##Desktop Use
+
+I edit /etc/laptop-mode/laptop-mode.conf:
+<pre>
+# Enable laptop mode when on AC power.
+ENABLE_LAPTOP_MODE_ON_AC=1
+</pre>
+

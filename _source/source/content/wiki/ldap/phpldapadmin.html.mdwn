@@ -1,0 +1,40 @@
+
+
+
+### My Complaints
+I have my complaints about this software package, but I have to admit, I have used it extensively and it got the job done. I found phpldapadmin to be a bit bloated and overly complicated to use. When I started digging around the code to see if I could improve the performance at all, I found it to be really confusing to follow.
+
+#### phpLDAPadmin Performance
+Wow. I find that when using php5-cgi under [[libapache2-mod-fcgid]] to power phpLDAPadmin is really slow when used in combination with sessions. I switched to cookies and found it much faster.
+
+### phpLDAPadmin Configuration
+It took me awhile to figure out that "admin" is the admin username on [[debian]]'s slapd installation. Also, I had to change "dn" to "cn" in the login attr in
+
+After I logged in, I tried the "Create new entry here" link, which provided me with these options:
+{|
+|
+* Address Book Entry
+* Address Book Entry (mozillaOrgPerson)
+* Courier Mail Account
+* Courier Mail Alias
+* DNS Entry
+* Organisational Role
+* Organisational Unit
+* Posix Group
+|
+* Posix Group - SUSE
+* Samba3 Account
+* Samba3 Group Mapping
+* Samba3 Group Mapping - SUSE
+* Samba3 Machine
+* Simple Security Object
+* User Account
+* Default
+|}
+
+Finally, some stuff I understand! :-)
+
+### Related Pages
+* [[PHP]]
+* [[LDAP]]
+

@@ -1,0 +1,8 @@
+The V21G has a Via C7 in it, and with the right power supply can consume as little as 21Watts. That's pretty darn good for a C7 chip and a motherboard with 2 pci slots. 
+
+This board used to sell at eWiz.com for only $55, and I bought two, but they don't have them anymore. Wish I bought more! They do have a similar version with a C3 in it.
+
+More about this here: 
+
+[[PC CHIPS V21G (V1.0C) VIA C7]]
+

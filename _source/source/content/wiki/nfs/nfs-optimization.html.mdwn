@@ -1,0 +1,47 @@
+I use [[NFS]] over [[IPSec]] and [[Wifi]] with [[PfSense]]. I've had a bunch of problems, but I think I've figured out most of them.
+
+<pre class="sh_sh">
+192.168.8.48:/ /mnt/imports/dev-48-gl nfs4    _netdev,noauto,noatime,rsize=768,wsize=768,user,hard,rw,intr,proto=tcp 0 0
+</pre>
+
+### [[PfSense]] Settings
+Since I use wireless through [[PfSense]], I [http://www.docunext.com/blog/2009/12/pfsense-enable-wme.html enable wme].
+
+Also, since my [[PfSense]] devices are what connects the [[IPSec]] endpoints (and I use [[FIOS]]), I don't want them to have to disassemble and reassemble all the [[NFS]] packets. That's why I use such a small rsize and wsize setting in my mount setting in [[Fstab]].
+
+### Fstab Settings
+I'm using the [[TCP]] protocol because I'm on a wireless network. I've used [[UDP]] before, but from what I've read, [[TCP]] will generally work better on lossy networks.
+
+As such, I no longer use the "timeo" option. It has a vastly different effect on [[UDP]] and [[TCP]]. With [[TCP]], if I set it to "4", it seems to be fine. If I set it to "8", operations take an absurdly long time:
+
+<pre class="sh_sh">
+$ time dd if=/dev/zero of=/mnt/imports/dev-48-gl/testfile2 bs=16k count=8
+
+8+0 records in
+8+0 records out
+131072 bytes (131 kB) copied, 386.314 s, 0.3 kB/s
+
+real	6m26.456s
+user	0m0.000s
+sys	0m0.004s
+</pre>
+
+compared to the "4" setting:
+<pre class="sh_sh">
+$ time dd if=/dev/zero of=/mnt/imports/dev-48-gl/testfile2 bs=16k count=8
+8+0 records in
+8+0 records out
+131072 bytes (131 kB) copied, 0.341177 s, 384 kB/s
+
+real	0m0.459s
+user	0m0.000s
+sys	0m0.008s
+albertlash@wrk-240-gr:~$ time dd if=/dev/zero of=/mnt/imports/dev-48-gl/testfile2 bs=16k count=8
+8+0 records in
+8+0 records out
+131072 bytes (131 kB) copied, 0.69538 s, 188 kB/s
+
+real	0m0.932s
+user	0m0.004s
+sys	0m0.000s
+</pre>

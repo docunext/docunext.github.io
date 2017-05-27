@@ -1,0 +1,15 @@
+I've used Parallels for about 12 months as of December 2007. It has worked quite
+well for what I've needed it for:
+
+* Testing websites in Internet Explorer
+* Running Quickbooks
+
+I've been running Windows XP Home in my Parallels virtual machine, on an Intel
+iMac.
+
+Hopefully I won't have to do either of those tasks too much longer! Supposedly
+Internet Explorer 8 will be more compatible with generally accepted web
+standards, but who knows? I personally wouldn't trust Microsoft, but that is
+only my personal opinion, based upon nothing else than my own limited experience
+in using their software and interacting with them as a small customer. It does
+not represent the opinion of my employer circa late 2011.

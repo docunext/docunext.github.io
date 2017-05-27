@@ -1,0 +1,12 @@
+---
+title: Q
+date: 2007-03-22
+---
+The developers over at kju-app.org have been busy, so I've updated my svn checkout and am recompiling the latest version now.
+
+Plenty of errors, but I think they happened last time I compiled:
+
+<pre>../dyngen-exec.h:231: warning: '__op_param1' defined but not used../dyngen-exec.h:231: warning: '__op_param2' defined but not used</pre>
+
+Yup, it worked. But its strange. It appears that the latest checkout is not the latest version. Hmmm.
+

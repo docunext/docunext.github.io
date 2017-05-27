@@ -1,0 +1,7 @@
+This is an interesting device. The power measurements look pretty good so far: 
+
+http://resources.mini-box.com/online/MBD-I-D201GLY/intel-d201gly-power-consumption.html
+
+[intel D201GLY @ Docunext Technology Blog](http://www.docunext.com/blog/2007/06/intels-little-valley-mini-itx-board.html)
+
+[[Intel Little Valley D201GLY Modules]]

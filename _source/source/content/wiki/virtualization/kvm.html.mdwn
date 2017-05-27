@@ -1,0 +1,51 @@
+KVM looks like the [[virtualization]] solution for me. I've read that its comparable to [[QEMU]] in concept, and since I've had some experience with that, it shouldn't be too much to learn about.
+
+I'm interested in the virtualization features coming in [[linux kernel 2.6.26]].
+
+### Initial Reaction ==
+My initial reaction to KVM is that its awesome. Thanks to a basic bridging setup, I've been able to place virtual machines right on the host network. I'm hoping that this can be done with a few virtual machines. If not, I'll give [[VDE2]] another try.
+
+### KVM Hardware Support
+
+Will it work?
+<pre>
+egrep '(vmx|svm)' /proc/cpuinfo
+</pre>
+
+On [[AMD]] hardware:
+
+<pre class="sh_sh">
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm 3dnowext 3dnow rep_good pni cx16 lahf_lm cmp_legacy svm extapic cr8_legacy 3dnowprefetch
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm 3dnowext 3dnow rep_good pni cx16 lahf_lm cmp_legacy svm extapic cr8_legacy 3dnowprefetch
+</pre>
+
+And [[Intel]] hardware:
+
+<pre class="sh_sh">
+
+pro-200-gl:~# egrep '(vmx|svm)' /proc/cpuinfo
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+</pre>
+
+### KVM Performance
+One thing that keeps surprising me about KVM is how FAST it is. It really is about as fast as the host machine, which is truly amazing.
+
+### KVM Errors
+<pre>
+kernel: [152761.605961] unregister_netdevice: waiting for tap0 to become free. Usage count = 1
+</pre>
+I'm not sure if this is an [[OpenVZ]] error or a kvm error.
+
+### See Also
+* [[VDE2]]
+* [[KVM Switches]] (not [[virtualization]])
+* [[QEMU]]
+* [[OpenVZ]]
+
+### Links
+* https://help.ubuntu.com/community/KVM
+* https://help.ubuntu.com/community/KVM/FAQ
+

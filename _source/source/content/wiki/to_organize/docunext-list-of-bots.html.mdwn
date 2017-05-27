@@ -1,0 +1,97 @@
+User-agents are slightly similar but not exactly the same as bots - many bots impersonate browser user-agents.
+### User Agents
+Note these user-agents are not all bad bots!
+<pre>
+NewsFire/70
+LeapTag (compatible; Mozilla 4.0; MSIE 5.5; http://beta.leaptag.com/?p=linux2&v=0.8.4.trunk.r5205)
+boitho.com-dc/0.86 ( http://www.boitho.com/dcbot.html )
+Jakarta Commons-HttpClient/3.0.1
+Python-urllib/2.1
+Pingdom GIGRIB
+Biz360 spider (blogsmanager@biz360.com; http://www.biz360.com)
+PHP version tracker (http://www.nexen.net/phpversion/bot.php)
+Googlebot
+Missigua Locator 1.9
+BlogPulseLive (support@blogpulse.com)
+nrsbot/5.0(loopip.com/robot.html)
+Nokia6682/2.0 (3.01.1) SymbianOS/8.0 Series60/2.6 Profile/MIDP-2.0 configuration/CLDC-1.1 UP.Link/6.3.0.0.0 (compatible;YahooSeeker/M1A1-R2D2; http://help.yahoo.com/help/us/ysearch/crawling/crawling-01.html)
+BDFetch
+lanshanbot/1.0
+Spock Crawler (http://www.spock.com/crawler)
+Mozilla/5.0 (compatible; YodaoBot/1.0; http://www.yodao.com/help/webmaster/spider/; )
+Lexxe/Robot
+The Incutio XML-RPC PHP Library
+PageFetcher-Google-CoOp;
+Rojo
+Mozilla/5.0 (compatible; LiteFinder/1.0; +http://www.litefinder.net/about.html)
+Mozilla/5.0 (Twiceler-0.9 http://www.cuill.com/twiceler/robot.html)
+msnbot-media/1.0 (+http://search.msn.com/msnbot.htm)
+Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)
+SurveyBot/2.3
+SBIder/SBIder-0.8.2-dev (http://www.sitesell.com/sbider.html)
+Mozilla/5.0 (compatible; SummizeFeedReader +http://www.summize.com)
+Mozilla/3.0 (compatible; Indy Library)
+Mediapartners-Google
+LargeSmall Crawler
+Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)
+Mozilla/5.0 (compatible; Proximic crawler; +http://www.proximic.com/en/about-us/contact-us.html)
+Vienna/2.2.0.2209
+CFNetwork/129.21
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)
+</pre>
+
+[[BDFetch]]
+
+Your logs might show something like this:
+<pre>
+ 193.194.87.131 [11/Nov/2007:21:56:57 -0500] "GET /cacti/cmd.php HTTP/1.0" 301 233 "-" "-"
+</pre>
+That's a bot which presents no user-agent but is looking for an exploit.
+
+### IP Addresses of Bad Bots
+#### Harvesters
+* [http://www.projecthoneypot.org/i_0b37013ca1096ac122b5f2d90174c80f 85.120.78.151] (link to project honeypot)
+
+#### No Respect For Robots.txt
+* 130.226.228.73 and 130.225.26.133 - heritrix/1.12.1 +http netarkivet.dk/website/info.html - disallowed by my robots.txt but crawled the site anyway. Used iptables to drop traffic from those source ip addresses.
+* 74.86.17.253 - sucking feeds, without checking robots.txt - SoftLayer Technologies? LargeSmall Crawler?
+* 216.178.35.203 - Jakarta Commons-HttpClient/3.0.1 - MySpace? Ugh, no thanks. Please don't aggregate my content for your "news".
+
+#### Continuous Comment Spam Posts
+* [http://www.projecthoneypot.org/i_f53c8eb741cd545b1775cf36d0e31ea9 194.83.70.20] (link to project honeypot)
+* 124.240.91.28 - posts over and over again
+* 60.213.208.32 - also posts over and over again
+* 125.36.48.170 - also posts over and over again
+* 60.167.2.23 - also posts over and over again
+* 123.151.34.1 - also posts over and over again
+* 61.141.221.248 - also posts over and over again
+* 219.148.30.186
+* 61.55.235.194 - also posts over and over again
+* 222.189.70.75 - also posts over and over again
+* 60.1.49.117
+* 59.35.114.119
+* 61.166.143.225
+* 222.93.184.42
+* 60.208.201.244
+* 125.36.78.201
+* 82.146.52.98
+* 82.146.52.103
+* 64.86.69.6 - tried to comment consecutively across several unrelated blogs - comment spam
+* 60.190.240.66
+
+#### Tries Exploits
+* 64.26.145.91 - tries /includes/lang/language.php?path_to_root
+* 222.95.173.65 - also posts over and over again
+* 64.15.136.24 - /includes/lang/language.php?path_to_root
+* 66.246.218.159 - /includes/lang/language.php?path_to_root
+* 209.40.205.123 - access/login.php?path_to_root
+
+### Add to block list because of [[Wordpress]] comment spam
+* 18.246.2.33
+* 62.24.71.231
+* 212.41.229.188
+
+### See Also
+* [[Mod_spamhaus]]
+* [[More IP Addresses That Have Been Blocked By mod_spamhaus]]
+

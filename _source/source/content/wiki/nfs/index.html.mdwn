@@ -1,0 +1,80 @@
+NFS is pretty sweet for convenient, ''insecure'', access to remote files. I say insecure, but with [[tunnels]] and [[VPN]]s, NFS can be made more secure.
+
+### NFS Server
+Setting up an NFS server is probably easier than you might think. Here's some important components:
+* [[Example NFS Exports File]]
+
+### Mounting an NFS Export
+Similarly, mounting an NFS export can be easy too! I needed to install nfs-common and portmap on the client. Then, its as simple as:
+<pre>
+mount nfs.example.com:/path/to/export /target/mount
+</pre>
+
+It can also be done with /etc/fstab:
+
+<pre>
+172.16.2.47:/ /home/all/nfs nfs4  _netdev,noatime,rsize=8192,wsize=8192,user,hard,rw,timeo=4,intr,proto=udp 0 0
+</pre>
+
+### Debugging NFS
+<pre>
+# nfsstat --rpc
+Server rpc stats:
+calls      badcalls   badauth    badclnt    xdrcall
+13381      0          0          0          0
+
+Client rpc stats:
+calls      retrans    authrefrsh
+0          0          0
+</pre>
+
+#### Get a List of all NFS Clients
+<pre class="sh_sh">
+cat /var/lib/nfs/rmtab
+</pre>
+
+or (from server):
+
+<pre class="sh_terminal">
+showmount localhost
+</pre>
+
+#### unable to register (statd, 1, udp) *RESOLVED*
+
+I was setting up NFS once and I ran into an issue where nfs-kernel-server wouldn't start. Syslog reported this:
+
+<pre class="sh_log">
+May 19 13:48:56 server rpc.statd[16714]: Version 1.1.2 Starting
+May 19 13:48:56 server rpc.statd[16714]: unable to register (statd, 1, udp).
+</pre>
+
+I couldn't figure it out, but was able to resolve it by stopping nfs-common and portmap, and then starting portmap first, verifying it was running with this command:
+
+<pre class="sh_sh">
+# rpcinfo -p localhost
+   program vers proto   port
+    100000    2   tcp    111  portmapper
+    100000    2   udp    111  portmapper
+</pre>
+
+And then starting nfs-common (/etc/init.d/nfs-common start), checking rpcinfo again, and then starting nfs-kernel-server.
+
+#### NFS Stale File Handle
+I'd seen this error in the past, but only when something between the client and the server was disrupted. More recently I saw it happen when the NFS connection was going through a load balancer which made the server believe that only one client was connected. In fact, I'm surprised that worked at all. Even more odd was that after a network re-design, the problem persisted, apparently because the server was running [[Ubuntu]] 10 and the client was running Ubuntu 8! Odd, indeed. Another caveat is that the server is running [[encfs]] under the NFS mount.
+
+### NFS Related Operating Systems
+#### [[FreeBSD]] Based
+* [[FreeNAS]]
+
+#### [[OpenSolaris]] Based
+* [[NexentaStor]]
+
+### See Also
+* [[PXE Boot]]
+* [[FreeNAS]]
+* [[PC Engines Geode Kernel with NFS]]
+* [[Autofs]]
+* [[NFS Ganesha]]
+* [[NFS User Server]]
+* [[NFS Optimization]]
+* [[Unfs3]]

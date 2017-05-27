@@ -1,0 +1,48 @@
+### Summary
+In my humble opinion, the main drawback to intel boards is their lack of hardware random number generators. Being the cheapskate that I am, I'm holding out on buying an additional chip, though I'm sure I'll get one someday. I've gone through the options and found a few good ideas, though I must acknowledge up front that I am not a security expert and insist that you do not rely upon my ideas for your security needs.
+
+### Disk I/O
+The kernel is setup to use keyboard, mouse and disk activity as sources of random numbers. However, my computers don't have keyboards or mice! Since I mainly use intel boards for web servers running linux, a lot of entropy gets used up when Apache gets restarted, or I log in using ssh. I use strong passwords for shell users, but the problem is the lack of random sources, like a keyboard and mouse. To boot, I also try to reduce disk IO as much as possible to save energy.
+
+### Audio
+I'm using audio-entropyd hooked up to a mic placed inside the computer, where the noise from the fan is nice and loud.
+
+### Other Random Sources
+Two of my favorite chips, the geode lx800 and the via c7 both have hardware RNGs with great support in linux. These I use for my VPNs where security is serious business. They also have security blocks and are low power, so they are perfect for the job. But they have random data to share! I use the egd (entropy gathering daemon) perl module to gather data from the hwrng computers, then harvest it using the egc (entropy gathering client) and insert it into /dev/urandom. From there, I even use rng-tools to sift through /dev/urandom and feed back the most random bits into the kernel for /dev/random.
+
+Now that's really where the not-so-good action comes in. I shouldn't be using /dev/urandom as a hardware rng source for /dev/random, but I am. For many reasons, it makes my life a lot easier. Because I'm seeding urandom with data from real hw rngs, as well as using random audio white noise, and the disk IO when its available, I'm feeling good about the randomness of my data. I've spent a lot of time on this and strongly encourage you to do the same. Its very interesting stuff!
+
+Aha! Thanks to http://www.jukie.net/~bart/blog/entropy-injection-driver I learned that you can access the remote rng directly. :-)
+<pre>
+    apt-get install rng-tools pv
+    ssh random-system cat /dev/random | pv -Wrb | rngd -f -r /dev/stdin
+</pre>
+
+### RNG-Tools From One Machine to Another
+I have this setup as simple as I can, but it is still a little bit of a mess. RNG-Tools is the best tool I've found for managing entropy, but it really can't be used without a HW RNG. It can be, but it is tricky. I use cat to stream a random block of data to a fifo pipe, which is then cat'd to the stdin device, which rngd reads. Phew! The random block of data is simply a dd output from /dev/hwrng on another machine. I set this up in cron to be refreshed every 5 minutes and made accessible via a webserver on the hardware generating board (the via c7 or the geode lx800), and then downloaded by the machine which needs the random data (the intel board).
+
+<pre>
+cat /tmp/random > /dev/rngin & cat /dev/rngin | rngd -t 30 -s 128 -b -p /var/run/krngd.pid -r /dev/stdin
+</pre>
+
+### Simple Userland Shell Command
+<pre>
+ssh pro-12-gl head -c 6K /dev/random | pv -Wrb | sudo rngd -W 3096 -f -s 128 -r /dev/stdin
+</pre>
+
+### Better [[Netcat]] based Entropy Server
+Thankfully this can be done via cron!
+
+#### Randomness Server
+<pre>
+head -c 8K /dev/random | nc -w 45 -l -p 3333 -r
+</pre>
+
+#### Randomness Client
+<pre>
+nc -q 1 pro-12-gl 3333 | pv -Wrb | sudo rngd -B 1 -t 6 -T 1 -W 3096 -s 128 -r /dev/stdin && sleep 1 && killall rngd
+</pre>
+
+### See Also
+* [[Linux and entropy]]
+

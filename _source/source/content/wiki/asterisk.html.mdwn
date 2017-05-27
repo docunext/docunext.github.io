@@ -1,0 +1,7 @@
+Asterisk is an [[open source]] phone system, or a private business extender (PBX) to be more precise.
+
+#### AskoziaPBX
+
+AskoziaPBX is a FreeBSD distribution and a super-duper phone system. Using asterisk and a m0n0wall base, it is a very capable operating system for managing multiple phone extensions, and connecting them to a voip service provider.
+
+I've been using askoziaPBX for over three months as of November 2007, and although we have very light call demand, the platform is has worked absolutely flawless for us.

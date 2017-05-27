@@ -1,0 +1,31 @@
+Racoon is used in [[IPSEC]] implementations. Along with [[ipsec-tools]], it can create a [[VPN]] connection.
+
+### Configuration Notes
+For me to setup a VPN connection between a Linode virtual server and a pfsense gateway, I installed racoon and iproute and their dependencies on the linode machine. Then I edited /etc/racoon/racoon.conf and /etc/racoon/psk.txt. I had to open up port 500 on the linode machine, as well as restart setkey and racoon. Lastly to ping the gateway subnet from the linode machine I had to setup a route like this:
+
+<pre>
+ip route add 192.168.8.0/24 via 192.168.134.22 dev eth1 src 192.168.134.22
+</pre>
+
+### Potential Errors
+<pre>
+ERROR: failed to get sainfo.
+</pre>
+
+<pre>
+INFO: unsupported PF_KEY message REGISTER
+</pre>
+
+### Potential Errors
+<pre>
+ERROR: failed to get sainfo.
+</pre>
+
+<pre>
+INFO: unsupported PF_KEY message REGISTER
+</pre>
+
+### Related Pages
+* [[IPSec]]
+* [http://www.docunext.com/blog/2007/05/debian-and-m0n0wall-vpn.html debian and m0n0wall]
+

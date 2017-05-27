@@ -1,0 +1,20 @@
+### Summary
+PC Engines are my favorite small motherboards.
+
+### [[ALIX]]
+The [[ALIX]] boards come in a few different formats: mini-itx, and two even smaller versions. The mini-itx board comes with on-board video which is pretty cool. All of them use the [[AMD Geode]] LX [[CPU]] and only consume about 5 watts of power. NICE!
+
+It has a [[cryptography]] chip too!
+
+### WRAP
+The wireless router application platform is no longer in production.
+
+### See Also
+* [[My Notes on Patching 2.6.22 with OCF]]
+* [[PC Engines Geode Kernel with NFS]]
+* [[pfSense]]
+* [[m0n0wall]]
+
+### Links
+* [http://www.pcengines.ch PC Engines Website]
+

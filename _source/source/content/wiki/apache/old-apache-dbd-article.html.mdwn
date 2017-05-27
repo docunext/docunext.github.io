@@ -1,0 +1,91 @@
+Apache mod_dbd on Debian?
+<pre>
+apt-get install libaprutil1-dev
+apt-get install apache2-utils
+</pre>
+Errors:
+<pre>
+This function has not been implemented on this platform: DBD: failed to initialise
+This function has not been implemented on this platform: DBD: driver for [DBDriver unset] not available
+</pre>
+Not sure, but following this (its outdated, but useful):
+
+http://www.mail-archive.com/dev@apr.apache.org/msg15983.html
+
+I'm trying
+<pre>
+apt-get install libmysqlclient15-dev
+apt-get install autoconf python libtool
+</pre>
+
+Better, I think this is how is should be done:
+ # Download apache source
+ # Download mysql driver from webthing to srclib/apr-util/dbd/
+ # Run ./buildconf in apache source root dir
+ # ./configure --enable-dbd --enable-authn-dbd
+
+<del>http://www.mail-archive.com/dev@apr.apache.org/msg16180/apr-util_dbd.m4.patch</del>
+
+More important:
+http://bahumbug.wordpress.com/2007/09/05/new-dbd-drivers/
+
+OK, I think I figured it out. I'm using the svn trunk checkout of httpd, apr, and apr-util, and the following configure specs:
+
+<pre>
+./configure --with-included-apr --with-mysql=/usr --enable-dbd --enable-authn-dbd
+</pre>
+
+And in the make phase:
+<pre>
+
+ -I/usr/include/mysql/include/mysql
+</pre>
+
+Cool! Wait, not cool, I need to change the --with-mysql spec to just --with-mysql=/usr. Done.
+
+Uh-oh:
+<pre>
+collect2: ld returned 1 exit status
+make[2]: *** [htpasswd] Error 1
+make[2]: Leaving directory `/usr/src/httpd/support'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/usr/src/httpd/support'
+make: *** [all-recursive] Error 1
+</pre>
+
+That previously mentioned --with-mysql fix worked, and the make process built apr_dbd_mysql.o. I'd prefer a shared object. Wonder how I build that... I'm trying out --enable-mods-shared=all in the configure stage.
+
+Got it to work! I removed the debian package, and then checked out the trunk from svn.apache.org. I downloaded the httpd, apr, and apr-util source, then ran ./buildconf, then
+
+./configure --enable-mods-shared=all --with-included-apr --with-mysql=/usr --enable-dbd --enable-authn-dbd
+
+Then to start the server, I issued:
+<pre>
+/usr/local/apache2/bin/apachectl start
+</pre>
+At first I got some errors about the server name, so I added my hostname to the /etc/hosts/ file, as well as added ServerName 127.0.0.1 to the Apache conf file.
+
+To activate the module, I used the following in /usr/local/apache2/conf/httpd.conf
+<pre>
+DBDriver mysql
+DBDParams host=127.0.0.1,user=asjhfkdjsfhaslkjghfg,pass=fkjr4lh5gh,dbname=ladkfjohg54kghjtg
+</pre>
+
+FYI: Gibberish replacing real credentials.
+
+Then to check:
+<pre>
+mysql> show processlist;
++----+------+-----------------+-------+---------+------+-------+------------------+
+| Id | User | Host            | db    | Command | Time | State | Info             |
++----+------+-----------------+-------+---------+------+-------+------------------+
+|  6 | root | localhost:46814 | mysql | Sleep   |   78 |       | NULL             |
+|  7 | root | localhost:46815 | mysql | Sleep   |   78 |       | NULL             |
+|  8 | root | localhost:46816 | mysql | Sleep   |   78 |       | NULL             |
+|  9 | root | localhost:46817 | mysql | Sleep   |   78 |       | NULL             |
+| 10 | root | localhost:46818 | mysql | Sleep   |   78 |       | NULL             |
+| 11 | root | localhost       | NULL  | Query   |    0 | NULL  | show processlist |
++----+------+-----------------+-------+---------+------+-------+------------------+
+</pre>
+
+Yup, it works. Very very cool.

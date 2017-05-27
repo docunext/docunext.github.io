@@ -1,0 +1,20 @@
+### DHIS Summary
+I believe that this is a dynamic [[DNS]] solution of sorts... yes, it could be more than that too, not sure yet.
+
+### My Experience with DHIS
+I stopped using dynamic [[DNS]] services from dyndns for two reasons:
+* No glue for .com names from .org dyndns nameservers
+* I didn't want to use my account password to update the host record
+
+Its taken me awhile but I decided to simply try another service, like dhis.org, so I signed up for a free account and install dhis-client on a debian machine.
+
+I'm using it to update a record of the public address of my laptop computer. This is helpful for a couple of reasons:
+* It will help track it down in case it gets stolen
+* I'm using it to open ports on certain servers using [[iptables]]
+
+### Related Pages
+* [[Shell script to check for DNS updates]]
+
+### External Links
+http://www.dhis.org
+

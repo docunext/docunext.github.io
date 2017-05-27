@@ -1,0 +1,14 @@
+Middleman is a static web compiler written in [[Ruby]]. I'm using it for one site as of late 2012, but plan to use it for a couple more sites as well.
+
+#### Middleman Features
+
+* Blog plugin
+* Gzip build files
+* File specific templates
+* Uses Bundler
+
+It has some similarities to [[Ruby on Rails]]:
+
+* ERB Templates
+* Uses ActiveSupport
+

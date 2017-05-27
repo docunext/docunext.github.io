@@ -1,0 +1,53 @@
+<pre>
+2006/01/02 ok
+  Expenses          $1300
+  Assets:Cash
+
+2006/01/02 ok
+  Income          -$2455
+  Assets:Cash
+
+
+2006/01/02 ok
+  Liabilities:Loan          -$500
+  Assets:Cash
+
+
+2006/01/02 ok
+  Equity          -$1500
+  Assets:Cash
+
+
+2006/12/31 ok
+  Expenses          -$1300
+  Income            $2455
+  Equity:Retained Earnings
+
+</pre>
+
+<pre>
+ledger -f ko.txt bal
+               $3155  Assets
+              $-2655  Equity
+               $-500  Liabilities
+</pre>
+
+The accounting equation is such that Assets = Equity + Liabilities. In this case, $3155 does not equal $-3155. How come? The ledger documentation to try putting -Equity at the end:
+
+<pre>
+               $3155  Assets
+               $-500  Liabilities
+--------------------
+               $2655
+</pre>
+
+Hmm, still not making much sense to me. How about:
+<pre>
+ledger -f ko.txt bal -Equity -Liabilities
+               $3155  Assets
+--------------------
+               $3155
+</pre>
+
+Yeah, that sort of works. Does this show that Ledger doesn't have a concept of debits or credits, and the normal balance of standard account types? Possibly.
+

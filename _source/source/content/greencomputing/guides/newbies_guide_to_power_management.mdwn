@@ -1,0 +1,41 @@
+I first learned about Power Management through this website: 
+
+* <http://www.gentoo.org/doc/en/power-management-guide.xml>
+
+It is a good overview of how everything works.
+
+While focused on Thinkpads mostly, this page is also very helpful:
+
+* <http://www.thinkwiki.org/wiki/How_to_reduce_power_consumption>
+
+### Power Management on Computers running the Debian Universal Operating System 
+
+On laptops and small service machines which run 24/7 I install:
+
+<pre class="sh_sh">
+apt-get install acpitool
+</pre>
+
+and I add this to /etc/rc.local
+<pre class="sh_sh">
+echo "/bin/echo 1500 > /proc/sys/vm/dirty_writeback_centisecs" >> /etc/rc.local
+echo "/bin/echo 5 > /proc/sys/vm/laptop_mode" >> /etc/rc.local
+echo "hdparm -S 12 /dev/sda" >> /etc/rc.local
+echo "modprobe acpi" >> /etc/rc.local
+echo "echo 'ondemand' > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor" >> /etc/rc.local
+</pre>
+
+### Powertop 
+[[/Software/Powertop]] is a great utility for linux to get an idea of what is causing your processor to wakeup. It was written by Intel and takes advantage of newer features in their CPUs.
+
+<pre class="sh_sh">
+sudo apt-get install powertop
+sudo powertop
+</pre>
+
+Powertop will display a "top" like scoreboard, identifying some processes which are chewing up energy, as well as suggest helpful ideas to reduce power consumption.
+
+### Related Pages
+
+* [[/Hardware]]
+* [[/Computer Power Efficiency Ratings]]

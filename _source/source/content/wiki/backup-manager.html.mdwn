@@ -1,0 +1,22 @@
+Backup Manager is a "Versatile Command Line Backup Tool for GNU/Linux".
+
+It has a wide spectrum of capabilities and features. I'm using it to backup some stuff currently, but I've yet to take full advantage of what it has to offer.
+
+### Backup Manager Features
+
+* Backup files, [[MySQL]] databases, and [[Subversion]] repositories
+* Transfer backups to remote storage systems, like [[S3]], or basic transfers with [[Rsync]] or [[FTP]]
+* [[Encryption]] with [[GPG]]
+
+### My Experience with Backup Manager
+This is a command line backup tool I found out about thanks to Planet [[Debian]]. Today I finally tried it out and it works great - its simple AND full-featured. Nice.
+
+I'm using it a little differently, I'm backing up a few hosts over a network using [[rsync]], and then using backup-manager to make tarballs from those directories. This might generally be the same thing as the option for backup manager to use the "tarball-incremental" backup method.
+
+Another thing that kind of annoys me is that you need to use [[SSH]] when using rsync as an upload method. Although I don't like [[FTP]], I'm using it with backup-manager for simplicity.
+
+### See Also
+* [[Rsync]]
+* [[Backups]]
+* [[Bacula]]
+

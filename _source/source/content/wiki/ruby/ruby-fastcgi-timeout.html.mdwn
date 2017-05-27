@@ -1,0 +1,63 @@
+This Ruby is an example FastCGI Ruby script that has both a request limit and
+a timeout limit:
+
+<pre class="prettify"><code>
+class TimeoutProxy
+  include Timeout
+
+  def initialize(receiver, timeout_in_seconds)
+    @receiver = receiver
+    @timeout_in_seconds = timeout_in_seconds
+  end
+
+  def method_missing(method, *args, &block)
+    timeout(@timeout_in_seconds) do
+      @receiver.send(method, *args, &block)
+    end
+  end
+end
+
+class Object
+  def with_timeout(timeout_in_seconds)
+    TimeoutProxy.new(self, timeout_in_seconds)
+  end
+end
+
+class Goo
+
+  def self.runit
+  i = 0
+
+  FCGI.each_cgi {|cgi|
+
+      i = i + 1
+      puts cgi.header("text/xml")
+      puts "&lt;remote_ip>"
+      puts i
+      puts cgi.env_table["REMOTE_ADDR"]
+      puts "&lt;/remote_ip>"
+      if(i == 4) then
+          system("/usr/local/bin/restart_fcgi.sh & ")
+      end
+  }
+
+  end
+end
+
+Goo.with_timeout(20).runit
+</code></pre>
+
+I like this concept a lot. The /usr/local/bin/restart_fcgi.sh is like this:
+
+    #!/bin/sh
+    
+    killall blah.fcgi
+    sleep 1
+    spawn-fcgi -u nginx -f blah.fcgi -s /tmp/blah.sock blah.fcgi
+    chmod 0666 /tmp/blah.sock
+
+In this way, I can use [[thttpd]] and [[nginx]] together to run [[fastcgi]]
+daemons with process limits.
+
+Big thanks to:
+* http://tumble.lukeredpath.co.uk/post/12847007/timeout-on-any-ruby-method

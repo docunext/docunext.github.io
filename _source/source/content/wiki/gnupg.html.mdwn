@@ -1,0 +1,10 @@
+### Gnu Privacy Guard
+As the name suggests, GnuPG is not only associated with [[security]], but also [[privacy]].
+
+It supports the ability to encrypt information as well as create, manage and organize digital signatures.
+
+### See Also
+* [[OpenPGP]]
+* [[GNU]]
+* [[Email]]
+

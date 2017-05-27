@@ -1,0 +1,21 @@
+### Dnsmasq Summary
+Dnsmasq is a caching, non-authoritative [[DNS]] server / forwarder. It is small, efficient, and lightweight. It is available as a [[Debian]] package, and it is also notably included in [[pfSense]] as the [[DNS]] forwarder and [[DHCP]] server.
+
+### My Configuration
+<pre>
+domain-needed
+bogus-priv
+no-resolv
+server=192.168.8.1
+server=4.2.2.1
+</pre>
+
+Obviously I don't use the [[DHCP]] capabilities with this configuration!
+
+### See Also
+* [[Unbound]]
+* [[BIND]]
+
+### Links
+* [http://marcotmarcot.wordpress.com/2010/08/19/using-dnsmasq-with-networkmanager/ Using Dnsmasq with Network Manager]
+

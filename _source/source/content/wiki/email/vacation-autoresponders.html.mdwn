@@ -1,0 +1,48 @@
+I use [[maildrop]] and [[Squirrelmail]] to power vacation autoresponders on [[Debian]] and [[Gentoo]].
+
+### Maildrop File
+/etc/maildroprc
+<pre>
+DEFAULT="$HOME/.maildir/"
+
+MAILDIR="$DEFAULT"
+
+logfile "$HOME/maildrop.log"
+
+log "maildir = $MAILDIR"
+
+`test -f $HOME/vacation.txt && exit 1 || exit 0`
+if ($RETURNCODE==1)
+{
+       {
+       if (!/^List-Unsubscribe:.*/:h )
+       {
+        if ( !(/^X-Spam-Flag: YES/:h) && !(/^X-Spam-Status: Yes/:h) )
+               {
+                      RESPOND="$HOME/vacation.txt"
+                      RESPONDDB="$HOME/autorespond.db"
+                  CC_ADDRESSES="$HOME/vacation_cc_addresses.txt"
+            CC_ADDRS=`cat $CC_ADDRESSES`
+            log "$CC_ADDRS"
+            #-A 'CC: $CC_ADDRS'
+            # The following must be one contiguous line
+            cc "!$CC_ADDRS"
+            cc "| mailbot -t $RESPOND -A 'From: $LOGNAME' -s 'Auto Response: from $LOGNAME' /usr/sbin/sendmail -t -f ''"
+
+               }
+       }
+       }
+}
+</pre>
+http://www.squirrelmail.org/plugin_view.php?id=187
+
+### Permissions Problem
+For me this worked on [[Debian]]:
+<pre>
+chown vmail:daemon /var/run/courier/authdaemon/
+</pre>
+
+### See Also
+* [[SquirrelMail]]
+* [[My Email Services Configurations]]
+

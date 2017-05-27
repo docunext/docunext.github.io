@@ -1,0 +1,37 @@
+Maximum Transmission Unit
+
+### What does it mean?
+To send data across a [[network]], computers break big chunks of data into smaller ones. This is called '''fragmentation'''. For example, if you have a 500MB file, the network won't send it all in one piece. [[Networking]] equipment and software can be configured to limit (or extend) the maximum size of each block of data sent between network interfaces.
+
+It gets more complicated with [[TCP]] encapsulation, which requires more overhead than standard TCP. For example, if a host sends a 1500 byte packet that gets encapsulated in [[IPSec]], [[IPSec]] must add its own header information, which adds another 20 bytes onto the packet, which results in the packet being too large, which can be problematic if the don't fragment header is set, sometimes in encrypted tunnels, such as [[SSL]] or [[SSH]].
+
+Path MTU discovery should avoid packets that are too large with a don't fragment header. This requires a firewall to support [[ICMP]] packets, but in my experience I've run into problems even when my firewall allows all [[IMCP]] packets.
+
+#### Example MTUs
+
+* [[DSL]], Dial-up, [[FIOS]] - 1492
+* [[Ethernet]] - 1500
+* Jumbo ethernet - 10000
+
+Things can get a little complicated in certain situations. In my experience, I've had problems with [[IPSec]], [[NFS]] and [[FIOS]].
+Apparently, [[IPSec]] incurs a little overhead, [[NFS]] on [[GNU/Linux]] reportedly sends a "don't fragment" flag along with fragmented packets, and I haven't gotten a clear report on the IP overhead involved with [[FIOS]].
+
+#### Linux IPtables
+<pre class="sh_sh">
+iptables --insert OUTPUT --jump TCPMSS --protocol tcp --tcp-flags SYN,RST SYN,RST --set-mss 1400
+</pre>
+
+### Related Pages
+* [[PfSense]]
+* [[IPSec]]
+* [[NFS Optimization]]
+
+### External Links
+* http://www.telecomrebirth.com/blog/fios/
+* http://www.netheaven.com/pmtu.html
+* http://www.cisco.com/en/US/tech/tk827/tk369/technologies_white_paper09186a00800d6979.shtml
+* http://www.rfc-editor.org/rfc/rfc1191.txt
+* http://www.chakraborty.ch/?p=61
+* http://www.wlug.org.nz/MSS
+* http://www.mail-archive.com/support@pfsense.com/msg09450.html
+

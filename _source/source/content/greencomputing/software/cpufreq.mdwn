@@ -1,0 +1,1 @@
+Cpufreq is the linux kernel cpu frequency scaling module set.

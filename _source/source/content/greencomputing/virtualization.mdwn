@@ -1,0 +1,1 @@
+Virtualization is a CPU capability which works with virtualization software.

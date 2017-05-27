@@ -1,0 +1,28 @@
+I've tried out Sinatra and I love it. Its actually very similar to Nexista in that the sitemap is the application. You start out with something like this:
+
+<pre class="sh_ruby">
+require 'rubygems'
+require 'xslt'
+require 'sinatra'
+
+sdoc = XML::Document.file('index.xsl')
+stylesheet = XSLT::Stylesheet.new(sdoc)
+
+get '/' do
+    xml_doc = XML::Document.file('index.xml')
+    blah = stylesheet.apply(xml_doc)
+    "#{blah}"
+end
+</pre>
+
+I can imagine transforming an existing [[Nexista]] application sitemap into a Sinatra application with ease!
+
+### Learning How to Use Sinatra
+I just found a blog post that suggested reading the Sinatra code. I've looked through it a bunch before, and its a good idea so I'm definitely going to do it again. I've also reviewed a bunch of other sinatra apps, like [[Git-wiki]]. That was very helpful.
+
+### Helpers
+I'm writing some helpers for Sinatra:
+
+* [[Sinatra-XSLView]]
+* [[Sinatra-Cache]]
+* I wish there was a more sophisticated configuration helper for Sinatra - there are, thanks to the [[Ruby Proc]]!

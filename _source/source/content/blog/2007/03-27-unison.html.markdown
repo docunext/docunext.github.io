@@ -1,0 +1,6 @@
+---
+title: Unison Machine Migration
+date: 2007-03-27
+---
+I just migrated my desktop Powermac G5 to an iMac Intel, and I've been trying to synchronize my home directory with unison, only to be foiled many times by different roots. After trying to use rootalias numerous times unsuccessfully, I realized that the rootalias line in .unison/default.prf has to be on both machines. After that, it worked fine, using the old snapshots of the filesystems. Nice!
+

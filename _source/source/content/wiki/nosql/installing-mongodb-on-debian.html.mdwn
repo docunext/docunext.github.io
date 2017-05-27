@@ -1,0 +1,39 @@
+UPDATE: [[MongoDB]] is now available in [[Debian]] squeeze, so I'm not using that version now.
+
+<pre>
+ apt-cache showpkg mongodb
+Package: mongodb
+Versions:
+1:1.2.2-1 (/var/lib/apt/lists/ftp.us.debian.org_debian_dists_squeeze_main_binary-amd64_Packages)
+ Description Language:
+                 File: /var/lib/apt/lists/ftp.us.debian.org_debian_dists_squeeze_main_binary-amd64_Packages
+                  MD5: bef3fde81f8c6d67cd4338d904dfb6c3
+
+Reverse Depends:
+  mongodb-unstable,mongodb
+  mongodb-stable,mongodb
+  mongodb-snapshot,mongodb
+Dependencies:
+1:1.2.2-1 - libboost-filesystem1.40.0 (2 1.40.0-1) libboost-program-options1.40.0 (2 1.40.0-1) libboost-system1.40.0 (2 1.40.0-1) libboost-thread1.40.0 (2 1.40.0-1) libc6 (2 2.3.2) libgcc1 (2 1:4.1.1) libmozjs2d (2 1.9.1) libncurses5 (2 5.6+20071006-3) libpcap0.8 (2 0.9.8) libpcre3 (2 7.7) libpcrecpp0 (2 7.7) libreadline6 (2 6.0) libstdc++6 (2 4.4.0) upstart-job (0 (null)) adduser (0 (null)) xulrunner-dev (0 (null))
+Provides:
+1:1.2.2-1 -
+Reverse Provides:
+pro-2-gl:/home/albertlash# apt-cache showpkg mongodb-stable
+Package: mongodb-stable
+Versions:
+20100305 (/var/lib/apt/lists/downloads.mongodb.org_distros_debian_dists_5.0_10gen_binary-amd64_Packages)
+ Description Language:
+                 File: /var/lib/apt/lists/downloads.mongodb.org_distros_debian_dists_5.0_10gen_binary-amd64_Packages
+                  MD5: bef3fde81f8c6d67cd4338d904dfb6c3
+
+Reverse Depends:
+  mongodb-unstable,mongodb-stable
+  mongodb-snapshot,mongodb-stable
+Dependencies:
+20100305 - libboost-filesystem1.35.0 (2 1.35.0-1) libboost-program-options1.35.0 (2 1.35.0-1) libboost-system1.35.0 (2 1.35.0-1) libboost-thread1.35.0 (2 1.35.0-1) libc6 (2 2.7-1) libgcc1 (2 1:4.1.1) libmozjs1d (2 1.9~b4) libncurses5 (2 5.6+20071006-3) libpcap0.8 (2 0.9.3-1) libpcre3 (2 7.4) libpcrecpp0 (2 7.6) libreadline5 (2 5.2) libstdc++6 (2 4.2.1) xulrunner-dev (0 (null)) mongodb (0 (null)) mongodb-snapshot (0 (null)) mongodb-unstable (0 (null))
+Provides:
+20100305 -
+Reverse Provides:
+</pre>
+
+Back to [[MongoDB]].

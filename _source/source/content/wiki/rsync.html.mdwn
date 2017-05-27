@@ -1,0 +1,30 @@
+### Summary
+Rsync is a very cool program - it can synchronize really well. The nice thing about rsync is that it only synchronizes files that have changed. It is usually run from the [[command line]].
+
+### Mirroring
+Rsync can be used to mirror file systems, however, the recursive option can be an unnecessarily intense option, especially for pushing. Here's some thoughts I have on how to reduce the amount of work necessary to only update the recently changed files (these would need to be changed depending on how I used them):
+<pre>
+find . -maxdepth 3 -mmin -30 - exec rsync {} ...
+
+</pre>
+
+### Resource Consumption
+Rsync can use a lot of resources! In late 2009 I started configuring /etc/default/rsync to include:
+<pre>
+RSYNC_NICE='10'
+</pre>
+
+### Rsync Errors
+This isn't really an error, but it appears when the unexpected occurs:
+<pre>
+rsyncd-munged
+</pre>
+
+### See Also
+* [[Rsyncd.conf Manual]]
+* [[SCP]]
+* [[Nice]]
+
+### External Links
+* http://www.docunext.com/blog/2009/10/debugging-and-reducing-io-wait.html
+

@@ -1,0 +1,69 @@
+## Laptops / Notebooks
+
+Notebook computers are very efficient in the way they manage power. They have to! Sometimes they have to run off of a battery with a limited temporary lifespan. To do so, notebook computers reduce the brightness of the screen, spin down the hard drive (not a good idea to do very often though), reduce processor power, and even turn off the cooling fans. They also go to sleep to save power. The downside? They are more expensive. There are some notable exceptions though, check out the [http://www.my-tech-deals.com/blog/notebooks/ Notebooks Category at My-Tech-Deals.com].
+
+* [[/Hardware/Everex]] - as low as 9 watts
+* [[/Hardware/Toshiba Notebooks]] - as low as 15 watts
+* [[/Hardware/ACER/ACER Notebooks]]
+
+## Embedded Systems 
+
+* [[/Hardware/Linksys/Linksys NSLU2]] - uses 5 watts with only a USB drive, up to 15 with an external USB drive (depends on drive and drive size)
+* [[/Hardware/Thecus n2100]]
+* [[Hardware/HP/HP t5000]] - uses about 14 watts WITH a 2.5" SATA hard drive (external USB, powered only by host USB bus)
+* [[Hardware/HP/HP t5135]]
+* [[Hardware/HP/HP t5725]] - uses about 21 watts with no drive, only flash storage
+* ebox - 15 watts
+* ebox iv uses via c7 eden processor!
+* [[/Hardware/ASUS/ASUS Terminator C3]] - [[Via C3]] - 35 watts
+* [[/Hardware/PC CHIPS V21G (V1.0C) VIA C7]]
+* http://linux.jjplus.com/index.html - reported to only use 2 watts
+
+## Thin Clients 
+
+* Gigabyte TA7
+* http://www.idot.com.tw/en/products/C7-thinclient/
+* http://www.pc-experts.org/index.php?topic=8161.msg117477
+* [[/Hardware/The Zonbu Zonbox]]
+* [[Hardware/HP/HP Thin Clients]]
+
+## Mini-ITX
+
+* [[Hardware/Intel/Intel Little Valley D201GLY]]
+* [[Hardware/VIA/VIA EPIA Boards]]
+* [[/Hardware/MSI Industrial Boards]]
+* [[/Hardware/PC Engines/ALIX 1c]]
+
+## Desktops 
+
+* [[Hardware/ACER/ACER]]
+
+##Macintosh
+
+* [[Hardware/Apple/Mac Mini]] - as low as 18 watts
+* [[Hardware/Apple/Macbook]]
+
+###Miscellaneous
+
+* [[/Hardware/ASUS/ASUS Terminator C3]]
+* [[/Hardware/dectop AMD PIC]] - uses about 10 watts with a WD 80GB hard drive
+
+USB Drive Equipment
+
+##Single Board Computers
+
+* [[Via Ezra Dmesg]]
+* [[/Hardware/Efika 5200B]]
+
+
+## Misc 
+
+* [[Different Types of Computers]]
+
+##Servers
+
+Servers are unfortunately serious power hogs. They run 24/7, often run at full power, and even have redundant power supplies. They generate a lot of heat too, and require special cooling. Still, they are great computers and in my opinion well worth the power usage. 
+
+## Related Pages
+
+* [[Server Processors]]

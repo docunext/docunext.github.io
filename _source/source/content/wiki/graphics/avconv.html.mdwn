@@ -1,0 +1,9 @@
+Avconv is a tool I discovered after learning that ffmpeg has been deprecated.
+
+It has a ton of features, and its easy to use. Here's an example command:
+
+<pre>
+avconv -i big_movie.avi -q 6 big_movie.mpg
+</pre>
+
+That will convert the file from an AVI to an MPG with a quality of "6", where 1 is the best quality and 31 is the lowest.

@@ -1,0 +1,18 @@
+The Mini Mac is the smallest desktop marketed by Apple.  Its specs are 6.5 inches (16.5 cm) wide, 6.5 inches (16.5 cm) deep, and 2 inches (5.1 cm) tall.
+
+#### Processor
+* 1.25 - 1.5 GHz PowerPC G4 
+* 1.5 GHz Intel Core Solo 
+* 1.66 GHz Intel Core Duo 
+* 1.83 GHz Intel Core Duo
+
+
+### Debian on the Mac Mini
+
+I used Lenny on the Mac Mini, because I wanted to use the xserver-xorg-video-intel driver. I'm getting between 19-22 Watts.
+
+I've also used Squeeze on a Mac mini, and the installation process was made much easier by the introduction of BIOS compatibility withing Apple's firmware.
+
+### nVidia Graphics Card
+
+The nvidia-settings application that is available on Debian allows GPU power control.

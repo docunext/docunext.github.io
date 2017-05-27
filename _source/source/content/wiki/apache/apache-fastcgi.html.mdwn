@@ -1,0 +1,126 @@
+#MARKUP markdown
+## Summary
+There are two [[FastCGI]] modules for [[Apache]] 2.2:
+* [[mod\_fcgid]]
+* mod_fastcgi
+
+I prefer mod_fcgid. The setup process confused me for awhile, so I'll explain my confusion here and how I've got it setup now.
+
+UPDATE: mod_fcgid is getting added to the Apache source!
+
+## General Configuration
+[[FastCGI]] and standard [[CGI]] don't know how to process your scripts on their own, so you either need to use a shebang at the top of each script or specify a wrapper in your Apache configuration.
+
+###Shebang
+Using a shebang has been easier in my experience, but I think this might isolate your scripts to being cgi-only. If you try to run them on a server which uses a language specific module like mod_php5 or mod_perl, you might be out of luck. ( I need to confirm that! )
+
+<pre>
+#!/usr/bin/php5-cgi
+</pre>
+
+### [[Apache]] fcgid.conf ([[mod_fcgid]]) Examples
+<pre>
+<IfModule mod_fcgid.c>
+  AddHandler fcgid-script .fcgi .php
+  SocketPath /var/lib/apache2/fcgid/sock
+  IPCConnectTimeout 10
+  IPCCommTimeout 20
+  OutputBufferSize 0
+  MaxRequestsPerProcess 500
+</IfModule>
+</pre>
+
+For [[trac]] (which uses [[python]]):
+<pre>
+RewriteRule /trac/(.*) /cgi-bin/$1 [PT]
+VirtualScriptAlias /usr/share/trac/cgi-bin/%0/trac.fcgi
+<Directory /usr/share/trac/cgi-bin/>
+    Options ExecCGI
+    Allow from all
+</Directory>
+</pre>
+Trac is setup this way because when a [[FastCGI]] process starts, it inherits some environmental variables, and they only get set once for each process. For example, if you have two trac environments, you'll need two separate fastcgi processes. I'm not crazy about how that is setup, but I guess it works OK. I would set the trac environment variable during runtime, not during instantiation, but maybe that would impact performance.
+
+###Wrappers for [[PHP]]
+Wrappers are executable binaries which are used to process [[FastCGI]] scripts, like [[PHP]] which has built-in [[FastCGI]] support. PHP can even run as a daemon process for web servers that can act as a [[FastCGI]] [[proxy]], like [[Apache]], [[lighttpd]] and [[NGINX]]. Apache's [[FastCGI]] [[proxy]] capabilities are provided by: [[mod_proxy_fcgi]].
+
+For [[PHP]] applications:
+<pre>
+<Directory /var/www/public/php/>
+    FCGIWrapper /usr/bin/php5-cgi .php
+</Directory>
+</pre>
+
+### PHP CGI HTTP Authentication
+<pre>
+RewriteEngine on
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+</pre>
+
+## My Own Setup on [[TTYLinux]]
+* Add .php to fcgi.conf
+* Add "FCGIWrapper /usr/bin/php5-cgi .php" to /etc/apache2/sites-available/default
+
+## Apache mod_fcgi errors
+### can't connect unix domain socket
+<pre class="sh_sh">
+arch/unix/fcgid_proc_unix.c(525): (111)Connection refused: mod_fcgid: can't connect unix domain socket: /var/lib/apache2/fcgid/sock/28150.87
+mod_fcgid: process /var/www/share/trac/cgi-bin/www.pbooks.org/trac.fcgi(28594) exit(server exited), terminated by calling exit(), return code: 255
+[info] mod_fcgid: /var/www/share/trac/cgi-bin/www.pbooks.org/trac.fcgi spawn score 13 >= 10, skip the spawn request
+[warn] (104)Connection reset by peer: mod_fcgid: read data from fastcgi server error.
+arch/unix/fcgid_proc_unix.c(525): (111)Connection refused: mod_fcgid: can't connect unix domain socket:
+</pre>
+This was caused by the trac.fcgi not being executable. Chmod 0755 trac.fcgi fixed it. :-)
+
+### mod_fcgid: can't apply process slot for...
+Permissions or directory error - check permissions for socket directory, or change socket directory.
+
+### Apache FastCGI Segaults?
+#### Segfaults in the [[Apache]] Module?
+[[Movable Type]] is causing crazy segfaults! Not good:
+
+<pre class="sh_log">
+Aug 20 20:23:30 pro-2-gl kernel: mt.cgi[18275]: segfault at 8 rip 2aed25802b2a rsp 7fff87d9ffe0 error 4
+Aug 20 20:45:02 pro-2-gl kernel: mt-search.cgi[18335]: segfault at 8 rip 2afde17d0b2a rsp 7fffcbdd2000 error 4
+Aug 20 20:57:05 pro-2-gl kernel: mt-search.cgi[18722]: segfault at 8 rip 2b2608d0cb2a rsp 7fffa4893ac0 error 4
+Aug 20 21:28:08 pro-2-gl kernel: mt.cgi[18965]: segfault at 8 rip 2ba02d7a1b2a rsp 7fff7fe01040 error 4
+</pre>
+
+I just noticed I've been getting segfaults on my [[Movable Type]] processes, a lot of them. I'm not sure when it started, but I think the last change I made to the [[Apache]] setup was the GeoIP module. As a guess, I've stopped using the MMapCache directive in the conf file. This is what I've got now:
+
+<pre class="sh_sh">
+<IfModule mod_geoip.c>
+  GeoIPEnable On
+  GeoIPDBFile /usr/share/GeoIP/GeoIP.dat
+  GeoIPOutput All
+  GeoIPScanProxyHeaders On
+</IfModule>
+</pre>
+
+I also reduced the maxclients directive in [[Apache]] from 150 to 100, as [http://ubuntuforums.org/showthread.php?t=1082709 this thread] alludes to a potential problem caused by [[Apache]] having more processes than allowed by the operating system. The thread refers to [[Ubuntu]], though I use [[Debian]], and a [[sysctl]] option I don't have on [[Debian]].
+
+Not fixed yet:
+
+<pre class="sh_log">
+Aug 20 20:57:05 pro-2-gl kernel: mt-search.cgi[18722]: segfault at 8 rip 2b2608d0cb2a rsp 7fffa4893ac0 error 4
+Aug 20 21:28:08 pro-2-gl kernel: mt.cgi[18965]: segfault at 8 rip 2ba02d7a1b2a rsp 7fff7fe01040 error 4
+Aug 20 22:12:35 pro-2-gl kernel: mt.cgi[19715]: segfault at 8 rip 2b01f9672b2a rsp 7fffb3f30170 error 4
+Aug 20 22:21:35 pro-2-gl kernel: mt-search.cgi[19704]: segfault at 8 rip 2b2704655b2a rsp 7fffa8f4b180 error 4
+</pre>
+
+I tried switching back to Apache worker, still happened. I then disallowed [[Googlebot]] from accessing mt-search.cgi for now until I can figure out what's going on. It even happens occasionally when I try to access mt.cgi.
+
+I have a suspicion that the [[FastCGI]] settings in mt-config.cgi might be causing the segmentation faults. I've made them huge so that mod_fcgid will be the only process manager.
+
+For what its worth, I've tried other process managers with [[Movable Type]] (like [[spawn-fcgi]]) and mod_fcigd seemed to do just as well as the others and in my opinion is way easier to configure.
+
+## See Also
+* [[FastCGI]]
+* [[Apache]]
+* [[NGINX]]
+
+## Links
+* http://www.docunext.com/blog/cgi-bin/movabletype/mt-search.cgi?search=apache&IncludeBlogs=250&limit=20
+* http://www.php.net/features.http-auth
+

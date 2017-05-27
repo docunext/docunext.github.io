@@ -1,0 +1,21 @@
+I use this with [[SWFObject]]:
+
+<pre class="sh_javascript">
+var so = new SWFObject("myswf.swf", "mymovie2", "120", "50", "10", "#FFFFFF");
+so.addParam("wmode","transparent");
+so.addParam("scale","noborder");
+so.addParam("salign","right");
+so.write("target");
+</pre>
+
+If the [[SWF]] movie is 220x50, in my experience, only the right part of the 220px wide will display.
+
+The important parts are:
+<pre class="sh_javascript">
+so.addParam("scale","noborder");
+so.addParam("salign","right");
+</pre>
+
+### External Links
+* http://kb2.adobe.com/cps/127/tn_12701.html
+

@@ -1,0 +1,6 @@
+I had no idea that chipsets could consume more energy than [[cpu]]s!
+
+##Chipsets
+* [[i945GSE]]
+
+[[Hardware]]

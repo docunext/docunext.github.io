@@ -1,0 +1,15 @@
+### Summary
+A load balancer is a system or service which distributes a load across two or more back-end services. Common examples include [[web server]] load balancers.
+
+Many load balancers test the back ends periodically to make sure that they are functioning, and remove them from the pool of available back-ends if they are unavailable. Furthermore, there is also sometimes a setting for a fail over destination, when none of the regular back-ends are functional or accessible.
+
+### Load Balancing Software
+* [[Crossroads]]
+* [[Apache2]]
+* [[Fair]]
+* [[Balance]]
+* [[HA Proxy]]
+* [[Slbd]]
+* [[Varnish]]
+* [[NGINX]]
+

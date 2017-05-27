@@ -1,0 +1,17 @@
+SMTP is used for outgoing and relayed email. The acronym stands for "Simple Mail Transfer Protocol".
+
+### Simple or Enhanced?
+
+In fact, SMTP is *incredibly* simple. So simple that requirements necessitated
+an enhanced version, ESMTP, which includes support for users to authenticate
+prior to sending email.
+
+### SMTP Specifications
+
+SMTP typically uses port 25, but due to overwhelming amounts of [[/Spam]], many
+ISPs block outgoing connections on port 25, forcing SMTP service clients to seek
+alternatives, such as port 587.
+
+### SMTP Servers
+
+* [[/Postfix]]

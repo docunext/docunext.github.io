@@ -1,0 +1,15 @@
+### Users and Security
+* [[Setup a debian machine to use an LDAP server for Authentication]] - this works good for me
+* [[Iptables]]
+* [[Sudo]]
+
+### Configuration Support Tools
+These aren't [[Debian]] specific, but they are available on Debian!
+* [[Etckeeper]]
+* [[Puppet]]
+
+### Backup Tools
+These aren't [[Debian]] specific, but they are available on Debian!
+* [[Bacula]]
+* [[Backup Manager]]
+* [[Rsync]]

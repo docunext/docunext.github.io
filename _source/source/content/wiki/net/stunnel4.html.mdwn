@@ -1,0 +1,5 @@
+Stunnel4 is a "secure tunnel" for making socket connections. It works great if you need to connect across the internet securely in a jiffy. I've used it for [[syslog]] and [[MySQL]] connections many a time without problems. It also supports compression but I've only ever gotten rle to work.
+
+### Related Pages
+* [[OpenSSL]]
+

@@ -1,0 +1,115 @@
+### Basic Git Commands
+
+* git clone "git-url"
+* git push origin master
+* git branch
+* git branch "branchname"
+* git merge "branchname"
+* git status
+* git gc
+
+### Git Config
+~/.gitconfig:
+<pre>
+[user]
+    email = user@example.com
+</pre>
+
+### Git Rebase
+I've done this on branches, like so:
+
+<pre class="terminal">
+git co branchname
+git rebase origin
+</pre>
+
+### Git Urls
+
+There is a git protocol and it seems to me that it is used for public
+repositories. For user-specific access to git repositories, it looks like most
+people are using [[/OpenSSH]].
+
+### Master versus Branches
+I think I'm finally figuring this git stuff out. This warning which appears when
+I try to push a master branch from one git clone to another had be confused:
+
+<pre>
+warning: updating the current branch
+warning: Updating the currently checked out branch may cause confusion,
+warning: as the index and work tree do not reflect changes that are in HEAD.
+warning: As a result, you may see the changes you just pushed into it
+warning: reverted when you run 'git diff' over there, and you may want
+warning: to run 'git reset --hard' before starting to work to recover.
+warning:
+warning: You can set 'receive.denyCurrentBranch' configuration variable to
+warning: 'refuse' in the remote repository to forbid pushing into its
+warning: current branch.
+warning: To allow pushing into the current branch, you can set it to 'ignore';
+warning: but this is not recommended unless you arranged to update its work
+warning: tree to match what you pushed in some other way.
+warning:
+warning: To squelch this message, you can set it to 'warn'.
+warning:
+warning: Note that the default will change in a future version of git
+warning: to refuse updating the current branch unless you have the
+warning: configuration variable set to either 'ignore' or 'warn'.
+</pre>
+
+Why? It takes a little running around to avoid it, but it does make sense to me
+now. While the "master" branch is supposed to be the "original" clone and all
+special and such, there may be a cases where even though its the master branch,
+it makes sense to push to it instead of merging it with other branches.
+
+If I create a git repository on a dev machine, then check it out on another
+machine, I'll then create a new branch to work on at that machine:
+
+<pre class="sh_sh">
+git branch thismachinebranch
+git checkout thismachinebranch
+</pre>
+
+Then I can commit as usual. I then push the origin branch:
+<pre class="sh_sh">
+git push origin thismachinebranch
+</pre>
+
+Then when I'm back on the other machine, I can merge the master with that branch
+if I want to. A little roundabout, but nice, actually.
+
+To make a remote repository be a only a repository, and not a working directory,
+I set "bare = true" in the core configuration of .git/config.
+
+### Git and Binary Files
+Binary files pose an interesting challenge for revision control systems.
+Thankfully, Git can use [[/git/Git Attribute Files]] to make handling binary files
+much easier!
+
+Another option is Git Annex, or [[Bup]].
+
+### Git and Private Files
+
+This is becoming a very important topic thanks to the awesomeness of Git
+- everyone is using it for everything! There are some options for this too
+- Gitcrypt and Stacked Git.
+
+#### Gitcrypt
+
+I have used Gitcrypt extensively and think its pretty cool, but since then I've
+switched to using Gpg, because [[/Vim]] has a plugin which allows me to
+transparently work with encrypted text files.
+
+### Git Annex
+Git Annex is an awesome project by Joey Hess that adds support for adding and
+tracking (but not including) large files into a Git repository. Sounds
+interesting, huh?
+
+* Git annex does a great job of making sure you don't lose data, but its still
+  possible, if you lose a remote, like a USB flash drive or due to a hard drive
+  failure.
+* Git annex is built on git, but its not realy git - though in my experience
+  some of the remotes are the same.
+
+### Other Git Stuff
+
+* [[/Git/Gitosis]]
+* [[/Git/Git-wiki]]

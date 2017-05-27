@@ -1,0 +1,34 @@
+### Gem Locations
+
+Trying to figure out how to use gems the right way. [[Ruby]] can't find my gems.
+
+http://www.skorks.com/2009/08/digging-into-a-ruby-installation-require-vs-load/
+
+These were helpful too:
+http://weblog.rubyonrails.org/2007/2/6/in-case-you-re-having-trouble-installing-gems
+
+In my case, I have two sets of rubygems installed. One from debian, and one in /usr/local/. Still not working right...
+
+If I install a gem with [[Sudo]], they get installed to /var/lib/gems.
+
+### Gem [[Hosting]]
+There are a bunch of different places that host gems:
+
+* RubyForge
+* [[GemCutter]]
+
+### [[Ruby Gems Directory]]
+
+### Misc Notes
+<pre class="sh_sh">
+rake gemspec
+gem build blah.gemspec
+</pre>
+
+### Related Pages
+* [[Ruby]]
+* [[Packaging]]
+
+### External Links
+* http://www.ruby.code-experiments.com/blog/
+

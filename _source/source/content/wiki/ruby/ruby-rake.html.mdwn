@@ -1,0 +1,25 @@
+Rake is a [[Ruby]] "[[Make]]" build utility.
+
+### Example Rakefile
+This is about as simple as it gets (this file is named "Rakefile"):
+
+<pre class="sh_ruby">
+task :default do
+    puts "hi"
+end
+</pre>
+
+when I run "rake", it puts "hi".
+
+### See Also
+* [[Vlad]]
+* [[Ruby Thor]]
+* [[Phing]]
+* [[Martin Fowler]]
+* [[Ruby]]
+
+### External Links
+* http://www.stuartellis.eu/articles/rake/
+* http://martinfowler.com/articles/rake.html
+* http://onestepback.org/index.cgi/Tech/Rake/Tutorial/RakeTutorialIntroduction.rdoc
+

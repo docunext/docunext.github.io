@@ -1,0 +1,187 @@
+For some reason I think that this project is really awesome! I was definitely interested in it because I'm familiar with [[Debian]] and want to learn more about [[FreeBSD]]. I tried is as a desktop, but ended up setting it up as a server.
+
+### Cool Stuff
+<pre>
+debian:/var/www# uname -a
+GNU/kFreeBSD debian 7.0-1-686 #0 Thu Mar  6 05:01:23 CET 2008 i686 i386 Intel(R) Celeron(R) CPU          215  @ 1.33GHz GNU/kFreeBSD
+</pre>
+I had heard many great things about FreeBSD 7 it was a great pleasure to see the kernel in the repository.
+
+[[Debian GNU/kFreeBSD sysctl -a]]
+
+<pre>
+$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/ad0s1a           9.7G  3.5G  5.5G  39% /
+devfs                 1.0K  1.0K     0 100% /dev
+linprocfs             4.0K  4.0K     0 100% /proc
+</pre>
+
+### [[Debian]] GNU/kFreeBSD i386 Package Results
+I'm testing out the debian-ports.org packages on Debian/kFreeBSD:
+
+{| border="1" cellpadding="4" cellspacing="0"
+|- bgcolor="#DDD"
+! colspan="3" | kFreeBSD 7 i386
+|-
+! Package
+! Version
+! Results
+|-
+| [[Apache2-mpm-worker]]
+| 2.2.8-3
+| Installs and runs fine
+|-
+| [[libapache2-mod-fcgid]]
+| 1:2.2-1
+| Installs and runs fine
+|-
+| [[phpsysinfo]]
+| 3.0~rc3-1
+| [http://www.docunext.com/wiki/Image:Phpsysinfo-debian-kfreebsd.gif Installs and runs, without any useful output]
+|-
+| [[phpmyadmin]]
+| 4:2.11.5.2-1
+| Installs and works OK, I used a symlink to get access to the apache2 directory
+|-
+| [[iceweasel]]
+| 3
+| Installs, works!
+|-
+| [[libnss-ldapd]]
+| 0.6.1
+| Installs and works
+|-
+| [[libpam-ldap]]
+| 184-4
+| Installs and works, I feel like the configuration of both this and [[libnss-ldapd]] was more than usual though
+|-
+| [[unfs3]]
+| 0.9.20+dfsg-2
+| Installs and works fine
+|-
+| [[acpitool]]
+| 0.4.7-1.4
+| Seems like this system lacks ACPI support or else /proc/acpi is not the place to look for ?
+|-
+| [[mysql-server-5.0]]
+| 5.0.51a-3
+| Installs and runs, init script has issues... hangs on stop. See [[MySQL on Debian GNU/kFreeBSD]]
+|-
+| [[php-pear]]
+| 5.2.5-3
+| Installs and runs fine, many pear packages are working fine as well.
+|-
+|
+|
+|
+|}
+
+### [[Debian]] [[GNU]]/kFreeBSD amd64 Package Results
+I'm testing out the debian-ports.org packages on Debian/kFreeBSD:
+
+{| border="1" cellpadding="4" cellspacing="0"
+|- bgcolor="#DDD"
+! colspan="3" | kFreeBSD 7 amd64
+|-
+! Package
+! Version
+! Results
+|-
+| [[iceweasel]]
+| 2.0.0.14-2
+| Installs, doesn't work
+|-
+|
+|
+|
+|}
+
+### Problems / Bugs / Questions
+#### [[update-binfmts]]
+<pre>
+Sorry, update-binfmts currently only works on Linux.
+</pre>
+#### inotify
+<pre>
+debian:/var/log# grep -r 'notify' ./*
+./apt/term.log:Selecting previously deselected package libnotify1.
+./apt/term.log:Unpacking libnotify1 (from .../libnotify1_0.4.4-3_kfreebsd-i386.deb) ...
+./apt/term.log:Setting up libnotify1 (0.4.4-3) ...
+./apt/term.log:* Can't start Hardware abstraction layer - enable inotify support in your kernel
+./apt/term.log:* Can't start Hardware abstraction layer - enable inotify support in your kernel
+./apt/term.log:* Can't start Hardware abstraction layer - enable inotify support in your kernel
+./dpkg.log:2008-03-25 16:51:21 install libnotify1 <none> 0.4.4-3
+./dpkg.log:2008-03-25 16:51:21 status half-installed libnotify1 0.4.4-3
+./dpkg.log:2008-03-25 16:51:21 status unpacked libnotify1 0.4.4-3
+./dpkg.log:2008-03-25 16:51:21 status unpacked libnotify1 0.4.4-3
+./dpkg.log:2008-03-25 16:51:56 status unpacked libnotify1 0.4.4-3
+./dpkg.log:2008-03-25 16:51:56 status half-configured libnotify1 0.4.4-3
+./dpkg.log:2008-03-25 16:51:56 status installed libnotify1 0.4.4-3
+</pre>
+
+#### Kernel Modules
+Can't seem to get this to work right:
+<pre>
+debian:/lib/modules/7.0-1-686# kldload umodem
+debian:/lib/modules/7.0-1-686# kldstat
+Id Refs Address    Size     Name
+kldstat: can't stat file id 1: Invalid argument
+kldstat: can't stat file id 2: Invalid argument
+kldstat: can't stat file id 3: Invalid argument
+kldstat: can't stat file id 4: Invalid argument
+debian:/lib/modules/7.0-1-686# kldload joy
+debian:/lib/modules/7.0-1-686# kldstat
+Id Refs Address    Size     Name
+kldstat: can't stat file id 1: Invalid argument
+kldstat: can't stat file id 2: Invalid argument
+kldstat: can't stat file id 3: Invalid argument
+kldstat: can't stat file id 4: Invalid argument
+kldstat: can't stat file id 5: Invalid argument
+</pre>
+
+#### Custom Kernels
+Is it possible to configure and compile your own kernel with Debian/kFreeBSD?
+
+#### Where is syslog?
+I'm unable to get syslog-ng to work, so factors like mysql logging to syslog is a bit of a problem. Aha! I finally got it working, thanks to [http://bsdzone.net/howto/howto_files/loghost/syslog-ng.conf.txt bsdzone]:
+
+I had to change a few things, mainly:
+<pre>
+source src { unix-dgram("/var/run/log");
+             unix-dgram("/var/run/logpriv" perm(0600));
+	     internal(); file("/dev/klog"); };
+</pre>
+
+### sysctl
+I'm used to /sysfs and /procfs on [[linux]], but in [[FreeBSD]] its all about [[sysctl]].
+
+<pre>
+# sysctl -a | grep random
+kern.arandom: -239096387025170742
+kern.randompid: 0
+kern.random.yarrow.gengateinterval: 10
+kern.random.yarrow.bins: 10
+kern.random.yarrow.fastthresh: 192
+kern.random.yarrow.slowthresh: 256
+kern.random.yarrow.slowoverthresh: 2
+kern.random.sys.seeded: 1
+kern.random.sys.harvest.ethernet: 1
+kern.random.sys.harvest.point_to_point: 1
+kern.random.sys.harvest.interrupt: 1
+kern.random.sys.harvest.swi: 0
+net.inet.ip.portrange.randomtime: 45
+net.inet.ip.portrange.randomcps: 10
+net.inet.ip.portrange.randomized: 1
+net.inet.ip.random_id: 0
+</pre>
+
+### See Also
+* [[Debian]]
+* [[FreeBSD]]
+* [[Debian GNU/kNetBSD]]
+* [[Preventa]]
+
+### Links
+* http://wiki.debian.org/Debian_GNU/kFreeBSD
+

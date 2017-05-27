@@ -1,0 +1,135 @@
+### [[GnuTLS]]
+[[Debian]]'s [[slapd]] package is compiled against [[GnuTLS]] instead of [[OpenSSL]] to comply with their licenses. Its not a big deal but it requires that the self-signed certificate be the last one in the chain. I used certtool from the [[gnutls-bin]] package for this:
+
+<pre>
+cat newcert.pem | certtool -e
+...
+Chain verification output: Verified.
+</pre>
+
+### Certificate Creation
+
+I'm using the same methods I use for creating [[OpenVPN]] certificates.
+
+### Hostnames
+Like every good tls client, [[ldapsearch]] checks that the server certificate matches the hostname:
+<pre>
+# ldapsearch -d 8 -H ldaps://192.168.0.30/ -x
+TLS: hostname (192.168.0.30) does not match common name in certificate (ldaps.example.com).
+ldap_sasl_bind(SIMPLE): Can't contact LDAP server (-1)
+</pre>
+
+I also have to add this to the ldap.conf file on the client:
+
+<pre>
+TLS_CACERT /etc/ldap/ca.crt
+</pre>
+
+### Client Certificates
+
+How about validating clients? The server needs this:
+
+<pre class="sh_sh">
+TLSVerifyClient demand
+</pre>
+
+HA! I just noticed this:
+
+<blockquote>
+Note  that  a valid client certificate is required in order to use the SASL EXTERNAL authentication mechanism with a TLS session.  As such, a non-default TLSVerifyClient setting must be chosen to enable SASL EXTERNAL authentication.
+</blockquote>
+
+No wonder why I couldn't get any external [[SASL]] mechanisms working! I still can't get it working. If I use "try", it works out OK, but if I use "demand", it does not.
+
+I've read up a little more, and it seems like TLSVerifyClient is really only used for syncrepl.
+
+### Configuration Files
+#### Server /etc/ldap/slapd.conf
+<pre class="sh_sh">
+include         /etc/ldap/schema/core.schema
+include         /etc/ldap/schema/cosine.schema
+include         /etc/ldap/schema/nis.schema
+include         /etc/ldap/schema/inetorgperson.schema
+pidfile         /var/run/slapd/slapd.pid
+argsfile        /var/run/slapd/slapd.args
+
+loglevel   256
+modulepath  /usr/lib/ldap
+moduleload  back_hdb
+moduleload  ppolicy
+sizelimit 500
+tool-threads 1
+
+TLSCertificateFile /etc/ldap/ldaps.savonix.com.crt
+TLSCertificateKeyFile /etc/ldap/ldaps.savonix.com.key
+sasl-realm SAVONIX.COM
+sasl-regexp uid=([^,]+),cn=savonix.com,cn=.+ cn=$1,dc=savonix,dc=com
+
+backend     hdb
+database        hdb
+suffix          "dc=savonix,dc=com"
+rootdn          "cn=admin,dc=savonix,dc=com"
+rootpw          {SSHA}x9Zw38Ika9z6eshB8zfzvk/wZ9CYkXdh
+directory       "/var/lib/ldap"
+dbconfig set_cachesize 0 2097152 0
+dbconfig set_lk_max_objects 1500
+dbconfig set_lk_max_locks 1500
+dbconfig set_lk_max_lockers 1500
+index           objectClass eq
+lastmod         on
+checkpoint      512 30
+
+access to attrs=userPassword,shadowLastChange
+        by dn="cn=admin,dc=savonix,dc=com" write
+        by anonymous auth
+        by self write
+        by * none
+
+access to dn.base="" by * read
+
+access to *
+        by dn="cn=admin,dc=savonix,dc=com" write
+        by dn="cn=replicant,dc=savonix,dc=com" read
+        by * read
+</pre>
+
+#### Client /etc/ldap/ldap.conf
+<pre class="sh_sh">
+BASE dc=savonix,dc=com
+URI ldap://192.168.8.132
+#URI ldaps://ldaps.savonix.com/
+
+#URI    ldap://ldap.example.com ldap://ldap-master.example.com:666
+
+TLS_CACERT /etc/ldap/ca.crt
+TLS_REQCERT demand
+
+</pre>
+
+### Current Status
+I'm going to halt on my work with this for now, as I need to review whether I want to continue using it for shell authentication. I don't think I do, but I would like to use LDAP for other types of authentication, such as [[FTP]] and [[SMTP]] [[SASL]].
+
+Therefore, I need to do some more planning.
+
+Current accomplished goals:
+
+* LDAP with TLS
+* LDAP with SASL
+
+TO-Do goals:
+
+* Setup proper [[LDAP ACLs]]
+* Review [[LDAP Replication]]
+
+### See Also
+* [[LDAP]]
+* [[TLS]]
+
+### Links
+* http://www.openldap.org/pub/ksoper/OpenLDAP_TLS.html
+* http://www.openldap.org/lists/openldap-software/200901/msg00133.html
+* http://www.yellowpigs.net/computers/openldap
+* http://www.open-xchange.com/wiki/index.php?title=CyrusLdapSetupForOx#Installing.2Fconfiguring_Cyrus_IMAP_for_OX
+* http://gagravarr.org/writing/openssl-certs/others.shtml#openldap
+* http://www.zytrax.com/books/ldap/ch6/ldap-conf.html
+

@@ -1,0 +1,46 @@
+I'm giving [[Amazon]] CloudFront a try, might be interesting. What is it? Its a simple content-distribution network.
+
+Seems like it should be possible to limit access to files based on an HTTP referer (referrer) header, but apparently that's not possible. This would be useful to prevent only certain domains from including an image on a web page.
+
+### Response [[HTTP]] Header
+<pre class="sh_sh">
+HTTP/1.0 200 OK
+x-amz-id-2: ZeJZmFcCbb6eBhCxhD0xiHHUgm63M0aa8UTeHSdaWUgEu79cl+x6pEOs2VOLPlle
+x-amz-request-id: 3C26F220A0EBB9D5
+Date: Sat, 06 Mar 2010 17:03:28 GMT
+Cache-Control: public,max-age=315360000
+Last-Modified: Sat, 06 Mar 2010 16:14:40 GMT
+Etag: "6f83726eb883261b509158ac61eee361"
+Content-Type: image/jpeg
+Content-Length: 18939
+Server: AmazonS3
+X-Cache: Miss from cloudfront
+X-Amz-Cf-Id: aca6c397bdef5198d8cf831ebf78e416bffdba20b357981c8187d51784fc8c4bedf0d05844e5e404,3b51b1e33c5afb907dc65330afcebd9e0cc88cd093af3dfc2529b2f9f31ac067540842e0676b4ef1
+Via: 1.0 ecf6abe40feed656b4a0843263468b70.cloudfront.net:11180 (CloudFront), 1.0 e45b1f1e171044cf488be122ea3ff12a.cloudfront.net:11180 (CloudFront)
+Connection: keep-alive
+</pre>
+
+After clearing my local cache and requesting the file again:
+<pre>
+HTTP/1.0 200 OK
+x-amz-id-2: ZeJZmFcCbb6eBhCxhD0xiHHUgm63M0aa8UTeHSdaWUgEu79cl+x6pEOs2VOLPlle
+x-amz-request-id: 3C26F220A0EBB9D5
+Date: Sat, 06 Mar 2010 17:03:28 GMT
+Cache-Control: public,max-age=315360000
+Last-Modified: Sat, 06 Mar 2010 16:14:40 GMT
+Etag: "6f83726eb883261b509158ac61eee361"
+Content-Type: image/jpeg
+Content-Length: 18939
+Server: AmazonS3
+Age: 65
+X-Cache: Hit from cloudfront
+X-Amz-Cf-Id: 5d98835eb81951b4c15e329fc1e150ef1e0ab322ee94ca5f31483119ed433caa0464041ee77abc67
+Via: 1.0 ecf6abe40feed656b4a0843263468b70.cloudfront.net:11180 (CloudFront), 1.0 e45b1f1e171044cf488be122ea3ff12a.cloudfront.net:11180 (CloudFront)
+Connection: keep-alive
+</pre>
+
+This works very much like a [[Varnish]] node.
+
+### Links
+* http://www.labnol.org/internet/setup-content-delivery-network-with-amazon-s3-cloudfront/5446/
+

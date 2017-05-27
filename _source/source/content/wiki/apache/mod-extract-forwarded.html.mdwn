@@ -1,0 +1,28 @@
+This is a cool module, almost forgot where my original writeup was, but then I found it:
+
+[Apache2 Spamhaus and mod_ext_forwarded modules][spamhaus]
+
+### Building mod_extract_forwarded on [[Debian]]
+
+<pre class="sh_sh">
+apt-get install apache2-threaded-dev
+wget http://www.openinfo.co.uk/apache/extract_forwarded-2.0.2.tar.gz
+tar -xzf extract_fo*
+cd extract_fo*
+/usr/bin/apxs2 -c mod_extract_forwarded.c
+cp .libs/mod_extract_forwarded.so /usr/lib/apache2/modules/mod_extract_forwarded.so
+echo "LoadModule extract_forwarded_module  /usr/lib/apache2/modules/mod_extract_forwarded.so" > /etc/apache2/mods-available/proxy_xtract_forwarded.load
+a2enmod proxy_xtract_forwarded
+/etc/init.d/apache2 force-reload
+</pre>
+
+### mod_extract_forwarded Configuration
+
+<pre>
+&lt;IfModule mod_extract_forwarded.c>
+MEFaccept all
+MEFdebug off
+&lt;/IfModule>
+</pre>
+
+[spamhaus]: http://www.docunext.com/blog/2009/03/apache2-spamhaus-and-x-forwarded-module.html

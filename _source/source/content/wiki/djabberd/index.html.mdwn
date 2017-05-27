@@ -1,0 +1,24 @@
+DJabberd is an IM framework written in [[Perl]] where "everything is a plugin". The base code comes with some plugins, even:
+
+* DJabberd-Authen-HTDigest
+* DJabberd-Authen-MySQL
+* DJabberd-Authen-PAM
+
+I modified one:
+
+* [[Djabberd/Docunext Modified DJabberd Authen LDAP]]
+
+#### DJabberd on Debian
+
+First I fixup CPAN
+
+    install Bundle::CPAN
+    force install Scalar::Util
+    install Danga::Socket
+    install Net::DNS
+    install DBI
+    install DBD::SQLite
+
+then I install some debian packages...
+
+    apt-get install libnet-ssleay-perl libxml2-dev libssl-dev openssl

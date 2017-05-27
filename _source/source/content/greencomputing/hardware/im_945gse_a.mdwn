@@ -1,0 +1,10 @@
+This is an awesome looking board:
+
+* 2 Intel 82574L 10/100/1000
+* 1.6 GHz Intel Atom N270
+* Intel 945GSE northbridge
+* ICH7 southbridge
+* ATA 133 / IDE
+* 2 SATA cable
+* 2 RS-232 COM
+

@@ -1,0 +1,20 @@
+There are several *must-haves* when it comes to kernel features when trying to save power, such as:
+
+* [[ACPI]]
+* [[APM]]
+* [[CPU Frequency Scaling]]
+
+There are a lot less obvious ones too, including sound codec power saving, and IRQ interrupts. Wouldn't it be nice to have a pre-compiled kernel optimized for power saving in various linux distros, like Debian or RedHat?
+
+## Software 
+
+* [[Powertop]]
+
+## Debug Information
+
+<pre>
+No detailed statistics available; please enable the CONFIG_TIMER_STATS kernel option
+This option is located in the Kernel Debugging section of menuconfig
+(which is CONFIG_DEBUG_KERNEL=y in the config file)
+Note: this is only available in 2.6.21 and later kernels
+</pre>

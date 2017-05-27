@@ -1,0 +1,25 @@
+__NOTOC__
+### First Impressions
+Here's what I liked about what I saw when examining pycoon:
+* Recently updated / worked on (2007)
+* Compliant with cocoon's sitemap
+* Decent documentation
+* Influenced by WSGI
+
+### Installing and Using Pycoon
+Was able to install by following instructions from http://pycoon.pbwiki.com/Quick+starter+guide . Main page loads but others give errors:
+
+<pre>
+Resource Not Found
+
+ResourceNotFoundException: No pipeline matched request: "/samples/blocks/pycoon/foo/"
+</pre>
+
+Getting fmt_textile was very easy, I just ran easy_install textile and tried again.
+
+### Pycoon Configuration and Resource Files
+The default when starting pycoon on my server is pycoon.xconf which loads the webapp/sitemap.xmap sitemap file. This is fairly similar to the config.xml and sitemap.xml files I'm familiar with on [[Nexista]].
+
+### Next Steps
+I'm interested to learn if pycoon can interface with python-xml and python-libxslt1 (packages on debian). That would be sweet!
+

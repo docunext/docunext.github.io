@@ -1,0 +1,13 @@
+To get rid of the annoying warnings you get when connecting securely to our docunext.com websites besides "www", we can install the docunext root security certificate by clicking on the following link. It should ask you whether you'd like to trust the certificate, and you can select all the boxes. If you have questions, ask them here.
+
+To make a new certificate (for docunext use):
+
+<pre>
+1. dev.docunext.com/usr/lib/ssl/misc
+2. cp -av skel.docunext.com new-sub.docunext.com
+3. cd new-sub.docunext.com
+4. ./CA.pl -newreq
+5. ./CA.pl -sign
+6. openssl rsa -in newkey.pem -out newkey.pem
+</pre>
+

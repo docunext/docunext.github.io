@@ -1,0 +1,24 @@
+Ming is a [[C]] library which can produce .swf files / movies.
+
+#### Ming Examples
+
+This just creates a blank movie:
+
+<pre class="sh_c"><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;ming.h>
+
+int Ming_init(void);
+
+int
+main () {
+    SWFMovie test_movie;
+
+    test_movie = newSWFMovie();
+    SWFMovie_setBackground(test_movie, 0x00, 0x00, 0x00);
+    SWFMovie_save(test_movie, "ming-test.swf");
+    return EXIT_SUCCESS;
+
+}
+</code></pre>

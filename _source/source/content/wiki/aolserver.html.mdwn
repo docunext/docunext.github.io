@@ -1,0 +1,90 @@
+AOLServer includes support for "ADP" - Aolserver dynamic pages - which are
+powered by [[tcl]]. Here's a quick example using the tdom tcl library:
+
+~~~
+&lt;%
+
+package require tdom
+
+set XML "
+    <example number='1'>abcdefgh
+    </example>"
+
+set doc  [dom parse $XML]
+
+set root [$doc documentElement]
+
+set node [$root firstChild]
+
+set barf [$node data]
+
+%>
+
+&lt;%= $barf %>
+&lt;% ns_adp_puts [ns_time] %>
+~~~
+
+
+#### AOLServer and Databases
+
+This was surprisingly difficult for me, seeing how one of AOL Server's strengths
+is its ability to pool database connections for use across various scripts and
+threads.
+
+I first tried the [[/MySQL]] driver for AOL Server, but had major issues with it.
+UPDATE: With help from Dossy, I was able to get the
+[http://www.docunext.com/blog/2008/07/aolserver4-nsmysql.html MySQL driver for
+AOLServer working]. [[The Emails Between Dossy and I about AOLServer and
+MySQL]].
+
+Then I tried the [[/Postgres]] driver, and was able to get it to work without
+much trouble.
+
+I've heard good things about Postgres, and have used it only a little in the
+past, and this is as good excuse as any, so I'll continue using it.
+
+Here's my setup in /etc/aolserver4/aolserver4.tcl:
+
+~~~
+#
+# Server parameters
+#
+ns_section "ns/server/${servername}"
+ns_param   directoryfile   $directoryfile ;# List of files to use (index.html)
+ns_param   pageroot        $pageroot ;# Directory under which all pages live
+
+ns_param nspostgres nspostgres.so
+~~~
+
+and further on in the file:
+<pre>
+ns_section "ns/db/drivers"
+ns_param   postgres_driver nspostgres.so  ;# An internal driver
+
+ns_section "ns/db/pools"
+ns_param   postgres_pool  "Postgres Pool"
+
+ns_section "ns/db/pool/postgres_pool"
+ns_param   driver          postgres_driver
+ns_param   datasource      localhost:5432:www-work
+ns_param   user            www-data
+ns_param   connections     1
+ns_param   logsqlerrors    true      ;# Verbose SQL query error logging
+ns_param   verbose         true     ;# Verbose error logging
+ns_param   maxidle         600       ;# Max time to keep idle db conn open
+ns_param   maxopen         3600      ;# Max time to keep active db conn open
+
+ns_section "ns/server/${servername}/db"
+ns_param pools          *            ;
+ns_param defaultpool    postgres_pool
+</pre>
+
+And my script.adp:
+
+~~~
+<%
+set db [ns_db gethandle postgres_pool]
+ns_db select $db "SHOW SERVER_VERSION"
+ns_db getrow $db t0
+ns_puts [ns_set array t0]
+~~~

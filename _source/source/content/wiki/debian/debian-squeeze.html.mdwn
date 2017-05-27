@@ -1,0 +1,23 @@
+The little binoculars...
+
+As of January 2010, Squeeze is still in still in the testing phase. It will be version 6.0 of the awesome [[Debian]] [[GNU/Linux]] distribution.
+
+After reading over the release goals, it seems to me like there is a lot of focus on package management. That comes as no surprise, because [[Debian]] package management is far superior than most of the alternatives. Sure, its a bit arcane and overly complicated in some circumstances, but in my experience its proven to be incredibly reliable for such an unbelievably complex and challenging task.
+
+To be more specific, I see consistency and automation big parts of the release. This is good news for all those hard working [[Debian]] ''volunteers''. Yes, in case you weren't aware, Debian is primarily built and maintained by volunteers from all across the globe. This probably could have been done in the past, but I'm glad it didn't as I think the years of manual work the developers have done have identified where automation will work, and where it won't.
+
+I'm also glad that [[Debian]] has adopted a schedule based release process. There was some debate about this, but in the end I felt like there was a general consensus that it is a change that will yield positive results.
+
+And the removal of obsolete packages is a very good thing! The tagging features for packages is nice, but I don't think its enough. Personally, I'd love to see a little bit more sophistication with the package categories. [[Ubuntu]] does a nice job of this with its main, universe, multiverse repositories.
+
+In fact, sometimes I feel like [[Debian]] has too many packages, and in some cases, the quality of the overall repositories has suffered. I find the fact that [[CentOS]] only has a few thousand packages a really cool thing.
+
+Also, from time to time I notice multiple packages in [[Debian]] that do the same thing. Not something as complex as [[Web Servers]], but something with a clearly defined scope. Actually I can't think of anything at the moment, but eventually I started to look up popularity statistics to find out which package more people use. Very handy information!
+
+### Related Pages
+* [[Debian]]
+* [[Ubuntu]]
+
+### External Links
+* http://www.debian.org/News/2009/20090730
+

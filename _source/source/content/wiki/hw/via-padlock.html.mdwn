@@ -1,0 +1,12 @@
+Via padlock is an encryption engine used in Via C7 chips.
+
+### Related Pages
+* [[Via C7]]
+* [[PfSense test results of the padlock kernel driver on a VIA C7]]
+* [[My Notes on Patching 2.6.22 with OCF]]
+* [[Via Padlock OCF-Linux Integration]]
+
+### Blog Entries
+* [http://www.docunext.com/blog/2007/03/the-via-c7-chip.html The Via C7 Chip]
+* [http://www.docunext.com/blog/2008/02/swiftweasel-on-the-via-c7.html Swiftweasel on the Via C7]
+

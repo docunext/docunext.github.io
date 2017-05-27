@@ -1,0 +1,56 @@
+Types of computers:
+
+## Laptop
+
+* User friendly
+* Low energy consumption, portable
+
+## Desktop
+
+* User friendly
+
+
+##Web Server Nodes
+
+* solid networking, probably slower (100Mbit)
+* RAM
+* low power consumption for 24/7 operation
+* IDE drive of DOM
+* Wake on lan
+
+## Router
+
+## Load Balancer
+
+## Database Server
+
+* Cluster?
+
+File Server
+
+* Fast networking
+* SATA drives
+* PCI-E or PCI-X?
+
+DNS Server
+
+## Workstation 
+
+* powerful, high speed network 1000Mbit
+
+                                 
+What type's of services can you put on a net4501?
+
+* Router
+
+What about a net4801?
+
+* Too expensive!
+* Load balancer
+
+
+JetWay Geode?
+
+* mini-box mainboard? How much power will this consume?
+
+[[ALIX]]?

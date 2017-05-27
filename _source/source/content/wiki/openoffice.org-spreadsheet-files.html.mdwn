@@ -1,0 +1,69 @@
+### Archive
+<pre>
+unzip test.ods
+Archive:  test.ods
+ extracting: mimetype
+  inflating: content.xml
+  inflating: styles.xml
+ extracting: meta.xml
+  inflating: Thumbnails/thumbnail.png
+  inflating: Configurations2/accelerator/current.xml
+   creating: Configurations2/progressbar/
+   creating: Configurations2/floater/
+   creating: Configurations2/popupmenu/
+   creating: Configurations2/menubar/
+   creating: Configurations2/toolbar/
+   creating: Configurations2/images/Bitmaps/
+   creating: Configurations2/statusbar/
+  inflating: settings.xml
+  inflating: META-INF/manifest.xml
+</pre>
+
+### [[XML]]
+<pre class="sh_xml">
+<office:spreadsheet>
+  <table:table table:name="Sheet1" table:style-name="ta1" table:print="false">
+    <table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+    <table:table-row table:style-name="ro1">
+      <table:table-cell office:value-type="float" office:value="1">
+        <text:p>1</text:p>
+      </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+      <table:table-cell office:value-type="float" office:value="2">
+        <text:p>2</text:p>
+      </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+      <table:table-cell office:value-type="float" office:value="3">
+        <text:p>3</text:p>
+      </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="ro1" table:number-rows-repeated="2">
+      <table:table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+      <table:table-cell table:formula="of:=SUM([.A1:.A3])" office:value-type="float" office:value="6">
+        <text:p>6</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table>
+  <table:table table:name="Sheet2" table:style-name="ta1" table:print="false">
+    <table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+    <table:table-row table:style-name="ro1">
+      <table:table-cell/>
+    </table:table-row>
+  </table:table>
+  <table:table table:name="Sheet3" table:style-name="ta1" table:print="false">
+    <table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+    <table:table-row table:style-name="ro1">
+      <table:table-cell/>
+    </table:table-row>
+  </table:table>
+</office:spreadsheet>
+</pre>
+
+Thankfully, it is also possible to save [[OpenOffice.org]] [[spreadsheet]] files in a "flat" format. I'm planning to use this in combination with [[Git]], so that the changes between file revisions can be tracked more efficiently.
+
+### Related Pages
+* [[OpenOffice.org]]

@@ -1,0 +1,18 @@
+I'm probably going to switch from squid to apache for all my http caching purposes. Why? Because I really like Apache and want to learn as much about it as possible.
+
+I did make the switch from Squid to Apache 2.2 for proxy caching purposes!
+
+[[Apache 2.2 Proxy Caching Configuration]]
+
+For disk caching, I'm using this command to clean the cache periodically:
+<pre>
+htcacheclean -v -n -t -l 20M -p /var/cache/apache2/mod_disk_cache/
+</pre>
+
+This nice little message is emailed out to me too:
+<pre>
+Statistics:
+size limit 20.0M
+total size was 19.9M, total size now 19.9M
+total entries was 1669, total entries now 1669
+</pre>

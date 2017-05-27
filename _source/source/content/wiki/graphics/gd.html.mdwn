@@ -1,0 +1,13 @@
+GD is a handy library which can be used to manipulate images. There are bindings for a ton of languages:
+* [[PHP]]
+* [[Perl]]
+* [[Lua]]
+
+It can be used to edit images in a programmatic manner, such as resizing, cropping, and optimizing, as well as generating graphics such as gradients, test, and shapes.
+
+### See Also
+* [[GD over FastCGI]]
+
+### Links
+* [http://www.libgd.org/Reference libgd API]
+

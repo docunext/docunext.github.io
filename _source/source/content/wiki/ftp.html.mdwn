@@ -1,0 +1,26 @@
+### FTP Summary
+File Transfer Protocol, despite its shortcomings, FTP is still quite popular due to its convenience. Personally, I never use it. Instead I use [[SCP]] (secure copy), of [[DAV]] over [[SSL]].
+
+I do provide the service for some clients though, and I use [[proftpd]] on debian. It seems to work fine for the majority of the time.
+
+I've also installed [[pureftpd]], and though I had some difficulties getting it running on OpenVZ, it did end up working OK.
+
+### Rounding Up FTP Servers
+I thought of trying to use [[FTP Proxy]] to act as a gateway / filter / router, but in the end I used [[NFS]] to mount ftp shares to a single ftp server. Works fine for my needs.
+
+Will [[ftp.proxy]] do the trick?
+
+### FTP Topics
+#### Passive FTP
+This is a common setting which is usually used as a workaround for users behind a [[firewall]].
+
+### FTP Clients
+* [[CyberDuck]] - http://www.cyberduck.ch/
+* [[Filezilla]] - http://filezilla-project.org/
+* [[gFTP]] - [[GNOME]] FTP client
+
+### Related Pages
+* [[DAV]]
+* [[SCP]]
+* [[NFS]]
+

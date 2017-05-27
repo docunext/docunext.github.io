@@ -1,0 +1,9 @@
+This new [[XMPP]] / [[Jabber]] server is very nice. Its very minimal and written in C, but Rawson Tetley.
+
+### Compatible Clients
+I'm able to use it with [[Pidgin]] and [[Adium]] (on [[Mac OS X]]), and [[PSI]] on [[Windows]] XP.
+
+### External Links
+* http://rawsontetley.org/proj_slugware.html
+* http://inetdxtra.sourceforge.net/
+

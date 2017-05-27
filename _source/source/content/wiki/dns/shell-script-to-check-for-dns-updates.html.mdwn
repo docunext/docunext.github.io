@@ -1,0 +1,34 @@
+I used to use this script to check for DNS changes.
+
+~~~
+# Copyright: Savonix Corporation
+# Author:    Albert Lash
+# Date:      20090603
+# License:   MIT
+
+#!/bin/sh
+
+DIFF="/tmp/ipdiff"
+TMP1="/var/tmp/ip1"
+TMP2="/var/tmp/ip2"
+
+HOST="sub-domain-goes-here.dhis.org"
+
+if [ ! -e $TMP1 ] ; then
+    host $HOST | awk '{print $4}' > $TMP1
+    exit 0
+else
+    host $HOST | awk '{print $4}' > $TMP1
+    diff $TMP1 $TMP2 > $DIFF
+    cp $TMP1 $TMP2
+    if [[ -s $DIFF ]] ; then
+        echo "DNS has changed."
+        /sbin/iptables-restore /etc/iptables_save.txt
+    else
+        exit 0
+    fi;
+fi;
+
+exit 0
+~~~
+

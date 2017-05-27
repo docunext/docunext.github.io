@@ -1,0 +1,83 @@
+## Power Consumption 
+The HP t5725 uses about 21 watts with no drive, only flash storage.
+
+## Processor 
+The HP t5725 has a much stronger processor than its siblings. 
+
+<pre># cat /proc/cpuinfo 
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 6
+model           : 8
+model name      : AMD Athlon(tm) Processor
+stepping        : 1
+cpu MHz         : 1000.092
+cache size      : 256 KB
+fdiv_bug        : no
+hlt_bug         : no
+f00f_bug        : no
+coma_bug        : no
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 1
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
+mmx fxsr sse syscall mp mmxext 3dnowext 3dnow ts fid vid
+bogomips        : 2001.29</pre>
+
+<pre>cat /proc/acpi/processor/CPU0/info 
+processor id:            0
+acpi id:                 0
+bus mastering control:   yes
+power management:        no
+throttling control:      no
+limit interface:         no</pre>
+
+But it still does have the ability to scale its frequency. Unfortunately it doesn't do much for its power consumption - with a reduction of frequency from 1000 to 666, there is only a reduction of about 1 or 2 watts.
+
+## No C-States 
+Unfortunately this machine only has one power (C) state. 
+
+## Machine Details 
+* [[t5725 dmesg]]
+* [[t5725 lspci]]
+
+## Sensors 
+There are some decent sensors found with lm-sensors:
+<pre>
+#----cut here----
+# I2C adapter drivers
+i2c-sis96x
+# Chip drivers
+smsc47m192
+eeprom
+smsc47m1
+#----cut here----
+</pre>
+Their output:
+<pre>
+sensors
+smsc47m1-isa-0800
+Adapter: ISA adapter
+fan1:        0 RPM  (min = 2560 RPM, div = 2)          ALARM
+fan2:        0 RPM  (min = 2560 RPM, div = 2)          ALARM
+
+smsc47m192-i2c-0-2d
+Adapter: SiS96x SMBus adapter at 0x10c0
++2.5V:     +2.55 V  (min =  +0.00 V, max =  +3.32 V)   
+VCore:     +1.02 V  (min =  +0.00 V, max =  +2.99 V)   
++3.3V:     +3.37 V  (min =  +0.00 V, max =  +4.38 V)   
++5V:       +5.13 V  (min =  +0.00 V, max =  +6.64 V)   
++12V:     +11.12 V  (min =  +0.00 V, max = +15.94 V)   
+VCC:       +3.37 V  (min =  +0.00 V, max =  +4.38 V)   
++1.5V:     +1.03 V  (min =  +0.00 V, max =  +1.99 V)   
++1.8V:     +1.81 V  (min =  +1.73 V, max =  +1.79 V)   ALARM
+Chip Temp: +49.0°C  (low  =  -128°C, high =  +127°C)  
+CPU Temp:  +47.0°C  (low  =  -128°C, high =  +127°C)  
+Sys Temp:  +52.0°C  (low  =   -19°C, high =   -37°C)  
+vid:      +1.850 V  (VRM Version 9.0)
+</pre>
+
+## Related Pages
+
+* [[Thin Clients]]

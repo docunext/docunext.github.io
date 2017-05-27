@@ -1,0 +1,11 @@
+### Packages
+Some [[perl]] modules:
+<pre>
+apt-get install libmail-dkim-perl
+apt-get install libmail-spf-query-perl spf-tools-perl
+cpan Encode::Detect Mail::DomainKeys
+</pre>
+
+### Rules
+After awhile, I had way too many rules. I uninstalled [[spamassassin]] and then installed it again. Thankfully that seemed to have cleaned out a lot of random rules!
+

@@ -1,0 +1,22 @@
+Unicorn is a [[Ruby]] powered [[web server]] based off of [[mongrel]]. I haven't reviewed the code, but apparently its makes intelligent use of [[UNIX]] concepts.
+
+### My Experience with Unicorn
+I haven't noticed too big of a difference, but I have noticed it starts up a lot faster than [[Thin]] or [[Webrick]].
+
+When I try to run unicorn on [[FreeBSD]], I get this error:
+
+<pre class="sh_sh">
+Fatal error 'Exceeded maximum lock level' at line 1159 in file /usr/src/lib/libpthread/thread/thr_sig.c (errno = 0)
+</pre>
+
+### See Also
+* [[Ruby]]
+* [[Web Servers]]
+* [[Daemontools]]
+
+### Links
+* http://www.ruby.code-experiments.com/blog/unicorn/
+* http://www.ruby.code-experiments.com/blog/2009/12/ruby-unicorn.html
+* http://tomayko.com/writings/unicorn-is-unix
+* http://www.mirrors.docunext.com/cgit.cgi/unicorn/
+

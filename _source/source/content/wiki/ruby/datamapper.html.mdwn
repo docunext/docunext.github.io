@@ -1,0 +1,158 @@
+### DataMapper Summary
+A [[Ruby]] object relational mapper ([[ORM]]).
+
+### My Experience with DataMapper
+I've only really scratched the surface this morning, but its really awesome!! Thankfully, its simpler than [[DBIx::Class]].
+
+While most of what I'm learning about DataMapper is very impressive, one of the plugins is truly remarkable: [[dm-rest-adapter]]. This allows DataMapper to use [[HTTP]] as its data store protocol! Incredible, and just happens to be something I've wanted to try out for awhile.
+
+### Sample Code
+Here's a very rough rendition of the accounts table from [[PBooks]] in DataMapper format:
+
+<pre class="sh_ruby">
+class Account
+  include DataMapper::Resource
+
+  property :id,Serial
+  property :name,String
+  property :account_type_id,Integer
+  property :description,Text
+  property :creation_datetime,DateTime
+  property :account_number,Integer
+  property :parent_account_id,Integer
+  property :hide,Boolean
+  property :group_id,Integer
+
+end
+</pre>
+
+While interesting, I'm really interesting in these features:
+
+* Associations
+* Hooks
+
+### DataMapper Basics
+
+<pre class="sh_ruby">
+  @myconf = Conf.new(:conf => data)
+  @myconf.save
+</pre>
+
+This is where things get sort of interesting to me, especially in the context of [[PBooks]].
+
+### DataMapper Associations
+The base object in PBooks is the journal entry. Each journal entry must have at least two journal entry amounts: one debit, and one credit, and journal entry amounts must refer to a specific journal entry.
+
+In [[MySQL]], the PBooks data model enforces this through foreign key constraints. If you try to create a journal entry amount that relates to a non-existent entry, MySQL will throw an error. However, enforcing the higher level logic about journal entries and the journal entry amounts is, as far as I know, too complicated for SQL. PBooks currently enforces the requirement through XSL, and not very well at that as one might imagine.
+
+With DataMapper, it appears that the higher level object constraints are managed with validators. [[Nexista]] has many built-in validators, and I never thought to add support for custom validators. That's something that needs to be done!
+
+### DataMapper Validators
+Concepts like validators bring DataMapper to a new level. It not only maps data and objects together, it really helps developers model objects, too. Is there such a thing as an object modeler?
+
+### DataMapper Limits
+With [[Sinatra]]:
+<pre class="sh_ruby">
+get '/raw/test/entries/:offset' do
+    content_type 'application/xml', :charset => 'utf-8'
+    @myentries = Entry.all(:limit => 4, :offset => params[:offset].to_i)
+    builder :'xml/entries_test'
+end
+</pre>
+
+### DataMapper Hooks
+These are really cool too!
+
+### DataMapper Serialization
+I just discovered an awesome extension to DataMapper: dm-serializer. It provides the ability to serialize DataMapper objects to [[XML]], [[JSON]], [[YAML]] and even [[CSV]].
+
+I had one fumble when trying it out - how to include object associations. Thankfully, its quite possible. To do this, the :methods symbol is used:
+
+<pre class="sh_ruby">
+get '/raw/jsontest' do
+    #content_type :json
+    content_type 'text/plain'
+    @myentries = Entry.all
+    @myentries.to_json(:methods => [:credits,:debits])
+end
+</pre>
+
+This produces awesome results:
+
+<pre class="sh_javascript">
+[
+      {
+          o id: 82
+          o memorandum: null
+          o status: null
+          o fiscal_period_id: null
+          o
+            credits: [
+                  {
+                      # id: 158
+                      # entry_id: 82
+                      # type: "Credit"
+                      # amount: 12323
+                      # account_id: null
+                      # memorandum: null
+                      # currency_id: null
+                  }
+            ]
+            debits: [
+                  {
+                      # id: 159
+                      # entry_id: 82
+                      # type: "Debit"
+                      # amount: 12323
+                      # account_id: null
+                      # memorandum: null
+                      # currency_id: null
+                  }
+            ]
+      }
+</pre>
+
+Honestly, this is really amazing. (Output is made readable in [[Iceweasel]] thanks to [http://benhollis.net/software/jsonview/ jsonview]).
+
+Unfortunately, I was unable to get the [[XML]] serializer to work with the associations yet. This code:
+
+<pre class="sh_ruby">
+get '/raw/xmltest' do
+    content_type 'application/xml'
+    @myentries = Entry.all
+    @myentries.to_xml(:methods => [:credits,:debits])
+end
+</pre>
+
+produces:
+
+<pre class="sh_xml">
+&lt;entry>
+&lt;id type="datamapper::types::serial">94&lt;/id>
+&lt;memorandum>sfdasdf&lt;/memorandum>
+&lt;status type="integer"/>
+&lt;fiscal_period_id type="integer"/>
+&lt;credits>#&lt;Credit:0xb753831c>&lt;/credits>
+&lt;debits>#&lt;Debit:0xb74c9638>&lt;/debits>
+&lt;/entry>
+</pre>
+
+Yup, the source code of the [[JSON]] serializer includes:
+<pre>
+  # Note: if you want to include a whole other model via relation, use :methods
+  # comments.to_json(:relationships=>{:user=>{:include=>[:first_name],:methods=>[:age]}})
+  # add relationships
+  # TODO: This needs tests and also needs to be ported to #to_xml and #to_yaml
+</pre>
+
+### Related Pages
+* [[Merb]]
+* [[Sinatra]]
+* [[Ruby]]
+* [[Regdel]]
+
+### External Pages
+* http://www.mirrors.docunext.com/cgit.cgi/dm-core/
+* http://www.ruby.code-experiments.com/blog/datamapper/
+* http://www.regdel.com/blog/2010/01/an-alternate-db-model.html
+

@@ -1,0 +1,38 @@
+### Summary
+SVG is an [[XML]] standard for creating [[vector graphics]]. Its been in development for a long long time and unfortunately not all [[browsers]] have the best support for it.
+
+While SVG support has floundered, [[Apple]] took the step towards the next version of [[HTML]] with [[Canvas]].
+
+### SVG and [[CSS]]
+It is very cool that SVG can use [[CSS]], like so:
+<pre class="sh_xml">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" height="480" width="640">
+<defs>
+    <style type="text/css"><![CDATA[
+      .test {
+        fill: none;
+        stroke: #aaa;
+        stroke-width: 4;
+      }
+    ]]></style>
+  </defs>
+ <rect class="test" id="svg_10" height="441" width="341" y="5" x="6"/>
+ <line class="test" id="svg_1" y2="228" x2="118" y1="64" x1="118"/>
+ <line class="test" id="svg_2" y2="62" x2="116" y1="62" x1="176"/>
+-
+</svg>
+</pre>
+
+### Projects that use SVG
+* [[m0n0wall]]
+* [[pfSense]]
+* [[Inkscape]]
+* [[Open Office Draw]]
+* [[SVG Edit]]
+
+### Related Pages
+* [[Canvas]]
+* [[SWF]]
+* [[SVG Conversion Tools]]
+

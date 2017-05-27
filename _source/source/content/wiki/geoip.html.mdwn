@@ -1,0 +1,14 @@
+GeoIP is a strategy used to determine the geographic source of a request based upon the remote IP address.
+
+MaxMind has created a terrific database and I'm impressed how they did it. If I understand correctly, they solicited the netizens of the world to contribute to their database, promising to partially release it under an open source license. They did so. Anyone can download the free [[MaxMind]] database and distribute it themselves. Interested parties can also pay to access a more precise database of geodata.
+
+To me, that process is a very good balance of free as in beer, free as in liberty, and not free as in you have to pay money for it. Pretty amazing in fact.
+
+### See Also
+* [[MaxMind GeoIP Country Codes]]
+* [[NGINX Geo]]
+* [[GeoDNS]]
+
+### Links
+* [http://www.docunext.com/blog/2010/06/apache2-geoip-module-for-blocking-unwanted-http-posts.html Apache2 GeoIP Module For Blocking Unwanted HTTP POSTs]
+

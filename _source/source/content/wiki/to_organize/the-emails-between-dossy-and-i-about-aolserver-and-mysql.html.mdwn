@@ -1,0 +1,129 @@
+<pre>
+> Hi Dossy,
+>
+> How are you? I'm trying to get your AOL Server mysql driver up and running
+> but keep running into the same problem:
+>
+> Warning: modload: could not load /usr/lib/aolserver4/bin/nsmysql.so:
+> /usr/lib/aolserver4/lib/libnsmysql.so: undefined symbol: mysql_select_db
+>
+> I've been on this for a few days, I'm using debian lenny, and have
+> /usr/lib/aolserver4/lib in /etc/ld.so.conf.d/aolserver4.conf. I'm using the
+> debian packages for aolserver4 and aolserver4-nsmysql, but since it didn't
+> work like that, I've been trying to compile it myself.
+>
+> First I ran into an issue where it couldn't find gcc_s, so I did this:
+>
+> ln -s /usr/lib/libgcc_s.so /lib/libgcc_s.so
+>
+> That helped the compile finish, but I still get the same error when
+> starting AOL Server.
+>
+> What do you think? Any ideas? Thanks!
+
+I just saw this --
+
+http://www.docunext.com/blog/2008/07/12/ld-cannot-find-lgcc_s/
+
+Is that your blog?
+
+On Debian, to get nsmysql to work, you'll need the packages
+libmysqlclient14 and libmysqlclient14-dev (and their dependencies)
+installed.  So:
+
+# apt-get install libmysqlclient14 libmysqlclient14-dev
+
+Good luck!
+</pre>
+
+<pre>
+Albert Lash wrote:
+> I was able to install the 14 libs from sarge via apt-get, but I still
+> get the same error. I'm guessing that there is some issue with the libc
+> version.
+>
+> I can keep trying, but I have very little knowledge in this domain of
+> dynamic linking. Are you able to make suggestions for me? I don't want
+> to be a nuisance.
+
+% dpkg -L libmysqlclient14-dev
+
+Where are the files installed?  Make sure that the various MYSQL_*
+variables in nsmysql's Makefile point to the right location for the
+MySQL 4.x client library headers and libs.  Then, recompile nsmysql and
+try it again.
+</pre>
+
+<pre>
+Albert Lash wrote:
+> Am I right in thinking this is a dynamic library linking problem?
+
+I can't be certain given what you've told me so far.
+
+> This is what I have my MSQL dirs set to in the Makefile:
+> MYSQL_LIBDIR = $(MYSQL_PREFIX)/lib/mysql
+> MYSQL_INCDIR = $(MYSQL_PREFIX)/include/mysql
+>
+> What follows in my attempt to show what I'm doing:
+>
+> dpkg -L libmysqlclient14-dev
+...
+> /usr/include/mysql/mysql.h
+...
+> /usr/lib/libmysqlclient_r.so
+
+Based on this, you should set/change your nsmysql Makefile to:
+
+        MYSQL_LIBDIR = /usr/lib
+        MYSQL_INCDIR = /usr/include/mysql
+
+> [14/Jul/2008:12:19:27][4643.3083105968][-main-] Notice: modload: loading
+> '/usr/lib/aolserver4/bin/nsmysql.so'
+> [14/Jul/2008:12:19:27][4643.3083105968][-main-] Warning: modload: could
+> not load /usr/lib/aolserver4/bin/nsmysql.so:
+> /usr/lib/aolserver4/lib/libnsmysql.so: undefined symbol: mysql_select_db
+> [14/Jul/2008:12:19:27][4643.3083105968][-main-] Error: dbdrv: failed to
+> load driver 'mysql'
+
+OK, so, lets see a few things.  What's the output of:
+
+% ldd /usr/lib/aolserver4/lib/libnsmysql.so
+% nm -A /usr/lib/libmysqlclient_r.so | grep mysql_select_db
+</pre>
+
+<pre>
+Albert Lash wrote:
+  > dev-48:/usr/src/aolserver4-nsmysql-0.6# nm -A
+> /usr/lib/libmysqlclient_r.so | grep mysql_select_db
+> nm: /usr/lib/libmysqlclient_r.so: no symbols
+> dev-48:/usr/src/aolserver4-nsmysql-0.6# nm -A /usr/lib/libmysqlclient_r.so
+> nm: /usr/lib/libmysqlclient_r.so: no symbols
+>
+> That must be the problem. I installed libmysqlclient14 and
+> libmysqlcilent14-dev from sarge [...]
+
+That might be okay.  Same behavior on my system, running Debian etch
+with the sarge package.
+
+When you compile nsmysql, try this:
+
+% make NO_ROPT=1 NEED_ZLIB=1 NO_LDOVERRIDE=1
+</pre>
+
+<pre>
+Albert Lash wrote:
+> On Jul 14, 2008, at 12:51 PM, Dossy Shiobara wrote:
+>> make NO_ROPT=1 NEED_ZLIB=1 NO_LDOVERRIDE=1
+>
+> What does that do?
+
+Just changes some of the compilation options - just read through the
+Makefile, it's pretty straight-forward.
+
+Really, those command line options probably ought to be the default when
+you execute "make" - not sure why they aren't.  Memory's faded ... :-)
+
+> Thanks again for your help with this.
+
+Thanks for checking out AOLserver!
+</pre>

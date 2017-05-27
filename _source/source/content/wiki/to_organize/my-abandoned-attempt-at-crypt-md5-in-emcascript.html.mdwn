@@ -1,0 +1,154 @@
+<pre>
+/*
+Ported from Perl by Albert Lash
+Perl author: Luis E. Muñoz
+*/
+
+//print(unix_md5_crypt("pwblahblah", "saltsalt"));
+
+function unix_md5_crypt(pw, salt) {
+
+    var began_loading = (new Date()).getTime();
+    var ctx = pw + '$1$' + salt;
+    var final = pw + salt + pw;
+    var ctx1 = "";
+
+    final = str_md5(final);
+
+    for (pl = pw.length; pl > 0; pl -= 16) {
+        ctx = ctx + final.substr(0, pl > 16 ? 16 : pl);
+    }
+    //return hex_md5(ctx);
+
+
+    for (i = pw.length; i; i >>= 1) {
+        if (i & 1)
+        {
+            ctx = ctx + "\000";
+        }
+        else
+        {
+            ctx = ctx + pw.substr(0,1);
+        }
+    }
+
+    final = str_md5(ctx);
+    // Should be good through line 33
+    // This is where I stopped
+    for (i = 1000; i > 0; i--) {
+        /*
+        if (i & 1)
+        {
+            ctx1 += pw;
+        }
+        else
+        {
+            ctx1 += final.substr(0, 16);
+        }
+
+        if (i % 3)
+        {
+            ctx1 += salt;
+        }
+
+        if (i % 7)
+        {
+            ctx1 += pw;
+        }
+
+        if (i & 1)
+        {
+            ctx1 += final.substr(0, 16);
+        }
+        else
+        {
+            ctx1 += pw;
+        }
+        */
+        final = core_md5(str2binl(ctx1), ctx1.length * 8);
+        //final = str_md5(ctx1);
+
+    }
+    var total = (((new Date()).getTime() - began_loading)) / 1000
+    return final + " time = " + total;
+    /*
+    passwd = '';
+    passwd += binl2str(final.substr(0,1));
+    //return "hi";
+
+    passwd += to64(int(unpack((final.substr( 1, 1))) << 16)
+		    | int(unpack((final.substr( 7, 1))) << 8)
+		    | int(unpack((final.substr( 13, 1)))), 4);
+    passwd += to64(int(unpack((final.substr( 2, 1))) << 16)
+		    | int(unpack((final.substr( 8, 1))) << 8)
+		    | int(unpack((final.substr( 14, 1)))), 4);
+    passwd += to64(int(unpack((final.substr( 3, 1))) << 16)
+		    | int(unpack((final.substr( 9, 1))) << 8)
+		    | int(unpack((final.substr( 15, 1)))), 4);
+    passwd += to64(int(unpack((final.substr( 4, 1))) << 16)
+		    | int(unpack((final.substr( 10, 1))) << 8)
+		    | int(unpack((final.substr( 5, 1)))), 4);
+    passwd += to64(int(unpack(final.substr( 11, 1))), 2);
+
+    final = '';
+    return '$1$' + salt + '$' + passwd;
+*/
+}
+
+var itoa64 = "./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+function to64(v,n) {
+
+    var ret = '';
+    while (--n >= 0) {
+	ret += itoa64.substr(v & 0x3f, 1);
+	v >>= 6;
+    }
+    return ret;
+}
+
+function pack(txt) {
+ // convert text to hexadecimal (string/byte-pairs) equivalents
+ var last = txt.length;
+ var bytes = Array(last);
+ var hexPack = "";
+ for (var i = 0; i < last; i++) {
+    bytes[i] = txt.charCodeAt(i);
+    hexPack += decToHex(bytes[i]);
+ }
+ return hexPack;
+}
+
+function unpack(hexPack) {
+ // convert hexadecimal (string/byte-pairs) to text equivalents
+ var last = hexPack.length/2;
+ var bytes = Array(last);
+ var txt = "";
+ var code = 0;
+ var low = "";
+ var high = "";
+ for (var i = 0; i < last; i++) {
+    low = hexPack.charAt(1 + 2*i);
+    high = hexPack.charAt(2*i);
+    code = hexToDec(high + low);
+    txt += String.fromCharCode(code);
+ }
+ return txt;
+}
+
+function decToHex(dec) {
+ var hexChars = "0123456789ABCDEF";
+ var low = dec % 16;
+ var high = (dec - low)/16;
+ hex = "" + hexChars.charAt(high) + hexChars.charAt(low);
+ return hex;
+}
+
+function hexToDec(hex) {
+ var hexChars = "0123456789ABCDEF";
+ var low = hexChars.indexOf(hex.charAt(1));
+ var high = 16*hexChars.indexOf(hex.charAt(0));
+ hex = low + high;
+ return hex;
+}
+
+</pre>

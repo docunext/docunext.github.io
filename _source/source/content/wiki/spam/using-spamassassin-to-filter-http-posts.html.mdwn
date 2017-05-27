@@ -1,0 +1,72 @@
+### Summary
+The idea here is to pass incoming HTTP POST requests through [[Spamassassin]] to reject [[spam]]. Just the concept at this point!
+<pre>
+<?php
+
+$sender = "user@example.com";
+$subject = "Comment";
+$date = date("D, d M Y H:i:s O (T)");
+$date_old = date("D, d M Y H:i:s O");
+$msg_id = date("YMdHis");
+echo <<<EOF
+Return-Path: <$sender>
+Received: example.com (example.com [4.2.2.1])
+    by localhost (Postfix) with ESMTP id E6A51278406A
+    for <www-data@example.com>; $date_old
+Received: from NOBODY ([4.2.2.1]) by example.com;
+    $date
+To: user@example.com
+Subject: $subject
+Message-Id: <$msg_id@example.com>
+Date: $date
+From: www-data@example.com (www-data)
+
+$message
+
+EOF;
+
+</pre>
+
+Then:
+<pre>
+php blah.php | spamc -c
+</pre>
+
+The goal here is to keep the headers fairly innocuous while focusing on the message. The results are promising - low scores for basic content, high scores for spammy content.
+
+Could be helpful!
+
+### Special Scoring
+The example above uses some generic data to "fill in the blanks" with regard to what [[spamassassin]] inspects. However, it is possible to change the scores for the rules which are not relevant to HTTP posts. For example, here is a custom scoring for [[spamassassin]] which removes scoring when testing only a message with no header.
+<pre>
+score MISSING_MID 0.0
+score MISSING_DATE 0.0
+score NO_RELAYS 0.0
+score MISSING_HB_SEP 0.0
+score MISSING_HEADERS 0.0
+score MISSING_SUBJECT 0.0
+score NO_RECEIVED 0.0
+score NO_HEADERS_MESSAGE 0.0
+</pre>
+After trying this out, I realized that an HTTP post can possibly include a header composed of a date, a from email address (the poster), and a subject.
+<pre>
+score MISSING_MID 0.0
+score NO_RELAYS 0.0
+score NO_RECEIVED 0.0
+</pre>
+
+Actually, special scoring isn't needed if the following headers can be included with the content getting checked:
+<pre>
+To: www-data@example.com (www-data)
+Subject: COMMENT
+Date: Sat, 04 Jul 2009 13:24:50 -0400 (EDT)
+From: www-data@example.com (www-data)
+</pre>
+
+Though the source [[IP Address]] would be very helpful for identifying [[spam]] too!
+
+### Related Pages
+* [[Fail2Ban]]
+* [[HTML Safe Input Filter]]
+* [[HTTP Spam]]
+

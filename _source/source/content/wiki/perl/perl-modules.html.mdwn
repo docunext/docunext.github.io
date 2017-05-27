@@ -1,0 +1,7 @@
+### Perl Module Summary
+Perl modules are very helpful when trying to keep larger programs organized. As a style convention, I've noticed that modules usually start with a capital letter, and use the .pm suffix / extension.
+
+### External Links
+This is an incredible quick and easy tutorial on [[Perl]] modules:
+* http://perl.plover.com/Hello/
+

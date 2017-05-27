@@ -1,0 +1,13 @@
+### Dynamic DNS Summary
+Dynamic [[DNS]] is a configuration whereby records are updated by hosts which are dynamically allocated [[IP]] addresses. The host sends an outgoing connection to a DNS server which is most likely set at a fixed address and informs the server of its current address. The server then updates its database to reflect the new address information.
+
+### My Experience with Dynamic DNS
+I've used dyndns.org, but I've always wanted to setup something like this on my own. Thanks to [[tinydyndns]], I can!
+
+### See Also
+* [[DHCP]]
+* [[DNS]]
+* [[djbdns]]
+* [[tinydyndns]]
+* [http://www.docunext.com/wiki/PfSense#TSIG_DNS_Updates TSIG DNS Updates with pfSense]
+

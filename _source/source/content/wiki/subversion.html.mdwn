@@ -1,0 +1,156 @@
+### Basic Subversion Commands
+* svn status - tells you the status of your current page
+* svn commit - allows you to commit changes made to files, with comments. - For example today I edited the i18n/en_US/infonomix.xml in my terminal I typed svn commit and made a note about the changes the note will be saved as a comment on all the files changed so we know who did what when, and what was done
+
+### Intermediate Subversion Commands
+#### Svnsync
+* svnsync - this is a great mirroring tool which can be used to have [[trac]] on one server, and the primary svn repository on another. [[Svnsync]]
+
+#### Moving Files
+Random command snibbet - say you want to move a bunch of files from one directory to its parent, using svn. There are many ways to do this, but this is how I just did it:
+
+<pre>
+find dirname/*.xml -exec svn mv {} ./ \;
+</pre>
+
+One of the great examples of how useful [[find]] can be!
+
+#### Adding Lots of New Files
+Add new files:
+<pre>
+svn st | grep "^?" | awk -F "      " '{print $2}' | xargs svn add
+</pre>
+
+#### File Execution Mode
+I've been wondering how to permanently store file modes (like rear/write/execute) in a subversion repository. Its the "svn:executable" property. Setting the property to anything for the file worked for me - here's what I did:
+<pre>
+svn propedit svn:executable file.sh
+</pre>
+
+In the editor window, I added "exec", then saved, then committed. I removed the file, updated, and the file was then executable whereas previously it was not.
+
+#### Add revision number to a versioned file
+I put '''$REV$''' into the file I wanted to have the revision number, i.e. revision.txt, then ran the following:
+<pre>
+svn propset svn:keywords "Revision" revision.txt
+</pre>
+
+Actually this doesn't do what I want. It only tracks the revision number of the file, not the revision number of the repository. I think I will have to create a script to keep it up to date. Grrr.
+
+### DAV
+A proper [[DAV]] setup requires modifying the mime-type properties of files, as described [http://dylanbeattie.blogspot.com/2008/08/making-your-svn-moddavsvn-repository.html here]. Its like this:
+<pre>
+$ svn propset svn:mime-type image/png pbooks-logo_120x60.png
+property 'svn:mime-type' set on 'pbooks-logo_120x60.png'
+</pre>
+
+My attempts to automate the process:
+<pre>
+find . -name '*.css' -exec svn propset svn:mime-type text/css {} \;
+find . -name '*.png' -exec svn propset svn:mime-type image/png {} \;
+find . -name '*.js' -exec svn propset svn:mime-type application/javascript {} \;
+</pre>
+
+### Subversion to XML ==
+This could be considered svn2xml! Its just similar to the [[MySQL]] command line option "--xml".
+<pre>
+svn log --xml
+</pre>
+
+Also, the [[DAV]] module for use with [[Apache2]] outputs [[XML]] which can be rendered into [[HTML]] with [[XSL]].
+
+### Subversion Dump Filter
+I just figured out how to omit blank revs and renumber the revs:
+
+<pre>
+cat update_repos | svndumpfilter include path --renumber-revs --drop-empty-revs > update_only_repo
+</pre>
+
+For some reason, it only worked when I used a specific path and put  --drop-empty-revs as the last argument before redirecting the output to a file. ??
+
+### Branching and Merging
+Not as exciting or dangerous as bobbing and weaving, but possibly more complicated. Actually its not that complicated, but the commands are precise.
+
+Special case:
+I created a branch, then merged changes from the trunk to the branch, then updated the branch, and now I want to merge new changes back to the trunk. The --stop-on-copy flag makes it easy to mark when a copy was made, but I think I need to find the revision where the merge was done on the branch. Actually, this is pretty cool, I just did a log on the branched version, check this out:
+
+<pre>
+------------------------------------------------------------------------
+r35 | albertlash | 2008-02-22 15:46:24 -0500 (Fri, 22 Feb 2008) | 1 line
+Changed paths:
+   M /branches/nexista-2.0/kernel/config.php
+   A /branches/nexista-2.0/modules/actions/content.action.php (from /trunk/nexista/modules/actions/content.action.php:34)
+   M /branches/nexista-2.0/modules/actions/curl.action.php
+   A /branches/nexista-2.0/modules/actions/header.action.php (from /trunk/nexista/modules/actions/header.action.php:34)
+   M /branches/nexista-2.0/modules/builders/action.builder.php
+   M /branches/nexista-2.0/modules/builders/xml.builder.php
+   M /branches/nexista-2.0/modules/handlers/xml.handler.php
+   M /branches/nexista-2.0/modules/handlers/xsl.handler.php
+   A /branches/nexista-2.0/scripts (from /trunk/nexista/scripts:34)
+
+merged changes from r22:r34 to version2 branch
+------------------------------------------------------------------------
+r22 | albertlash | 2007-12-17 13:32:04 -0500 (Mon, 17 Dec 2007) | 3 lines
+Changed paths:
+   A /branches/nexista-2.0 (from /trunk/nexista:21)
+
+branch for nexista 2.0
+</pre>
+
+As you can see, the log skips from revision 22 to 35, but I do have to start at revision 36 to make sure that the merge doesn't try to make the merge changes over again. Let's give it a go!
+
+I just finished the merge, and everything seemed to work OK. Good!
+
+### Subversion Hooks
+I've finally started to work with subversion hooks. So far I've only setup a post-commit hook to send an email and to svnsync two local subversion repositories. Not much, but I'm very much into triggers and hooks, so this is a positive development for me.
+
+They must be executable:
+<pre>
+sudo find . | grep hooks/ | grep -v .tmpl | xargs sudo chmod 0775
+</pre>
+
+### Interfacing with Other Revision Control Systems
+
+#### Converting [[CVS]] to SVN
+
+* http://cvs2svn.tigris.org/cvs2svn.html
+* http://alexandria.wiki.sourceforge.net/CVS+-+Version+Control+for+Source+Code#tocCVS%20-%20Version%20Control%20for%20Source%20Code12
+
+#### Converting from Subversion to [[Git]]
+
+* http://pauldowman.com/2008/07/26/how-to-convert-from-subversion-to-git/
+
+### Errors
+Not really an error, more of a warning, but annoying nonetheless:
+<pre>
+svn: warning: cannot set LC_CTYPE local
+</pre>
+Fix:
+<pre>
+dpkg-reconfigure locales
+</pre>
+
+#### Assertion Path
+* [http://www.docunext.com/blog/2008/10/svn-ra-get-log-assertion-path-failed.html Assertion `*path != '/'' failed.]
+
+### Feature Requests
+The [[DAV]] interface is awesome, I wish it was possible to have the resulting [[XML]] include the mime-type as an attribute of each file. That would be sweet!
+
+### Related Pages
+* [[svn2html.pl]]
+* [[TortoiseSVN]]
+* [[Submin]]
+* [[SVN-Web]]
+* [http://www.docunext.com/blog/2008/04/svnsync-svn-failed-to-get-lock.html Svnsync failed to get lock]
+
+### Other Revision Control Software
+* [[Git]]
+* [[CVS]]
+* [[Bazaar]]
+* [[SVK]]
+* [[Fossil]]
+* [[Mercurial]]
+
+### External Pages
+* http://www.svnxslt.com/blog/
+

@@ -1,0 +1,26 @@
+/etc/default/saslauthd:
+<pre>
+START=yes
+
+DESC="SASL Authentication Daemon"
+
+NAME="saslauthd"
+
+MECHANISMS="ldap"
+
+CONFIG_FILE="/etc/saslauthd.conf"
+
+MECH_OPTIONS=""
+
+THREADS=5
+
+OPTIONS="-c -m /var/spool/postfix/var/run/saslauthd"
+</pre>
+
+/etc/saslauthd.conf:
+<pre>
+ldap_servers: ldap://ldap.example.com/
+  ldap_filter: uid=%u@%d
+  ldap_search_base: dc=example,dc=com
+</pre>
+

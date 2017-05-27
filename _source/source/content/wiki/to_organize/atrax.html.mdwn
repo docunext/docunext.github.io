@@ -1,0 +1,20 @@
+Atrax ignored the catchall [[robots.txt]] disallow on my server:
+
+<pre>
+User-agent: *
+Disallow: /
+</pre>
+
+That's reason enough to get banned in my opinion. I added this to my robots.txt file:
+
+<pre>
+User-agent: AtraxSolutions
+Disallow: /
+</pre>
+
+I also added the IP addresses, 174.46.170.185 and 72.13.95.243, from which an Atrax bot came to the "slow lane" (7kbps).
+
+<pre>
+www.docunext.com 72.13.95.243 - - [04/Nov/2009:23:44:15 -0500] "GET /wiki/Rlscan.rl HTTP/1.1" 403 914 "-" "Atrax Solutions atraxbot/0.3; http://www.atraxsolutions.com/atraxbot"
+www.docunext.com 174.46.170.185 - - [04/Nov/2009:23:44:26 -0500] "GET /wiki/Roundcube HTTP/1.1" 403 914 "-" "Atrax Solutions atraxbot/0.3; http://www.atraxsolutions.com/atraxbot"
+</pre>

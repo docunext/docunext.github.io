@@ -1,0 +1,38 @@
+### [[Subversion]] to [[Git]]
+Git can do this easily!
+
+### [[Bazaar]] to [[Git]]
+I'm trying to use [[Tailor]], but get this error:
+
+<pre>
+10:52:50 [D] Adjusting the state accordingly to journal
+10:52:50 [I] 921 pending changesets in state file
+10:52:50 [C] Upstream change application failed: /var/www/mirrors/www.mirrors.docunext.com/git-repos/terminator $ /usr/bin/git mv vte-demo.py termiator.py failed
+10:52:50 [C] Something unexpected!
+Traceback (most recent call last):
+  File "/usr/lib/pymodules/python2.5/vcpx/tailor.py", line 156, in __call__
+    self.update()
+  File "/usr/lib/pymodules/python2.5/vcpx/tailor.py", line 120, in update
+    applyable=self._applyable, applied=self._applied)
+  File "/usr/lib/pymodules/python2.5/vcpx/dualwd.py", line 102, in applyPendingChangesets
+    applied=applied)
+  File "/usr/lib/pymodules/python2.5/vcpx/source.py", line 136, in applyPendingChangesets
+    replay(c)
+  File "/usr/lib/pymodules/python2.5/vcpx/dualwd.py", line 113, in replayChangeset
+    self.target.replayChangeset(changeset)
+  File "/usr/lib/pymodules/python2.5/vcpx/target.py", line 134, in replayChangeset
+    self._replayChangeset(changeset)
+  File "/usr/lib/pymodules/python2.5/vcpx/target.py", line 336, in _replayChangeset
+    action(group)
+  File "/usr/lib/pymodules/python2.5/vcpx/target.py", line 502, in _renameEntries
+    self._renamePathname(e.old_name, e.name)
+  File "/usr/lib/pymodules/python2.5/vcpx/repository/git/target.py", line 270, in _renamePathname
+    self.repository.runCommand(['mv', oldname, newname])
+  File "/usr/lib/pymodules/python2.5/vcpx/repository/git/__init__.py", line 77, in runCommand
+    raise exception(str(c) + ' failed')
+Exception: /var/www/mirrors/www.mirrors.docunext.com/git-repos/terminator $ /usr/bin/git mv vte-demo.py termiator.py failed
+</pre>
+
+Now I'm trying this shell script from Henrik Nilsson [[bzrtogit.sh]].
+
+### [[Mercurial]] to Git

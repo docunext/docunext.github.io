@@ -1,0 +1,4 @@
+I don't know of any HP environmental policies, but their thin clients do have decent energy efficiency. 
+
+* [[HP t5000]]
+* [[HP t5135]]

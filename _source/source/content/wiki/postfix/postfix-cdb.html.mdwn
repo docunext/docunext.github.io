@@ -1,0 +1,26 @@
+This is a package for using [[CDB]] (constant database) with [[Postfix]].
+
+I use this package and user information storage system because [[CDB]] is super fast and easy to manage with postmap. I use it primarily on [[SMTP]] gateways to store whether or not an email address exists on the networks I manage - i.e. the relay_recipient_maps [[Postfix]] configuration option.
+
+The raw file looks like this:
+
+<pre class="sh_sh">
+user@example.com OK
+</pre>
+
+Then I compile it with postmap:
+
+<pre class="sh_sh">
+postmap cdb:/etc/postfix/file
+</pre>
+
+And the [[Postfix]] configuration option:
+
+<pre class="sh_sh">
+relay_recipient_maps = cdb:/etc/postfix/file
+</pre>
+
+### See Also
+* [[Postfix]]
+* [http://www.informedemail.com/blog/2010/09/the-necessity-of-a-comprehensive-list-of-all-emails-accepted-at-an-mx-host.html The Importance of A Comprehensive List of All Emails Accepted at an MX Host]
+

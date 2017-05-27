@@ -1,0 +1,3 @@
+This board looks great, but I haven't gotten my hands on one yet. It has a passively cooled 1.2 Ghz Celeron 200 CPU, SATA support, 1 PCI slot, and 1 RAM slot all in a mini-itx form factor. 
+
+The [[D201GLY]] consumes around 22 watts of power, so I'm thinking this one will come in under 20watts, hopefully closer to 10watts. With the new SATA power link optimizations that intel is releasing, it might be possible.

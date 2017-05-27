@@ -1,0 +1,17 @@
+Xapian looks really cool, its an open source [[C++]] search engine, with bindings for a lot of languages (including [[PHP]]!). It seems like its simpler to install and setup than [[leyna]] which looks cool too but more than I would need.
+
+### My Experience with Xapian
+It took some time, but I finally got running with Xapian. How do I like it so far? I love it. Its super simple, fast, and produces quality results.
+
+I've been able to create indexes and search them using the [[Ruby Xapian Bindings]], and I've also searched them using the [[Perl]] interface as well.
+
+At first I used it for generating "related links" based upon certain keywords, but now I'm planning to use it as a real search engine for all my content, as Google isn't doing that good of a job of indexing it anymore. :-(
+
+### See Also
+* [[apt-xapian-index]]
+* [[Ruby Xapian Bindings]]
+
+### Links
+
+* http://www.xapian.org/
+

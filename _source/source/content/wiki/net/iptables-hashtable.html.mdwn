@@ -1,0 +1,39 @@
+### Hashtable Summary
+This is good stuff! I wanted replicate some of the functionality of [[Fail2ban]].
+
+A new table, called HASHLIMIT:
+<pre>
+-N HASHLIMIT
+-A HASHLIMIT -j LOG --log-prefix "[NF SYN Matched]: "
+-A HASHLIMIT -m hashlimit --hashlimit 1/hour --hashlimit-burst 1 --hashlimit-mode srcip --hashlimit-htable-expire=300000 --hashlimit-name ssh --hashlimit-htable-gcinterval 100000 -j ACCEPT
+#-A HASHLIMIT -j LOG --log-prefix "[SYN Matched2]: "
+-A HASHLIMIT -j limitlogdrop
+</pre>
+
+And rules to feed the table:
+<pre>
+-A INPUT -m tcp -p tcp --dport 22 -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -p tcp --tcp-flags SYN SYN --dport 22 -j HASHLIMIT
+</pre>
+
+### Hashtable Expiry Troubles
+
+Hmmm, for whatever reason, on the [[debian]] [[vps]] I'm using, the expire option isn't working, its always using the default. So I'm recompiling it with a higher default. Strange, its not that its always using the default, its that the hashlimit-name has to be changed when any of the settings are changed. Odd.
+
+<pre>
+# cat /proc/net/ipt_hashlimit/ssh4
+295 123.3.1.242:0->0.0.0.0:0 1193088 57600000 57600000
+</pre>
+
+### Hashtable Benefits
+
+Despite the problem mentioned above, the hashtable feature of [[iptables]] has worked very well for me for several years now. I plan to continue using it for the foreseeable future.
+
+### See Also
+* [[Networking]]
+* [[Iptables]]
+
+### Links
+* http://security.maruhn.com/iptables-tutorial/x6330.html
+* http://www.zero-sys.net/portal/sysadmin.html
+

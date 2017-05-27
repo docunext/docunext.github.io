@@ -1,0 +1,35 @@
+The filesystem is the organization and storage mechanism for data stored locally on a computer. Filesystems on POSIX compliant operating systems usually have a "root" directory inside of which all other directories are stored.
+
+[[File System Hierarchy Standard]]
+
+### Incomplete List of Filesystems ==
+* [[ext2]] - the same as [[ext3]], without journal support
+* [[ext3]] - my favorite filesystem for use with the [[Linux]] kernel
+* [[ext4]] - the future of [[ext3]] for use with super gigantic filesystems
+* [[HFS]] - [[Mac OS X]]
+* [[Btrfs]] - another new filesystem for [[Linux]], supposedly similar to [[ZFS]]
+* [[NFS]] - [[Network]] filesystem
+* [[squashfs]] - compressed
+* [[ZFS]] - From [[Solaris]], now available in [[FreeBSD]]
+* [[ReiserFS]] - supposed to be super fast for lots and lots of little files
+* [[XFS]] - Alternative to [[ext3]] on [[Linux]]
+* JFS - Alternative to [[ext3]] on [[Linux]]
+* [[UFS]] - Default filesystem on [[FreeBSD]]
+* [[Tux3]]
+* [[NILFS]]
+
+Filesystems are usually created on top of [[partitions]].
+
+When I found myself with a lot of well organized files, I realized a need to [[backup]] and [[synchronize]] them.
+
+### Related Pages
+* [[Files]]
+* [[LVM]]
+* [[Git]]
+* [[FUSE]]
+* [[Fsarchiver]]
+
+### External Links
+* http://www.debian-administration.org/articles/388
+* http://www.cyberciti.biz/tips/most-efficient-linux-file-system-for-laptops.html
+

@@ -1,0 +1,50 @@
+### Summary
+
+[[Ruby]] Builder is exactly what I was looking for in my quest to patch together a [[Ruby]] version of [[Nexista]], aka [[NeoToys]].
+
+What does it do? It uses the magical power of [[Ruby]] to generate structured documents, more specifically, [[XML]] and [[CSS]].
+
+### My Experience with Ruby Builder
+So far I've noticed that its quite zippy, and easy to use. I've also found that there is more than one way to use builder, especially when it comes to blocks.
+
+<pre class="sh_ruby">
+xml.root { |r|
+    r.mynode("hi")
+    r.subtree { |z|
+        z.subnode(:myattr=>"yo")
+        r.anothernode(:myattr=>"cya")
+    }
+}
+</pre>
+
+In the above example, I'm not sure why I'm able to use z and r interchangeably within the r.subtree block. In fact, z isn't required at all. Is there a preferred or recommended approach? The Builder::XmlMarkup [[Ruby]] docs elaborate a little:
+
+<blockquote>
+The instance_eval implementation which forces self to refer to the message receiver as self is now obsolete. We now use normal block calls to execute the markup block. This means that all markup methods must now be explicitly send to the xml builder. For instance, instead of
+
+<pre class="sh_ruby">
+   xml.div { strong("text") }
+</pre>
+
+you need to write:
+
+<pre class="sh_ruby">
+   xml.div { xml.strong("text") }
+</pre>
+
+Although more verbose, the subtle change in semantics within the block was found to be prone to error. To make this change a little less cumbersome, the markup block now gets the markup object sent as an argument, allowing you to use a shorter alias within the block.
+For example:
+
+<pre class="sh_ruby">
+  xml_builder = Builder::XmlMarkup.new
+  xml_builder.div { |xml|
+    xml.stong("text")
+  }
+</pre>
+
+</blockquote>
+
+### Related Pages
+* [[LibXML]]
+* [[Nokogiri]]
+

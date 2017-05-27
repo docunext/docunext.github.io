@@ -1,0 +1,29 @@
+### Summary
+Routing is the process of getting from one network to another.
+
+### Routing Types
+
+* Static - instructions for directly forwarding packets from one network or host to another
+* Dynamic - processes for forwarding packets to a set of possible next networks hops
+
+### Dynamic Routing
+* [[BGP]]
+* [[IS-IS]]
+* [[OSPF]]
+
+### Routing Software
+* [[Quagga]]
+* [[Cisco IOS]]
+* [[Zebra]]
+* [[BIRD]]
+
+### Related Pages
+* [[iproute2]]
+* [[VPN]]
+* [[LAN]]
+* [[pfSense]]
+* [[Vyatta]]
+
+### External Links
+* http://wiki.openvz.org/Source_based_routing
+

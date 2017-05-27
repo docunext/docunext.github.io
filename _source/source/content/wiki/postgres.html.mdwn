@@ -1,0 +1,61 @@
+Postgres is a relational database management system. It is ACID compliant and
+has support for foreign keys.
+
+It is popular with accounting packages such as LedgerSMB, TinyERP, and SQL
+Ledger.
+
+I'm not too familiar with Postgres, as I've had a lot more experience with
+[[/MySQL]]. One thing I like about Postgres is that it is totally open source,
+whereas MySQL is dual licensed, and the InnoDB backend which supports
+foreign keys is owned by Oracle.
+
+### Installing Postgres on Ubuntu / Debian
+
+    apt-get install postgresql
+    apt-get install phpPgAdmin
+
+I followed two more steps - I read the postgresql + phppgadmin DEBIAN.Readme
+docs and added password capability to the postgres server, then disabled the
+extra security setting in phppgadmin config.inc.php file as described in the
+phppgadmin docs.
+
+### Examples
+
+    CREATE TABLE wwwneofilmzcom_config (
+      conf_name varchar(255) NOT NULL default '',
+      conf_value text,
+      PRIMARY KEY  (conf_name)
+    );
+
+### Big News I am using Postgres
+
+I recently switched to using Postgres because it offers transaction support
+without gobbling up tons of memory like InnoDB can, making it more appealing for
+my virtual instances. I'm glad I did, because I've since learned about the
+awesome Hstore feature, as well as PL/V8.
+
+#### Adding a Role
+
+    sudo su
+    su postgres
+    psql
+    postgres=# CREATE ROLE app WITH SUPERUSER LOGIN;
+
+#### Creating a Database
+
+    CREATE DATABASE newdb OWNER me;
+    
+### Postgres Extensions
+
+#### HStore
+
+HStore could be compared to a giant hash - complete with keys and values. The
+very interesting part about this is that with postgres its possible to search
+within the values. This makes it quite the contender to [[/NoSQL]] solutions like
+[[/nosql/MongoDB]].
+
+#### PL/V8
+
+This is super cool - the [[/Google]] V8 engine plugged into Postgres - it can be
+used to create stored procedures. Just imagine - this supercharges Postgres into
+an API service for client-side web apps. MASSIVE!

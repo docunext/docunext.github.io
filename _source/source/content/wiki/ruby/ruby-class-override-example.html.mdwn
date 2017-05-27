@@ -1,0 +1,37 @@
+Thanks to [[Ruby]]'s object oriented-nature, it includes support for class inheritance. It also includes the ability to override inherited class and instance methods!
+
+Here's a '''simple''' example of class inheritance:
+
+<pre class="sh_ruby">
+class MyString < String
+  # Yeah!
+end
+</pre>
+
+This simple creates a new class named "MyString" that is nearly identical to the original [[Ruby]] "String" class.
+
+Here's a simple example of [[Ruby]] class inheritance with a method override:
+
+<pre class="sh_ruby">
+class MyString < String
+
+  def self.capitalize
+    return "CAPITALIZE"
+  end
+end
+</pre>
+
+What do you think this will do? Let's find out:
+
+<pre class="sh_ruby">
+class MyString < String
+  def capitalize
+    return "WAZZUP"
+  end
+end
+
+blah = MyString.new("hello")
+puts blah.capitalize
+# WAZZUP
+</pre>
+

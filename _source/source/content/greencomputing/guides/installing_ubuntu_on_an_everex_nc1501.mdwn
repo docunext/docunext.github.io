@@ -1,0 +1,28 @@
+This isn't too hard, but there are a few gotchas: 
+
+* I installed using an external monitor, the notebook display won't work. To do so, use the BIOS to turn on LCD. 
+* After installation, I booted into single user mode and remove GDM. 
+* I updated everything, then installed openchrome (see link below)
+* I use a custom DSDT
+
+## Wireless 
+
+To turn on wireless, use fn-F2. The radio is an Atheros based card, which is pretty good. 
+
+## Video Driver 
+
+I use the openchrome driver and it is also pretty good. 
+
+## Touchpad 
+
+I had some problems with the cursor, but eventually figured it on on the ubuntu machine. I'm trying to install debian on another one and the cursor remains invisible. 
+
+
+## See Also
+
+* [[/Hardware/Everex]]
+
+## Links
+
+* [Everex NC1501 DSDT](http://www.docunext.com/blog/2007/03/everex-nc1500-dsdt-fix.html)
+* <https://help.ubuntu.com/community/OpenChrome>

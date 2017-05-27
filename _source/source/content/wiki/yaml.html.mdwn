@@ -1,0 +1,42 @@
+"Yet Another Markup Language"
+
+Personally, I'd rather use [[XML]] or [[JSON]].
+
+### YAML Example
+
+<pre>
+something:
+    - else         : OK
+</pre>
+
+I was really disinterested with YAML for a long time, but recently I've become very interested in it thanks to '''Front Matter'''.
+
+Front matter is essentially metadata about the document its attached to, formatted in such a way that it does not get in the way. In other words, if you don't know its "Front Matter", you probably wouldn't wonder what it is, or what its doing there.
+
+Here's an example:
+
+<pre>
+---
+Title: This is an example of front matter
+Categories: examples yaml text
+Date: 2011-10-28
+Layout: page
+---
+</pre>
+
+Not bad, eh? To me, it feels very comfortable, kind of like [[Markdown]]. I first formally learned about Front Matter thanks to [[Jekyll]], though I had seen it before without knowing its name or real purpose. After doing some research, I've come to learn that '''many''' services / software packages use Front Matter:  [[tumblr]], [[Movable Type]]... even [[Ikiwiki]] has a plugin for it.
+
+So nowadays I'm in the process of converting some of the wiki utilities I work with to play nicely with front matter - namely [[Git Wiki]] and [[Ikiwiki]]. Speaking of wikis, I need to get [[Secure Wiki]] over to [[Ruby on Rails]]! But back to my recent work - I actually converted [[Git Wiki]] into a [[Rails3]] engine last evening. It's not nearly done yet, but it is really cool so far!
+
+Anyway, I'm also changing some non-wiki stuff to use Front Matter, like [[Regulate]] - a [[CMS]].
+
+My interest in [[Regulate]] and front matter actually led me to [[GitModel]], and I actually ended up combining the two together - it was a very cool project.
+
+With regards to Front Matter and different media types, I think Tumblr and [[Jekyll]] are able to use it with blog posts because they are alternate back-ends for commenting, like [[Disqus]]. As soon as the metadata surrounding a document gets a bit more complicated, it could be a task for a relational database management system like [[MySQL]], or a [[NoSQL]] server like [[MongoDB]]. I feel similarly about YAML I guess, once a document starts to get complicated, might as well switch to [[JSON]].
+
+Along those lines, I've been thinking of how [[GitModel]] could be a "local", development type of [[ORM]] for [[Rails]], in place of [[Mongoid]]. Sort of like what [[SQLite]] is to [[MySQL]].
+
+### See Also
+* [[JSON]]
+* [[XML]]
+

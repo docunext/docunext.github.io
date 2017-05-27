@@ -1,0 +1,12 @@
+In reading over my old [[Postfix]] notes, I'm wondering why I didn't just use postfix-mysql instead of postfix -> sasl -> mysql? Who knows... oh wait - postfix-mysql is for delivery information, not for authentication, right?
+
+<pre class="sh_sh">
+user = user
+password = pass
+dbname = dbnam
+table           = auth_user
+select_field    = maildir
+where_field     = email
+hosts = localhost
+</pre>
+

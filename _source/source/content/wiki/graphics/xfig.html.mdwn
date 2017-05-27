@@ -1,0 +1,21 @@
+This is an open source tool for creating line drawings, and more. It seems a bit dated, but its looks nice too.
+
+
+I love how simple the file format is:
+<pre>
+#FIG 3.2  Produced by xfig version 3.2.5a
+Landscape
+Center
+Metric
+A4------
+100.00
+Single
+-2
+1200 2
+1 3 0 1 0 7 50 -1 -1 0.000 1 0.0000 1530 1845 3002 3002 1530 1845 2745 4590
+1 3 0 1 0 7 50 -1 -1 0.000 1 0.0000 2025 2970 1438 1438 2025 2970 2520 4320
+1 3 0 1 0 7 50 -1 -1 0.000 1 0.0000 2880 5355 764 764 2880 5355 2340 4815
+2 5 0 1 0 -1 50 -1 -1 0.000 0 0 -1 0 0 5
+>-------0 <empty>
+>------- 1395 3105 2745 3105 2745 4365 1395 4365 1395 3105
+</pre>

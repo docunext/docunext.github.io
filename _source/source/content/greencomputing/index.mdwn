@@ -1,0 +1,40 @@
+## Welcome
+
+Welcome to the Green Computing Wiki! This wiki has been developed by a single human being for the most part and will continue to be until I get a better understanding of how to protect MediaWiki from abuse. In the future, I hope that this wiki can be a community effort as it will be impossible for me to capture and record the power consumption and efficiency of every computer out there. 
+
+As you peruse this site, you'll come to realize that I actually have tested and evaluated quite a lot of different computers so far ([[Computer Power Efficiency Ratings]]) and identified some quality components ([[Energy Efficient Computer Components Section]]), and have come up with some pretty good methods for reducing energy consumption by computers. I hope you benefit from the information. If you do have anything to contribute, you can add a comment to our [Green Computing Blog](http://www.green-computing.info/blog/) and I hope you come back soon. 
+
+## [[Guides]]
+
+If you are new to the idea of power management, please check out our [[/Guides/Newbies Guide to Power Management]] to get started! 
+
+### How to measure your computer power consumption
+
+There are many ways to measure how much energy your computer uses. The way I do it is with the [[Kill a watt]] energy meter. If you are monitoring your battery discharge, you can use these [[command line battery check commands]].
+
+### How to control your computer power consumption
+
+You can control your computer's power consumption through a variety of different strategies, and thankfully there are some relatively standard ways of doing so. These are called [[Power Management Systems]]. 
+
+You can also simply [[turn off your computer]], and only [[turn on your computer]] when you need to use it.
+
+If you need to run your computer continuously, you might want to consider getting [[Hardware/Energy Efficient Power Supplies]], and other [[energy efficient computer components]].
+
+### Measurements of Various Computers and Components
+
+
+You might be surprised with how wide a spectrum of energy efficiency is available for computers. If you consider the price ranges to buy a computer and computer components, there is a similar range in how much it will cost to operate those components. We've assembled some anecdotal information on how much energy some common computers and their components consume, and you can access that information on our [[Computer Power Efficiency Ratings]] page and the [[Energy Efficient Computer Components Section]].
+
+
+### New Sections
+
+
+* [[Computer Power Efficiency Ratings]]
+* [[Computers and Heat]]
+* [[Linux Kernel and Power Saving]]
+* [[Other Websites about Saving Power on Computers]]
+* [[/Software/Laptop Mode Tools]]
+* [[My Energy Settings]]
+* [[Software]]
+* [[Hardware]]
+* [[Guides]]

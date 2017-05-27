@@ -1,0 +1,10 @@
+[[PHP]] + [[Ming]] rocks!
+
+The best place for [[PHP]] / [[Ming]] info was gazb's website hosted at brinkster, but its been unavailable for the past few weeks. Hopefull it was backed up somewhere!
+
+The best place to learn about Ming is gazb's tutorials.
+
+http://www.gazbming.com/
+
+[[Example PHP Ming Code]]
+

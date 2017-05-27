@@ -1,0 +1,69 @@
+"dar - Disk ARchive: Backup directory tree and files"
+
+This tool sounds awesome. It can compress and encrypt files for backups and
+retrieval.
+
+### Dar Compression Options
+
+Unlike Tar, dar compresses each of the files in an archive independently.
+This has several advantages, not the least of which files can be selectively
+included or excluded from the compression process. For example, there is no need
+to re-compress *.gz or *.jpg (or PNG or GIF files), they are already
+compressed; though txt, cnf, and log files compress very well.
+
+Example:
+
+    dar -z -c /var/archives/home/exampleuser -Z "*.gz" -X "*.jpg" /home/exampleuser
+
+The above instructs dar to create (-c) an archive (likely named
+exampleuser.1.dar) in /var/archives/home of the /home/exampleuser folder, to
+compress it (-z), and to exclude files with gz and jpg extentions (-Z "*.gz" -X
+"*.jpg").
+
+### Dar Encryption Options
+
+Dar uses external libraries to encrypt and decrypt files, and I think it can
+only encrypt / decrypt entire archives. I had hoped it was similar to the
+compression mechanism, where one could selectively encrypt files, but apparently
+there are some disadvantages to doing it that way. Instead, to support selective
+retrieval of files from an encrypted archive, the archive is encrypted in chunks
+(whose size can be specified).
+
+Dar supports the blowfish, aes, twofish, serpent and camellia ciphers for strong
+encryption and scrambling for essentially obfuscation (for some that may be good
+enough); blowfish is the default - from what I've heard it is fast and strong.
+
+Encryption example:
+
+    dar -K blowfish:t0ps3krit -z -c /var/archives/home/exampleuser -Z "*.gz" -X "*.jpg" /home/exampleuser
+
+The above would encrypt the archive with the blowfish algorithm using the key
+t0ps3krit.
+
+### Dar Slicing
+
+Another cool option of dar is the ability to easily slice up archives at any
+size to transfer the backup to media of a specific size.
+
+Slicing example:
+
+    dar -s 4G -z -c /var/archives/home/exampleuser -Z "*.gz" -X "*.jpg" /home/exampleuser
+
+The above would slice the archive into 4G pieces.
+
+### Incremental Backups with Dar
+
+Dar can also do incremental backups, but first it must make a master version,
+from which subsequent backups shall be made.
+
+First time incremental example:
+
+    dar -z -c /var/archives/home/exampleuser.0 -Z "*.gz" -X "*.jpg" /home/exampleuser
+
+Just a regular backup, but above I've added "0" to the archive name, to indicate
+its the beginning of something.
+
+Follow-up example:
+
+    dar -z -c /var/archives/home/exampleuser.1 -Z "*.gz" -X "*.jpg" /home/exampleuser -A /var/archives/home/exampleuser.0
+

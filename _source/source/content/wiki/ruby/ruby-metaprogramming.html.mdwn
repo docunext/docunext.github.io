@@ -1,0 +1,164 @@
+Here is a script that hopefully will expose some of the ins and outs of metaprogramming with Ruby:
+
+<pre class="sh_ruby">
+# This is here to identify the method that is getting called
+module Kernel
+  private
+    def this_method
+      caller[0] =~ /`([^']*)'/ and $1
+    end
+    def calling_method
+      caller[1] =~ /`([^']*)'/ and $1
+    end
+end
+
+# This is some static data
+module Stuff
+
+  MYKEYS = ['date']
+  NUKEYS = ['betterdate']
+  ALLKEYS = []
+  ALLKEYS.concat(MYKEYS).concat(NUKEYS)
+  ALLKEYS << 'dynamicdate'
+  MYHASH = {
+          't1' => {'date' => '2000', 'betterdate' => '2000', 'dynamicdate' => '2000' },
+          't2' => Hash.new('2011')
+        }
+
+end
+
+# This is the test case class we'll use for examining some metaprogramming
+class Test
+  include Stuff
+
+  # Instance attribute accessors
+  attr_accessor :q, :name
+
+  def initialize(name)
+
+    # Some defaults
+    @q = "How do you HTML?"
+
+    # Set name upon instantiation
+    @name = name
+
+    # Strategy TWO: define_method upon instantiation
+    # Let's try to save some cycles and create the methods upon object
+    # instantiation, this seems logical, right?
+    NUKEYS.each do |k|
+      self.class.send(:define_method, k.to_sym) do
+        # You might think that this works OK, but WATCH OUT!
+        MYHASH[name][k]
+      end
+    end
+
+  end
+
+  #
+  # If we use define method dynamically here in the class, we'll be creating
+  # instance methods. Since I'm accessing a data source that used an instance
+  # property as its primary key, I'll need to pass the key as an argument,
+  # because the class can't access instance properties that don't exist yet.
+
+  MYKEYS.each do |k|
+    define_method(k.to_sym) do |myid|
+      MYHASH[myid][k]
+    end
+  end
+
+  # Fear not the method_missing instance method!
+  # With it, you can instruct the parent class to define_method on an
+  # instance's behalf at runtime, and thus self and its properties are
+  # accessible.
+  def method_missing(m, *args, &block)
+
+    if ALLKEYS.include?(m.to_s)
+      # Yes, smarter key
+      self.class.send(:define_method, m) do
+        MYHASH[name][m.to_s]
+      end
+    else
+      self.class.send(:define_method, m) do
+        val = ">>  I'm a dynamically generated method, "
+        val << "created by #{self.class} #{name} "
+        val << "and my name is #{this_method}. "
+        val << "My question is: #{q}?"
+      end
+    end
+    self.send(m)
+
+  end
+
+end
+
+
+t1 = Test.new('t1')
+t2 = Test.new('t2')
+
+puts "puts t1.popquiz"
+puts t1.popquiz
+t1.q = '"Will the @q instance variable be accessible to newly instantiated objects?"'
+
+puts "\n"
+puts "puts t1.popquiz"
+puts t1.popquiz
+
+puts "\n"
+puts "puts t2.popquiz"
+puts t2.popquiz
+
+t2.q = 'T2: Is Ruby AWESOME, or what?'
+
+puts "\n"
+puts "puts t2.popquiz"
+puts t2.popquiz
+
+puts "\n"
+puts "puts t2.adhoc"
+puts t2.adhoc
+
+puts "\n"
+puts "puts t1.adhoc"
+puts t1.adhoc
+
+puts "\n"
+puts "puts t1.date('t1')"
+puts t1.date('t1')
+
+puts "\n"
+puts "puts t2.date('t2')"
+puts t2.date('t2')
+
+puts "\n"
+puts "puts t2.betterdate"
+puts t2.betterdate
+
+puts "\n"
+puts "puts t1.betterdate"
+puts t1.betterdate
+puts "OH NO! I thought this would be 2000!!!"
+
+puts "\n"
+puts "puts t2.dynamicdate"
+puts t2.dynamicdate
+
+puts "\n"
+puts "puts t1.dynamicdate"
+puts t1.dynamicdate
+puts "Hoo ray!!! This is 2000!!"
+
+puts "\n\nLike this stuff? See these pages for more info:"
+
+puts "http://wiki.answers.com/Q/How_do_you_html"
+puts "http://apidock.com/rails/Class/cattr_accessor"
+puts "http://stackoverflow.com/questions/185947/ruby-define-method-vs-def/242106"
+puts "http://www.ruby-doc.org/core/classes/Module.html#M000497"
+</pre>
+
+### See Also
+* [[Ruby]]
+
+### Links
+* [http://www.docunext.com/blog/2011/05/metaprogramming-with-ruby.html Metaprogramming with Ruby: method_missing and define_method]
+* [http://www.ruby.code-experiments.com/blog/2011/02/dynamic-creation-of-instance-methods-in-ruby-with-define-method-and-method-missing.html Dynamic Creation of Instance Methods In Ruby with define_method and method_missing]
+

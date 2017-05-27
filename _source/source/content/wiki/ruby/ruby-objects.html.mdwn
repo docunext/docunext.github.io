@@ -1,0 +1,63 @@
+In [[Ruby]], everything is an object, right? So let's create some!
+
+minit.rb:
+<pre class="sh_ruby">
+class Minit
+
+    def initialize()
+        @barf = "blah"
+    end
+
+    def barf()
+        puts @barf
+    end
+end
+</pre>
+
+new.rb:
+<pre class="sh_ruby">
+require "minit"
+
+yo = Minit.new
+
+yo.barf
+</pre>
+
+Runit:
+<pre class="sh_sh">
+# ruby new.rb
+blah
+</pre>
+
+Nice and simple. Now let's try modifying that object we create.
+
+minit.rb:
+<pre class="sh_ruby">
+class Minit
+
+    @barf = "yo"
+
+    def initialize()
+        @barf = "blah"
+    end
+
+    def setme(newval)
+        @barf = newval
+    end
+
+    def barf()
+        puts @barf
+    end
+end
+</pre>
+
+new.rb:
+<pre class="sh_ruby">
+require "minit"
+yo = Minit.new
+yo.setme("yoyoyo")
+yo.barf
+</pre>
+
+Yes, yoyoyo!
+

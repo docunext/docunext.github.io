@@ -1,0 +1,19 @@
+Ubuntu uses a different process for managing LDAP authentication. Its a little frustrating because I just learned how to do it with [[debian]]!
+
+Its really odd - I can see the LDAP users with getent passwd or getent shadow, but when I "su username" I get bunk. Same when I try to login via ssh.
+
+It appears that [[Debian]] uses pam_unix.so while [[Ubuntu]] uses pam_ldap.so for [[LDAP]] authentication.
+
+In an effect to do this the lazy way, I'm upgrade to [[Hardy Heron]]. :-) Maybe that will help me figure it out.
+
+The upgrade was painful, but its done. I then continued with the ldap configuration, '''restarted''' and it works now. :-)
+
+The key to getting it to work was learning about these two new packages:
+* ldap-auth-config
+* ldap-auth-client
+
+As far as I can tell, they are meta-packages which combine all the required packages and configurations needed to get [[LDAP Authentication]] to work.
+
+### Related Pages
+* [[Setup a debian machine to use an LDAP server for Authentication]]
+

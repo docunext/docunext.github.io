@@ -1,0 +1,7 @@
+Software can make a significant impact in how energy efficient a computer is.
+
+
+* [[Software/cpufreq]]
+* [[Software/powernowd]]
+* [[Software/powertop]]
+* [[/Software/Laptop Mode Tools]]

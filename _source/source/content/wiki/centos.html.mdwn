@@ -1,0 +1,118 @@
+### CentOS Summary
+CentOS is, as I understand it, based on [[RedHat]]. That is true, the RedHat enterprise distribution. As they state on their website:
+<blockquote>
+CentOS is an Enterprise-class Linux Distribution derived from sources freely provided to the public by a prominent North American Enterprise Linux vendor.  CentOS conforms fully with the upstream vendors redistribution policy and aims to be 100% binary compatible. (CentOS mainly changes packages to remove upstream vendor branding and artwork.)  CentOS is free.
+</blockquote>
+
+CentOS stands for "Community Enterprise Operating System"!
+
+### CentOS Project
+In mid-2009, there was an open letter written by the project developers to the manager of the centos.org domain name. As of August, 2009, the issues stated in the letter appear to be resolved. I'm personally pleased to see the CentOS Project become more community focused and organized.
+
+### My Experience with CentOS
+Well, I finally got a CentOS server setup. I signed up for a "Village" [[VPS]] from vpsville.ca. Its a very minimal machine, I signed up just so I could learn about CentOS. I will host some non-mission critical services there eventually, once I'm comfortable with CentOS.
+
+#### Package Management: [[yum]]
+<pre>
+Loading "installonlyn" plugin
+You need to give some command
+usage: yum [options] < grouplist, localinstall, groupinfo, localupdate, resolvedep, erase, deplist, groupremove, makecache, upgrade, provides, shell, install, whatprovides, groupinstall, update, groupupdate, info, search, check-update, list, remove, clean, grouperase >
+
+options:
+  -h, --help            show this help message and exit
+  -t, --tolerant        be tolerant of errors
+  -C                    run entirely from cache, don't update cache
+  -c  [config file]     config file location
+  -R  [minutes]         maximum command wait time
+  -d  [debug level]     debugging output level
+  -e  [error level]     error output level
+  -y                    answer yes for all questions
+  --version             show Yum version and exit
+  --installroot=[path]  set install root
+  --enablerepo=[repo]   enable one or more repositories (wildcards allowed)
+  --disablerepo=[repo]  disable one or more repositories (wildcards allowed)
+  -x [package], --exclude=[package]
+                        exclude package(s) by name or glob
+  --obsoletes           enable obsoletes processing during updates
+  --noplugins           disable Yum plugins
+None
+</pre>
+
+OK, yum update does a bunch of stuff, I guess it does an upgrade too.
+
+Uh-oh:
+<pre>
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Traceback (most recent call last):
+  File "/usr/bin/yum", line 29, in ?
+    yummain.user_main(sys.argv[1:], exit_code=True)
+  File "/usr/share/yum-cli/yummain.py", line 229, in user_main
+    errcode = main(args)
+  File "/usr/share/yum-cli/yummain.py", line 104, in main
+    result, resultmsgs = base.doCommands()
+  File "/usr/share/yum-cli/cli.py", line 343, in doCommands
+    return self.yum_cli_commands[self.basecmd].doCommand(self, self.basecmd, self.extcmds)
+  File "/usr/share/yum-cli/yumcommands.py", line 554, in doCommand
+    return base.search(extcmds)
+  File "/usr/share/yum-cli/cli.py", line 691, in search
+    for (po, keys, matched_value) in matching:
+  File "/usr/lib/python2.4/site-packages/yum/__init__.py", line 1593, in searchGenerator
+    for sack in self.pkgSack.sacks.values():
+  File "/usr/lib/python2.4/site-packages/yum/__init__.py", line 591, in <lambda>
+    pkgSack = property(fget=lambda self: self._getSacks(),
+  File "/usr/lib/python2.4/site-packages/yum/__init__.py", line 434, in _getSacks
+    self.repos.populateSack(which=repos)
+  File "/usr/lib/python2.4/site-packages/yum/repos.py", line 223, in populateSack
+    self.doSetup()
+  File "/usr/lib/python2.4/site-packages/yum/repos.py", line 71, in doSetup
+    self.ayum.plugins.run('postreposetup')
+  File "/usr/lib/python2.4/site-packages/yum/plugins.py", line 176, in run
+    func(conduitcls(self, self.base, conf, **kwargs))
+  File "/usr/lib/yum-plugins/fastestmirror.py", line 181, in postreposetup_hook
+    all_urls = FastestMirror(all_urls).get_mirrorlist()
+  File "/usr/lib/yum-plugins/fastestmirror.py", line 333, in get_mirrorlist
+    self._poll_mirrors()
+  File "/usr/lib/yum-plugins/fastestmirror.py", line 376, in _poll_mirrors
+    pollThread.start()
+  File "/usr/lib/python2.4/threading.py", line 416, in start
+    _start_new_thread(self.__bootstrap, ())
+thread.error: can't start new thread
+</pre>
+
+It works when I use the --noplugins flag. To install [[NGINX]], I added [[EPEL]].
+
+[[CentOS Software Installation]]
+
+### Configuration
+Should be the same as any other distribution.
+
+#### Sudo
+I get this:
+<pre>
+audit_log_user_command(): Connection refused
+</pre>
+
+#### Service Management
+I think it uses /etc/init.d, yes:
+<pre>
+/etc/init.d/sshd restart
+Stopping sshd:                                             [  OK  ]
+Starting sshd:                                             [  OK  ]
+</pre>
+
+#### Autostart Services
+<pre>
+chkconfig varnish on
+chkconfig nginx on
+</pre>
+
+### See Also
+* [[Comparison of Debian and CentOS]]
+* [[CentOS on OpenVZ]]
+* [[EPEL]]
+* [[NGINX with Passenger on CentOS]]
+
+### Links
+* [http://www.lucas-nussbaum.net/blog/?p=385 Bootstrapping CentOS from Debian]
+

@@ -1,0 +1,7 @@
+## What is Lenovo?
+
+Lenovo is a Chinese company which bought the "Thinkpad" notebook line from IBM. I've always viewed the Thinkpads in high regard, even as they transitioned from IBM to Lenovo. Lenovo makes other laptops besides the ThinkPad series.
+
+## Lenovo Notebook Models
+
+* [[/Hardware/Lenovo/G555]]

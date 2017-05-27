@@ -1,0 +1,59 @@
+
+
+
+"Of course it runs NetBSD!"
+
+I'm interested in setting up a NetBSD [[VPS]] server, so I'm trying out NetBSD on [[QEMU]] first. I've read it is a very efficient operating system.
+
+<pre class="sh_sh">
+kvm -cdrom amd64cd-5.0.1.iso -hda netbsd.qcow2
+</pre>
+
+I ran dhclient to get an IP from QEMU.
+
+Some basic stuff:
+<pre>
+  # vmstat                                             
+   procs    memory      page                       disks   faults      cpu
+   r b w    avm    fre  flt  re  pi   po   fr   sr w0 c0   in   sy  cs us sy id
+   0 0 0  11652  93272  286   0   0    0    0    0 17  0  105  218  31  3  8 89
+  # ps -A                                              
+  PID TTY   STAT    TIME COMMAND                       
+    0 ?     DKl  0:00.17 [system]                      
+    1 ?     Is   0:00.23 init                          
+   84 ?     Is   0:00.01 /sbin/dhclient                
+  119 ?     Is   0:00.07 /usr/sbin/syslogd -s          
+  272 ?     Is   0:00.03 /usr/sbin/inetd -l            
+  278 ?     Ss   0:00.05 /usr/sbin/cron                
+  291 ttyE0 Is   0:00.57 login                         
+  293 ttyE0 S    0:00.19 -csh                          
+  305 ttyE0 O+   0:00.05 ps -A                         
+  284 ttyE1 Is+  0:00.03 /usr/libexec/getty Pc ttyE1   
+  263 ttyE2 Is+  0:00.04 /usr/libexec/getty Pc ttyE2   
+  297 ttyE3 Is+  0:00.05 /usr/libexec/getty Pc ttyE3   
+  # uname -a                                           
+  NetBSD  5.0.1 NetBSD 5.0.1 (GENERIC) #0: Thu Jul 30 00:08:07 UTC 2009  builds@b7
+  .netbsd.org:/home/builds/ab/netbsd-5-0-1-RELEASE/amd64/200907292356Z-obj/home/bu
+  ilds/ab/netbsd-5-0-1-RELEASE/src/sys/arch/amd64/compile/GENERIC amd64
+</pre>
+
+### NetBSD [[Filesystems]]
+
+* NetBSD uses FFS aka [[UFS]] as its default file system.
+* NetBSD supports [[ext2]], but not [[ext3]].
+* It also supports [[ZFS]].
+* Ah - it also supports [[unionfs]], but not [[aufs]].
+* The NetBSD server I just installed on an [[ALIX]] board has a procfs mounted at /proc
+* NetBSD supports [[NFS]] as a client and a server for [[NFS]] versions 2 and 3
+
+### NetBSD and [[RAID]]
+NetBSD implements a software raid using [[RAIDframe]].
+
+### NetBSD and [[Xen]]
+I just read at Wikipedia that some operating systems run faster as a [[Xen]] virtual machine that is hosted by NetBSD than when installed directly on the same hardware. Incredible!!
+
+I've been meaning to start working with [[Xen]], so perhaps I'll get a chance while I learn NetBSD. UPDATE: I've signed up for a NetBSD [[VPS]] with [http://www.informedhosting.com/blog/prgmrcom/ prgrm]. I can't wait to get this running. UPDATE 2: I got impatient and instead installed [http://www.docunext.com/blog/2009/09/installing-netbsd-on-alix-1d.html NetBSD on an ALIX 1D].
+
+### Related Pages
+* [[NetBSD on Compact Flash]]
+* [[NetBSD pkgsrc]]

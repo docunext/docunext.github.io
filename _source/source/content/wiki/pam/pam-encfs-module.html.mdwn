@@ -1,0 +1,41 @@
+The ability to mount an [[Encfs]] share upon [[PAM]] login would really be awesome, so of course I'm giving it a go!
+
+<pre class="sh_sh">
+
+$ sudo apt-get install libpam-encfs
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  libpam-encfs
+0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.
+Need to get 12.2kB of archives.
+After this operation, 90.1kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ lucid/universe libpam-encfs 0.1.4.1-4 [12.2kB]
+Fetched 12.2kB in 0s (25.0kB/s)
+Selecting previously deselected package libpam-encfs.
+(Reading database ... 234539 files and directories currently installed.)
+Unpacking libpam-encfs (from .../libpam-encfs_0.1.4.1-4_i386.deb) ...
+Setting up libpam-encfs (0.1.4.1-4) ...
+
+Bad group for maybe chgrp UNKNOWN './mtab.fuselock'
+[master 0ed9247] committing changes in /etc after apt run
+ Author: docunext <albert.lash@docunext.com>
+ 1 files changed, 18 insertions(+), 0 deletions(-)
+ create mode 100644 security/pam_encfs.conf
+
+</pre>
+
+Files I edited:
+
+* /etc/security/pam_encfs.conf
+* /etc/pam.d/common-auth - actually, I didn't have to edit this.
+
+Based on /var/log/auth.log, it doesn't seem to be even trying to mount.
+
+Once I restored common-auth to its original state, the [[encfs]] mount worked! Yay! That is sweet. Only real issue I see is the need to use the same password for encryption as login. Not a big whoop though for what its worth.
+
+### See Also
+* [[PAM Encfs Default Configuration]]
+* [[Encfs]]
+

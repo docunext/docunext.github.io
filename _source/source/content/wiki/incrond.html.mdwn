@@ -1,0 +1,9 @@
+### Incrond Summary
+Incron uses the [[kernel]] [[inotify]] capability to watch for file changes, and executes a command when a match in the incrontab file is made.
+
+### Incrontab
+I prefer to use incrontab files in /etc/incron.d/. Here's an example:
+<pre>
+
+/var/www/virtual/www.yodnsconf.com/public/web/2008/08    IN_CLOSE_WRITE    /usr/local/bin/synchronize_this.sh    /var/www/virtual/www.yodnsconf.com/public/web/2008/08
+</pre>

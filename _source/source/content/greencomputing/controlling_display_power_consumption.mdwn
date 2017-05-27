@@ -1,0 +1,12 @@
+##DPMS
+
+
+##Screensavers
+I use [[xscreensaver]], and [[gnome-screensaver]] is also a common choice. 
+
+##Common Problems
+I can't get my dpms to turn off!
+
+##External Links
+* <http://www.shallowsky.com/linux/x-screen-blanking.html>
+

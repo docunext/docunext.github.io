@@ -1,0 +1,18 @@
+The POP protocol is often used with email accounts provided by internet service
+providers for home or personal use. Emails are often removed from the server
+after downloading, and there is only one-way synchronization between clients and
+the server. These characteristics of email accounts using the POP protocol allow
+internet service providers to reasonably limit the amount of storage space each
+account requires. It also allows customers to easily retain their emails if they
+move or choose to switch to another provider.
+
+There are, however, some drawbacks to email accounts that use the POP protocol.
+As mentioned earlier, POP does not have a two-way synchronization mechanism, so
+users looking to access their email from multiple computers, devices, or clients
+may have difficulties, such as missing emails on one or more devices. Also,
+servers are often built using fault-tolerant systems (such as RAID arrays), as
+opposed to desktop machines, which can sometimes suffer from higher failure
+rates. POP is a standard email protocol that has been around for many years and
+is therefore widely available and implemented. It supports secure connections,
+including SSL, TLS, CRAM-MD5, among others. It can also be used with services
+like fetchmail, to pull email from one mailbox to another.

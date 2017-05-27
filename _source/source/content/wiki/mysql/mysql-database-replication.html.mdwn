@@ -1,0 +1,91 @@
+Thanks to
+
+gentoo-wiki.com/HOWTO_MySQL_Replication (link not working for me anymore)
+
+"It doesn't matter what the value for server-id is, as long as it is different from the master's."
+
+My experience, its not as hard as it seems to setup, but I have had some issues with the replicant databases failing and not staying in-step with the primary server. When that happens, its time to redo the process, but overall it is worth it. I use [[stunnel4]] to create a secure tunnel between my replicated and master servers.
+
+### Replication in 15 minutes
+I'm trying to setup a replicated database in 15 minutes, and document it. One db is already running, I just want another server to replicate it.
+
+* Install db server
+* Dump database from master (mysqldump with --master-data flag - see below), create database on replicant, import database dump
+* Edit /etc/mysql/my.cnf with specs on replication, restart db
+* CHANGE MASTER TO MASTER_HOST='192.168.',MASTER_USER='replicant',MASTER_PASSWORD='',
+MASTER_LOG_FILE='mysql-bin.',MASTER_LOG_POS=98;
+
+In 20 minutes I was able to setup two. :-)
+
+#### Master Data
+<pre>
+  --master-data[=#]   This causes the binary log position and filename to be
+                      appended to the output. If equal to 1, will print it as a
+                      CHANGE MASTER command; if equal to 2, that command will
+                      be prefixed with a comment symbol. This option will turn
+                      --lock-all-tables on, unless --single-transaction is
+                      specified too (in which case a global read lock is only
+                      taken a short time at the beginning of the dump; don't
+                      forget to read about --single-transaction below). In all
+                      cases, any action on logs will happen at the exact moment
+                      of the dump. Option automatically turns --lock-tables
+                      off.
+</pre>
+
+### Continued MySQL Replication Errors
+I usually run into two repetitive errors.
+
+#### Duplicate Records
+The first one is easy, it happens when there is a duplicate record in the secondary database, and a unique key constraint will be violated when the new record is created. In this case, the slave just stop and waits for an admin to figure out what's going on, reconcile the problem, and restart the replicant clone. Here's an example error report:
+<pre>
+Error 'Duplicate entry '31718' for key 1' on query. Default database: 'docunext'. Query: 'INSERT INTO `_sk2_logs` SET `msg` = 'Successfully updated comment entry ID: 600101 to status: approved.', `component` = 'sk2_anubis_plugin', `level` = 4, `ts` = NOW()'
+</pre>
+
+### InnoDB Errors
+
+#### Bin Log Errors
+The other error still bugs me. I'm not sure what causes it, but eventually I'll track it down:
+
+<pre>
+[ERROR] Could not find target log during relay log initialization
+[ERROR] Failed to open the relay log '/var/run/mysqld/mysqld-relay-bin.000007'
+</pre>
+
+and
+<pre>
+[Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--relay-log=/var/run/mysqld/mysqld-relay-bin' to avoid this problem.
+</pre>
+
+In the configuration file, I found this:
+<pre>
+# WARNING: Using expire_logs_days without bin_log crashes the server! See README.Debian!
+</pre>
+Unfortunately, I don't know what bin_log is... a little search reveals [http://www.debianhelp.org/node/4193 this from debian help] and thankfully it expanded upon bin_log, saying it refers to bin_log_do_db. And duh, I should have actually read README.Debian.
+
+Not sure about this one:
+<pre>
+Could not parse relay log event entry. The possible reasons are: the master's binary log is corrupted (you can check this by running 'mysqlbinlog' on
+the binary log), the slave's relay log is corrupted (you can check this by running 'mysqlbinlog' on the relay log), a network problem, or a bug in the
+master's or slave's MySQL code. If you want to check the master's binary log or slave's relay log, you will be able to know their names by issuing
+'SHOW SLAVE STATUS' on this slave.
+</pre>
+
+[[MySQL InnoDB Errors]]
+
+### Temporary File Systems
+If the MySQL server is acting as a replication slave, I always make sure to not set --tmpdir to point to a directory on a memory-based filesystem or to
+a directory that is cleared when the server host restarts. A replication slave needs some of its temporary files to survive a machine restart so
+that it can replicate temporary tables or LOAD DATA INFILE operations. If files in the temporary file directory are lost when the server restarts,
+replication fails.
+
+### To Do Replication Stuff
+* Need to figure out if I can replicate multiple databases to and from various hosts. [[Debian]]'s configuration for my.cnf seems to suggest multiple database replication is possible as long as its from the same host. '''UPDATE:''' I've decided against this and am instead replicated all databases from a primary host.
+* [[MySQL Replication with Two Primaries]]
+
+### See Also
+* [[MySQL]]
+* [[Filesystems]]
+
+### Links
+* http://dev.mysql.com/doc/refman/5.0/en/replication-solutions-performance.html
+

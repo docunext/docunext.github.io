@@ -1,0 +1,82 @@
+Scripting, coding, programming, hacking, whatever you want to call it.
+
+### Languages
+{|
+|
+* [[Ruby]]
+* [[PHP]]
+* [[Perl]]
+* [[Python]]
+* [[C]]
+* [[CPlusPlus]]
+* [[SQL]]
+* [[TCL]]
+* [[Lua]]
+|
+* [[Javascript]]
+* [[Java]]
+* [[LISP]]
+* [[Shell Scripting]]
+* [[XML-RPC]]
+* [[XSLT]]
+* [[Erlang]]
+* [[Haskell]]
+* [[OCaML]]
+|}
+
+### Computer Science Concepts
+* [[Data Structures]]
+* [[Object Oriented Programming]]
+* [[Callbacks]]
+* [[Introspection]]
+* [[Reflection]]
+* [[Refactoring]]
+* [[Coding Standards]]
+* [[Miscellaneous Programming Terminology]]
+* [[The Docunext Explanation of Relativity]]
+
+### Development
+* [[Data and Object Modeling]]
+* [[Integrated Development Environment]]
+* [[Writing Code]]
+* [[Debugging]]
+* [[Handling Errors]]
+* [[Quality Assurance Testing]]
+* [[Source Code Management]]
+* [[Continuous Integration]]
+* [[Code Commenting]]
+* [[Software Documentation]]
+* [[Web Application Frameworks]]
+* [[Design Patterns]]
+* [[Agile Software Development]]
+
+### Compiling
+* [[Make]]
+* [[GCC]]
+* [[PCC]]
+
+### Packaging
+* [[Projects]]
+* [[Modules]]
+* [[Packages]]
+* [[Packaging Formats and Tools]]
+
+### Licensing
+* [[Open Source Licenses]]
+* [[Proprietary Licenses]]
+
+### Applications
+* [[Mediawiki Notes]]
+
+### See Also
+* [[Python]]
+* [[PHP]]
+* [[Ruby]]
+* [[Javascript]]
+* [[Lua]]
+* [[Bash]]
+
+### Links
+* http://www.perl.com/lpt/a/2005/07/14/bestpractices.html
+* http://particletree.com/features/successful-strategies-for-commenting-code/
+

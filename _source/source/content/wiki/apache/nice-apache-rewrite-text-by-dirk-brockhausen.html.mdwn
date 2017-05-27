@@ -1,0 +1,191 @@
+<pre>
+####
+Module mod_rewrite:
+Rewriting URLs With Query Strings
+------------------------------------------------------
+by
+Dirk Brockhausen
+------------------------------------------------------
+The Apache server's module mod_rewrite is typically
+used to rewrite one URL to turn it into another one.
+
+Example:
+--------
+RewriteRule ^index\.html$ homepage.html
+
+"^index\.html$" is a regular expression.
+"^" represents the beginning and "$" the end of a
+string.
+The dot "." in a regular expression is a meta symbol
+(wildcard) and signifies any random character.
+If you want to use an actual, real period/dot "."
+character, you will have to mask it with a preceding
+backslash.
+
+The next example is slightly more complicated:
+
+RewriteRule ^(.*)/(.*)/(.*)/(.*)$  shop.cgi?$1=$2&$3=$4
+
+This rule rewrites URL:
+< http://www.yourdomain.com/cat/cars/product/bmw >
+
+into:
+< http://www.yourdomain.com/shop.cgi?cat=cars&product=bmw >
+
+This way, you can submit static URLs (the first one
+in our example above) to the search engines, with
+visitors still being directed to a cgi script with
+dynamic parameters.
+
+The two examples above are part and parcel of
+mod_rewrite's standard features.
+
+Matters tend to get more sophisticated and involved,
+however, if you want to redirect URLs with different
+tags to various different web pages. This procedure
+will now be explained in detail.
+
+For a practical example, let's consider three PPC
+campaigns with Overture. In Overture's admin center
+your will assign your domain's URL, followed by unique
+tags to track the traffic generated, e.g.:
+
+http://www.yourdomain.com/?ov1
+http://www.yourdomain.com/?ov2
+http://www.yourdomain.com/?ov3
+
+Overture actually recommends tracking URLs. However, we
+don't want to restrict ourselves to mere traffic
+analysis, we also want to guide visitors to different
+pages.
+
+To this effect, the following ".htaccess" file entries
+are generated:
+
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+RewriteCond %{QUERY_STRING}  ^ov1$
+RewriteRule ^$ /product1.html [L]
+RewriteCond %{QUERY_STRING}  ^ov2$
+RewriteRule ^$ /product2.html [L]
+RewriteCond %{QUERY_STRING}  ^ov3$
+RewriteRule ^$ /product3.html [L]
+
+This code example makes use of rewrite conditions by
+analyzing the query string, i.e, everything following
+the question mark "?" character.
+
+Our line:
+
+RewriteCond %{QUERY_STRING} ^ov1$
+
+is made up of the following three parts:
+
+  Directive: "RewriteCond"
+ TestString: "%{QUERY_STRING}"
+CondPattern: "^ov1$"
+
+TestString is a server variable. CondPattern is a
+regular expression. "^" represents the beginning and
+"$" the end of a string.
+
+It follows that the query string must exactly be "ov1"
+and nothing else. For example, "ov11", would not
+work: in this case, the condition would not be met.
+
+The next line:
+
+RewriteRule ^$ /product1.html [L]
+
+will rewrite the URL "^$" into the new URL
+"/product1.html".
+
+The regular expression "^$" matches, if there is no
+file name included in the URL. This is exactly the case
+for these URLs:
+
+http://www.yourdomain.com/?ov1
+http://www.yourdomain.com/?ov2
+http://www.yourdomain.com/?ov3
+
+Here, we only have the domain name, followed by
+"/?ov1", etc. Thus, there is no file name included.
+
+A URL like the following:
+
+http://www.yourdomain.com/page1.html?ov1
+
+will not match the condition.
+
+The [L] flag stops the rewriting process
+if a condition matches.
+
+You can achieve an even shorter form by making use of
+backreferences, e.g.:
+
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+RewriteCond %{QUERY_STRING}  ^ov(1)$ [or]
+RewriteCond %{QUERY_STRING}  ^ov(2)$ [or]
+RewriteCond %{QUERY_STRING}  ^ov(3)$
+RewriteRule ^$ /product%1.html? [L]
+
+By adding the brackets in "ov(1)", etc. the value
+included within brackets can be stored in a variable.
+This variable can then be used for further processing.
+
+In our second example further above:
+
+RewriteRule ^(.*)/(.*)/(.*)/(.*)$  shop.cgi?$1=$2&$3=$4
+
+we worked with backreferences already. Here, the
+variables were "$1", "$2", etc.
+
+If you want to make use of variables from a RewriteCond
+entry in the following RewriteRule, the variables have
+to adhere to the syntax "%1", "%2", etc.
+
+There's a further detail to be found in the expression
+"/product%1.html?": the trailing question mark "?"
+character will inhibit transfer of the the query string
+from the old to the new URL. Without this trailing "?"
+character, we would get the following results:
+
+old URL - http://www.yourdomain.com/?ov1
+new URL - http://www.yourdomain.com/product1.html?ov1
+
+As you can see, the query string "ov1" would be added
+to the new URL, which is not desirable.
+
+The above goes to illustrate how you can make use of
+very sparse mod_rewrite syntax to efficiently
+manipulate URLs for your SEO campaigns.
+
+------------------------------------------------------
+
+[Main text: 641 words/4693 characters]
+####
+This text may freely be republished or distributed
+provided the following resource box is included intact
+either at the beginning or the end of the article and
+a complimentary copy or notice (link) is sent to the
+author at the address specified below:
+
+------------------------------------------------------
+Dirk Brockhausen is the co-founder and principal of
+fantomaster.com GmbH (Belgium), a company specializing
+in webmasters software development, industrial-strength
+cloaking and search engine positioning services. He
+holds a doctorate in physics and has worked as an SAP
+consultant and software developer since 1994. He is
+also Technical Editor of fantomNews, a free newsletter
+focusing on search engine optimization, available at:
+< http://fantomaster.com/fantomnews-sub.html >
+You can contact him at
+mailto:fntecheditor@fantomaster.com
+(c) copyright 2002 by fantomaster.com
+------------------------------------------------------
+</pre>
+

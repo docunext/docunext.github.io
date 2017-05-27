@@ -1,0 +1,14 @@
+---
+title: NSD
+date: 2008-07-27
+---
+I'm setting up NSD as a replacement for some of my MyDNS servers.
+
+These links were helpful:
+
+<a href="http://www.generic-nic.net/sheets/practical/nameserver-en">http://www.generic-nic.net/sheets/practical/nameserver-en</a>
+
+<a href="http://home.lfms.nl/20050815/nsd-on-freebsd/">http://home.lfms.nl/20050815/nsd-on-freebsd/</a>
+
+<a href="http://en.wikipedia.org/wiki/Zone_file">http://en.wikipedia.org/wiki/Zone_file</a>
+

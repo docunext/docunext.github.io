@@ -1,0 +1,7 @@
+The [[NGINX]] proxy module is one of my favorite things about [[NGINX]]. Its more than just a [[proxy]], it can also do some elementary caching.
+
+The caching is very simple, and that is probably a good thing in some ways.
+
+### External Links
+* [http://www.proxy-sys.com/blog/2009/06/nginx-proxy-cache-and-proxy-store.html NGINX Proxy Cache and Proxy Store]
+

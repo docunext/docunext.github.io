@@ -1,0 +1,35 @@
+### Courier Maildrop
+Maildrop can be used as a virtual mailbox transport. There are  couple programs with this name, I use the [[Debian]] package [[courier-maildrop]].
+
+This component helps with [[spamassassin]] filtering, as well as vacation autoresponders.
+
+### Maildroprc
+<pre>
+
+</pre>
+
+### [[gdbm]]
+[[Courier]] maildrop supports [[gdbm]] files! That's awesome, making it much easier to do some fancy filtering with maildroprc.
+
+My maildrop -v responds with this:
+<pre>
+maildrop 2.0.4 Copyright 1998-2005 Double Precision, Inc.
+GDBM/DB extensions enabled.
+Courier Authentication Library extension enabled.
+Maildir quota extension enabled.
+This program is distributed under the terms of the GNU General Public
+License. See COPYING for additional information.
+</pre>
+So which is it, [[gdbm]] or [[bdb]]? Its hard to tell unfortunately. In my case, it is using [[gdbm]]. Unfortunately, [[Postfix]] does not support [[gdbm]] at all, so why is courier-maildrop compiled with gdbm?
+
+Looks like [[courier]] is easy to recompile via the [[debian]] package, just changing --with-db=db in debian/rules.
+
+### Related Pages
+* [[My Email Services Configurations]]
+* [[Sieve]]
+
+### External Links
+* http://gentoo-wiki.com/Maildrop_configuration
+* http://www.courier-mta.org/maildrop/maildroptips.html
+* http://www200.pair.com/mecham/spam/maildroprc.txt
+

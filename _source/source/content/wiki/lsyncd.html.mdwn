@@ -1,0 +1,35 @@
+This looks very nice, its a server which listens to [[inotify]] events and uses [[rsync]] to replicate local directories to a remote site running an [[rsync]] daemon.
+
+### Lsyncd on [[Debian]]
+Lsyncd is available on [[Debian]], but it does not have a configuration file or init script so it must be configured and run manually.
+
+### Lsyncd Example Configuration
+
+<pre class="sh_sh">
+&lt;lsyncd version="1">
+    &lt;directory>
+        &lt;source path="/home/example/tinyldap/"/>
+        &lt;target path="192.168.8.38::testing/"/>
+    &lt;/directory>
+&lt;/lsyncd>
+</pre>
+
+After I set this up, I ran lsyncd from the command line, and voila - the files transferred, and any changes I made to the directory transferred to the target host. Sweet!
+
+There is more! More than one target can be specified!!
+
+Alternatively, lsyncd can be run with source and target directories as arguments:
+
+<pre class="sh_sh">
+lsyncd [OPTION]... [SOURCE] [TARGET 1] [TARGET 2] ...
+</pre>
+
+### See Also
+* [[Rsync]]
+* [[Inotify]]
+* [[Incrond]]
+* [[DRBD]]
+
+### Links
+* http://code.google.com/p/lsyncd/
+

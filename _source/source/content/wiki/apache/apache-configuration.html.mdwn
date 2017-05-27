@@ -1,0 +1,329 @@
+Here's a recent apache2.conf file I use on my servers. I figured I'd share it as I think its a pretty good setup:
+<pre>
+#
+# Do NOT add a slash at the end of the directory path.
+#
+ServerRoot "/etc/apache2"
+
+#
+# The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
+LockFile /var/lock/apache2/accept.lock
+
+PidFile /var/run/apache2.pid
+
+# Performance
+Timeout 30
+KeepAlive On
+MaxKeepAliveRequests 0
+KeepAliveTimeout     2
+UseCanonicalName Off
+HostnameLookups Off
+ExtendedStatus On
+
+<IfModule mpm_worker_module>
+    StartServers          1
+    MaxClients          250
+    MinSpareThreads      25
+    MaxSpareThreads     150
+    ThreadsPerChild      25
+    MaxRequestsPerChild   0
+</IfModule>
+
+User www-data
+Group www-data
+
+AddDefaultCharset UTF-8
+TypesConfig /etc/mime.types
+DefaultType text/html
+
+ErrorLog /var/log/apache2/error.log
+LogFormat "%V %a %t \"%r\" %>s %b \"%{User-agent}i\"" vhost
+CustomLog /var/log/apache2/access.log vhost
+
+LogLevel warn
+Listen 80
+DirectoryIndex index.html index.php
+
+Include /etc/apache2/mods-enabled/*.load
+Include /etc/apache2/conf.d/
+
+ServerTokens Prod
+ServerSignature Off
+
+<IfModule mod_mime.c>
+    AddEncoding x-gzip .gz .tgz
+    AddEncoding x-bzip2     .bz .tbz .bz2 .tbz2
+    AddType application/x-gzip .gz .tgz
+    AddType application/x-bzip2 .bz .bz2 .tbz .tbz2
+</IfModule>
+
+<IfModule mod_mime_magic.c>
+        MIMEMagicFile /usr/share/file/magic.mime
+</IfModule>
+<IfModule mod_defensible.c>
+        DnsblUse On
+        DnsblServers xbl.spamhaus.org. list.dsbl.org.
+</IfModule>
+
+<IfModule mod_fcgid.c>
+    AddHandler    fcgid-script .fcgi .php
+    IPCConnectTimeout 20
+    MaxRequestsPerProcess 500
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript text/css application/x-javascript
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/x-shockwave-flash A3600
+    ExpiresByType image/gif A14400
+    ExpiresByType image/jpeg A14400
+    ExpiresByType image/png A14400
+    ExpiresByType flv-application/octet-stream A3600
+    ExpiresByType application/x-gzip A3600
+    ExpiresByType application/x-bzip2 A3600
+</IfModule>
+
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from none
+    Deny from all
+    Header set Cache-Control "must-revalidate,proxy-revalidate"
+</Directory>
+
+DocumentRoot /var/www/public/
+
+ErrorDocument 403 /403.html
+ErrorDocument 404 /blog/category/notfound/
+ErrorDocument 500 /error.html
+ErrorDocument 503 /error.html
+
+# This is used for PHP CGI access to HTTP AUTH
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} ^(.+)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+
+RewriteMap domain_keys dbm:/var/www/etc/apache2/hashmaps/domain_keys.db
+RewriteRule . - [E=DOMAIN_KEY:${domain_keys:%{HTTP_HOST}}]
+
+# Allowed hostnames - switch to use a DBM hash here as well.
+RewriteCond %{HTTP_HOST}   !^(www|dev-|pear) [NC]
+RewriteCond %{HTTP_HOST}   !^\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b [NC]
+RewriteRule ^/(.*)   http://www.%{HTTP_HOST}/$1 [L,R=301]
+# Redirected domains
+RewriteMap redirects dbm:/var/www/etc/rewrites/redirects.db
+RewriteCond ${redirects:%{HTTP_HOST}|nomatch} !nomatch|virtual
+RewriteRule . http://${redirects:%{HTTP_HOST}} [L,R=301]
+
+# ACCESS CONTROL
+# Allowed posters
+RewriteCond %{HTTP_USER_AGENT} ^(Mozilla|Opera|ELinks)
+RewriteCond %{HTTP_USER_AGENT} !Yahoo|Googlebot|msn-bot
+RewriteCond %{HTTP_COOKIE} !poster_is_set=y
+RewriteCond %{REQUEST_URI} !.css|.jpg|.gif
+RewriteRule . - [CO=poster_is_set:y:%{HTTP_HOST}]
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{HTTP_USER_AGENT} !^(Mozilla|Opera|ELinks) [OR]
+RewriteCond %{HTTP_COOKIE} !poster_is_set=y
+RewriteRule . - [F,L]
+
+# END ACCESS CONTROL
+
+# PROXIED DOMAINS TO MARGE
+RewriteCond %{HTTP_HOST} www.aortica.com|www.nextoclock.com
+RewriteCond %{REQUEST_URI} !/blog/
+RewriteRule ^/(.*) http://192.168.8.102/$1 [L,P]
+
+RewriteCond %{HTTP_HOST} www.hungryblogger.com|www.neofilmz.com|www.docunext.com|www.neocarz.com|www.telecomrebirth.com|www.creditcardtalk.org|www.racing-sponsorships.com|www.healthybot.com|www.merchandisingmanager.com|www.toobinator.com|www.nexista.org
+RewriteRule ^/forums/(.*) http://192.168.8.102/forums/$1 [L,P]
+
+# OPERATIONAL CONFIGURATION
+
+# Take care of the direct requests first
+RewriteCond /var/www/public/%{REQUEST_FILENAME} -f
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/%{REQUEST_FILENAME} !-f
+RewriteRule . - [L]
+
+# Is it a virtual host request?
+RewriteCond /var/www/virtual/%{SERVER_NAME}/public/ -d
+RewriteCond /var/www/virtual/%{SERVER_NAME}/public/%{REQUEST_FILENAME} -f
+RewriteRule ^/(.+) /var/www/virtual/%{SERVER_NAME}/public/$1 [L]
+
+# Rule ID vhostindex
+# Virtual host index?
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/%{REQUEST_FILENAME} !-f
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/%{REQUEST_FILENAME} -d
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/%{REQUEST_FILENAME}index.html -f [OR]
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/%{REQUEST_FILENAME}index.php -f [OR]
+RewriteCond %{REQUEST_URI} ^/debian/|^/pub/
+RewriteRule . /var/www/virtual/%{HTTP_HOST}/public%{REQUEST_FILENAME} [L]
+
+<DirectoryMatch /var/www/(public|share/trac/htdocs|virtual/.+/public|virtual/.+/cgi-bin)/>
+    Options ExecCGI FollowSymLinks
+    FCGIWrapper /usr/bin/php5-cgi .php
+    AllowOverride Indexes
+    # Order is very important here!
+    Order Deny,Allow
+
+    # First the explicit bans using mostly CIDRs for brevity
+    # These do not include GET requests.
+    Deny from env=DEFENSIBLE
+
+    # Then allow explicit overrides
+    # Do not add "Allow all" here or all denials will be overridden
+    Include /var/www/etc/apache2/passlists.conf
+
+    # End general access control
+    # if only deny match, req is denied
+    # if both deny and allow match, req is allowed
+    # if no match, req is allowed
+
+</DirectoryMatch>
+
+<LocationMatch /(debian|pub)/>
+    Options Indexes
+</LocationMatch>
+RewriteRule ^/dev/trac$ /dev/trac/ [L,R=301]
+Include /var/www/etc/apache2/conf.d/
+
+# Application configurations
+
+# Pretty permalinks for wordpress
+RewriteCond %{REQUEST_URI} ^/blog|^/web|^/news
+RewriteCond %{REQUEST_FILENAME} !wp-
+RewriteRule /([a-zA-Z]+)/. /$1/index.php [L]
+
+# Pretty mediawiki permalinks
+RewriteCond %{REQUEST_URI} ^/wiki
+RewriteCond %{REQUEST_URI} !skins
+RewriteRule /wiki/(.*) /wiki/index.php?title=$1 [L]
+
+# Trac rewrites
+RewriteCond %{REQUEST_URI} ^/trac/
+RewriteCond %{REQUEST_URI} !chrome
+RewriteRule ^/trac/(.*) /var/www/virtual/%{HTTP_HOST}/cgi-bin/trac.fcgi/$1 [L]
+
+Alias /trac/chrome/common/ /var/www/share/trac/htdocs/
+
+RewriteCond %{REQUEST_URI} ^/dev/trac/
+RewriteCond %{REQUEST_URI} !chrome
+RewriteRule /dev/trac/(.*) /cgi-bin/$1 [L,PT]
+
+<Location /trac/login>
+    AuthType Digest
+    AuthName "trac"
+    AuthDigestDomain /
+    AuthUserFile /var/www/etc/trac.passwd
+    Require valid-user
+</Location>
+
+# Perl Web::SVN
+RewriteCond %{HTTP_HOST} www.mirrors.docunext.com
+RewriteCond %{REQUEST_URI} ^/cgi-bin/
+RewriteRule ^/cgi-bin/(.*) /var/www/virtual/%{HTTP_HOST}/cgi-bin/index.fcgi/$1 [L]
+
+# For efficiency, this rule must come after rule ID vhostindex
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP_HOST} !driveondirt
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/index.* !-f
+RewriteRule . /blog/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP_HOST} driveondirt
+RewriteCond /var/www/virtual/%{HTTP_HOST}/public/index.* !-f
+RewriteRule . /web/ [R=301,L]
+
+RedirectMatch 301 ^/wiki/$ /wiki/Main_Page
+RedirectMatch 301 ^/blog/wp-admin/$ /blog/wp-admin/index.php
+
+<Directory "/var/www/public/(blog|news|web|wiki|forums|trac)">
+    ExpiresByType text/html A10
+    Header set Cache-Control "private,must-revalidate,proxy-revalidate"
+</Directory>
+<DirectoryMatch "/var/www/public/(blog|news|web)/wp-(content|includes)">
+    ExpiresDefault A14400
+    Header set Cache-Control "public"
+</DirectoryMatch>
+<DirectoryMatch "/var/www/(public/wiki/skins|share/trac/chrome)">
+    ExpiresDefault A14400
+    Header set Cache-Control "public"
+</DirectoryMatch>
+<DirectoryMatch /var/www/virtual/(.+)/public/>
+    Options ExecCGI FollowSymLinks
+    FCGIWrapper /usr/bin/php5-cgi .php
+    Header set Cache-Control "private,must-revalidate,proxy-revalidate"
+</DirectoryMatch>
+
+<Location /a/>
+    AuthType Digest
+    AuthName "savonix"
+    AuthDigestDomain /
+    AuthUserFile /var/www/etc/savonix.passwd
+    Require valid-user
+</Location>
+<Location /a/server-status>
+    SetHandler server-status
+</Location>
+<Location /a/server-info>
+    SetHandler server-info
+</Location>
+<Location /a/balancer-manager>
+    SetHandler balancer-manager
+</Location>
+
+<IfModule mod_dav_svn.c>
+    DAVLockDB /var/lock/apache2/DAVLockDB
+    <Location "/svn">
+        DAV svn
+        SVNIndexXSLT /svnindex.xsl
+        AuthType Digest
+        AuthName "trac"
+        AuthUserFile /etc/trac.passwd
+        <LimitExcept GET PROPFIND OPTIONS REPORT>
+            Require valid-user
+        </LimitExcept>
+        SVNParentPath /var/www/projects/svn
+    </Location>
+    <Location "/a/svn">
+        DAV svn
+        SVNIndexXSLT /svnindex.xsl
+        SVNParentPath /home/svn/repos
+    </Location>
+</IfModule>
+RewriteMap svn_redirects dbm:/var/www/etc/rewrites/svn_redirects.db
+RewriteCond %{REQUEST_URI} ^/svn/$
+RewriteRule . /svn/${svn_redirects:%{HTTP_HOST}}/ [L,R=301]
+
+# Include the virtual host configurations:
+Include /var/www/etc/apache2/default
+Include /var/www/etc/apache2/hostname/hostname.conf
+
+<Directory /var/www/public/a/dev/mutabletimes/>
+    Options ExecCGI FollowSymLinks
+    Allow from 192.168
+    AddHandler CGI-Script .cgi
+    <FilesMatch "^mt(?:-(?:comments|search|tb|view))?\.cgi$">
+        SetHandler fcgid-script
+    </FilesMatch>
+</Directory>
+
+<Directory /usr/lib/cgi-bin/>
+    Options ExecCGI FollowSymLinks
+    Allow from 192.168
+    SetHandler CGI-Script
+</Directory>
+
+<IfModule mod_gnutls.c>
+    Listen 443
+</IfModule>
+<IfModule mod_ssl.c>
+    Listen 443
+</IfModule>
+
+</pre>
+

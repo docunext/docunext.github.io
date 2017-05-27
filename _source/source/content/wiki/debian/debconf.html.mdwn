@@ -1,0 +1,13 @@
+Debconf is a package for managing user configurations. It depends on [[Perl]], and there is an alternative package written in [[C]], called [[cdebconf]], but it isn't ready to take the place of Debconf yet.
+
+### Debconf Notices
+* [[Debconf OK]]
+
+### Related Pages
+* [[Etckeeper]]
+* [[Debian Conferences]]
+
+### External Links
+* http://www.fifi.org/doc/debconf-doc/tutorial.html
+* http://kitenet.net/~joey/code/debconf/
+

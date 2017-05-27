@@ -1,0 +1,16 @@
+I use acpitool to check my laptop battery information:
+
+<pre>
+cat /proc/acpi/battery/BAT0/state 
+present:                 yes
+capacity state:          ok
+charging state:          charging
+present rate:            13342 mW
+remaining capacity:      18560 mWh
+present voltage:         12700 mV
+</pre>
+
+
+* [[/Hardware/Laptops]]
+* [[/Hardware/Batteries]]
+* [[/Software/ACPI]]

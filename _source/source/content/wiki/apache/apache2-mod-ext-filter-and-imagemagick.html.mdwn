@@ -1,0 +1,15 @@
+This is a quick hack that can produce some awesome results:
+
+<pre>
+ExtFilterDefine imagecompress100 mode=output cmd="/usr/bin/convert - -resize 100 -"
+ExtFilterDefine imagecompress200 mode=output cmd="/usr/bin/convert - -resize 200 -"
+&lt;Location "/img/100/">
+    SetOutputFilter imagecompress100
+&lt;/Location>
+
+&lt;Location "/img/200/">
+    SetOutputFilter imagecompress200
+&lt;/Location>
+</pre>
+
+Both /img/200/ and /img/200/ are just symlinks to /img/originals/.

@@ -1,0 +1,36 @@
+### Fail2ban Summary
+fail2ban is a defender against brute force attacks and network abuse. There are many automated bots that scan the web looking for services to try and break into, they try dictionary attacks using common usernames and passwords.
+
+fail2ban scans log files for abusers and blocks them after a certain amount of failed attempts.
+
+Fail2ban is written in [[python]] and uses [[gamin]] for notification when a log file is altered. However, it can also use polling. And I just noticed this in the debian configuration file:
+
+<pre>
+# "backend" specifies the backend used to get files modification. Available
+# options are "gamin", "polling" and "auto".
+# yoh: For some reason Debian shipped python-gamin didn't work as expected
+#     This issue left ToDo, so polling is default backend for now
+</pre>
+
+### Fail2Ban Vs [[iptables]]
+On June 2, 2009, I setup my iptables script to include this:
+<pre>
+-A INPUT -m tcp -p tcp --dport 22 -m state --state NEW -m limit --limit 4/hour --limit-burst 4 -j ACCEPT
+</pre>
+Then later on after accepting related and established connections, I drop the other [[ssh]] connections. Seems to work well. I'm leaving Fail2ban running for the time being so I can watch the logs and see what happens. To compare, I'm also logging the limit drops:
+<pre>
+-N limitlogdrop
+-A limitlogdrop -j LOG --log-prefix "[Limit Exceeded]: "
+-A limitlogdrop -j DROP
+</pre>
+
+Turns out that the hashtable match is a much better way to go, so here's a new page for it: [[iptables hashtable]].
+
+### See Also
+* [[Funny Brute Force Attempts]]
+* [[Bad Bots]]
+* [[Security]]
+
+### Links
+* http://www.fail2ban.org/wiki/index.php/Main_Page
+

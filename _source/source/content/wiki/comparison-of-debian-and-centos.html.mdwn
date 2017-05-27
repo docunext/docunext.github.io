@@ -1,0 +1,12 @@
+I'm pleasantly surprised by how similar these systems are.
+
+### Things I like about [[CentOS]]
+* [[Yum]] is fast and is powered by [[python]]
+* Smaller set of packages is a good thing
+* [[NSS]] [[LDAP]] setup was a breeze
+
+### Things I like about [[Debian]]
+* [[Apt-get]] is awesome!
+* The development community is incredibly idealistic
+* [[Debian]] supports multiple kernels: [[FreeBSD]] and [[Linux]]
+

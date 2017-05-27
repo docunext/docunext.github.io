@@ -1,0 +1,33 @@
+### My Fileset
+
+~~~
+l:/etc/postfix# ls access_files/
+authenticated_users	  postfix-dnswl-header-cidr	 postfix-dnswl-permit.asc	recipient_access_classes      update_authenticated_clients
+authenticated_users.cdb   postfix-dnswl-header-ones	 postfix-dnswl-permit-cidr	recipient_access_classes.cdb  update_dnswl
+postfix-dnswl-header	  postfix-dnswl-header-ones.cdb  postfix-dnswl-permit-ones	sender_access
+postfix-dnswl-header.asc  postfix-dnswl-permit		 postfix-dnswl-permit-ones.cdb	sender_access.cdb
+~~~
+
+### Update Script
+
+~~~
+#!/bin/sh
+# Copyright: Savonix Corporation
+# Author: Albert Lash
+# Year: 2009
+# License: GPLv3 + MIT
+
+rsync --times rsync1.dnswl.org::dnswl/postfix-* /etc/postfix/access_files/
+cat postfix-dnswl-header | sed "s/X-REPLACEME:/X-SHHHHH: YES/" > finalheader
+mv finalheader postfix-dnswl-header
+cat postfix-dnswl-header | grep ^[1-9] | grep -v /32 > postfix-dnswl-header-cidr
+cat postfix-dnswl-header | grep ^[1-9] | grep /32 | sed "s/\/32//" > postfix-dnswl-header-ones
+postmap cdb:postfix-dnswl-header-ones
+
+cat postfix-dnswl-permit | grep ^[1-9] | grep -v /32 > postfix-dnswl-permit-cidr
+cat postfix-dnswl-permit | grep ^[1-9] | grep /32 | sed "s/\/32//" > postfix-dnswl-permit-ones
+postmap cdb:postfix-dnswl-permit-ones
+
+exit 0
+~~~
+

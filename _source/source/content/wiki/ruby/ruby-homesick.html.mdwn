@@ -1,0 +1,13 @@
+This is a good one... it helps keep dotfiles in-sync over multiple hosts by storing them in a [[Git]] repository.
+
+### My Experience with Homesick
+UPDATE: This [[gem]] is awesome!!
+
+I have created two homesick repositories (one is a [[fork]]):
+
+* http://github.com/docunext/vim_config
+* http://github.com/docunext/docunext_dotfiles
+
+### Links
+* http://technicalpickles.com/posts/never-leave-your-dotfiles-behind-again-with-homesick/
+

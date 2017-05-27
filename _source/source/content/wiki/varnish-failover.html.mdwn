@@ -1,0 +1,53 @@
+
+<pre>
+backend vpncomet {
+        .host = "444.444.444.444";
+        .port = "80";
+        .probe = {
+                .url = "/test.html";
+                .timeout = 90ms;
+                .interval = 4s;
+                .window = 3;
+                .threshold = 2;
+        }
+}
+
+backend localnginx {
+        .host = "444.444.444.444";
+        .port = "88";
+        .probe = {
+                .url = "/test.html";
+                .timeout = 30ms;
+                .interval = 3s;
+                .window = 3;
+                .threshold = 2;
+        }
+}
+
+backend stoughton {
+        .host = "444.444.444.444";
+        .port = "80";
+        .probe = {
+                .url = "/test.html";
+                .timeout = 200ms;
+                .interval = 4s;
+                .window = 3;
+                .threshold = 2;
+        }
+}
+
+sub vcl_recv {
+
+        set req.backend = stoughton;
+
+        if (req.restarts == 1 || !req.backend.healthy) {
+                set req.backend = localnginx;
+        }
+
+        if (req.restarts == 2 || !req.backend.healthy) {
+                set req.backend = vpncomet;
+        }
+
+}
+</pre>
+

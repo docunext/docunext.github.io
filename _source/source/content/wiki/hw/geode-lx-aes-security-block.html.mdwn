@@ -1,0 +1,32 @@
+There is a linux and an Open / Net BSD driver for this:
+
+<pre>
+GLXSB(4)              OpenBSD Programmer's Manual (i386)              GLXSB(4)
+
+NAME
+     glxsb - Geode LX Security Block crypto accelerator
+
+SYNOPSIS
+     glxsb* at pci?
+
+DESCRIPTION
+     The glxsb driver supports the security block of the Geode LX series pro-
+     cessors.  The Geode LX is a member of the AMD Geode family of integrated
+     x86 system chips.
+
+     Driven by periodic checks for available data from the generator, glxsb
+     supplies entropy to the random(4) driver for common usage.
+
+     glxsb also supports acceleration of AES-CBC operations for crypto(4).
+
+SEE ALSO
+     crypto(4), intro(4), pci(4), random(4), crypto(9)
+
+HISTORY
+     Support for glxsb was added in OpenBSD 4.1.
+
+AUTHORS
+     The glxsb driver was written by Tom Cosgrove.
+
+OpenBSD 4.2                     August 9, 2007                               1
+</pre>

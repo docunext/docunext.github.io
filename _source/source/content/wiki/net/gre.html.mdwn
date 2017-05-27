@@ -1,0 +1,76 @@
+
+GRE is a tunneling method, and a really good one at that. I'm going to try it out today
+and see what I can come up with. It stands for Generic Routing Encapsulation.
+
+The general process I use:
+<pre>
+1. Add GRE tunnel
+2. Add new interface - select GRE Tunnel
+3. Enable new interface
+4. Setup firewall rules for new interface
+5. Setup static route for new interface
+</pre>
+
+#### My Crack At Using GRE Tunnels
+#### GRE Tunnel Setup
+Remote Virtual Machine Server / IPSec Endpoint
+<pre>
+ip tunnel add netb mode gre remote 192.168.8.48 local 192.168.134.22 ttl 255
+ip link set netb up multicast on mtu 1420
+ip addr add 10.0.1.1 peer 10.0.1.2 dev netb
+</pre>
+
+Local Real Server Behind [[pfSense]] Router
+<pre class="sh_sh">
+ip tunnel add neta mode gre remote 192.168.134.22 local 192.168.8.48 ttl 255
+ip link set neta up multicast on mtu 1420
+ip addr add 10.0.1.2 peer 10.0.1.1 dev neta
+</pre>
+
+From remote:
+<pre class="sh_sh">
+ping -r -I netb 10.0.1.2
+</pre>
+
+From local:
+<pre>
+ping -r -I neta 10.0.1.1
+</pre>
+Just because pings work, doesn't mean that non-ICMP communication is ready for operation!
+
+Shutdown:
+<pre>
+ip link set neta down
+ip tunnel del neta
+</pre>
+
+#### NAT
+I'm planning to use this for network address translation over [[IPSec]].
+
+'''Router NAT and Port Forwarding Setup''' :
+<pre>
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -A FORWARD -p tcp -i eth0 -d 10.0.1.2 --dport 80 -j ACCEPT
+iptables -t nat -A PREROUTING -p tcp -i eth0 -d [public-ip] --dport 8890  -j DNAT --to 10.0.1.2:80
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -A FORWARD -i netb -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+</pre>
+
+Now using this when my firewall is already up:
+<pre>
+iptables -I FORWARD -p tcp -i eth0 -d 10.0.1.2 --dport 80 -j ACCEPT
+iptables -I FORWARD -i netb -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -t nat -A PREROUTING -p tcp -i eth0 -d [public-ip] --dport 8890  -j DNAT --to 10.0.1.2:80
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</pre>
+
+'''GRE Endpoint Source Based Routing''':
+<pre>
+ip rule add from 10.0.1.2 table 80
+ip route add default dev neta table 80
+ip route add 192.168.8.0/24 dev eth1 table 80
+</pre>
+
+If I understand correctly, tunnels remain in the lower levels of the OSI model, specifically layer 4, the transport layer. Thus, it would presumably be more efficient than a proxy which operates at a higher level, like the application level for HTTP.
+
+But it really depends upon what the situation is and what the goals are.

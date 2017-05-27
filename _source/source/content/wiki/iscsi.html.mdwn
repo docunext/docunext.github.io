@@ -1,0 +1,36 @@
+I use iscsi with [[Debian]] as the initiator (client) and [[FreeNAS]] as the target. Works OK so far, haven't done any extreme testing.
+
+Following the advice on the [[Debian]] wiki, I am able to get the iSCSI device upon reboot, but not mounted at reboot. I can manually mount it though. Hmmmm, it contains some information about labels, so a little further research finds the Bob Cares website. Thanks Bob for suggesting e2label.
+
+### Tests
+Tried to get two iscsi devices to build a [[RAID]] 1. I got it to build, but upon reboot /proc/mdstat had nothing to say about it. Though I was glad to see that one of the iscsi devices mounted in its place. Next up... [[LVM]]. Nope, that didn't work either. Maybe there is a [[userland]] tool which could provide some mirroring capability, like [[incrond]].
+
+Yes, this seems like it will work OK:
+<pre>
+/mnt/sda1/ IN_MODIFY /usr/bin/rsync -av --delete /mnt/sda1/ /mnt/sdb1
+</pre>
+
+### Usage
+On [[debian]], I find these commands helpful:
+<pre>
+iscsiadm -m discovery -t sendtargets -p 192.168.8.7
+</pre>
+
+<pre>
+iscsiadm -m node --logoutall=all
+iscsiadm -m node -o show
+iscsiadm -m node -o delete
+</pre>
+
+### Errors
+[[Image:Iscsi.png]]
+
+### Related Pages
+* [[Grub PXE Boot]]
+
+### External Links
+* http://wiki.debian.org/iSCSI/open-iscsi
+* http://kb.bobcares.com/?View=entry&EntryID=797
+* http://knowledgelayer.softlayer.com/questions/228/How+to+format+an+iSCSI+Volume+in+Linux.
+* http://wpkg.org/Diskless_/_remote_boot_with_Open-iSCSI
+

@@ -1,0 +1,36 @@
+The Linksys is a great little computer, but it does have some limitations. The processor is fairly slow and the memory is only 32MB!
+
+<pre>Processor       : XScale-IXP42x Family rev 1 (v5l)
+BogoMIPS        : 132.71
+Features        : swp half fastmult edsp 
+CPU implementer : 0x69
+CPU architecture: 5TE
+CPU variant     : 0x0
+CPU part        : 0x41f
+CPU revision    : 1
+Cache type      : undefined 5
+Cache clean     : undefined 5
+Cache lockdown  : undefined 5
+Cache format    : Harvard
+I size          : 32768
+I assoc         : 32
+I line length   : 32
+I sets          : 32
+D size          : 32768
+D assoc         : 32
+D line length   : 32
+D sets          : 32
+
+Hardware        : Linksys NSLU2
+Revision        : 0000
+Serial          : 0000000000000000</pre>
+
+<pre>             total       used       free     shared    buffers     cached
+Mem:         29988      28728       1260          0       5040       9824
+-/+ buffers/cache:      13864      16124
+Swap:       240932         52     240880</pre>
+
+
+
+[[Testing:123]]
+[[Testing/234]]

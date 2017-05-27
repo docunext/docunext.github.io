@@ -1,0 +1,21 @@
+I'm thinking something like this:
+
+~~~
+#!/bin/sh
+# Copyright: Savonix Corporation
+# Author:    Albert Lash
+# Date:      2009-06-08
+# License:   MIT
+
+PATH="/etc/nsd3/zones"
+ZONE="$PATH/evenserver.com.zone"
+TMPZONE="$ZONE.tmp"
+RECORD="www-09"
+NEW_CNAME=$1
+
+#echo $ZONE
+#echo $TMPZONE
+/bin/cat $ZONE | /bin/sed -r s/"$RECORD IN [0-9]+ CNAME www-[a-z]+.evenserver.com."/"$RECORD IN 30 CNAME $NEW_CNAME"/g > $TMPZONE
+/bin/mv $TMPZONE $ZONE
+~~~
+

@@ -1,0 +1,108 @@
+### IMAP Email Summary
+As I may have mentioned before, I use [[Courier]], and its worked really well
+for quite some time.
+
+I've been thinking about how the heck to get IMAP email dual-homed for
+redundancy, but I really couldn't think of much. A few possibilities do exist
+however:
+
+* failover to active backup
+* failover to read-only backup
+* other ideas
+
+IMAP is great because IMAP clients can synchronize to a primary server. However,
+synchronizing two IMAP servers isn't so easy. There are some IMAP mirror tools,
+some maildir mirror and sync tools, but they run into the same problems as most
+synchronization systems. No doubt about it, synchronization is a tough nut to
+crack.
+
+### What is the IMAP Protocol?
+The IMAP protocol is used for accessing email stored by the server instead of
+the client. Clients can store a cached copy of the email repository which can
+improve performance over slow network connections, as well as enable offline
+access to emails. For this to work, two-way synchronization is needed, and
+thankfully IMAP supports it! Along with offline access, the synchronization
+capabilities of IMAP enable users to access their email accounts from multiple
+machines, devices (such as a Blackberry or iPhone), or clients.
+
+Since the "master copy" of an email account using the IMAP protocol is stored on
+a server, it is possible that the server was built using fault-tolerant
+methodologies. This has the added benefit of potentially reducing the likelihood
+of catastrophic data loss.
+
+For these reasons and more, businesses often use the IMAP protocol for their
+email needs.
+
+#### IMAP Servers
+* [[Courier]]
+* [[Dovecot]]
+* [[Cyrus IMAP]]
+* [[DBMail]]
+
+#### IMAP Failover to active backup
+This one is tough because the two servers could easily find their way into
+a "split brain" scenario, where there are conflicting changes on both servers,
+and neither knows which one is primary.
+
+#### IMAP Failover with read-only access
+This one is good, because it provides access while the primary server is down,
+but that isn't too great, most people want to access their email to get new
+mail.
+
+Courier IMAP has pretty smart acl capabilities with the maildiracl command. My
+plan is to use it this way:
+
+    maildiracl -set .maildir INBOX owner arl
+
+And then:
+
+    find .maildir -name 'courierimapacl' -exec cp .maildir/courierimapacl {} \;
+
+I've only tried this out once, so I have no idea if it really works or if it
+will cause major problems. UPDATE - Just tried it out a little bit more, and it
+actually works OK. With [[Mozilla Thunderbird]] and [[Roundcube]], you can
+access the IMAP server without any problems. If you try to make any changes, you
+get a reasonably decent error message. If I setup a redundant or failover
+[[SMTP]] server as well, the mail client can still send outgoing mail, but will
+get an error about the email not being able to be copied to the sent messages
+folder.
+
+And while I was doing that, I remembered one of the problems with this setup
+which pretty much requires it to be read only. If I use rsync to maintain the
+failover backup along with the scripts above to set the folders as read only,
+I would probably want to do a "full" (meaning destructive) [[rsync]]. In other
+words, if the user deleted a message off the main server, it would get deleted
+off the failover server as well.
+
+In the case of the failover, it might make sense to keep the "Sent" folder
+writable, continue to do destructive synchronizations on it, but attempt to keep
+track of any messages that we sent out during the outage for uploading to the
+primary server once it is back online. And since I would have control of the
+backup mx / failover smtp server, it might be doable. I had thought of trying to
+get the failover smtp server to automatically forward the outgoing messages back
+to the source address so that it would automatically queue for delivery to the
+final destination, but I can't figure out how to do that, and its not really
+optimal since it would end up in the inbox, not the sent messages folder.
+
+#### IMAP Redundancy
+Google suggested a cool idea for email redundancy: to create a domain alias, and
+forward all incoming mail to the domain alias, on another server. That is
+helpful for archival and transitioning purposes, but it doesn't do much for
+synchronization. You could presumably extend upon this concept, and with the
+help of [[rsync]], do a decent job of faking it.
+
+#### [[OfflineIMAP]]
+I've been manually experimenting with IMAP synchronization and so far I'm happy
+with the results, though I'm far from automating the process. In concept, I'd
+compare it to [[Subversion]] synchronization and [[MySQL Replication]], where
+there is one primary storage volume, and one or more secondary storage volumes.
+With regular, non-sync'ed [[Subversion]], the checkouts can commit their changes
+back to the primary repository, and this is what I'd like to achieve with IMAP
+synchronization. While I'm currently doing this manually, I believe that
+[[OfflineIMAP]] can run as a daemon monitoring for any changes. This idea leads
+me to wonder about using the IMAP IDLE extension for triggering synchronization.
+
+#### IMAP IDLE
+What is IMAP IDLE? It is a notification protocol. I might compare it to the
+notify kernel module, as opposed to the polling technique sometimes used for
+monitoring.

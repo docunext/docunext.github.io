@@ -1,0 +1,100 @@
+This still obviously needs more work, and I still have a lot to learn when it
+comes to creating debian packages. Most of it makes decent sense, but I still
+need to figure out how to do the shell scripting part it.
+
+### Preparing to DPKG
+I've made a few .deb files in the past which simply contained the files to be
+installed and the control file, but nothing else. Moving forward, I want to
+include some scripts as well as the checksums for making sure the files are
+legit.
+
+#### The Debian Control File
+The debian control file is sort of like a file list or manifest. Most package
+formats ([[PEAR]], [[Pacman]], etc.) have something like this.
+
+#### DPKG Tools
+There are actually a lot of dpkg tools, for instance:
+
+    dpkg-architecture    dpkg-gencontrol      dpkg-scansources
+    dpkg-buildpackage    dpkg-gensymbols      dpkg-shlibdeps
+    dpkg-checkbuilddeps  dpkg-name            dpkg-source
+    dpkg-deb             dpkg-parsechangelog  dpkg-split
+    dpkg-distaddfile     dpkg-query
+    dpkg-genchanges      dpkg-scanpackages
+
+### DPKG Maintainer Scripts
+The scripts I want to learn about are:
+
+* preinst
+* postinst
+* prerm
+* postrm
+
+My guess is that these scripts do the setup steps required to install a package,
+like create directories, add users, and whatnot, as well as what needs to be
+done after the package has been installed, like change permissions, etc., and
+vice versa on removing packages.
+
+To learn more about these scripts, I'm going to take a look at one in
+/var/lib/dpkg/info - /var/lib/dpkg/info/php5-curl.postinst:
+
+~~~
+#!/bin/sh
+
+set -e
+
+if [ "$1" != "configure" ]; then
+        exit 0
+fi
+
+# here we test for upgrades from versions prior to the config-file-scan-dir
+# migration.
+#
+# to avoid lots of scary warnings about duplicate-loaded modules, each
+# module will remove its "extension=" line from each SAPI's php.ini file
+# when upgrading from a "prior version".  this will be the last time we
+# ever muck with such files in maintainer scripts.  really.  promise :)
+
+if [ "$2" ] && dpkg --compare-versions "$2" lt "5.1.6-5"; then
+        extension_re='^[[:space:]]*extension[[:space:]]*=[[:space:]]*curl\.so$'
+        for SAPI in apache apache2 cgi cli; do
+                ini_file="/etc/php5/$SAPI/php.ini"
+                if [ -f "$ini_file" ]; then
+                        if grep -q "$extension_re" $ini_file; then
+                                sed -i -e "/$extension_re/d" $ini_file
+                        fi
+                fi
+        done
+fi
+
+exit 0
+~~~
+
+I was sort of thinking that the scripts would also take care of the configuration files, but those are simply included in the package to get installed. There is a file indicating which files are configuration files though. Take php5-curl for example:
+
+    /var/lib/dpkg/info/php5-curl.conffiles
+    /var/lib/dpkg/info/php5-curl.list
+    /var/lib/dpkg/info/php5-curl.md5sums
+    /var/lib/dpkg/info/php5-curl.postinst
+
+The conffiles lists the configuration files, in this case there is only one.
+Then the list file lists all the files in the package, the md5sums lists some of
+the files md5 checksum value, and the postinst is a script to be run after the
+package has been installed. In this case, I don't really understand what is
+going on in the postinst script shown above, so maybe this isn't the best
+example.
+
+See: http://www.debian.org/doc/debian-policy/ch-binary.html#s-maintscripts
+
+### Signing the Package
+
+I will need to start signing my packages with a [[gnupg]] signature...
+
+### Post Packaging Steps
+
+Lintian and linda checks!
+
+### Remaining Questions and To-Dos
+
+* How do I create source packages?
+* How do I create a keyring and sign my packages?

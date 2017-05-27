@@ -1,0 +1,95 @@
+Good old [[spam]], I mean email. Its funny, but for users, email is convenient and simple. For systems administrators, email can be incredible complicated and frustrating.
+
+### [[My Email Services Configurations]]
+I had originally included it here, but it became too big a beast.
+
+### Protocols
+* [[/email/IMAP Email]] - port 143 and 993 for tls
+* [[POP Email]] - port 110 and 995 for tls
+* [[SMTP Email]] - port 25 and 587
+
+### Email Applications
+#### IMAP / POP Email Servers
+* [[/Courier]]
+* [[/Dovecot]]
+* [[dbmail]]
+
+#### SMTP Servers
+* [[/Postfix]]
+* [[Qmail]]
+* [[ssmtp]]
+* [[nullmailer]]
+* [[Exim]]
+
+#### Email Clients
+* [[Roundcube]] / [[Circlebox]]
+* [[SquirrelMail]]
+* [[Thunderbird]]
+* [[Chandler]]
+* [[Command Line SMTP Client]]
+* [[/email/Mutt]]
+* [[Pine]]
+* [[Evolution]]
+
+#### Mailing List Software
+* [[GNU Mailman]]
+
+#### Email [[Proxies]]
+* [[Perdition]]
+* [[up-imapproxy]]
+* [[dkimproxy]]
+
+#### Miscellaneous Email Software
+* [[MHonArc]]
+* [[Spamassassin]]
+* [[spampd]]
+* [[OfflineIMAP]]
+
+
+### [[IMAP]] or POP3?
+I use the server to store messages, and one can do so with either POP3 or IMAP.
+IMAP does this natively, but it can be a little slow. With POP3, the messages
+are completely downloaded and stored on a computer, in that case, I explicitly
+set the POP3 client to keep the messages on the server, otherwise they will be
+only stored on the computer. With that setup, the major difference is that
+changes made on the client (like making new folders), won't be reflected on the
+server when logging in via webmail or another IMAP client.
+
+### Bring It Together
+How do I try to get [[SMTP]], [[POP]], and [[IMAP]] servers, as well as web and
+desktop clients to all get along, AND fight the good battle against [[Spam]]?
+Its a good question. Here's some of my notes:
+
+I have a few [[Postfix]] servers setup, but only one is setup to deliver mail to
+user mailboxes. The others are setup as relays, for those users. In the event
+the delivery server is unavailable, the relay servers can be used by clients to
+send outgoing mail. In that scenario, if the POP / SMTP servers are available
+even though the main SMTP server is unavailable, then the sent mail will still
+get copies to the user's "Sent Messages" folder. In that case, most SMTP clients
+don't play well with multi-homed SMTP hosts (one hostname with multiple A record
+IP addresses), and I setup a failover with the firewall. If the client is
+web-based, it might be a different story, as setting up a  failover for the
+localhost doesn't make much sense. I think in that case it might make sense to
+failover the web app, which would migrate the smtp server to the new machine,
+but you could point the IMAP server to the primary IMAP.
+
+### Email Problems
+There are many problems associated with email:
+
+* Lack of [[Security]]
+* Limited [[Privacy]]
+* [[Spam]] and [[Phishing]]
+* [[Email Archival]]
+* [[Large ISP Email Services]]
+
+Still, email is incredibly convenient and widely used.
+
+### Attachments
+Email attachments are handled in an inefficient, but robust manner. Files are
+first encoded using the base64 algorithm to convert the file into a very simple,
+text-based format. Once the email is received by its intended recipient, the
+attachment can be decoded and saved in the original format.
+
+Email was never really designed as a file transfer mechanism, but because of its
+ubiquity and convenience, its file transferring capabilities are surprisingly
+good and widely used.

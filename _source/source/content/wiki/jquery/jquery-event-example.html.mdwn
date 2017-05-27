@@ -1,0 +1,15 @@
+Here's an example of a keypress event:
+
+<pre class="sh_javascript">
+$("p").append($("<span/>"))
+          .children(":last")
+          .append(document.createTextNode(c));
+</pre>
+
+### Related Pages
+* [[JQuery]]
+
+### External Links
+* http://semooh.jp/jquery/api/events/keypress/fn/
+* http://docs.jquery.com/Events/keypress
+

@@ -1,0 +1,32 @@
+Imagemagick is a great software application if you have a little experience with
+the command line.
+
+### Example Commands
+#### mogrify
+    
+    mogrify -resize 50% image.jpg
+
+#### convert
+
+    convert -resize 50% image.jpg image-2.jpg
+
+### Shell Scripts
+I use this shell script to automate imagemagick:
+
+    #!/bin/sh
+    mv $1 $2.jpg
+    jpegoptim -f -m75 -o --strip-all $2.jpg
+    exiftool -Copyright="Savonix Corporation" $2.jpg
+    rm *nal
+    convert -quality 70% -scale 50% $2.jpg $2.mini.jpg
+
+This one too, though it doesn't use imagemagick:
+
+    #!/bin/sh
+    pngcrush -f -m75 -o --strip-all $1 $1_
+    mv $1_ $1
+    exiftool -Copyright="Savonix Corporation" $1
+    rm *nal
+    scp *.png 192.168.8.50:/var/www/public/s/img/2009/q1/
+    echo "&lt;img src=\"/s/img/2009/q2/$1\"/>"
+

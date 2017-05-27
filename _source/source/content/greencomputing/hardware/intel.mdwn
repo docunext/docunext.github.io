@@ -1,0 +1,6 @@
+Intel has made some important contributions to the efficiency of computers, include the development of [[/Software/Powertop]].
+
+
+### Intel Hardware
+
+* [[/Hardware/Intel/d201gly]]

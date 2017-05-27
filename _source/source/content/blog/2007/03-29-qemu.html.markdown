@@ -1,0 +1,16 @@
+---
+title: QEMU on Ubuntu
+date: 2007-03-29
+tags: none
+author: Albert Lash
+---
+Sweet! Just got QEMU installed on Ubuntu!
+
+Thanks to:
+
+<a href="http://codepoets.co.uk/docs/qemu_windows2000_on_ubuntu_linux_howto">Katherine and David Goodwin - How to install QEmu on Ubuntu Linux (Breezy)</a>
+
+I had a bit of a problem with the graphics, but I installed libsdl-dev and then compiled the latest version of qemu manually and it worked fine.
+
+<pre>apt-get install libsdl-dev</pre>
+

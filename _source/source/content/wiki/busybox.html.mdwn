@@ -1,0 +1,26 @@
+Busybox is a really awesome open source project. It is a single binary that can perform many of the basic tasks required to administer a system, aka the [[userland]].
+
+### Busybox Compile
+
+<pre>
+menu makeconfig
+</pre>
+
+### Busybox Install
+
+'''I WILL NEVER RUN THIS ON A RUNNING SYSTEM. I WILL ONLY RUN IT ON A CHROOT I AM BUILDING.'''
+<pre>
+/bin/busybox --install -s
+</pre>
+
+This appears to symlink with /proc/self/exe instead of /bin/busybox.
+
+### Related Pages
+* [[Initramfs]]
+* [[Embedded]]
+* [[Emdebian]]
+
+### External Links
+* http://www.informedlicensing.com/blog/2007/11/startech-use-of-busybox.html
+* http://www.docunext.com/blog/2010/09/debian-gnuhurd-and-a-universal-installer.html
+

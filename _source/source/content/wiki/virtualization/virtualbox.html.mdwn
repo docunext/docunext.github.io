@@ -1,0 +1,82 @@
+VirtualBox is a virtualization system for running virtual machines, it is produced by [[Oracle]]. I haven't tried it in awhile, but since Sun is continuing to release it under the [[GPL]], I'd like to try it again.
+
+### VirtualBox on [[Debian]]
+<pre>
+apt-get install virtualbox-ose-modules-2.6.26-1-openvz-amd64
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  linux-image-2.6.26-1-openvz-amd64
+Suggested packages:
+  linux-doc-2.6.26
+The following NEW packages will be installed:
+  linux-image-2.6.26-1-openvz-amd64 virtualbox-ose-modules-2.6.26-1-openvz-amd64
+0 upgraded, 2 newly installed, 0 to remove and 79 not upgraded.
+Need to get 45.4kB/21.1MB of archives.
+After this operation, 84.9MB of additional disk space will be used.
+Do you want to continue [Y/n]?
+</pre>
+
+I'm glad that [[Lenny]] includes a package for virtualbox modules that is compatible with another [[Lenny]] package that I need - an [[OpenVZ]] [[Kernel]]!
+That installed OK, now I'm installing virtualbox-ose:
+<pre>
+apt-get install virtualbox-ose
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  libaudio2 libdrm2 libgl1-mesa-glx libglu1-mesa libidl0 libmng1 libqt3-mt libxmu6 libxxf86vm1
+Suggested packages:
+  nas libqt3-mt-mysql libqt3-mt-odbc libqt3-mt-psql virtualbox-ose-source
+The following NEW packages will be installed:
+  libaudio2 libdrm2 libgl1-mesa-glx libglu1-mesa libidl0 libmng1 libqt3-mt libxmu6 libxxf86vm1 virtualbox-ose
+0 upgraded, 10 newly installed, 0 to remove and 79 not upgraded.
+Need to get 11.3MB/11.6MB of archives.
+After this operation, 35.1MB of additional disk space will be used.
+Do you want to continue [Y/n]?
+</pre>
+
+Grrr...:
+<pre>
+# virtualbox
+Qt WARNING: VirtualBox: cannot connect to X server
+</pre>
+Can this be used with [[VNC]], like [[QEMU]] and [[KVM]]? YES! No problem, it was a piece of cake with [[tightvncserver]]. I'm trying out [[Nexenta]], hopefully it will run OK!
+
+### Networking
+Need to use [[bridge-utils]]. This works for me, just had to do:
+<pre>
+VBoxAddIF vbox0 root br0
+</pre>
+(I'm running the vm as root - bad docunext!)
+
+Then on the VirtualBox gui for my vm, I selected host interface, and entered vbox0. (This is described on the Debian Wiki!)
+
+#### Network Device Emulators
+The [http://bugs.gentoo.org/232519 VirtualBox open source edition doesn't include the e1000 (doh)], and I'm having trouble getting [[OpenWRT]] to recognize the AMD PC Network interface. Grrr. Is is supported? [http://translate.google.com/translate?hl=en&sl=de&u=http://www.meeveo.com/2008/12/openwrt-kamikaze-in-virtualbox-auf-dem-mac-laufen-lassen/&sa=X&oi=translate&resnum=3&ct=result&prev=/search%3Fq%3Dopenwrt%2Bpcnet%2Bamd%26hl%3Den%26safe%3Doff%26client%3Diceweasel-a%26rls%3Dorg.debian:en-US:unofficial%26sa%3DG *]
+
+### Releasing the mouse
+Right arrow key -> and the CNTL key.
+
+### Error message: VirtualBox can't operate in VMX root mode.
+<pre>
+/etc/init.d/kvm stop
+</pre>
+
+Thanks: http://ubuntuforums.org/archive/index.php/t-975007.html
+
+### Virtual Box Guest Tools
+When running an [[Ubuntu]] guest on a [[Windows]] host, a colleague suggested I install the VirtualBox guest tools to improve performance. I did - it involved running a script that compiled some custom kernel modules, which afterwards made perfect sense.
+
+The logic behind installing custom [[virtualization]] tools on guests was supported by the fact that [[VMWare]] has guest tools too.
+
+### See Also
+* [[VirtualBox on Windows]]
+* [[QEMU]]
+
+### Links
+* http://wiki.debian.org/VirtualBox
+* [http://www.sun.com/software/products/virtualbox/get.jsp VirtualBox @ Sun]
+* http://www.virtualbox.org/
+

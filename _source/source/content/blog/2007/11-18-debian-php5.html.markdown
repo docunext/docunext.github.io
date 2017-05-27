@@ -1,0 +1,13 @@
+---
+title: Debian PHP5 Cron
+date: 2007-11-18
+tags: debian,php
+---
+<img src='http://www-sa.evenserver.com/s/img/2007/11/1121_mountains.JPG' alt='Debian PHP5 Cron' />
+
+I just noticed that the cron command I commented out on my debian machines to extend the length of my php5 sessions has resulted in a gigantic number of session files. Whoops! We're talking about a half million files. Not good.
+
+I guess instead of every 30 minutes or never, I'll use 24 hours.
+
+UPDATE November 20, 2007: I should have read the comments in the cron job. You can set the lifetime using the php.ini files, but you have to set them all. It will use the smallest number, so if you set cgi/php.ini to 86400, but leave cli to 120, it will use 120. Doh!
+

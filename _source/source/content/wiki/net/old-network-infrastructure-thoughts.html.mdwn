@@ -1,0 +1,40 @@
+<pre>
+Building the network.
+
+Needs:
+1.Security (VPN – openswan?)
+2.Simplicity (linux, Mac OS X, BSD)
+3.Speed (DSL, Squid, LAN, mirrored fileservers)
+4.Single authentication database (ldap, pam, etc.)
+5.Redundancy (Cable and DSL backup)
+6.Uninterruptible power supply for longer than 11 minutes?
+7.Incredibly high performing web server for colo
+
+Equipment:
+1.1000Mbit/s Switch
+2.(2) 1+ TB fileservers, one for Local, and one for colo
+a.Local Server – needs to perform a multitude of services, requiring substantial processing and memory resources
+i.Samba
+ii.VPN server (openswan)
+iii.Firewall (IPTables)
+iv.Proxy server (squid)
+v.RAID controller, with battery backup
+vi.Web server
+vii.MySQL server
+viii.Controller card with battery backup cache
+b.Colo
+i.Samba
+ii.VPN server
+iii.Firewall
+
+Budget:
+$25,000?
+
+Expectations, to last at least seven years with 99.9% uptime performance.
+
+Uncontrollable, acceptable factors:
+1.Power – too expensive to make redundant beyond a 5 minute power outage, which is probably the most common problem, use a battery backup cache on the controller card for Local
+2.Internet connection – having cable as the main connection with DSL as backup would cost an additional $100 / month.
+3.Machine failure – a hard drive or machine could fail, causing the system to malfunction. Use RAID 5, without hotswap option, where one drive could fail. Use Seagate drives that come with a 5 year warranty.
+4.Fire, theft, or other destruction – use offsite backups at Colo
+</pre>

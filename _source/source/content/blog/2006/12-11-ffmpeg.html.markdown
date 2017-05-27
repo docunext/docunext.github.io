@@ -1,0 +1,16 @@
+---
+title: ffmpeg
+date: 2006-12-11
+tags: none
+author: Albert Lash
+---
+I'm wrestling with ffmpeg trying to figure out the best conversion settings for mp4 to flv. So far I'm not having any luck, though I finally found the documentation for it:
+
+<a href="http://ffmpeg.mplayerhq.hu/ffmpeg-doc.html#SEC8">Ffmpeg documentation</a>
+
+The current command I'm using:
+
+<pre>ffmpeg -r 6 -b 28k -maxrate 28k -bufsize 1 -i infile.mp4 outfile.flv</pre>
+
+Actually that seems to work out OK. To see the results, check out the <a href="http://www.docunext.com/blog/gallery/animation/">squigs animation</a> that my friend Randy and I created years ago. I just posted in the gallery using <a href="http://flowplayer.sourceforge.net/index.html">FlowPlayer</a> and <a href="http://kimili.com/plugins/kml_flashembed">Kimili Flash Embed</a>.
+

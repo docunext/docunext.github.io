@@ -1,0 +1,79 @@
+MySQL Database area. I've been using MySQL for quite some time and I really like
+it. I use the command line client and phpMyAdmin to manage the servers and
+databases.
+
+### Installation
+On [[/Debian]], installing MySQL is easy:
+
+    sudo apt-get install mysql-server
+
+After that, I usually run <code>sudo mysql_secure_installation</code> which goes through
+the process of assigning important passwords.
+
+### Replication
+One of my favorite things about MySQL is its ability to replicate itself. I've
+written more on the subject here: [[/mysql/MySQL Database Replication]]
+
+### MySQL Errors
+#### 1033
+    ERROR 1033 (HY000): Incorrect information in file:
+
+I got this when I would try the following SQL command:
+
+    describe mytable;
+
+The problem was that it was an innodb table, but /etc/mysql/my.cnf had
+"skip-innodb" set. I commented it out, restarted, and it worked.
+
+#### Other Innodb errors
+
+~~~
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: You can look for further help from
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: http://dev.mysql.com/doc/refman/5.0/en/innodb-troubleshooting.html
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: If table `savonext/nxwiki_version` is a temporary table #sql..., then it can be that
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: there are still queries running on the table, and it will be
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: dropped automatically when the queries end.
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: You can drop the orphaned table inside InnoDB by
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: creating an InnoDB table with the same name in another
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: database and copying the .frm file to the current database.
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: Then MySQL thinks the table exists, and DROP TABLE will
+Apr 23 18:43:12 dev-48 mysqld[7633]: InnoDB: succeed.
+~~~
+
+This worked for me, but I made the mistake of doing so as root, and then
+MySQL couldn't do much with it. Once I chowned the files to the mysql user,
+it worked fine.
+
+#### 2013 and 1129
+
+    ERROR 2013 (HY000): Lost connection to MySQL server at 'reading authorization packet', system error: 0
+
+No clue! Its not a version conflict though, I have two clients with the same
+version, one can connnect, the other cannot.
+
+I rebooted the non-functioning client, tried again and got this:
+
+    ERROR 1129 (00000): Host 'dev-91-gl.savonix.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'
+
+That seemed to have worked. Why all the errors?
+
+#### definer/invoker of view lack rights to use them mysql
+
+This is a tough one! It is a cryptic error, and sometimes involves another error
+saying "SUPER is required". It happens in various circumstances, but for me it
+happened when I tried to dump and restore a database that has views.
+
+As a workaround, I grepped out the definer statements, like so:
+
+    cat mysqldump.sql | grep -v "^\/\*\!50013" > newmysqldump.sql
+
+### MySQL Proxy
+The architecture of this program is interesting - the core is written in [[/C]],
+and it implements its configuration via [[/lua]]. It reminds me a little of the
+architectural relationship between [[/Apache]] and mod_perl.
+
+The one MAJOR stumbling block I had with mysql-proxy was the fact that the read
+write splitting LUA script which accompanies the software doesn't route all
+reads to the read-only database. It starts out with the master write database,
+and then when that a significant amount of connections to it, does it then start
+routing reads to the read only database.

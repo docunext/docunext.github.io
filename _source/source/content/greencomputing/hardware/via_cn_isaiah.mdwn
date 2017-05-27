@@ -1,0 +1,5 @@
+This new chip sounds nice, but its not available yet.
+
+## Related Pages
+
+* [[Processors]]

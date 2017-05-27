@@ -1,0 +1,77 @@
+### Modules 
+<pre>
+Module                  Size  Used by
+vzethdev               14592  0 
+vznetdev               24456  0 
+simfs                   8944  0 
+vzrst                 122920  0 
+vzcpt                 106424  0 
+tun                    15492  2 vzrst,vzcpt
+vzdquota               42868  0 [permanent]
+vzmon                  31248  4 vzethdev,vznetdev,vzrst,vzcpt
+vzdev                   7568  4 vzethdev,vznetdev,vzdquota,vzmon
+xt_tcpudp               7680  0 
+xt_length               6400  0 
+ipt_ttl                 6144  0 
+xt_tcpmss               6656  0 
+xt_TCPMSS               8576  0 
+iptable_mangle          8704  0 
+iptable_filter          8320  0 
+xt_multiport            7424  0 
+xt_limit                7172  0 
+xt_dscp                 7168  0 
+ipt_REJECT              7552  0 
+ip_tables              21776  2 iptable_mangle,iptable_filter
+x_tables               25736  10 xt_tcpudp,xt_length,ipt_ttl,xt_tcpmss,xt_TCPMSS,xt_multiport,xt_limit,xt_dscp,ipt_REJECT,ip_tables
+bridge                 54952  0 
+ipv6                  296256  21 vzrst,vzcpt,vzmon
+xfs                   475304  1 
+vboxdrv              1658672  0 
+loop                   19340  0 
+it87                   28952  0 
+hwmon_vid               7296  1 it87
+kvm_amd                29452  0 
+kvm                   127208  1 kvm_amd
+powernow_k8            17156  1 
+freq_table              9344  1 powernow_k8
+serio_raw               9988  0 
+snd_pcsp               14588  0 
+snd_pcm                81800  1 snd_pcsp
+snd_timer              25744  1 snd_pcm
+snd                    63688  3 snd_pcsp,snd_pcm,snd_timer
+soundcore              12064  1 snd
+k8temp                  9216  0 
+snd_page_alloc         13072  1 snd_pcm
+button                 11680  0 
+i2c_nforce2            10752  0 
+i2c_core               27936  1 i2c_nforce2
+evdev                  14208  0 
+ext3                  124816  2 
+jbd                    51240  1 ext3
+mbcache                12804  1 ext3
+dm_mirror              20608  0 
+dm_log                 13956  1 dm_mirror
+dm_snapshot            19400  0 
+dm_mod                 58864  8 dm_mirror,dm_log,dm_snapshot
+raid1                  24192  1 
+raid0                  10624  2 
+md_mod                 79908  5 raid1,raid0
+sd_mod                 29376  8 
+sata_nv                27528  3 
+ata_generic            10116  0 
+amd74xx                13448  0 [permanent]
+sata_sil24             18180  3 
+libata                165472  3 sata_nv,ata_generic,sata_sil24
+scsi_mod              160888  2 sd_mod,libata
+dock                   14112  1 libata
+r8169                  31364  0 
+forcedeth              54032  0 
+ehci_hcd               36108  0 
+ide_pci_generic         9220  0 [permanent]
+ide_core              128156  2 amd74xx,ide_pci_generic
+ohci_hcd               25092  0 
+thermal                22688  0 
+processor              42304  2 powernow_k8,thermal
+fan                     9352  0 
+thermal_sys            17728  3 thermal,processor,fan
+</pre>

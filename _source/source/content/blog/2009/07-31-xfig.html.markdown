@@ -1,0 +1,9 @@
+---
+title: Xfig
+date: 2009-07-31
+tags: software,vector graphics,xfig
+---
+In my quest to find all the open source technical drawing software packages out there, today I came across Xfig.
+
+Its very simple, and in my opinion, that's a good thing! There are also a bunch of supporting software packages, like fig2ps, and transfig. With the latter, I was able to convert a fig drawing to a pdf file. The output was very nice!
+

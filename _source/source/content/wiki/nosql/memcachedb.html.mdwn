@@ -1,0 +1,27 @@
+This is interesting - a network server which uses the [[memcached]] protocol but uses [[Berkeley DB]] as the backend for persistent storage.
+
+I'm trying this server out right now and so far it has been very easy to setup! Note that on [[Debian]], the default port is 21201, not 11211.
+
+### TODO
+* Figure out how to backup and potentially browse these databases
+* Figure out how to do replication
+
+### Backing Up MemcacheDB Data
+
+Not sure yet, I tried this today:
+
+<pre class="sh_sh">
+db4.7_hotbackup -h `pwd` -b /root/mcdb/
+</pre>
+
+### Related Pages
+* [[memcache]]
+* [[Redis]]
+* [[Ruby Memcache Client]]
+
+### External Links
+* [http://www.docunext.com/blog/2010/02/redis-memcachedb-or-couchdb.html Redis, MemcacheDB, or CouchDB?]
+* [http://www.labs.docunext.com/blog/2010/02/cool-new-project-brewing.html Cool New Project Brewing]
+* http://www.docunext.com/blog/2009/10/nice-to-meet-you-memcachedb.html
+* http://www.mirrors.docunext.com/websvn/memcachedb
+

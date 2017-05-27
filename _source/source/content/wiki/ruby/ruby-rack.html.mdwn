@@ -1,0 +1,46 @@
+Ruby Rack is a web server written in [[Ruby]]. The cool thing about Rack is that it supports the idea of [[middleware]].
+
+What good is middleware?
+
+### [[Ruby]] Rack Middlware
+* [[Rack Rewrite]]
+* [[Rack-XSLView]]
+* [[Rack Caching]]
+* [[Rack Sessions]]
+* [[Rack-Docunext-Content-Length]]
+
+### Rack Test
+Testing Rack applications has been an interesting activity for me. There are so many Ruby testing frameworks, it was tough for me to decide which one to use.
+
+I'm now using:
+
+* [[Rack-Test]]
+* [[Webrat]]
+* [[RSpec]]
+* [[Rcov]]
+
+### Frameworks Supporting Rack
+
+* [[Camping]]
+* [[Coset]]
+* [[Halcyon]]
+* [[Mack]]
+* [[Maveric]]
+* [[Merb]]
+* [[Racktools::SimpleApplication]]
+* [[Ramaze]]
+* [[Ruby on Rails]]
+* [[Rum]]
+* [[Sinatra]]
+* [[Sin]]
+* [[Vintage]]
+* [[Waves]]
+* [[Wee]]
+
+### See Also
+* [[WSGI]]
+
+### Links
+* http://www.middlewarez.com/
+* http://www.mirrors.docunext.com/cgit.cgi/rack/
+

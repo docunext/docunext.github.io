@@ -1,0 +1,3 @@
+Powertop is a "top" like utility which will monitor power usage and display which processes are preventing the reduction of power consumption.
+
+It was written by [[/Hardware/Intel]] and is open source.

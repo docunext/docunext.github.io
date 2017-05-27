@@ -1,0 +1,12 @@
+Redmine is a project management system, similar to Trac. Its written in
+[[Ruby]] using the [[Ruby on Rails]] framework. It may make it into [[Debian]]
+soon, I just noticed an upload to Debian mentors!
+
+### Review
+I've recently started using Redmine extensively and am totally impressed. First
+of all, its way faster than I'd imagined. I am running it via [[/Apache]] and
+[[/Mod fcgid]], using [[/SQLite]] for data storage.
+
+Redmine is configured to only access [[/Git]] repositories, and not surprisingly,
+it is configured to work alongside [[/git/Gitosis]] that is configured to control
+access to the Git repositories.

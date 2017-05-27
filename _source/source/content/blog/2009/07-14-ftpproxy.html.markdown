@@ -1,0 +1,10 @@
+---
+title: Ftp.proxy
+date: 2009-07-14
+---
+I've been looking for a software package like this for quite a while. Unfortunately it looks like it hasn't been updated in awhile, so I'm going to review the code.
+
+Thankfully there is a debian package. I tried it out and it does what I want: it proxies FTP users to different real FTP servers base on the username. :-)
+
+UPDATE: ftp.proxy is working out really well. I'm looking forward to trying it out with a heavy load. Speaking of which, I need to try it out behind a firewall.
+

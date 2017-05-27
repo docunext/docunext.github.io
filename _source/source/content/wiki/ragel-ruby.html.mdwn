@@ -1,0 +1,40 @@
+Hopefully I can work with [[Ragel]] more now that I'm working with [[Ruby]] more!
+
+Here's an example I hacked up with the help of the [http://www.devchix.com/2008/01/13/a-hello-world-for-ruby-on-ragel-60/ dev chix]:
+
+<pre class="sh_ruby">
+%%{
+    machine multistep;
+
+    default = ^0;
+
+    anchorfin := |*
+
+        'z' @ {
+            puts "zoro";
+            fgoto main;
+        }
+        default;
+
+    *|;
+
+    main := (
+
+        'o' @ { $barf = ""; }
+        |'h' @ { $barf << "hello world!" }
+        |'w' @ { $barf << "welcome" }
+        |'z' @ { fgoto anchorfin; }
+        |'q' @ { puts $barf }
+
+   )*;
+
+}%%
+
+  data = 'owhwzzwwhwq'
+  %% write data;
+  %% write init;
+  %% write exec;
+</pre>
+
+Not too fancy, but hey.
+

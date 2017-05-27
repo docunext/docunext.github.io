@@ -1,0 +1,14 @@
+### Summary
+Light Web Server
+Used by [[pfSense]] and [[FreeNAS]], also by [[Wikipedia]] I think.
+
+### See Also
+* [[spawn-fcgi]]
+* [[Redmine]] - Lighttpd project uses [[Redmine]].
+* [[LUA]] - there is embedded [[LUA]]! aka [[mod_magnet]]
+* [[NGINX]]
+
+### External Links
+* [http://redmine.lighttpd.net/attachments/550/mod_post_to_disk.c Save POST Request to Disk Module]
+* [http://redmine.lighttpd.net/projects/spawn-fcgi spawn-fcgi]
+

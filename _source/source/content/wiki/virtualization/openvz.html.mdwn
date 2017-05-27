@@ -1,0 +1,155 @@
+OpenVZ is a linux process isolation service (containers) from Virtuozzo, the
+makers of [[/virtualization/Parallels]]. It is open source, but not in the 
+mainline kernel source, like [[/virtualization/lxc]], which I'm using instead.
+
+### Beancounters
+When using OpenVZ, the following is your friend:
+
+    cat /proc/user_beancounters
+
+As they say, the failure counters don't reset, so I save the output periodically
+and use diff to compare it to future versions to see if the failure numbers have
+increased.
+
+### Basic vzctl commands
+Some basic commands I use:
+
+    sudo vzctl create 101 --ostemplate debian-4.0-i386-minimal
+
+I think the vz number has to be greater than 100, so I use the use octal ip mask
+for the number. In the above example, if the vz is on a 192.168.0.0/24 subnet,
+I'll give it an ip of 192.168.0.101 to keep things organized.
+
+To add the ip to the vz, I use:
+
+    sudo vzctl set 101 --ipadd 192.168.0.101 --save
+
+More locked pages:
+
+    vzctl set 101 --lockedpages=1024 --save
+
+More private virtual memory:
+
+    vzctl set 123 --privvmpages=131072:175104 --save
+
+Set disk space:
+
+    vzctl set 123 --diskspace 20G:25G --save
+
+While those commands are helpful to start, I'm beginning to just edit the conf file in /etc/vz/conf/.
+
+### OpenVZ Problems
+#### Unable to open pty
+Problem:
+
+    Unable to open pty: No such file or directory
+
+Solution:
+
+    cat etc/rc.sysinit | sed "s/\/sbin\/start_udev/#\/sbin\/start_udev/" > /tmp/rc.sysinit && mv /tmp/rc.sysinit etc/rc.sysinit
+
+Plus:
+
+<pre><code>
+mknod dev/ptmx c 5 2
+mkdir dev/pts
+/sbin/MAKEDEV -d dev ttyp ptyp
+mknod dev/null c 1 3
+mknod -m 644 dev/random c 1 8
+mknod dev/urandom c 1 9
+</code></pre>
+
+Still plagues me, not sure what I'm missing....
+
+#### ARP
+<pre><code>
+arpsend ...  is detected on another computer : ...
+vps-net_add WARNING: arpsend -c 1 -w 1 -D  -e ... eth1 FAILED
+</code></pre>
+
+I'm not sure what the issue is there, but I don't even want my vz to be
+interfacing with eth1. Since its the default route for the rest of the server,
+I have to use source base routing for the vz's.
+
+UPDATE: Since I switched to having the entire server behind a router where all
+the ips are private, I no longer get this warning.
+
+#### Missing Kernel Modules
+Since I often compile my own kernels, I run into issues with missing modules
+from time to time. Today I forgot to add File Systems -> Disk Quota Support,
+which adds a bunch of OpenVZ stuff.
+
+#### NFS
+Unfortunately, you can't use [[/NFS]] kernel server with an OpenVZ kernel,
+however, you can use nfs-user-server. I had a tough time debugging an error
+which kept saying mountd failed to mount, Unauthorized access by NFS client,
+blocked attempt, permission denied, etc, but it was because I was trying to use
+a CIDR block in the exports file. Doh! Is that because its NFSv2?
+
+I'm now trying unfs3, which hopefully has better support. It should also be
+noted that I was able to get an NFS client working with a host kernel
+2.6.18, but not 2.6.26. Too bad, hopefully that will get fixed soon. See
+[OpenVZ Container mount nfs no such device for more info][1].
+
+UPDATE: I've been able to get NFS working in an OpenVZ container using kernel 2.6.26. :-)
+
+#### Reboot OpenVZ
+How do you "reboot" an OpenVZ virtual machine, from within the environment?
+In /etc/vz/conf/###.conf
+
+    ALLOWREBOOT="yes"
+
+And then check the /etc/cron.d/vz file:
+
+<pre><code>
+# Start containers marked as rebooted.
+*/5 * * * * root /usr/share/vzctl/scripts/vpsreboot
+</code></pre>
+
+#### Kernel Capabilities
+Trying to run pure-ftpd, I hit this error:
+
+    Unable to switch capabilities : Operation not permitted
+
+The solution that worked for me was to add capabilities to the ve:
+
+* http://forum.openvz.org/index.php?t=msg&goto=4203&
+
+Problem described here:
+
+* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=272527
+
+### Migrating Virtual Environments
+I migrated my first OpenVZ environment last night and today. It took a long time
+to transfer, but once it was on the new machine, starting it was a breeze.
+I didn't have to do anything at all, but I should note that I am using a new
+configuration file for it.
+
+The steps I took were:
+
+1. Create new VM on the target machine using same VE number.
+2. Configure, start and test the placeholder VM.
+3. Create a compressed tarball of the VE to migrate.
+4. scp the tarball
+5. Stop the target VM on the target server
+6. Move the placeholder VE out of the way
+7. Unpack the tarball in its place
+8. Start the VM
+
+There is actually an easier way to do this, but it requires root to be able to login via [[/OpenSSH]] without entering a password:
+
+    vzmigrate 192.168.8.176 101
+
+It can also be run with the "--online" parameter, but that has never worked for me.
+
+#### Vzdump
+Migrations can also be done using the Vzbackup tool.
+
+    vzdump --dumpdir /var/filebackups/ --suspend 132
+
+### OpenVZ on Xen
+NEWSFLASH: I am running OpenVZ containers on [[/virtualization/Xen]] virtual images!
+
+* [[/Virtualization/Centos on OpenVZ]]
+
+[1]: http://www.docunext.com/blog/2009/02/openvz-container-mountnfs-no-such-device.html

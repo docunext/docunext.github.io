@@ -1,0 +1,12 @@
+Base64 is commonly used to encode binary data as textual characters. It is used for [[email]] and sometimes [[HTML]].
+
+I'm thinking about using it for storing binary data in a [[database]] for easy retrieval by a database abstraction layer which automatically places data into [[XML]] documents.
+
+### Base64 Implementations
+* [[base64.sql]]
+* [[MySQL UDF Base64]]
+
+### External Pages
+* http://www.dbrs2xml.com/site/
+* http://www.stringify.com/2007/jun/18/base64/
+

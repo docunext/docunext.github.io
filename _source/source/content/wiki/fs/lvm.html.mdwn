@@ -1,0 +1,45 @@
+### Summary
+Logical Volume Management (LVM) usually refers to the lvm2 user space tools, the device mapper kernel modules, and the libdevmapper supporting process.
+
+Here are the kernel modules as they appear on one of my servers:
+<pre>
+dm_mirror              12820  -
+dm_snapshot            11232  -
+dm_mod                 38032  -
+</pre>
+
+### Create Physical Volume
+pvcreate
+
+<pre>
+dev-48:/home/charliechokko# pvcreate /dev/sdaX
+  Physical volume "/dev/sda6" successfully created
+</pre>
+
+### Create Volume Group
+vgcreate
+<pre>
+dev-48:/home/djjazzygeoff# vgcreate xtra /dev/sdaX
+  Volume group "xtra" successfully created
+</pre>
+
+### Create Logical Volume
+<pre>
+lvcreate --size 10GB --name newname xtra
+</pre>
+
+### Troubleshooting LVM
+<pre>
+Can't remove open logical volume ...
+</pre>
+Not sure how to fix this one. I ended up renaming the volume, replacing another volume with it, and removing that volume. Ha! Gotta lover the workarounds. Hmm, not able to remove the other one either. What gives?
+
+### See Also
+* [[Filesystems]]
+* [http://www.docunext.com/blog/2008/04/resizing-filesystems.html Resizing Filesystems at the Docunext Blog]
+* [[Shrinking Ext3]]
+* [[Resizing XFS]]
+* [[CentOS]]
+* [[RAID]]
+* [[DRBD8]]
+

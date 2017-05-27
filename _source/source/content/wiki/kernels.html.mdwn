@@ -1,0 +1,36 @@
+### Linux Kernel
+There are many versions, patches, and variations to the linux kernel, but there is only one "vanilla" source. Even when you use the vanilla source, there are many ways to configure and compile the kernel.
+
+#### Compiling a kernel
+I use "make menuconfig", and on debian, [http://www.debian.org/doc/FAQ/ch-kernel.en.html make-kpkg].
+
+'''Problem revision causes problems''':
+<pre>
+However, the ./debian/changelog file exists, and has a different value
+</pre>
+
+'''Solutions''':
+* http://wiki.nerdylorrin.net/wiki/Wiki.jsp?page=Kernel
+* Note - I did not need to use the --rev flag and the version number in the make menuconfig setup. I used both and ended up with double the version info.
+
+### [[FreeBSD]] Kernel
+The FreeBSD kernel
+
+### Various Kernels
+
+#### [[Linux Kernel]]
+
+#### [[OpenSolaris]] Kernel
+
+#### [[Docunext Kernel Notes]]
+
+#### My Kernel Configs
+* [[Via C7 Notebook with GUI]]
+* [[PC Engines Geode Kernel with NFS]]
+* [[Kernel Panic]]
+
+### Links
+* http://www.kernelmadness.com/blog/
+* http://lwn.net/Articles/152363/
+* http://www.cyberciti.biz/tips/build-linux-kernel-module-against-installed-kernel-source-tree.html
+

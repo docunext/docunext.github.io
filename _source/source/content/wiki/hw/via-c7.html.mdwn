@@ -1,0 +1,11 @@
+### Summary
+The Via C7 [[CPU]] is a low-power chip with a hardware random number generator and hardware accelerated encryption functions built-in.
+
+### Related Pages
+* [[PfSense test results of the padlock kernel driver on a VIA C7]]
+* [[Via Padlock OCF-Linux Integration]]
+* [[VIA Padlock]]
+
+### External Links
+* [http://www.green-computing.info/wiki/pc_chips_v21g___40__v1.0c__41___via_c7/ PC CHIPS V21G (V1.0C) VIA C7]
+

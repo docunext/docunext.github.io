@@ -1,0 +1,123 @@
+Note: I'm using the second one listed on this page.
+
+### courier.schema
+
+<pre>
+#$Id: authldap.schema,v 1.4 2003/06/12 14:05:09 mrsam Exp $
+#
+# OID prefix: 1.3.6.1.4.1.10018
+#
+# Attributes: 1.3.6.1.4.1.10018.1.1
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.1 NAME 'mailbox'
+	DESC 'The absolute path to the mailbox for a mail account in a non-default location'
+        EQUALITY caseExactIA5Match
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.2 NAME 'quota'
+	DESC 'A string that represents the quota on a mailbox'
+        EQUALITY caseExactIA5Match
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.3 NAME 'clearPassword'
+	DESC 'A separate text that stores the mail account password in clear text'
+        EQUALITY octetStringMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40{128})
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.4 NAME 'maildrop'
+        DESC 'RFC822 Mailbox - mail alias'
+        EQUALITY caseIgnoreIA5Match
+        SUBSTR caseIgnoreIA5SubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.5 NAME 'mailsource'
+        DESC 'Message source'
+        EQUALITY caseIgnoreIA5Match
+        SUBSTR caseIgnoreIA5SubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.6 NAME 'virtualdomain'
+        DESC 'A mail domain that is mapped to a single mail account'
+        EQUALITY caseIgnoreIA5Match
+        SUBSTR caseIgnoreIA5SubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.7 NAME 'virtualdomainuser'
+        DESC 'Mailbox that receives mail for a mail domain'
+        EQUALITY caseIgnoreIA5Match
+        SUBSTR caseIgnoreIA5SubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.8 NAME 'defaultdelivery'
+        DESC 'Default mail delivery instructions'
+        EQUALITY caseExactIA5Match
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#
+# Objects: 1.3.6.1.4.1.10018.1.2
+#
+
+objectclass ( 1.3.6.1.4.1.10018.1.2.1 NAME 'CourierMailAccount' SUP top AUXILIARY
+	DESC 'Mail account object as used by the Courier mail server'
+	MUST ( mail $ homeDirectory $ uidNumber $ gidNumber )
+        MAY ( mailbox $ uid $ cn $ gecos $ description $ loginShell $ quota $ userPassword $ clearPassword $ defaultdelivery) )
+
+objectclass ( 1.3.6.1.4.1.10018.1.2.2 NAME 'CourierMailAlias' SUP top AUXILIARY
+	DESC 'Mail aliasing/forwarding entry'
+	MUST ( mail $ maildrop )
+        MAY ( mailsource $ description ) )
+
+objectclass ( 1.3.6.1.4.1.10018.1.2.3 NAME 'CourierDomainAlias' SUP top AUXILIARY
+	DESC 'Domain mail aliasing/forwarding entry'
+	MUST ( virtualdomain $ virtualdomainuser )
+        MAY ( mailsource $ description ) )
+</pre>
+
+### courier.schema from debian-edu-config
+I found a simpler one from [[debian]]:
+<pre>
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.32 NAME 'mailMessageStore'
+    DESC 'File system location of the Inbox for a user'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+    SINGLE-VALUE
+  )
+
+# attributetype ( 1.3.6.1.1.1.1.3 NAME 'homeDirectory'
+#          DESC 'The absolute path to the home directory'
+#          EQUALITY caseExactIA5Match
+#          SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+#    SINGLE-VALUE
+#  )
+
+objectclass ( 1.3.6.1.4.1.8990.2.1.1 NAME 'imapUser'
+    SUP top
+    MUST ( mailMessageStore $ homeDirectory )
+  )
+</pre>
+
+I like this one better. I changed the name to imap.schema and am using it in combination with posixAccount. Together I can create directory records like this:
+<pre>
+dn: uid=bbla,ou=Email,dc=example,dc=com
+cn: Barf
+gidNumber: 100001
+homeDirectory: /home/users/bbla
+loginShell: /bin/false
+mailMessageStore: /home/users/bbla
+objectClass: imapUser
+objectClass: posixAccount
+objectClass: top
+uid: bbla@example.com
+uidNumber: 100001
+userPassword: {CRYPT}$1$NfWu7c3o$wU1Eyc0taVrNXxQN1c86k/
+</pre>
+
+I saved this schema in /etc/ldap/schema/ and then added it to the top of /etc/ldap/slapd.conf.
+
+Since I want to use CRAM-MD5 for [[Dovecot]] IMAP accounts, I use this:
+
+<pre class="sh_sh">
+# dovecotpw -s CRAM-MD5
+Enter new password:
+Retype new password:
+{CRAM-MD5}9186d855e11eba527a7a52ca82b313e180d62234f0acc9051b527243d41e2740
+</pre>

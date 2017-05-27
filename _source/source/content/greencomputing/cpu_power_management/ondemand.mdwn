@@ -1,0 +1,6 @@
+Ondemand is now my favorite cpu frequency governor. On my [[Pentium 4 M]], I have the following options to tune:
+<pre>
+ls /sys/devices/system/cpu/cpu0/cpufreq/ondemand
+ignore_nice_load  sampling_rate      sampling_rate_min
+powersave_bias    sampling_rate_max  up_threshold
+</pre>

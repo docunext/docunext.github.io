@@ -1,0 +1,21 @@
+This is a configuration option in [[OfflineIMAP]] which can be used to offload the authentication process to a separate mechanism. I've used [[SSH]] successfully, like this:
+
+<pre>
+ssh -q example.com /usr/bin/imapd .maildir
+</pre>
+
+In that case, the user I am running offlineimap has [[SSO]] setup via [[ssh-agent]]. Now I'm wondering how this could be setup automatically for multiple users.
+
+### Ideas==
+* Setup www-data for [[SSO]], and allow it to ONLY "sudo %username /usr/bin/imapd .maildir" with no password
+* Use the capability of OfflineIMAP to get the username from the login which is triggering the action, either courier-imap, pop, or webmail client.
+* OfflineIMAP is all about the user - which is good - and so each user would need to be the caller, not www-data. That's a fairly challenging thought. I just wish you could pass OfflineIMAP the password via the command line. '''UPDATE''': You can, you just have to use the Machine.MachineUI user interface. It didn't work on one of my machines, not sure why. See [[OfflineIMAP Machine UI]].
+
+### Concerns
+* [[Security]]
+* How to create a trigger hook from [[Courier]] to automatically call offlineimap?
+* Should cron be used instead?
+* Can [[Courier]]'s ENHANCED_IDLE be used?
+
+### Tests
+* Try out more than one account to see how that is handled.

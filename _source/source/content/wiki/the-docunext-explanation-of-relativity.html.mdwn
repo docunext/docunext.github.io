@@ -1,0 +1,16 @@
+I'm not sure how extensive the theories of relativity are, but here are a few metaphors and scenarios I use to better understand what I think relativity means.
+
+### The Bicycle Wheel
+If a bicycle wheel is not spinning, it is easy to pass a pencil through the spokes. If the wheel starts to spin, it might still be possible to pass a pencil through the spokes without it hitting any spokes. As the wheel turns faster, the less time one has to pass the pencil through before a spoke strikes the pencil. As the bicycle wheel spins around, the image of the spokes starts to blur together. Now imagine that either your observation frame widens, meaning more time passes during each instance which you observe the wheel, or the wheel continues to spin faster and faster. Centrifugal forces aside, eventually the wheel spokes will appear to be a seamless wall of metal, rather than individual spokes. In this instance, it is relatively fair to say that the wheel spokes have gained mass, because they are more (a complete wall) than they were before (individual spokes).
+
+As far I as understand, this couldn't really happen with a bicycle wheel, but it does happen on an atomic (meaning atoms) level, with electrons especially. Why am I rambling on about this stuff on a computer / technology wiki? Read on...
+
+### The Race
+A race is a great metaphor for relativity when it comes to software. Be it a car race or a bicycle race, the starting line, the finish, and the runners are all the players we need to explain path relativity. In a race, you can describe a racer's position relative to the starting line, the finish line, or other racers. When referring to the lines (start or finish), the reference is absolute, as all the racers have agreed on where those positions are. When comparing one racers position to another, the reference is relative, meaning the position of one racer is dependent upon the other.
+
+In software, references are often made both of the absolute and relative nature, and on posix style operating systems, the most important absolute reference point is the root. The root can be compared to the starting line (or perhaps more appropriately, the root of a tree). If you have the position of all the racers in respect to the starting line, you can calculate out the distance from each of them. If you only have the position of the racers with respect to each other, you won't be able to derive the distance they are from the starting line or the finish line.
+
+A similar situation arises in software references. You will at some point need to know where the root is, but you would also like to make the referees (the files or resources which are doing the referencing) flexible and portable, so that depending on the circumstances, their relative positions can change.
+
+### Summary
+What do these concepts have to do with each other? A lot, but that's enough for now.

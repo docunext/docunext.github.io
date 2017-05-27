@@ -1,0 +1,29 @@
+Along with most multimedia services on GNU/Linux, audio has vastly improved as of the 2.6 and 3+ kernel stacks. As of 2012, I'm now using Mint Linux instead of Debian, and thus have to deal with some of the parts of Ubuntu I'm not keen on so I'm fiddling with Pulse Audio. As I research the matter, I figured I'd write up this page.
+
+### Sound Drivers Packages
+
+Sound drivers are kind of like drivers that support graphics cards, so like X11 has many drivers, the linux audio frameworks have lots of drivers. Though unlike X11, they aren't servers. The two main sound driver packages are ALSA and OSS.
+
+#### ALSA
+
+Based upon what I've read, ALSA is the recommended architecture, and it stands for Advanced Linux Sound Architecture. Advanced it may be, but its tools are fairly rudimentary. It does include an ncurses based mixed, but there is one for GNOME available as well.
+
+#### OSS4
+
+Likely due to licensing, the OSS4 drivers are not included in the linux kernel and must be compiled. Due to that, I have limited experience with them. However, earlier today I installed it due to a lack of understanding about how all these pieces fit together.
+
+### Sound Servers
+
+Like the graphics stacks have X servers, the sound stack needs audio servers. There is PulseAudio, JACK, and Enlightened Sound Daemon (ESD). Unlike X servers, an audio server is not needed for audio to function.
+
+#### PulseAudio
+
+I removed PulseAudio because it recommends RtKit (realtime kit) and it made my system unstable. PulseAudio doesn't require RtKit though.
+
+#### JACK
+
+I haven't used JACK, but supposedly its quit advanced.
+
+#### ESD
+
+I tried installing ESD, but ran into conflicts with ALSA.

@@ -1,0 +1,36 @@
+Here are some notes I took while setting up linux on an [[/Hardware/Everex]] laptop.
+
+##Kernel
+I compile my own kernel. The debian stock kernel doesn't include the patches for a custom DSDT, so I added that. 
+
+See my kernel .config file at Docunext:
+
+* <http://www.docunext.com/wiki/Via_C7_Notebook_with_GUI>
+
+##Video
+I use the openchrome driver, which has support for accelerated 2D and MPEG playback. No 3D at this time unfortunately. My Stepnote's have the new P4M900 graphics chip. It will probably get support at some time in the future. 
+
+For a lightweight, pleasant user interface, I chose XFCE4 and am really happy with it.  
+
+##CPU
+The CPU doesn't have a lot of cache space, so I tried to offload as much processing to other components as possible. 
+
+##Sound
+I installed alsa-base, alsa-utils, and alsa-tools. This is my /etc/modprobe.d/sound file:
+<pre>
+alias snd-card-0 snd-hda-intel
+options snd-hda-intel index=0
+</pre>
+
+##Wireless
+I actually switched out the atheros cards on most of the Everex laptops I have to use them in [[PC Engines Network Appliances]], and on the laptop I use everyday, I installed an intel 2195 card. My goal in this regard was to use WPA2, setup to use the VIA ACE AES acceleration. It took awhile, but in the end I got it to work. I added "alias aes padlock-aes" to my /etc/modprobe.d/aliases file. 
+
+##Browser
+I compiled a custom iceweasel browser for use with the Everex laptop and its working great. I had tried iceweasel, but the distributor doesn't really offer too many details (that I could find) about the inner workings of their customizations. It was a lot of work for me to figure out how to compile my own iceweasel, but the debian source package and the dpkg-buildpackage made it much easier.
+
+http://www.docunext.com/wiki/My_Iceweasel_debian_rules
+
+Since Iceweasel uses NSS instead of OpenSSL, I setup a proxy using stunnel for my webmail. It works well but is kind of pain to manage, so for now I'm not using it. 
+
+[[Notebooks]]
+[[Linux]]

@@ -1,0 +1,9 @@
+I like the idea behind cpudyn because as I understand it, its basically like the [[ondemand]] module, but a little bit less finicky, and a little bit more aggressive.
+
+I'm trying to get my computer to be in [[performance]] mode the entire time I'm using it, and in [[powersave]] mode if I walk away. Right now it seems like its just jumping back and forth between the two while I'm typing this... that's not what I want. I increased the CPU_DOWN setting in /etc/default/cpudyn to 0.99, and it appears to be remaining in performance mode a little longer, and that's what I want. I've also reduced the CPU_UP to 0.2, so that it will enter performance mode faster. 
+
+After a few more tries, I ended up removing this tool. I couldn't get it to do what I wanted. Now I'm trying [[powernowd]].
+
+## External Links
+
+* <http://web.ics.purdue.edu/~nino/Linux/cpudyn.html>

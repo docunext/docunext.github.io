@@ -1,0 +1,66 @@
+We use courier to provide access to imap mailboxes, and deliver email over pop. It has worked fine for me over the past few years.
+
+### Courier Access Control Lists
+Courier has some nice access controls, and I may end up using them in the future for shared mailboxes. I would also like to use them to make my email archives read only. The tool to use or this is '''maildiracl'''.
+
+Courier supports immediate new message notification with the ENHANCED_IDLE setting. This is something I've been interest in when learning about [[IMAP Email]].
+
+### User Databases
+Courier provides a few different ways to store user information. In the past I've used [[MySQL]], and I'd like to also try the userdb and [[ldap]] modules.
+
+http://www.courier-mta.org/authlib/README_authlib.html#authuserdb
+
+I'm planning to continue storing the user data in a [[MySQL]] database, but would like to export it out to a bdb flat file for everyday use.
+
+### IMAP_EMPTYTRASH
+This can be a little tricky. Mail is only deleted from the mailbox after its been in the trash folder for the amount of days specified, even if the message itself is older. Also, I had to specify the trash folder name I was using: "Deleted Messages", instead of just "Trash". I included the "[[Spam]]" folder as well.
+
+This actually does work for me and is a really great way to keep mailboxes under control.
+
+### Courier Errors
+#### Sanity Check
+This one always gets me:
+<pre>
+##NAME: IMAP_MAILBOX_SANITY_CHECK:0
+#
+# Sanity check -- make sure home directory and maildir's ownership matches
+# the IMAP server's effective uid and gid
+
+IMAP_MAILBOX_SANITY_CHECK=0
+</pre>
+
+The default is one, but I've never been able to get it to work. I think that this would be a good idea, but I'll have to try it later.
+
+### Quotas
+I can't seem to figure out how to get quotas to work. [[Courier-authdaemon]] has access to the quota field in the database, but I don't know if it is getting used at all. I am on the topic because I'm revisiting [[RoundCube]], the awesome email web client, and it has a quota display (actually it says "Disk usage: unlimited"). Mine always say "unlimited".
+
+Discovered a couple of things:
+* http://www.mail-archive.com/courier-imap@lists.sourceforge.net/msg02475.html
+* http://www.inter7.com/courierimap/README.maildirquota.html
+
+Postfix is involved, and the quota values are more than just numbers - there are two values - size and number of emails, suffixed with "S" and "N", respectively. ( I need to double check that!)
+
+### Maildir Access Control Lists
+<pre>
+maildiracl -list .maildir INBOX.Spam
+owner	alr
+administrators	aceilrstwx
+</pre>
+
+<pre>
+maildiracl -set .maildir INBOX.Spam owner aceilrstwx
+</pre>
+
+### See Also
+* [[Dovecot]]
+* [[My Email Services Configurations]]
+* [[LDAP Schema for Courier]]
+* [[Maildrop]]
+* [[Qmail]]
+* [[Postfix]]
+* [[OfflineIMAP]]
+* [[courier-filter-perl]]
+
+### Links
+* http://www.informedemail.com
+

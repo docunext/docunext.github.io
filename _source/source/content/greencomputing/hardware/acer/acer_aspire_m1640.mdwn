@@ -1,0 +1,8 @@
+* Standard configuration power consumption: 45 - 70 Watts
+* Low settings: 35 Watts
+* Even lower settings with a power adapter and mini-power supply: 30 Watts!
+* Suspend to RAM: yes
+* Video on resume: unknown
+
+
+[[Desktop Computer Power Consumption Ratings]]

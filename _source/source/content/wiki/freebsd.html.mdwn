@@ -1,0 +1,36 @@
+FreeBSD is a free and open source UNIX operating system, complete with kernel
+and userland.
+
+#### FreeBSD Ports Collection
+
+The FreeBSD ports collection makes it easy to install customized software
+packages on FreeBSD. Ports are instructions and Makefiles to assist in the
+installation of thousands of software packages. They require custom compilation,
+so it takes some extra time to install them, but they are lightweight and
+reliable.
+
+For larger software installs, binary packages are available which can be
+installed like so:
+
+    pkg_add -r vim-lite
+
+#### Example Port Installation
+
+    cd /usr/ports/somedir/someprogram/
+    make && make install && make clean
+
+#### Ports Maintenance
+
+The cvsup tool is used to update a FreeBSD Ports tree.
+
+    cvsup -g -L 2 /etc/supfile
+
+And the freebsd-update tool can be used to update binary packages, including the
+system itself.
+
+#### What makes FreeBSD different from Ubuntu or Debian?
+
+* Ubuntu and [[/Debian]] are comprised of the GNU userland and the linux kernel
+* The linux kernel is licensed under the GPL2 license
+* FreeBSD has no /proc/ filesystem
+* FreeBSD is liberally licensed under the BSD license

@@ -1,0 +1,5 @@
+PC Engines makes small, low-power, x86 compatible hardware for use as routers, internet appliances or any type of embedded system appliance.
+
+## Models
+
+* [[/Hardware/Pc Engines/Alix 1C]]

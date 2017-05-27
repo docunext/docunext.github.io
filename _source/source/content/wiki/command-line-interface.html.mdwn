@@ -1,0 +1,40 @@
+### Summary
+The command line interface (CLI) is usually a "text-only" interface, with only minimal graphics made from ASCII characters. It is actually quite sophisticated, and fully interactive menus can be created using a variety of development libraries.
+
+The CLI is referred to in many ways:
+* Shell
+* Console
+* Terminal
+
+### Example CLI Tasks
+* [[Count the number of files within a directory]]
+* [[Create md5sum file manifest of a directory]]
+* [[Flip the switch shell switch]]
+* [[Generating Commands with Awk and Sed]]
+
+### Command Line Software
+* [[Imagemagick]] / [[Gpicview]]
+* [[Exif]]
+* [[Ssh]] / [[telnet]] / [[ping]]
+* [[nmap]]
+* [[irc]]
+* [[Git]] / [[Subversion]]
+* [[Ledger]]
+* [[Yokadi]]
+* [[Vim]]
+* [[Mutt]]
+* [[Pstree]]
+
+### Terminal Emulators
+The default terminal emulator can be selected in [[Debian]] using:
+
+<pre class="sh_sh">
+update-alternatives --config x-terminal-emulator
+</pre>
+
+* [[Xfce4-terminal]]
+* [[Terminator]]
+* [[Lxterminal]]
+* [[Gnome-terminal]]
+* [[Konsole]]
+

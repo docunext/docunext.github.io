@@ -1,0 +1,70 @@
+### Rationale
+
+I would like a very simple pre-authentication mechanism for all my [[LDAP]] uses. With [[SASL]], this is possible, but its a bit more complicated than I originally thought. It is separate from, but quite connected to, the built-in bind authentication scheme of [[LDAP]] in general.
+
+I want to do this because I feel it will help with security. I don't think that it will be a magic solution to all things security, but in addition to requiring [[TLS]], I believe it will help.
+
+### /etc/ldap/sasl2/slapd.conf
+<pre>
+pwcheck_method: saslauthd
+mech_list: PLAIN DIGEST-MD5 LOGIN
+saslauthd_path:/var/run/saslauthd/mux
+</pre>
+
+### Useful Tools
+
+* sasldblistusers2
+
+### Example Debugging
+
+Should work:
+<pre class="sh_sh">
+ldapsearch -U savldap -R savonix.com -X dn:cn=savldap,dc=savonix,dc=com
+</pre>
+
+Also:
+
+<pre class="sh_sh">
+# ldapwhoami -U savldap
+SASL/DIGEST-MD5 authentication started
+Please enter your password:
+SASL username: savldap
+SASL SSF: 128
+SASL data security layer installed.
+dn:cn=savldap,dc=savonix,dc=com
+</pre>
+
+Shows insufficient access via ACL:
+<pre class="sh_sh">
+# ldapwhoami -U savldap -I
+SASL/DIGEST-MD5 authentication started
+SASL Interaction
+Please enter your authorization name: savldap
+Default: savldap
+Please enter your authentication name: admin
+Please enter your password:
+ldap_sasl_interactive_bind_s: Insufficient access (50)
+</pre>
+
+### Errors
+Is this caused by having libsasl2-modules-ldap installed but not configured?
+
+<pre class="sh_log">
+_sasl_plugin_load failed on sasl_auxprop_plug_init for plugin: ldapdb
+</pre>
+
+<pre class="sh_log">
+successful result: security flags do not match required
+</pre>
+
+<pre class="sh_sh">
+str2ad(cmusaslsecretDIGEST-MD5): attribute type undefined
+</pre>
+
+### Links
+
+* http://fumi.me/ldap/ldap.html
+* http://itlab.stanford.edu/blog/archives/2009/test-services/ldap-kerberos-5-sasl-and-passwords
+* http://www.tldp.org/HOWTO/LDAP-HOWTO/sasl.html
+* http://southbrain.com/south/2008/08/cmusaslsecretcrammd5-cmusaslse.html
+

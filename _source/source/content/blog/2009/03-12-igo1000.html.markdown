@@ -1,0 +1,8 @@
+---
+title: IGO1000
+date: 2009-03-12
+---
+The iGoLogic IGO1000 looks great - finally an intel atom machine with two lan interfaces! They are 100/1000, which is more than I would want, and I'm guessing that they are Realtek chipsets.
+
+I would prefer 10/100 network interfaces if they were intel chipsets.
+

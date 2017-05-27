@@ -1,0 +1,6 @@
+### Nullmailer Summary
+Nullmailer is a lightweight daemon for relaying mail to a smarthost. It manages a queue so it supports delivering mail to hosts which employ [[greylisting]].
+
+### My Experience with Nullmailer
+I used to use [[ssmtp]] but it does not manage a queue, so I'm using nullmailer instead. After a few short days of using nullmailer, I've very pleased with it. Its super easy to configure, and supports all the features I need. Instead of aliases, it has only one "adminaddr": /etc/nullmailer/adminaddr.
+

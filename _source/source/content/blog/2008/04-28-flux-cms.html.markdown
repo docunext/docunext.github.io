@@ -1,0 +1,10 @@
+---
+title: Flux CMS
+date: 2008-04-28
+tags: none
+author: Albert Lash
+---
+I installed Flux CMS this morning - I'm very interested in it because it uses XSL. It works fine so far but I'd like to work on the admin interface a little bit.
+
+UPDATE: After spending a few hours tinkering with the Flux Capacitor, I mean Flux CMS, I really like it. I do want to change a bunch of things though... I'd like to simplify it a lot. There is way more functionality in the subversion trunk than I'm interested in at the moment. I should fork it and start removing parts until its stops working, and then as I fix what I broke I'll figure out how it works.
+

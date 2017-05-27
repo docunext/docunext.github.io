@@ -1,0 +1,17 @@
+Everex is a low-cost computer manufacturer. They sell notebooks and desktop computers, and are gaining a lot of notoriety for their use of the VIA C7 chip in a low cost computer that runs linux (gOS) and is sold at Wal*Mart for $199 ([the Everex gOS computer can also be purchased from Newegg](http://www.my-tech-deals.com/blog/2008/01/everex-gpc-at-newegg.html)). 
+
+## Stepnote Computers
+* [[/Hardware/Everex/Everex Cloudbook CE1200V]]
+* [[/Hardware/Everex/Everex Stepnote NC1500]]
+* [[/Hardware/Everex/Everex Stepnote NC1501]]
+* [[/Hardware/Everex/Everex Stepnote NC1503]]
+* [[/Hardware/Everex/Everex Laptop Review]]
+* [[/Hardware/Everex/Everex Stepnote NC1503 Dsdt]]
+
+## Configuring the Stepnote Series with Debian Linux
+I have six Stepnote laptops, and I've taken a similar approach to configuring them for use with linux. Here's my setup: 
+
+* [[/Linux on the Everex Stepnote Series]]
+
+## See Also
+* [[/Maintenance/Laptops/Everex Maintenance]]

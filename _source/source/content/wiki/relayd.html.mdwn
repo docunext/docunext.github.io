@@ -1,0 +1,77 @@
+Relayd is a load balancer / proxy from the [[OpenBSD]] group. It is used in the latest version of [[pfSense]]: [[PfSense 2]] (though as of 20100808, I can't get it to work, yet - it is BETA!). Relayd works with two distinct manners: relays (layer 7) and redirections (layer 3).
+
+It looks very, very nice!
+
+## Relayd Configuration
+I'm trying to hack in a configuration file that will work with the relayd included with [[pfSense]] but I keep getting syntax errors:
+
+<pre class="sh_sh">
+[2.0-BETA3][root@vpn-fw.example.com]/root(11): relayd -d -vv -f /var/etc/relayd.conf
+/var/etc/relayd.conf:72: syntax error
+</pre>
+
+After many trials and errors, I found this configuration to work OK:
+
+<pre class="sh_c">
+www1=192.168.0.38
+www2=192.168.0.48
+
+interval 5
+
+table <nginx> { $www1, $www2 }
+
+redirect "www" {
+       listen on 74.94.149.33 port 80 interface vr0
+
+       tag REDIRECTED
+
+       forward to <nginx> port 80 timeout 300 check http "/" code 200
+}
+</pre>
+
+The test:
+
+<pre class="sh_sh">
+[2.0-BETA3][root@vpn.example.com]/root(25): relayd -d -vv -f /var/etc/relayd.conf
+startup
+init_filter: filter init done
+init_tables: prepare anchor "relayd/www" and table "www"
+init_tables: created 1 tables
+hce_notify_done: 192.168.0.38 (tcp_read_buf: check succeeded)
+host 192.168.0.38, check http code (6ms), state unknown -> up, availability 100.00%
+pfe_dispatch_imsg: state 1 for host 3 192.168.0.38
+hce_notify_done: 192.168.0.48 (tcp_read_buf: check succeeded)
+host 192.168.0.48, check http code (36ms), state unknown -> up, availability 100.00%
+pfe_dispatch_imsg: state 1 for host 2 192.168.0.48
+</pre>
+
+This example from the relayd manpage also works with [[pfSense]]:
+
+<pre class="sh_sh">
+protocol "myssh" {
+       tcp { nodelay, socket buffer 65536 }
+}
+
+relay "sshforward" {
+       listen on 74.94.149.33 port 2222
+       protocol "myssh"
+       forward to 192.168.0.48 port 22
+}
+</pre>
+
+## Relays
+Relays can check more specific details about the health of backend servers - using the HTTP protocol and even checking the status code response or the digest of the content.
+
+## Redirections
+Redirections can also use the HTTP protocol to check backend health I guess!
+
+## See Also
+* [[HA Proxy]]
+* [[Rinetd]]
+* [[Redir]]
+
+## Links
+
+* https://calomel.org/relayd.html
+* http://www.rootr.net/man/man/relayd.conf/5
+

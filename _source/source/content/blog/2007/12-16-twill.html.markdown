@@ -1,0 +1,8 @@
+---
+title: Twill
+date: 2007-12-16
+---
+I just found out about another web scripting tool which can be useful for testing: twill. I installed it on debian and was able to try it out right away. Aside from testing, I'm trying to learn python so this is at least another tool I can use to learn more about python. Cool.
+
+UPDATE December 30, 2007: Here's an article on the subject of <a href="http://ivory.idyll.org/articles/twill-and-wsgi_intercept.html" rel="nofollow">testing web applications with twill</a>.
+

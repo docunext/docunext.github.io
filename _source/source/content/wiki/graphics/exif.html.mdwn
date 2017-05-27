@@ -1,0 +1,12 @@
+EXIF is data stored in digital picture files about the picture itself. Its also a command line tool to extract and manipulate this information.
+
+### Related Pages
+* [[exiftool]]
+* [[IPTC]]
+* [[XMP]]
+
+I use this command to remove some basic exif tags to further reduce filesize:
+<pre>
+exiftool -ThumbnailImage= -Software= -FirmwareRevision= -FlashpixVersion= -ColorSpace= -ExposureMode= -FileSource= -SensingMethod= -CustomRendered= -Flash= -Orientation= -ImageUniqueID= -MeteringMode= -ShutterSpeedValue= -WhiteBalance=
+</pre>
+

@@ -1,0 +1,55 @@
+### What is SQL?
+Most people view SQL as a simple way to get information in and out of a database, but it can actually do quite a lot besides that.
+
+As far as I know, SQL is a standard language, meaning that the logic behind how it works is an open publication by ANSI and can be used by anyone royalty free.
+
+#### Example
+<pre class="sh_sql">
+SELECT * FROM tablename;
+</pre>
+
+#### LEFT JOIN Example
+<pre class="sh_sql">
+  SELECT DISTINCT pb_entry_amounts.entry_id,
+    pb_entry_amounts.account_id,
+    pb_entry_amounts.entry_amount_id,
+    pb_entry_amounts.entry_amount,
+    pb_entry_amounts.entry_type_id,
+    pb_accounts.name,
+    pb_accounts.account_type_id,
+    pb_general_ledger.account_id as posted_account_id
+
+  FROM (pb_accounts, pb_entry_amounts)
+
+  LEFT JOIN pb_general_ledger
+    ON pb_general_ledger.entry_amount_id=pb_entry_amounts.entry_amount_id
+
+  WHERE pb_entry_amounts.entry_id LIKE ?
+    AND pb_accounts.id = pb_entry_amounts.account_id
+    AND
+    (
+      pb_general_ledger.account_id IS NULL
+      OR
+      pb_general_ledger.account_id = 0
+    )
+
+  ORDER BY
+    pb_entry_amounts.entry_type_id DESC
+</pre>
+( Taken from [[PBooks]])
+
+### Best Practices use SQL
+One of the first mistakes I made in developing web applications was not appreciating SQL as a method of manipulating and handling data. I only used it for I/O.
+
+Nowadays when I develop web applications, I try to put a bunch of logic in my queries, rather than my application. I do so because SQL is quite mature, simple, and can be optimized in many ways.
+
+I have learned a lot by using [[phpMyAdmin]], such as adding "LIMIT 1" at the end of delete queries... just in case! Unfortunately, I don't think that it is standard SQL.
+
+### Related Pages
+* [[NoSQL]]
+
+### External Links
+* [http://www.developerfusion.co.uk/show/1734/ How to create a standard SQL running total]
+* [http://pooteeweet.org/blog/0/1083#m1083 Prepared Statements Gotchas]
+* [http://www.linuxnetworks.de/doc/index.php/Portable_SQL Portable SQL]
+

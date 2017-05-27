@@ -1,0 +1,55 @@
+The intel xeon L5410 is a nice chip. It combines power with efficiency, includes multiple cores, as well as some impressive cache. In my server setup, I've combined it with a [http://www.my-tech-deals.com/blog/2008/07/14/new-server/ SUPERMICRO X7DAE-O Dual LGA 771 Intel 5000X motherboard]]. 
+
+The motherboard BIOS are smart enough to support the power saving capabilities of the Xeon, so it has access to C-States AND frequency modulation. 
+
+##Base cpuinfo
+<pre>
+cat /proc/cpuinfo 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5410  @ 2.33GHz
+stepping	: 6
+cpu MHz		: 2000.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+bogomips	: 4670.36
+clflush size	: 64
+</pre>
+
+##Powertop Results w/ 2.6.25
+<pre>
+     PowerTOP version 1.10      (C) 2007 Intel Corporation
+
+Cn                Avg residency       P-states (frequencies)
+C0 (cpu running)        ( 0.1%)         2.34 Ghz     0.0%
+polling           0.0ms ( 0.0%)         2.00 Ghz   100.0%
+C1                0.0ms ( 0.0%)
+C2                0.0ms ( 0.0%)
+C3              266.0ms (99.9%)
+
+Wakeups-from-idle per second :  3.8     interval: 5.0s
+no ACPI power usage estimate available
+
+Top causes for wakeups:
+  19.7% (  2.4)     <kernel core> : queue_delayed_work_on (delayed_work_timer_fn
+  16.4% (  2.0)     <kernel core> : clocksource_register (clocksource_watchdog)
+  16.4% (  2.0)       <interrupt> : extra timer interrupt
+  11.5% (  1.4)       <interrupt> : eth0
+   8.2% (  1.0)   <kernel module> : edac_pci_add_device (delayed_work_timer_fn)
+   8.2% (  1.0)   <kernel module> : edac_mc_add_mc (delayed_work_timer_fn)
+</pre>
+Nice, huh?

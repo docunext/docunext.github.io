@@ -1,0 +1,25 @@
+OpenOffice.org is an open source office productivity suite of software packages. It includes:
+
+* oowriter for [[word processing]]
+* oocalc for [[spreadsheet]]
+* ooimpress for presentations
+* oodraw for [[graphics]]
+
+There are some other tools it includes, but those are the ones I use.
+
+### Saving Data in OpenOffice.org Formats
+OpenOffice.org files are .[[zip]] archives. The archives contain a bunch of metadata files, as well as an [[XML]] file that contains the document data. In [[PBooks]], I was able to manually create an OpenOffice.org archive using [[PHP]] and [[XSLT]]. Here's a link to the [http://www.pbooks.org/src/view/pre/trunk/apps/pbooks/templates/xml/open_spreadsheet.xml.xsl xsl template] I used.
+
+[[OpenOffice.org Spreadsheet Files]]
+
+### Locking Rows from Scrolling
+I had a difficult time hunting down how to do this. Its called "Freezing Rows" and is accessed under the "Windows" menubar drop down.
+
+### See Also
+* [[ODF]]
+* [[SVG]]
+* [[XML]]
+
+### Links
+* http://www.laliluna.de/remove-openoffice-hyperlink.html
+

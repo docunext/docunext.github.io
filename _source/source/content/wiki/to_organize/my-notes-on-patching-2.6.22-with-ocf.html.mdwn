@@ -1,0 +1,298 @@
+### What is OCF?
+OCF it the [[OpenBSD]] Cryptographic Framework, and OCF-Linux is a set of patches to enable device access to the linux kernel CyptoAPI. This capability provides a way to access the [[AMD Geode]] AES security block, among other hardware based encryption accelerators. Read on to follow how I was able to set this up on a [[PC Engines]] ALIX 1C.
+
+### My Notes on Patching kernel 2.6.22 with OCF
+I originally copied my debian config from /boot/config-* to /usr/src/linux/.config, but then no ocf options were showing up besides < >   Software async crypto daemon.
+
+I think I'm supposed to be looking for OCF...
+
+Found this patch error:
+<pre class="sh_sh">
+*************** config CRYPTO_TEST
+*** 471,473 ****
+  source "drivers/crypto/Kconfig"
+
+  endif # if CRYPTO
+--- 471,476 ----
+  source "drivers/crypto/Kconfig"
+
+  endif # if CRYPTO
++
++ source "crypto/ocf/Kconfig"
++
+</pre>
+
+That is odd, I added the offending patch string to crypto/Kconfig and it worked - I was able to access the OCF Crypto menu. Cool! Compiling now... its slow because the AMD Geode LX800 is not a powerhouse, and I'm using a CF drive as the main storage device.
+
+http://www.linuxquestions.org/questions/showthread.php?t=572188
+
+The make process finished, but there aren't any shared object modules that I can find. Here's my kernel config:
+<pre class="sh_sh">
+#
+# OCF Configuration
+#
+CONFIG_OCF_OCF=m
+# CONFIG_OCF_RANDOMHARVEST is not set
+CONFIG_OCF_CRYPTODEV=m
+CONFIG_OCF_CRYPTOSOFT=m
+# CONFIG_OCF_SAFE is not set
+# CONFIG_OCF_IXP4XX is not set
+# CONFIG_OCF_HIFN is not set
+# CONFIG_OCF_HIFNHIPP is not set
+# CONFIG_OCF_TALITOS is not set
+# CONFIG_OCF_OCFNULL is not set
+# CONFIG_OCF_BENCH is not set
+</pre>
+
+After that, building the kernel did not result in the ocf modules getting built. So I went to crypto/ocf/ and issued:
+
+<pre class="sh_sh">
+make -C /usr/src/linux-source-2.6.22/ M=`pwd` modules
+</pre>
+
+resulting in:
+<pre class="sh_sh">
+make: Entering directory `/usr/src/linux-source-2.6.22'
+  CC [M]  /usr/src/linux-source-2.6.22/crypto/ocf/crypto.o
+  CC [M]  /usr/src/linux-source-2.6.22/crypto/ocf/criov.o
+  LD [M]  /usr/src/linux-source-2.6.22/crypto/ocf/ocf.o
+  CC [M]  /usr/src/linux-source-2.6.22/crypto/ocf/cryptodev.o
+  CC [M]  /usr/src/linux-source-2.6.22/crypto/ocf/cryptosoft.o
+  Building modules, stage 2.
+  MODPOST 3 modules
+  CC      /usr/src/linux-source-2.6.22/crypto/ocf/cryptodev.mod.o
+  LD [M]  /usr/src/linux-source-2.6.22/crypto/ocf/cryptodev.ko
+  CC      /usr/src/linux-source-2.6.22/crypto/ocf/cryptosoft.mod.o
+  LD [M]  /usr/src/linux-source-2.6.22/crypto/ocf/cryptosoft.ko
+  CC      /usr/src/linux-source-2.6.22/crypto/ocf/ocf.mod.o
+  LD [M]  /usr/src/linux-source-2.6.22/crypto/ocf/ocf.ko
+make: Leaving directory `/usr/src/linux-source-2.6.22'
+</pre>
+Good!
+ I was then able to insmod ocf.ko as well as cryptosoft.ko, but I got an undefined symbol when trying to install cryptodev.ko.
+
+insmod: error inserting 'cryptodev.ko': -1 Unknown symbol in module
+
+and from dmesg:
+cryptodev: Unknown symbol sys_dup
+
+I've hit a wall, so I emailed the author:
+<blockquote>
+I'm trying to get OCF linux modules installed but I'm getting an error when trying to insmod cryptodev.ko.
+
+So far I've tracked down the problem to:
+
+cryptodev: Unknown symbol sys_dup
+
+I attempted to export the symbol as suggested here:
+
+http://mail.nl.linux.org/kernelnewbies/2004-04/msg00333.html
+
+and also found someone else experiencing a similar problem here:
+
+http://lists.openswan.org/pipermail/users/2007-January/011553.html
+
+My work is being conducted on an AMD Geode LX800, and my running kernel is 2.6.22 from debian. I downloaded the kernel source to /usr/src, and applied the patch with on caveat, I had to manually add the ocf to to crypto/Kconfig file. With that there, I was able to select the modules in the ncurses make menuconfig, but they would not build. I was able to build them via the following process:
+
+make -C /usr/src/linux-source-2.6.22/ M=`pwd` modules
+
+issued in the crypto/ocf folder. The ocf and cryptosoft modules insert fine.
+
+Thanks for this great work and any pointers you can share!
+</blockquote>
+
+AWESOME! David got back to me in a jiffy. I had skipped the "install kernel" part. Duh. His detailed and helpful instructions:
+
+# get kernel source
+# apply OCF patch
+# make config ... ( I use make menuconfig )
+# make ( I also used the make-kpkg tool from debian )
+# install newly built kernel
+# make modules modules_install
+# reboot
+# try it out - insmod geode-aes.ko, ocf.ko, cryptosoft.ko, cryptodev.ko
+
+I built "cryptotest", but on debian GNU/linux there is no strlcpy, but one is provided by openssl ([http://libtorrent.rakshasa.no/ticket/993 thanks]), so I added the following to both cryptotest.c and cryptokeytest.c:
+
+<pre class="sh_sh">
+#include <openssl/buffer.h>
+#define strlcpy
+</pre>
+
+### The Results
+The results are great!
+
+<pre class="sh_sh">
+alix1c-1:/usr/src/crypto-tools# ./cryptotest -a aes 256 8192
+   0.088 sec,     512    aes crypts,    8192 bytes, 47597099 byte/sec,   363.1 Mb/sec
+alix1c-1:/usr/src/crypto-tools# ./cryptotest -a 3des 256 8192
+   2.292 sec,     512   3des crypts,    8192 bytes,  1829928 byte/sec,    14.0 Mb/sec
+</pre>
+
+Pretty cool huh? The one drawback I've found so far is that the geode-aes only supports aes128 ([http://marc.info/?l=linux-crypto-vger&m=118841990225108&w=2 thanks]), not aes192 or aes256. When I try to use those, this is the result:
+
+<pre class="sh_sh">
+cryptotest: line 384:ioctl(CIOCCRYPT): Invalid argument
+</pre>
+
+However, 128 is plenty for my needs. :-)
+
+Based on these results, I had to email back David, as well as send the results to Pascal Dornier of PC Engines, who I bought the ALIX board from a few weeks ago:
+
+<blockquote>
+You are probably already aware of this feature in the geode, but I thought you might like to know about the results I've obtained with the ALIX 1c board I purchased from you last month.
+
+This morning I was able to patch a debian kernel with the OCF-linux patches, thus providing a generic interface to the geode-aes cipher block. I haven't patched openssl yet, but with the cryptotest tool, I was able to compare the aes128 cipher with 3des, and the results are fantastic:
+
+<pre class="sh_sh">
+alix1c-1:/usr/src/crypto-tools# ./cryptotest -a aes 256 8192
+   0.088 sec,     512    aes crypts,    8192 bytes, 47597099 byte/sec,   363.1 Mb/sec
+
+alix1c-1:/usr/src/crypto-tools# ./cryptotest -a 3des 256 8192
+   2.292 sec,     512   3des crypts,    8192 bytes,  1829928 byte/sec,    14.0 Mb/sec
+</pre>
+
+I'm not too certain about the BSDs, but I'm confident that linux ipsec uses the linux CryptoAPI natively, so for that block cipher combined with the geode-rng, we'll be looking at some amazing VPNs.
+</blockquote>
+
+The ocf-linux project includes a patch for ssl as well. I'm trying that now...
+* applied patch
+* ./config --with-cryptodev --with-cryptodev-digests
+* just to be sure I also ran ./Configure --with-cryptodev --with-cryptodev-digests gcc
+* It wasn't working until I insmod cryptodev.ko, then openssl engine displayed cryptodev.
+
+<pre class="sh_sh">
+alix1c-1:/usr# /usr/local/ssl/bin/openssl engine
+(cryptodev) BSD cryptodev engine
+(dynamic) Dynamic engine loading support
+(4758cca) IBM 4758 CCA hardware engine support
+(aep) Aep hardware engine support
+(atalla) Atalla hardware engine support
+(cswift) CryptoSwift hardware engine support
+(chil) CHIL hardware engine support
+(nuron) Nuron hardware engine support
+(sureware) SureWare hardware engine support
+(ubsec) UBSEC hardware engine support
+(padlock) VIA PadLock (no-RNG, no-ACE)
+alix1c-1:/usr# /usr/local/ssl/bin/openssl speed -evp aes-128-cbc -engine cryptodev
+engine "cryptodev" set.
+Doing aes-128-cbc for 3s on 16 size blocks: 344779 aes-128-cbc's in 0.24s
+Doing aes-128-cbc for 3s on 64 size blocks: 305351 aes-128-cbc's in 0.26s
+Doing aes-128-cbc for 3s on 256 size blocks: 220088 aes-128-cbc's in 0.13s
+Doing aes-128-cbc for 3s on 1024 size blocks: 104411 aes-128-cbc's in 0.11s
+Doing aes-128-cbc for 3s on 2048 size blocks: 60907 aes-128-cbc's in 0.03s
+OpenSSL 0.9.8c 05 Sep 2006
+built on: Tue Sep 25 17:24:34 EDT 2007
+options:bn(64,32) md2(int) rc4(ptr,int) des(ptr,risc1,16,long) aes(partial) idea(int) blowfish(idx)
+compiler: gcc -DHAVE_CRYPTODEV -DUSE_CRYPTODEV_DIGESTS -O3
+available timing options: TIMES TIMEB HZ=100 [sysconf value]
+timing function used: times
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   2048 bytes
+aes-128-cbc      22985.27k    75163.32k   433404.06k   971971.49k  4157917.87k
+</pre>
+
+And without access to the geode-aes driver via cryptodev:
+<pre class="sh_sh">
+alix1c-1:/usr# rmmod cryptodev
+alix1c-1:/usr# /usr/local/ssl/bin/openssl speed -evp aes-128-cbc -engine dynamic
+engine "dynamic" set.
+Doing aes-128-cbc for 3s on 16 size blocks: 1057801 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 64 size blocks: 286874 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 256 size blocks: 73858 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 1024 size blocks: 18603 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 2048 size blocks: 9313 aes-128-cbc's in 3.00s
+OpenSSL 0.9.8c 05 Sep 2006
+built on: Tue Sep 25 17:24:34 EDT 2007
+options:bn(64,32) md2(int) rc4(ptr,int) des(ptr,risc1,16,long) aes(partial) idea(int) blowfish(idx)
+compiler: gcc -DHAVE_CRYPTODEV -DUSE_CRYPTODEV_DIGESTS -O3
+available timing options: TIMES TIMEB HZ=100 [sysconf value]
+timing function used: times
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   2048 bytes
+aes-128-cbc       5641.61k     6119.98k     6302.55k     6349.82k     6357.67k
+</pre>
+
+Slightly different command to compare with [http://www.docunext.com/wiki/PfSense_test_results_of_the_padlock_kernel_driver_on_a_VIA_C7 Padlock driver on VIA C7 results]:
+<pre class="sh_sh">
+# /usr/local/ssl/bin/openssl speed -elapsed -evp aes128 -engine cryptodev
+engine "cryptodev" set.
+You have chosen to measure elapsed time instead of user CPU time.
+To get the most accurate results, try to run this
+program when this computer is idle.
+Doing aes-128-cbc for 3s on 16 size blocks: 344260 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 64 size blocks: 305741 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 256 size blocks: 220861 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 1024 size blocks: 104527 aes-128-cbc's in 3.00s
+Doing aes-128-cbc for 3s on 2048 size blocks: 61238 aes-128-cbc's in 3.00s
+OpenSSL 0.9.8c 05 Sep 2006
+built on: Tue Sep 25 17:24:34 EDT 2007
+options:bn(64,32) md2(int) rc4(ptr,int) des(ptr,risc1,16,long) aes(partial) idea(int) blowfish(idx)
+compiler: gcc -DHAVE_CRYPTODEV -DUSE_CRYPTODEV_DIGESTS -O3
+available timing options: TIMES TIMEB HZ=100 [sysconf value]
+timing function used: ftime
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   2048 bytes
+aes-128-cbc       1836.05k     6522.47k    18846.81k    35678.55k    41805.14k
+</pre>
+
+I tried compiling openssh against this patched openssl library but I get errors when using ssh and scp: "Corrupted MAC on input". :-( Confirmed, I just compiled using the built-in ssl libraries, and the scp transmission worked, then recompiled again using the patched openssl library, and it failed. Then I rmmod cryptodev and it worked, but at the non-accelerated speed. Hmmm. For some reason the source I downloaded from the repository was only 4.3, so I downloaded 4.7 and found this option:
+<pre class="sh_sh">
+--with-ssl-engine       Enable OpenSSL (hardware) ENGINE support
+</pre>
+Compiling now....
+<pre class="sh_sh">
+OpenSSH has been configured with the following options:
+                     User binaries: /usr/local/bin
+                   System binaries: /usr/local/sbin
+               Configuration files: /usr/local/etc
+                   Askpass program: /usr/local/libexec/ssh-askpass
+                      Manual pages: /usr/local/share/man/manX
+                          PID file: /var/run
+  Privilege separation chroot path: /var/empty
+            sshd default user PATH: /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+                    Manpage format: doc
+                       PAM support: no
+                   OSF SIA support: no
+                 KerberosV support: no
+                   SELinux support: no
+                 Smartcard support: no
+                     S/KEY support: no
+              TCP Wrappers support: no
+              MD5 password support: no
+                   libedit support: no
+  Solaris process contract support: no
+       IP address in $DISPLAY hack: no
+           Translate v4 in v6 hack: yes
+                  BSD Auth support: no
+              Random number source: OpenSSL internal ONLY
+
+              Host: i586-pc-linux-gnu
+          Compiler: gcc
+    Compiler flags: -g -O2 -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wno-pointer-sign -std=gnu99
+Preprocessor flags: -I/usr/local/ssl/include
+      Linker flags: -L/usr/local/ssl/lib
+         Libraries: -lresolv -lcrypto -lutil -lz -lnsl  -lcrypt
+</pre>
+
+Nope, same problem. Now I noticed I was using openssl 0.9.8c instead of 0.9.8e. Urgh. Back to the command line... dang I just can't get it to work. I wonder what's wrong? I even recompiled openssh after recompiling the patched openssl 0.9.8e. :-(
+
+### See Also
+* [[Linux and entropy]]
+* [[Kernels]]
+* [[Debian]]
+* [[Security]]
+* [[Via Padlock OCF-Linux Integration]]
+* [[VIA Padlock]]
+* [[OpenSSL]]
+* [[Cryptography]]
+* [[Michal Ludvig Cryptodev]]
+* [[AMD Geode]]
+
+### Links
+*[http://ocf-linux.sourceforge.net/ OCF Linux Homepage]
+*[http://www.logix.cz/michal/devel/cryptodev/ Michal Ludvig's Cryptodev port to linux] - I prefer the ocf project, its more recent that Michal's code. However, Michal's is dual licensed, both [[GPL]] and [[BSD]].
+*[http://www.securityfocus.com/columnists/375 OpenSSH cutting edge]
+*[http://www.docunext.com/blog/2007/09/25/geode-aes-ocf-cryptodev-openssl/ Fix for corrupted MAC?]
+*[http://www.docunext.com/blog/2007/10/11/more-distcc-and-ccache-notes/ Debian distcc and ccache notes]
+

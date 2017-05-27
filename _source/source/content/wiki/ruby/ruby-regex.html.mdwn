@@ -1,0 +1,14 @@
+While people new to [[programming]] may find [[regular expressions]] a little confusing, they are incredibly awesome.
+
+[[Ruby]]'s dot-syntax makes it super easy to use:
+
+<pre class="sh_ruby">
+mytext = "This is a test"
+puts mytext.gsub("a test","not a test")
+</pre>
+
+Results with:
+<pre>
+This is not a test
+</pre>
+

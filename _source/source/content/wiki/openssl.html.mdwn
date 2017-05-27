@@ -1,0 +1,62 @@
+OpenSSL can use different engines, such as the [[Via C7]] [[Padlock]].
+
+With the help of [[OCF Linux]], OpenSSL can use the [[AES]] acceleration block present in the [[AMD Geode LX]] [[CPU]].
+
+### [[PKI]]
+Public Key Infrastructure - share your public key, protect your private key.
+* [[RSA]]
+
+### x509 Certificates
+Along with PKI comes the concept of trust. Certificates can help bridge trust between disparate parties. Thankfully openssl helps create certificates! I use the following method on [[debian]] systems:
+* edit /etc/ssl/openssl.cnf
+* use /usr/lib/ssl/misc/CA.pl to generate a request, then sign the request
+* I created my own certificate signing authority awhile back, and am trying to continue to use that
+
+The folks at [[cacert]] have got a good idea going, but the web of trust is still a ways away in my humble opinion. I hope to start using a certificate to sign open source software packages someday.
+
+UPDATE: Thanks to [[OpenVPN]], I've again revisited OpenSSL and [[PKI]]. The openssl.cnf that the easyRSA scripts use has these parts commented out for [[OpenVPN]], but [[Firefox]] requires them for Certificate Authorities:
+
+<pre>
+# Key usage: this is typical for a CA certificate. However since it will
+# prevent it being used as an test self-signed certificate it is best
+# left out by default.
+keyUsage = cRLSign, keyCertSign
+
+# Some might want this also
+nsCertType = sslCA, emailCA
+</pre>
+
+To import the certificate into [[Iceweasel]], I used:
+<pre>
+certutil -A -t "CT,CT,CT" -n "Savonix Corporation CA" -i savonix/operations/network/pki/keys/ca.crt -d .mozilla/firefox/10p23dd5.default/
+</pre>
+
+
+
+Into [[Google Chrome]]:
+<pre>
+certutil -d sql:$HOME/.pki/nssdb -A -t "CT,C,C" -n "Savonix Corporation CA" -i savonix/operations/network/pki/keys/ca.crt
+</pre>
+
+Into /etc/ssl/certs/
+<pre>
+#sudo cp savonix/operations/network/pki/keys/ca.crt /etc/ssl/certs/Savonix_Corporation_CA.crt
+#cd /etc/ssl/certs/
+#ln -s Savonix_Corporation_CA.crt `openssl x509 -hash -noout -in Savonix_Corporation_CA.crt`.0
+#openssl verify -CApath /etc/ssl/certs/Savonix_Corporation_CA.crt
+/etc/ssl/certs/Savonix_Corporation_CA.crt: OK
+</pre>
+
+Thanks: http://gagravarr.org/writing/openssl-certs/others.shtml#ca-openssl
+
+See also [[Security Certificates]].
+
+### Creating Certificates
+* [[CA.pl]]
+* [[Old SSL Certificate Creation Notes]]
+
+### Links
+* http://code.google.com/p/chromium/wiki/LinuxCertManagement
+* http://www.mozilla.org/projects/security/pki/nss/tools/certutil.html
+* http://sandbox.rulemaker.net/ngps/m2/howto.ca.html
+

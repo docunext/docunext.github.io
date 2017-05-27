@@ -1,0 +1,55 @@
+After growing in popularity in Japan for many years, Ruby is now world famous
+for "[[Ruby on Rails]]". It makes building web applications fun and enjoyable.
+There are two popular versions of Ruby: 1.8 and 1.9. As of April 2011, Ruby
+1.9.2 is getting pushed forward as the new stable version. In my experience,
+1.9.x is MUCH faster than 1.8.x! There are some transitioning issues, and many
+applications still only run on 1.8 and not 1.9 at this time.
+
+There are some very impressive Ruby software applications on the rise. This is
+very intriguing to me, and I wonder how much of it has to do with Ruby, the
+ability of the developers, as well as their passion for developing quality apps.
+Regardless, its very impressive.
+
+Ruby is an incredibly elegant language. It is consistent, predictable, and uniform.
+
+### Really Cool Ruby Stuff
+
+* [[/ruby/Ruby on Rails]]
+* [[/ruby/Ruby Metaprogramming]]
+* [[/Sinatra]]
+* [[/Ruby/Ruby Rack]]
+* [[/Unicorn]]
+* [[/ruby/Simple Ruby FastCGI / DBM Script]]
+* [[/ruby/Ruby FastCGI Timeout]]
+* [[/ruby/Ruby Blocks]]
+* [[/ruby/Ruby erb Templates]]
+* [[/ruby/Ruby Objects]]
+* [[/ruby/Ruby Class Override Example]]
+* [[/ruby/Ruby Rake]]
+
+### Ruby Deployment Tools
+* [[/ruby/Vlad]]
+* [[/ruby/Heroku]]
+* [[/ruby/Ruby Installers]]
+
+#### MagLev
+
+MagLev is an implementation of the Ruby programming language, plus oh-so-much
+more. It runs as a daemon service, and includes a persistent object cache - in
+other words, its like NoSQL for objects.
+
+Let's say with Ruby on Rails, a developer wants to create a publishing platform
+for social networking. Each visitor could have a profile stored in a JSON
+document. This could be implemented any number of ways, but with MagLev, (if
+I understand correctly), when the Ruby object is created, it can be
+persistently stored as-is, without the need to marshal it, save it to a file,
+store it in a database, or in something like MongoDB. MagLev will just handle
+it for you.
+
+As Monty Williams of VMWare puts it, "I don't think of MagLev only as a Ruby VM
+that has an integrated NoSQL database. I think of MagLev as a NoSQL database
+that uses Ruby for its data manipulation language."
+
+Sounds like Ruby embedded in MongoDB! Actually I have no idea if MagLev is
+anything like MongoDB, but its the NoSQL storage service I have the most
+experience with.

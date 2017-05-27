@@ -1,0 +1,13 @@
+Perl subroutines are in my opinion similar to what I call functions in a language like [[PHP]]. Inasmuch, I've used them to isolate different components of my programs into different subroutines.
+
+### Subroutine Example
+<pre>
+sub smarminator {
+
+    return $_[0];
+
+}
+</pre>
+
+This is similar, but quite different than what I'm used to. First off, there are no parentheses to pass parameters. A little delving reveals that the $_@ array is for those - ha! The smarminator subroutine mentioned above will simply return the first value which is sent to it.
+

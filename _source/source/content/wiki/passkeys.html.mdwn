@@ -1,0 +1,11 @@
+A lot of people use what are called "dictionary words" for their passwords, and in general, these are not considered "strong" passwords. This means that they can either be guessed or deduced through various trivial methods (like trying every word in a dictionary until one works...).
+
+My preferred method of creating passkeys is to use a random source of entry, such as the random device found in most open source operating systems. To do this I use the xxd command (part of the vim package in the [[debian]] repositories).
+
+<pre>
+xxd -l 4 -p /dev/random
+</pre>
+
+In my experience, these passkeys are actually not '''that'' hard to remember once you've typed them in a few times.
+
+There are plenty of other ways of creating passkeys - [[openssl]] can be used to generate random strings as well.

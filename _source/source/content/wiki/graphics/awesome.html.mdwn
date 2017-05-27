@@ -1,0 +1,61 @@
+### Awesome Window Manger Summary
+Awesome is a window manager for [[X11]]. It can integrate quite easily with [[GNOME]].
+
+### The Awesome Name
+The name is frustrating to me because it is difficult to search for, so I'm now going to refer to it as "awesomewm".
+
+### Awesome Versions
+I'm starting with version 3 which uses the rc.lua configuration script. There seems to be some significant differences between versions. For example, I'm trying to get an xterm window instance to be sticky, i.e. - appear on all workspaces / a member of each tag. I got it to work on my desktop, which is running the squeeze version of Awesome, but can't get it to work on my laptop which is running the sid version of awesome. Doh!
+
+### Awesome Tips and Tricks
+#### Customizing the Default Theme
+
+I wanted to change the wallpaper background, so this is what I did:
+
+<pre class="sh_sh">
+cp -a /usr/share/awesome/themes/default/ .config/awesome/default
+vim !$
+</pre>
+
+On line 77:
+<pre class="sh_sh">
+-- You can use your own command to set your wallpaper
+theme.wallpaper_cmd = { "awsetbg .config/desktop_bkgd.jpg" }
+</pre>
+
+When using Awesome right on top of a [[Gnome]] installation, I had to set the background via the preferences panel.
+
+#### AwesomeWM Tags
+Tags are like workspaces, but better.
+
+#### AwesomeWM Haggling
+<pre class="bash">
+xprop | grep WM_
+</pre>
+
+#### AwesomeWM + [[Gimp]]
+This was bugging me... I set gimp to be floating, and then set floating windows to have a titlebar. This worked, but only for the main window. This was caused by [[gimp]], not awesome. Edit -> Preferences -> Window Management -> Hint for...
+
+#### Awesome Libraries
+I've finally figured out some stuff thanks to the helpful works of http://sysphere.org/~anrxc/. When trying to get viscous setup, I finally got invaders to work!
+
+#### Awesome and [[Java]] or [[Wine]]
+#### Can't Un-minimize windows
+Much to be said about this! I ran into a similar as the one described [http://comments.gmane.org/gmane.comp.window-managers.awesome/5692 here], but for [[JEdit]], actually all windows. Installing and using [[wmcrtl]] to issue:
+
+<pre>wmctrl -R clientname</pre>
+
+After that, I commented out the minimize code:
+
+<pre>--    awful.key({ modkey,           }, "n",      function (c) c.minimized = not c.minimized    end),</pre>
+
+### See Also
+* [[Lua]]
+* [[Window Managers]]
+
+### Links
+* http://www.docunext.com/blog/2010/08/copy-and-paste-from-jedit-to-gnome-terminal-resolved.html
+* http://www.docunext.com/blog/2009/07/learning-about-the-awesome-window-manager-wm.html
+* http://www.informedcomputing.com/blog/2009/07/awesomewm-sticky-windows-solved.html
+* http://sysphere.org/~anrxc/j/archives/2009/07/09/vicious_widgets_for_awesome_wm
+

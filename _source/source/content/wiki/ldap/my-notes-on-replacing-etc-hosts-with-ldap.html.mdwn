@@ -1,0 +1,36 @@
+I had a tough time finding documentation on how to setup [[GNU/Linux]] and [[LDAP]], but in the end its not too tough. I was making the mistake of trying to use [[DNS]] entries rather than [[ipHosts]].
+
+### Configuration Files
+I've got a few notes to share:
+
+#### /etc/nsswitch.conf
+<pre>
+passwd:         files mysql ldap
+group:          files mysql ldap
+shadow:         files mysql ldap
+
+hosts:          files dns ldap
+networks:       files
+</pre>
+
+#### /etc/ldap/ldap.conf
+<pre>
+nss_base_hosts         ou=Hosts,dc=example,dc=com?one
+</pre>
+
+Test it out:
+<pre>
+getent hosts
+</pre>
+
+### Uses
+Why did I want to setup LDAP to resolve simple hostnames? I wanted to do this to override public DNS records. I use [[pfSense]] and [[m0n0wall]] to setup [[VPN]]s, and services behind the firewalls are sometimes inhibited by the fact that public [[IP]] addresses won't resolve due to [[IP masquerading]].
+
+I had originally setup several private [[DNS]] servers, but that proved to be a bit of a pain to manage.
+
+### Alternatives
+Now I'm actually using [[pdnsd]] for internal hostnames. I store the information in ldap, then convert it to text in /etc/hosts, and then share it with [[pdnsd]].
+
+### External Links
+* http://www.linux.com/base/ldp/howto/archived/LDAP-Implementation-HOWTO/dns.html
+

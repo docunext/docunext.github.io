@@ -1,0 +1,53 @@
+### marshal data too short (or incompatible marshal file format (can't be read) (MemCache::MemCacheError))
+I'm getting this error:
+
+<pre class="sh_ruby">
+ArgumentError: marshal data too short
+	from /usr/lib/ruby/1.8/memcache.rb:214:in `load'
+	from /usr/lib/ruby/1.8/memcache.rb:214:in `get'
+	from (irb):23
+	from :0
+</pre>
+
+Looks to be a general [[Ruby]] bug?
+
+This works:
+<pre class="sh_ruby">
+irb(main):006:0> puts mycache.get('www.docunext.com/blog/2009/08/is-ruby-18-stuck.html','dflkj')
+3
+=> nil
+</pre>
+
+but this does not:
+
+<pre class="sh_ruby">
+irb(main):005:0> puts mycache.get('www.docunext.com/blog/2009/08/is-ruby-18-stuck.html')
+ArgumentError: marshal data too short
+	from /var/lib/gems/1.8/gems/memcache-client-1.7.8/lib/memcache.rb:256:in `load'
+	from /var/lib/gems/1.8/gems/memcache-client-1.7.8/lib/memcache.rb:256:in `get'
+	from /var/lib/gems/1.8/gems/memcache-client-1.7.8/lib/memcache.rb:886:in `with_server'
+	from /var/lib/gems/1.8/gems/memcache-client-1.7.8/lib/memcache.rb:252:in `get'
+	from (irb):5
+</pre>
+
+The same resolution can be used for this type of error:
+
+<pre class="sh_ruby">
+/usr/lib/ruby/1.8/memcache.rb:241:in `load': incompatible marshal file format (can't be read) (MemCache::MemCacheError)
+	format version 4.8 required; 49.51 given
+	from /usr/lib/ruby/1.8/memcache.rb:241:in `get'
+	from /usr/lib/ruby/1.8/memcache.rb:871:in `with_server'
+	from /usr/lib/ruby/1.8/memcache.rb:237:in `get'
+	from ./popcon.rb:13
+</pre>
+
+#### Memcached
+The memcached gem is a bit different than the memcache-client, and the '''marshal data too short''' error can be fixed by setting marshal to false.
+
+<pre class="sh_ruby">
+res = settings.poll_memcdb.get(key, false)
+</pre>
+
+### See Also
+* [[Ruby-memcached-c]]
+

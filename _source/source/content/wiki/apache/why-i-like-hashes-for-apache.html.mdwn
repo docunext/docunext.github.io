@@ -1,0 +1,29 @@
+Currently I use text files for mapping key value pairs for [[Apache]], but I'm going to change to hashes, specifically the [[Berkeley DB]] dbm.
+
+I'm doing this for a few reasons, but mainly because hashes are fast and simple. I'm not going to do anything complex, just going to manage some one-to-one relationships.
+
+What I'm planning to use hashes for:
+* url redirects
+* access control lists
+* ip management
+
+I won't get too into the details, but these hashes will act as maps for mod_rewrite, and will only provide a moderate level of functionality, mainly convenience.
+
+'''Extra Goodies'''
+* PHP, Python, and Perl can also access Berkeley DB dbms!
+
+If there was a database connector for [[SQLite]], I'd also consider using that.
+
+### Potential Problems
+The primary challenge I've run into when using [[BDB]] files with [[Apache]] is the size of the file and the need to replicate it over several systems. This would be easy with a tool like [[rsync]], but the binary format of the files make it difficult to tell that only one record has been changed while the other thousands of records are the same. I had thought about storing the hash as a text file as well, a format which work fine with rsync, but converting text files to dbd hashes is very processor intensive! Now I'm evaluating the use of db4.6_dump and db4.6_load. Unfortunately, that still isn't rsync friendly. :-(
+
+Actually, in a recent test, I added one record to a [[BDB]] file and then rsync'd it and the entire file WASN'T transferred - which is awesome!
+
+### Tools
+* /usr/sbin/httxt2dbm (grrr... why doesn't [[python]]'s [[anydbm]] support [[SDBM]]?) - BDB is pretty darn good though.
+* I wrote a little script to add ip's to a hash db for blocking spammer posts - [[addip]] - I updated it for checking ips too!
+* [[db4.6-util]] - some helper utilities for working with berkeley database files
+
+### External Links
+* http://search.cpan.org/dist/Net-IP-Match-Regexp/lib/Net/IP/Match/Regexp.pm
+

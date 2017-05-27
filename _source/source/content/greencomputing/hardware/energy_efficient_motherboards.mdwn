@@ -1,0 +1,20 @@
+##intel motherboards
+The [http://www.docunext.com/2007/06/intels-little-valley-mini-itx-board.html intel D201GLY Little Valley] is a fairly energy efficient motherboard (it includes a celeron 215 processor). It consumes between 20-30 watts depending on configuration.
+
+* [[Intel/intel D201GLY2]]
+* [[Intel/intel DG965SS]]
+
+##MSI Motherboards
+* [[IM-945GSE-A]]
+
+##PC Chips Motherboards
+* [[V21G]]
+
+##VIA Motherboards
+* [[EPIA_EN12000EG]]
+
+##AMD Motherboards
+* [[Gigabyte Motherboards]]
+
+##Freescale Motherboards
+* [[LimePC]]

@@ -1,0 +1,11 @@
+The AMD Geode is a low power [[CPU]] found in the ALIX series of main boards from [[PC Engines]], as well as many other systems.
+
+### Geode LX
+This is the chip found in the [[PC Engines]] systems. It has a security block for accelerated [[encryption]] and a hardware based random number generator for lots of [[entropy]].
+
+Hardware using the AMD Geode LX:
+* [[PC Engines]] ALIX
+* [[Thecus N3200PRO]]
+
+### Geode NX
+The NX series uses more power than the LX series and I believe it has more [[graphics]] features as well. I have a [[thin client]] with this chip, the [[HP t5725]].

@@ -1,0 +1,9 @@
+---
+title: Ziproxy
+date: 2008-10-06
+tags: squid,"verizon wireless"
+---
+I just found Ziproxy, a cool forward proxy, like Squid, which can compress images for the proxy client. I'm using it with great success with my <a href="http://www.soggyblogger.com/blog/2008/10/debian-verizon-wireless-pc5750.html">Verizon Wireless 3G EV-DO mobile wireless modem</a>. Good stuff!
+
+If you have a mobile internet modem, you might think about giving this a try to save bandwidth.
+

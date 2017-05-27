@@ -1,0 +1,75 @@
+### NGINX Mail Summary
+NGINX, besides being a great webserver, can also act as an email proxy.
+
+If possible, it would be cool to replace [[Perdition]] with [[NGINX]], just for simplicity. [[Perdition]] is really nice, especially since it can route email authentication and access based upon regex matching. If [[NGINX]] can do that too, I'm sold!
+
+### Authentication
+The NGINX mail authentication system is very flexible - it uses something like HTTP and can thus be scripted with [[PHP]] or something similar.
+
+### Backend Access
+The Codemonger's wiki has [http://wiki.nginx.org/NginxImapProxyExample this example], but unfortunately it makes no sense to me. How does NGINX know where to proxy the request to? Perhaps that information is provided by the authentication process. Looks that way, [http://wiki.nginx.org/NginxImapAuthenticateWithApachePhpScript this example] has more information about how that works.
+
+OK, I think I figured out. My next goal with this will be to setup a [[Lua]] or maybe a [[C]] [[socket]] server to check a [[cdb]] [[database]] of usernames.
+
+### CRAM-MD5
+I can authenticate with plain text, but what about CRAM-MD5? Sort of, it looks like NGINX can authenticate IMAP clients with CRAM-MD5, but cannot proxy that information back - unless the password is passed back to the nginx mail module in clear text.
+
+Why? It appears that although NGINX can act as an IMAP server with CRAM-MD5 support, it can't act as a IMAP client with CRAM-MD5 support. Its not really needed though, because NGINX would have to do another handshake with the upstream IMAP server, after which it would get a new salt to encrypt... wait for it - the clear text password. Since the connection between the NGINX and the upstream IMAP server is likely more secure than the connection to the original client, is there much to gain?
+
+Maybe. As things stand, the problem is that the password also has to be stored in plain text in the database. If NGINX had support for CRAM-MD5 as an IMAP client, its conceivable that the password could be stored in the database as CRAM-MD5. I'm not sure if that's possible, but I do know that [[Dovecot]] can authenticate CRAM-MD5 connections when the password is stored in CRAM-MD5 format.
+
+The relevant code is:
+<pre class="sh_c">
+    case ngx_imap_start:
+        ngx_log_debug0(NGX_LOG_DEBUG_MAIL, rev->log, 0,
+                       "mail proxy send login");
+
+        s->connection->log->action = "sending LOGIN command to upstream";
+
+        line.len = s->tag.len + sizeof("LOGIN ") - 1
+                   + 1 + NGX_SIZE_T_LEN + 1 + 2;
+        line.data = ngx_pnalloc(c->pool, line.len);
+        if (line.data == NULL) {
+            ngx_mail_proxy_internal_server_error(s);
+            return;
+        }
+
+        line.len = ngx_sprintf(line.data, "%VLOGIN {%uz}" CRLF,
+                               &s->tag, s->login.len)
+                   - line.data;
+
+        s->mail_state = ngx_imap_login;
+        break;
+</pre>
+
+Regardless of the possibilities, the [[NGINX]] mail auth response must include a clear-text Auth-Pass header. The only alternative I could imagine would be to authenticate as an individual user, and then leverage the master user capability of [[Dovecot]]. That coud use a single plaintext password and be restricted logins by IP address. Not a bad idea.
+
+Alternatively, NGINX could only listen to TLS / SSL connections using the PLAIN authentication method, and then retain the clear text password for authentication to the backend using an unencrypted connection. In that case, I'm not sure why something like [[Stunnel4]] wouldn't be better.
+
+### Other Notes
+There is a configuration option called imap_auth that isn't documented on the [[NGINX]] wiki.
+
+This is the configuration I used in the NGINX web server to test out various IMAP authentication setups:
+
+<pre>
+location /ok.html {
+        root   /usr/share/nginx/html;
+        add_header Auth-Status OK;
+        add_header Auth-Server 127.0.0.1;
+        add_header Auth-Port 1143;
+        add_header Auth-Pass $http_auth_pass;
+}
+</pre>
+
+[[Dovecot]] is listening on port 1143.
+
+So, to sum up, I probably won't use [[NGINX]] mail. I like [[Perdition]], and [[Postfix]] does a fine job handling connections as well as authentication, especially when it uses [[Dovecot]]'s [[SASL]] capabilities.
+
+Aha! I just read this about [[Perdition]]:
+<blockquote>No IMAP authentication schemes, other than the LOGIN command are accepted.</blockquote>
+
+### See Also
+* [[Perdition]]
+* [[Dovecot]]
+* [[NGINX]]
+

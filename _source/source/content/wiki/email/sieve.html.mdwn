@@ -1,0 +1,27 @@
+Sieve is a language for filtering [[email]] messages.
+
+### Packages with Sieve Support
+* [[Dovecot]]
+* [[DBMail]] is adding Sieve support?
+* [[Squirrelmail]]
+
+### Questions
+* Is it used by [[IMAP]] or [[SMTP]] [[MTA]]s?
+* Why no [[Postfix]] support? There is an [[Exim]] plugin.
+* What is [[MANAGESIEVE]]? Its an [[IMAP]] feature I believe.
+
+### Plugins
+* [[RoundCube]]
+* [[SquirrelMail]]
+* [[Exim]]
+
+### Related Pages
+* [[Procmail]]
+* [[Maildrop]]
+
+### External Links
+* http://sieve.info/
+* http://www.thomaskeller.biz/blog/2008/11/17/server-side-email-filtering/
+* http://wiki.dovecot.org/LDA/Postfix
+* http://email.uoa.gr/avelsieve/
+

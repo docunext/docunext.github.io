@@ -1,0 +1,4 @@
+The performance [[software/cpufreq]] kernel module will keep your processor using its fastest speed available.
+
+
+[[software/cpufreq]]

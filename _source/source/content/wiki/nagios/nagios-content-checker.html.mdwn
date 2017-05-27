@@ -1,0 +1,44 @@
+### Summary:
+This is a site content check for Nagios,
+this will grab index from sites specified
+in .content-check-urls. Store MD5 hash if not
+stored. Otherwise, it will compare with MD5 hash
+on the machine. It will only output if a site's MD5
+hash isn't the same as the stored version.
+
+### What language is diFFurl coded in?==
+
+diFFurl is coded in bash.
+
+### How does Nagios know what diFFurl does?
+
+Within the Nagios configuration files, there's entries to make Nagios call diFFurl. diFFurl also makes use of the Nagios exit codes, which changes the colors within the [[Nagios]] [[GUI]]. Since this is not a host based check, it is run as localhost (host nagios machine).
+
+### What files make up diFFurl?
+
+diffurl is the script.
+.content-check-urls is a file where the sites are stored (one site, per line).
+.content-check is a directory where the MD5 hashes are stored.
+
+### Are there any dependencies?
+
+diffurl depends on:
+
+# links (text based browser)
+# md5sum (should be included in every distro, but it's in the coreutils package in debian)
+# bash! (diffurl is coded in bash)
+
+You can't read [[bash]]? Let go through the process of what diFFurl does behind the scenes.
+
+1) Two variables are set in the start of the script, this is where the URL file is stored and where the MD5 hashes will be stored. This can be changed accordingly to your enviorment.
+
+2) If the directory where the MD5 hashes are to be stored does not exist, diFFurl will create it.
+
+3) If the URL file does not exist, diFFurl will exit.
+
+4) For each site in the URL file, compare against stored MD5 sum to see if content has changed. If there's a change, "New content at $URL" will be outputted (exit code triggers Nagios to turn RED and be critical). If there's no change, "No content has been changed." will be outputted (exit code triggers Nagios to be GREEN and be OK).
+
+5) If MD5 doesn't exist, grab it and store it. Will compare on next execution
+
+6) We're finished.
+

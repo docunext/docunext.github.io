@@ -1,0 +1,23 @@
+### Software Install
+<pre>
+emerge nss_ldap pam_ldap
+</pre>
+... proceed to get distracted by a "emerge -uDv world"...
+
+I noticed this:
+<pre>
+ * QA Notice: Package has poor programming practices which may compile
+ *            fine but exhibit random runtime failures.
+ * pam_ldap.c:2358: warning: dereferencing type-punned pointer will break strict-aliasing rules
+</pre>
+
+### Configuration
+/etc/nsswitch.conf:
+<pre>
+passwd:      compat ldap
+shadow:      compat ldap
+group:       compat ldap
+</pre>
+
+There is no /etc/pam_ldap.conf like in [[debian]], and the /etc/pam.d/* files are much different. I'm not sure how to proceed, so I'm putting this on hold momentarily.
+

@@ -1,0 +1,33 @@
+### OpenLDAP Replication on [[Debian]]
+
+For setting up ldap replication on debian, I had to do this:
+* add moduleload syncprov and:
+<pre>
+overlay syncprov
+syncprov-checkpoint 100 10
+syncprov-sessionlog 100
+</pre>
+to /etc/ldap/slapd.conf on the primary server
+* add syncrepl section to the replicant:
+
+<pre>
+syncrepl rid=123
+    provider=ldap://ldap.example.com:389
+    type=refreshOnly
+    interval=00:00:10:00
+    searchbase="dc=example,dc=com"
+</pre>
+
+The above was getting me the records, but was omitting the userPassword attributes, therefore I had to add binddn and credentials to the mix.  I had originally been using the [[LDAP]] admin user for replication, but now I'm using a new organizationalRole for this with read only access.
+
+With [[Backsql]], the replication could be done via [[MySQL]].
+
+### Related Pages
+* [[LDAP]]
+* [[MySQL Replication]]
+* [[Syncrepl]]
+
+### External Links
+* http://www.openldap.org/doc/admin24/syncrepl.html
+* http://fxp0.org.ua/2006/sep/22/ldap-replication-setup-using-syncrepl/
+

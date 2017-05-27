@@ -1,0 +1,30 @@
+This seems to be a good setup as [[CentOS]] minimal is fairly minimal.
+
+### My Setup
+
+    sudo vzctl create 111 --ostemplate centos-5-i386-minimal
+
+Turned out there was a lot more to do after that! I had to get yum working,
+which was actually pretty challenging, but doable. Once I did that, I did some
+cleanup, and then did this:
+
+    tar -czvf /var/lib/vz/template/cache/centos-5-i386-minimal.tar.gz ./
+
+~~~
+pub-210-st:/var/lib/vz/private# vzctl enter 111
+entered into CT 111
+[root@centosone /]# pstree
+init-+-klogd
+     |-sshd
+     `-syslogd
+[root@centosone /]# free -m
+             total       used       free     shared    buffers     cached
+Mem:           373          4        368          0          0          0
+-/+ buffers/cache:          4        368
+Swap:            0          0          0
+[root@centosone /]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+simfs                 1.0G  224M  801M  22% /
+~~~
+
+Not bad, eh?

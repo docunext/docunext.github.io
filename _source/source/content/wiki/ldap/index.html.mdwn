@@ -1,0 +1,94 @@
+LDAP stands for lightweight directory access protocol.
+
+It is sometimes said that ldap is good for data that is read more often than
+written or updated. I agree, for hostnames, users, and other common data that
+is stored in files, ldap is a good choice in my opinion.
+
+#### Tips
+I originally setup OpenLDAP with [[MySQL]], aka [[Backsql]], which was a fairly
+herculean effort. Now for learning sake I'm just using the default database
+type - HDB.
+
+I finally got to login as "admin" with [[phpLDAPadmin]]. To do so, I had to
+change the login attr to "cn".
+
+#### LDAP ACLs
+As far as I can tell, there are different ACL issues when dealing with a public
+[[LDAP]] server accessible via the internet used for lower security data, such
+as lists of relay recipients for [[Postfix]] or authentication information for
+[[Dovecot]].
+
+In my experience, the hardest thing to figure out with LDAP ACLs was the order
+in which they appear. For example, if you have a rule which gives "* read
+privileges, it won't be updated with a write rule later on, so you have to be
+cognizant of that.
+
+I'm pretty happy tonight because I was able to get [[DJabberd]] to not only
+authenticate against LDAP, but also register new users! To make sure that the
+user with write access for jabber accounts doesn't have write access for the
+entire directory, I used ACLs.
+
+<pre>
+access to dn.subtree="ou=jabbers,dc=example,dc=com"
+        by dn="cn=admin,dc=example,dc=com" write
+        by dn="uid=admin,ou=jabbers,dc=savonix,dc=com" write
+        by anonymous auth
+        by self write
+        by * read
+
+# The admin dn has full write access, everyone else
+# can read everything.
+access to *
+        by dn="cn=admin,dc=example,dc=com" write
+        by * read
+
+</pre>
+
+I had to put the jabbers subtree above the default rule. It makes sense to me to
+think about this like a firewall ruleset.
+
+#### LDAP Servers
+#### OpenLDAP
+OpenLDAP is one of the most prominent open source LDAP servers available. The
+server binary is named "slapd".
+
+#### TinyLDAP
+The TinyLDAP CVS repository doesn't include any specific licensing details, so
+I asked on the list.
+
+Felix wrote back:
+
+ > I was going to make it GPL as soon as I release 1.0, but never got around to doing that :-)
+ > Consider it GPL.
+ > Felix
+
+#### 389
+
+389 Directory Server is an LDAP server from Red Hat. I originally thought it was coded in Java, but the "ds" module from the git repository has C source files.
+
+#### Ldapsearch
+
+Ldapsearch is helpful for general LDAP queries:
+
+    ldapsearch -x
+
+I've found "getent" to be priceless for dealing with nsswitch.conf settings:
+
+    getent passwd
+    getent shadow
+    getent group
+
+* [[Setup a debian machine to use an LDAP server for NSS hosts]]
+* [[Setup a debian machine to use an LDAP server for Authentication]]
+* [[Setup a CentOS machine to use an LDAP server for Authentication]]
+* [[Setup a gentoo machine for LDAP authentication]]
+* [[LDAP Replication]]
+* [[Planning an LDAP Directory]]
+* [[FreeBSD and pam ldap]]
+* [[ldap-utils]]
+* [[phpLDAPadmin]] / [[lwat]]
+* [[ldapscripts]]
+* [[LDAP SASL]]
+* [[LDAP TLS]]
+* [[My Notes on using LDAP for Linux Authentication]]
+* [[My notes on replacing /etc/hosts with LDAP]]

@@ -1,0 +1,46 @@
+### Summary
+Linux is really awesome in my humble opinion. It is an [[operating system]] [[kernel]] which is usually paired with the [[GNU]] [[userland]] tools. It is licensed under the [[GPL]] version 2, which requires that kernel modules also be licensed as [[GPL]]. It was originally created by [[Linus Torvalds]] and while he still leads the project, it is contributed to by thousands of individuals and organizations. [[Intel]], [[IBM]], [[RedHat]] and even [[Microsoft]] have contributed to the linux kernel.
+
+### Major [[Linux Distributions]]
+* [[Ubuntu]]
+* [[Debian]]
+* [[RedHat]]
+* [[Gentoo]]
+* [[Slackware]]
+* [[Arch Linux]]
+* [[CentOS]]
+* [[RedHat]]
+* [[SUSE]]
+
+### Linux Distributions for Embedded Devices
+* [[FreeWRT]]
+* [[OpenWRT]]
+* [[uClinux]]
+* [[ttylinux]]
+* [[emdebian]]
+* [[NODOWS]]
+
+[[Mirror of an interview discussing the difference between OpenWRT and FreeWRT]]
+
+### Other Linux Stuff
+* [[Linux and Open Source Operating Systems Audio]]
+* [[Linux and cryptography]]
+* [[Linux and entropy]]
+* [[Linux Filesystems]]
+* [[Kernels]]
+* [[Linux Desktop]]
+* [[Linux Security]]
+* [[Command Line Interface]]
+* [[Systems Configuration Management]]
+* [[Logging]]
+
+### Linux Kernel Patches
+* [[OCF Linux]]
+* [[Custom DSDT]]
+* [[CK Patches]]
+* [[OpenVZ]]
+* [[Aufs]]
+* [[Squashfs]]
+* [[VirtualBox]]
+* [[DRBD8]]
+* [[Xen]]

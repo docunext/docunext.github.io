@@ -1,0 +1,49 @@
+This just might be possible! I've been thinking about it for awhile, and am actively testing out the concept towards the end of 2008.
+
+#### Ingredients
+
+* [[OfflineIMAP]]
+* [[Perdition]]
+* [[Courier]]
+* [[Libpam-script]]
+
+#### Configurations
+This is a little over the top! It uses a "vmail" user to act on behalf of all
+the email accounts. [[OfflineIMAP]] then runs as the vmail user, so the vmail
+users .offlineimaprc has to contain information for **all** the accounts to be
+redundant.
+
+The accounts in vmail's .offlineimaprc file have to match up with the email user
+account names (which also define the names of each account to synchronize in the
+.offlineimaprc), which are different than the email user email addresses. Thus
+[[Perdition]]'s popmap ([[GDBM]] would probably be best here) would also have to
+contain **all** the accounts to be redundant.
+
+Perdition would need to be setup to authenticate locally (or wherever
+[[OfflineIMAP]] is being run, which has to be the same location as the the
+[[Maildirs]]).
+
+I think it would be easiest to generate the .offlineimaprc and popmap.db files
+automatically to keep them equally up to date.
+
+#### Examples
+If [[OfflineIMAP]] is using netcat:
+
+    su vmail -c "/home/vmail/special_script.sh $PAM_USER"
+
+And then special_script.sh would be something like this:
+
+~~~
+#!/bin/bash
+# Use $1 to get the $MAILDIR_PATH for the user
+ssh 192.168.8.12 "netcat -v -l -p 9132 -c '/usr/bin/imapd $MAILDIR_PATH'"
+
+The lookups would probably be easiest with [[GDBM]] tables like those used by
+[[Perdition]] or [[Postfix]].
+
+And then the offlineimaprc would look like:
+
+    preauthtunnel = nc 192.168.8.12 9132
+
+### See Also 
+* [[/pam/Libpam-script]]

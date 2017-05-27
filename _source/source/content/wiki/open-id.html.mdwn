@@ -1,0 +1,20 @@
+### Open ID Summary
+Open ID is a federated or distributed identification system.
+
+### My Experience with Open ID
+I setup and Open ID server way back when it was first announced, but I never used it as there weren't too many consumers. These days I use Verisign as the provider, but I use my own domain and url as my id, and delegate the authentication to Verisign.
+
+### OpenID and this Wiki
+I've recently setup temporary and experimental Open ID support on this wiki. You can login by clicking the login via openid at the top right hand part of this screen.
+
+### Applications with OpenID Support
+* [[MediaWiki]]
+* [[Ikiwiki]]
+
+### Related Pages
+* [[Higgins]]
+
+### External Links
+* http://www.informedprivacy.com/blog/2009/06/openid-is-awesome.html
+* http://blog.woobling.org/2009/05/your-openid-sucks.html
+

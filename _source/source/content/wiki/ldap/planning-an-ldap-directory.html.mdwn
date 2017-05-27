@@ -1,0 +1,19 @@
+After about a year running [[LDAP]], I've realized I made a few minor glitches with my setup, but I'm not sure what would have been better.
+
+### Subtrees
+One of the main advantages of [[LDAP]], as I see it, is the ability to restrict a search to the subtree of a base. On the other hand, I'm not sure of how to structure the trees I use in my directory. Currently, I have these top level branches:
+
+* Email - email users, currently in testing with [[Dovecot]]
+* People - [[shell]] users - I want to restrict access to this
+* ldapusers - these are the users I want [[LDAP]] clients to use when accessing the directory
+* addressbook - this is another test case: a distributed address book for email clients
+
+I'm also not sure whether I want to use uppercase or lowercase, or when.
+
+With the Email subtree, I got a hint from [[Dovecot]] to use the domain name as a branch, like so:
+<pre>dc=example,dc=org,ou=Email,dc=example,dc=com</pre>
+I image that will make lookups faster.
+
+### Access Control Lists
+These are tricky in [[OpenLDAP]]. I thought I figured them out, but then I still ran into some trouble and had to again provide read access to all. Is it commonplace to control the security of [[LDAP]] via the [[network]]?
+

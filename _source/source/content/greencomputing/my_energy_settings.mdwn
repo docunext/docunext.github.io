@@ -1,0 +1,9 @@
+## /etc/rc.local 
+
+<pre>
+#!/bin/sh -e
+
+echo 2500 > /proc/sys/vm/dirty_writeback_centisecs
+echo 5 > /proc/sys/vm/laptop_mode
+exit 0
+</pre>

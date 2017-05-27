@@ -1,0 +1,18 @@
+PEAR is the PHP Extension and Application Repository. I've recently setup a PEAR server for [[Nexista]]. I still have to test it out some more and make it public, but here are my notes:
+
+[http://www.docunext.com/blog/2007/10/22/pear-channel-server/ Setting up a PEAR Channel]
+
+### PEAR Modules I use
+* [[Text_Wiki]]
+* [[Cache_Lite]]
+* [[MDB2]] with drivers for [[SQLite]] and [[MySQL]]
+* [[PEAR Calendar]]
+* [[PEAR Date]]
+* [[PEAR IMAP]]
+* [[PEAR PackageFileManager Cli]]
+* [[PEAR Net SMTP]]
+* [[PEAR File PDF]]
+* [[HTML_Safe]]
+* [[HTML_BBCodeParser]]
+* [[PEAR Markdown]]
+

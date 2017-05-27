@@ -1,0 +1,48 @@
+{
+  "name": "docunext.com",
+  "version": "0.0.1",
+  "description": "A website about tech.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "./tools/build.sh",
+    "start": "./tools/build.sh & NODE_ENV=prod node app"
+  },
+  "author": "Albert Lash",
+  "license": "none",
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "stage-2",
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "connect": "^3.4.0",
+    "express": "^4.15.2",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4",
+    "markdown-with-front-matter-loader": "^0.1.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-select": "^1.0.0-rc.5",
+    "redux": "^3.6.0",
+    "webpack": "^2.6.1"
+  }
+}

@@ -1,0 +1,34 @@
+Redis is a persistent key-value store system written in ANSI-C.
+
+Looks kind of like [[MemcacheDB]], with slightly more storage capabilities. Although only slightly, the little more might make all the difference. Actually, yes!
+
+### Data Types
+#### Lists
+The native '''list''' capability of Redis is pretty amazing. How else would it be possible to have access to an array of thousands of items? With [[MemcacheDB]] or [[Tokyo Tyrant]] the array would have to be serialized as a string. Wait - I was just reading up on it a little bit, and the list is stored as a string, but it can be appended to without having to read the string first, i.e. the server can do the appending. Still cool. Plus, the docs add this:
+
+<blockquote>
+The max length of a list is 2^32-1 elements (4294967295, more than 4 billion of elements per list).
+</blockquote>
+
+Sweet!
+
+One thing I wanted to do with a Redis list that I don't think is natively possible is to get the natural sort index position of a key. It is possible to get keys by index number, but apparently not vice-versa / the other way around. I think its possible if you get fancy with the key names, but since I was just dealing with a basic list, this is what I did (in [[Ruby]]):
+
+<pre class="sh_ruby">
+pkgpos = @rdis.list_range('pkgs',0,-1).index(@pkg)
+</pre>
+
+Basically what I'm doing is getting the entire list as an array, and then using [[Ruby]]'s capability to do what I needed.
+
+### Redis Configuration
+* [[Default Redis Configuration File on Debian]]
+
+### Related Pages
+* [[Redis-rb]]
+* [[Memcachedb]]
+* [[Tokyo Tyrant]]
+
+### External Links
+* [http://www.docunext.com/blog/2010/02/redis-memcachedb-or-couchdb.html Redis, MemcacheDB, or CouchDB?]
+* http://www.mirrors.docunext.com/cgit.cgi/redis/
+
