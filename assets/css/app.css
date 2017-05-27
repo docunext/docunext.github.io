@@ -1,0 +1,28 @@
+
+.header {
+    height: 100px;
+    padding: 60px 5px 5px 5px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #eee;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.page-select {
+    margin-left: 20px;
+    width: 300px;
+    font-size: 12px;
+}
+
+.content {
+    width: 768px;
+    padding-top: 10px;
+}
+
+pre {
+    border-color: #ddd;
+    padding-left: 2px;
+}
