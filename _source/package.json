@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "publish": "./tools/publish.sh",
     "build": "./tools/build.sh",
     "start": "./tools/build.sh & NODE_ENV=prod node app"
   },
