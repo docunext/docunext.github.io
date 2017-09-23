@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/app';
+import Root from './containers/root';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
@@ -12,7 +12,5 @@ let store = createStore(blog,
 let rootElement = document.getElementById('root');
 
 ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
+    <Root store={store} />,
     rootElement);

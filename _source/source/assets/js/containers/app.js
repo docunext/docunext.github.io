@@ -1,16 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { hashHistory } from 'react-router'
 import { setPage } from '../actions';
 import BlogIndex from '../components/BlogIndex';
 import blogIndex from './../../../../source/content/blogIndex.js';
 
 window.blogIndex = blogIndex;
 class App extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    selectPage(page) {
+      console.log(page);
+      let newpage = page.value.replace('__', '');
+      hashHistory.push(newpage);
+    }
     render() {
+        const { dispatch, page, params } = this.props;
+        console.log(params);
+        let mypage = ('__' + (params.slug || Object.keys(blogIndex)[0])).replace('____', '__');
 
-        const { dispatch, page } = this.props;
-
-        let pageContent = blogIndex[page];
+        let pageContent = blogIndex[mypage];
+        pageContent.slug = mypage;
         
         let pageNode = pageContent ? (
             <div className="content">
@@ -25,7 +36,7 @@ class App extends React.Component {
                 <div className="header">
                 <div className="header-nav">
                     <h3>Docunext</h3>
-                    <BlogIndex onBlogEntryClick={slug => dispatch(setPage(slug))} />
+                    <BlogIndex onBlogEntryClick={this.selectPage} />
                 </div>
                 </div>
                 {pageNode}
@@ -41,6 +52,7 @@ function select(state) {
         var myIndex = state.length - 1;
         selectedPage = state.pageKey;
     }
+    //browserHistory.push('/some/path')
     return {
         page: selectedPage || Object.keys(blogIndex)[0]
     };

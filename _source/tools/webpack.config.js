@@ -24,7 +24,7 @@ const clientConfig = {
   },
 
   output: {
-    path: path.resolve(__dirname, '../../assets/js'),
+    path: path.resolve(__dirname, '../build/public/assets/js'),
     publicPath: '/assets/js',
     pathinfo: isVerbose,
     filename: '[name].js'
