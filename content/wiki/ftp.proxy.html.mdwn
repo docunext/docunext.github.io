@@ -1,8 +1,0 @@
-### ftp.proxy Summary
-This is similar to [[FTP Proxy]], but it does so much more! It actually does what I had hoped that [[FTP Proxy]] would do, which is route ftp users to different back end ftp servers depending on the username.
-
-I hope it works just as well behind a firewall!
-
-### Problems
-I ran into a problem when spaces in a directory name caused the proxy to request only the first part of the name. Thankfully ftp.proxy has the allow_blanks config option, which gets enabled by the -b flag. It works now!
-

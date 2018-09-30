@@ -17,3 +17,10 @@ github_username:  docunext
 
 # Build settings
 markdown: kramdown
+exclude: [ content, _site ]
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"

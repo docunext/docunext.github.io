@@ -1,8 +1,0 @@
-### Summary
-KVM switches allow a single set of [[keyboard]], [[mouse]], and [[video]] to connect to multiple computers. There are even network KVM switches which allow remote access.
-
-KVM switches are not related to the [[KVM]] [[virtualization]] solution.
-
-### External Links
-* [http://www.my-tech-deals.com/blog/category/kvm/ KVM Switches category at My Tech Deals]
-

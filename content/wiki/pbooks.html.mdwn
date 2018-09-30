@@ -1,9 +1,0 @@
-PBooks is an open source bookkeeping and accounting software application, written in [[PHP]], [[SQL]], and [[XML]]. It is licensed using the [[Affero GPLv3]]
-
-### See Also
-* [[Regdel]]
-
-### Links
-* [http://www.pbooks.org/blog/ Free and Open Source Bookkeeping and Accounting Software in PHP]
-* http://www.informedbanking.com/wiki/Bookkeeping_Software
-

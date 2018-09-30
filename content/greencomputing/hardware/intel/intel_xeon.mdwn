@@ -1,6 +1,0 @@
-In July 2008, there are finally some energy efficient XEON chips available!
-
-
-## Related Pages
-
-* [[Energy Efficient Processors]]

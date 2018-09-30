@@ -1,4 +1,0 @@
-I am considering getting my CCNA certification. Since I've been interacting with networks for over twenty years and working with them professionally for over ten, I would venture to guess that I could pass the CCNA certification exam. However, I have only had limited experience with [[Cisco]] equipment and the [[Cisco]] operating system, IOS.
-
-Out of curiosity, I started to search for CCNA test center locations. Strangely, this wasn't too easy, at all. Search after search after search turned up no real information, so I kept digging and seemed to discover that all the testing locations are really training locations that want to offer their training services that include CCNA certification. Unfortunately, most of these training locations charge a significant sum. I wonder, is it even possible to simply take a test for CCNA certification, or does it require enrollment in a training program?
-

@@ -1,1 +1,0 @@
-This is a control panel which allows you to set when you want the screen and or the computer to [[sleep]].

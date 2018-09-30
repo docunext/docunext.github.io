@@ -1,4 +1,0 @@
-
-* [[Intel Pentium III]]
-* [[Intel XEON]]
-* [[AMD Opteron]]

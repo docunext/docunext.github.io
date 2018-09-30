@@ -1,5 +1,0 @@
-ASUS is a large manufacturer of computers, computer components, and computer accessories.
-
-## Computer Models
-
-* [[/Hardware/Asus/Asus Terminator C3]]

@@ -1,5 +1,0 @@
-Pluggable Authentication Modules
-
-There are a lot of PAM modules, definitely check 'em out. Here are a few which I'm interested in:
-* [[/pam/libpam-mysql]]
-* [[/pam/libpam-script]]

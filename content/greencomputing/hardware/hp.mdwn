@@ -1,3 +1,0 @@
-Hewlett Packard Hardware
-
-* [[/Hardware/Hp/HP t5725]]

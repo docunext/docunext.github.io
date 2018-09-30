@@ -1,7 +1,0 @@
-### Errors
-I get this when trying to use libpam-mysql via couried-authdaemon:
-
-    Dec 30 18:49:58 dev authdaemond: PAM unable to dlopen(/lib/security/pam_mysql.so): /lib/security/pam_mysql.so: undefined symbol: pam_get_item
-    Dec 30 18:49:58 dev authdaemond: PAM adding faulty module: /lib/security/pam_mysql.so
-
-Not sure if its caused by courier or libpam-mysql.

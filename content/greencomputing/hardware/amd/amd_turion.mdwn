@@ -1,5 +1,0 @@
-The Turion is AMD's "high-end" laptop CPU, so it therefore should consume less power than its desktop and server counterparts.
-
-
-[[../AMD]]
-[[CPU]]

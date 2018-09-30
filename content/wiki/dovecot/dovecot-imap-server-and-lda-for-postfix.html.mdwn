@@ -1,7 +1,0 @@
-This is a sweet configuration! In this setup, [[Dovecot]] is performing the task of accessing emails for users as well as delivering emails to mailboxes for [[Postfix]].
-
-### Initial Considerations
-* Use [[LDAP]] or virtual patterns for finding home directories
-* Use [[LDAP]], [[SQL]] or passwd file for authenticating users
-* No SSL or Plaintext passwords for trusted [[IMAP]] proxies - see: [[Dovecot IMAP Proxy for a Mail Gateway]]
-

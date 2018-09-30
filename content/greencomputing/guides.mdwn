@@ -1,1 +1,0 @@
-* [[/Guides/installing ubuntu on an everex nc1501]]

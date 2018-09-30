@@ -1,8 +1,0 @@
-Unison is a file repository synchronization tool. It uses [[rsync]] to make efficient changes when synchronizing.
-
-I first used unison on a [[Apple]] [[Macintosh]], and unfortunately I got a bad impression because at the time they were still using (perhaps still are) resource forks, and somehow a repository I was working on got messed up. These days I stick with what works: [[ext3]]!
-
-### See Also
-* [[Rsync]]
-* [[Duplicity]]
-
