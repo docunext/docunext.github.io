@@ -1,6 +1,0 @@
-ejabberd is an IM server. It is written in Erlang and is one of the most comprehensive open-source jabber servers. It is available on debian unstable and testing package repositories.
-
-http://www.docunext.com/acc/nxwiki/view/ejabberd-Documentation.html
-
-I'd like to make an embedded appliance with [[m0n0wall]], like [[m0n0jabber]].
-

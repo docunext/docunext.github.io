@@ -1,9 +1,0 @@
-### Summary
-The [[Thecus]] n2100 is a storage device, specifically a network attached storage devices, aka [[NAS]]. I used this device to install debian on a sort of embedded device:
-
-* http://www.docunext.com/blog/category/hardware/thecus-n2100/
-* http://www.docunext.com/blog/2007/06/28/the-thecus-is-back-in-action/
-* http://www.docunext.com/blog/2007/02/28/the-thecus-isnt-dead-yet/
-* http://www.docunext.com/blog/2007/02/28/giving-up-on-the-thecus-n2100/
-* http://www.docunext.com/blog/2007/02/22/more-thecus-n2100-pics/
-

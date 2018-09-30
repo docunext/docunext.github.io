@@ -1,6 +1,0 @@
-Another unionfs. I had heard rumblings on the internet that aufs is better than unionfs, and [[debian]] has kernel modules for aufs but not unionfs. However, <del>I've never been able to get aufs to work</del> I finally got aufs to work, and Andrew Morton's tree has unionfs merged. Go figure.
-
-Thankfully aufs works a lot like unionfs:
-<pre>
-mount -t aufs -o dirs=/mnt/2:/mnt/1=ro /mnt/1 /mnt/3
-</pre>

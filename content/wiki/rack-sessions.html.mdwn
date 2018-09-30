@@ -1,8 +1,0 @@
-I'm reading up on [[Rack]] sessions, for use with [[Sinatra]]. I'm going to start off using the full middleware setup:
-
-<pre class="sh_ruby">
-use Rack::Session::Cookie, :key => 'okee', :path => '/', :expire_after => 2592000, :secret => '1e6b43c6'
-</pre>
-
-I'd like to only use this if the user agent is not a bot; or if the user wants to login.
-

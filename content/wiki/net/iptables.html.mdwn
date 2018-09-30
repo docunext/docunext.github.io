@@ -1,9 +1,0 @@
-### Summary
-AKA netfilter... useful for creating [[firewall]]s on [[linux]]. It can also be used to provide network address translation ([[NAT]]), also known as IP Masquerading, which is useful for enabling internet access to a local area network.
-
-### See Also
-* [[ferm]]
-* [[nftables]]
-* [[Iptables hashtable]]
-* [[Firehol]]
-

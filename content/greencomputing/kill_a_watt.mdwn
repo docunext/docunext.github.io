@@ -1,8 +1,0 @@
-The Kill-a-watt energy meter is a commonly available power consumption meter. It basically works by plugging it into an outlet, and then plugging the computer you want to measure into it. There is an LCD display with a few buttons to switch between volts, amps, watts, and volt-amps.
- 
- 
- 
-
-The Kill-A-Watt is an awesome little tool which can help measure the electricity used by many household appliances, including computers!
-
-* [Kill-A-Watt Blog Post](http://www.green-computing.info/blog/2007/09/kill-a-watt.html)

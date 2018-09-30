@@ -1,8 +1,0 @@
-These chips look quite nice. I wonder how hot they get?
-
-
-
-## Related Pages
-
-* [[CPU]]
-* [[Intel]]

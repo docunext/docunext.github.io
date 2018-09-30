@@ -1,9 +1,0 @@
-Turning off the computer is the most effective way to save power. However, you can't use your computer when it is off. :-) So, you have to turn it back on again. Most people do this by pushing the power button. But what if you are not close by your computer? 
-
-There are a few ways to remotely turn on a computer, but its not always a reliable or straightforward process, as there are many pieces to the pie which are needed to make it happen, and there are many ways to go about the process. Read on to learn about the various ways to [[Turn on your computer]] again.
-
-You can also use an [[outlet timer]] to turn on and off computers at specific times.
-
-## Related Pages
-
-* [[Turn on your computer]]

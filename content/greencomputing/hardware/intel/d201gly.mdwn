@@ -1,3 +1,0 @@
-The D201GLY is intel's first mini-itx board, and it consumes around 22 watts of power considering the CPU has a 512kB cache.
-
-[[intel D201GLY running Debian GNU/kFreeBSD 7.0]]

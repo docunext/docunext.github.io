@@ -1,6 +1,0 @@
-The Thecus n2100 uses a lot of energy for what it is and what it does. With one sata drive (160GB), it uses over 20 watts of power. Compare that to the [[Dectop AMD PIC]] which uses only 11 watts with an IDE drive (80GB).
-
-
-## Related Pages
-
-* [http://www.docunext.com/blog/hardware/thecus-n2100/ Thecus Category @ Docunext]

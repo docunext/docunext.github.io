@@ -1,9 +1,0 @@
-The important thing to remember when setting up your reverse [[proxy]] [[cache]]
-with [[Apache]] is to make sure it is secure, so the denizens of the web don't
-abuse it.
-
-Mine is behind a firewall, but I also run it on port 3128 and only allow access
-from 192.168.0.0/16.
-
-I enable mod_proxy, mod_proxy_http, mod_cache, mod_mem_cache, and mod_disk_cache
-to get things going.

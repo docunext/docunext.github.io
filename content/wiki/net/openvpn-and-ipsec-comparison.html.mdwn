@@ -1,6 +1,0 @@
-[[OpenVPN]] and [[IPSec]] are both [[VPN]] technologies, but in my experience, they are designed for very different uses.
-
-For me, it all has to do with whether I'm trying to build a hybrid network of disparate systems, or whether I'm trying to connect two networks together over a wide area network.
-
-In my experience, [[OpenVPN]] is perfect for bringing computers together in a hub-and-spoke, or star, model - similar to how [[PPTP]] works (though I have read that [[OpenVPN]] can do a lot more). [[IPSec]] is *really* good at connecting two [[LAN]]s with different sub-networks together.
-

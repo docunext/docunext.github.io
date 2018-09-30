@@ -1,8 +1,5 @@
 ---
 title: Facebook Flux Notes 
-date: 2015-08-01
-tags: javascript
-author: Albert
 ---
 
 
