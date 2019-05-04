@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "RTS and Fragmentation Threshold for my Wifi issues"
+date: 2018-09-03
 ---
 
 My wifi was not performing well and I tried messing with many settings. The

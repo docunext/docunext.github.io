@@ -1,7 +1,7 @@
 ---
 title: Damn Internet Explorer
 comments:
-  - author: 770
+  - author: alby
     email: alby@thirteen.net
     ip: 75.194.215.7
     url:
