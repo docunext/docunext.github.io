@@ -1,0 +1,1 @@
+{"data":{"markdownRemark":{"html":"<pre class=\"sh_sh\">\nffmpeg -i mvi_4548.avi -b 256k output.mpg\n</pre>\n<p>¥</p>","frontmatter":{"title":"Avi2mpg"}}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"/2009/2009-05-05-avi2mpg/"}}
