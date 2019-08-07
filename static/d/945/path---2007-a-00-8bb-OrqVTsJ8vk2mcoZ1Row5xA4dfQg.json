@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$year\" is never used in operation \"homeAllSrcDocunextGithubIoSrcTemplatesYearJs1092554634\".","locations":[{"line":2,"column":3}]}],"pageContext":{"isCreatedByStatefulCreatePages":false,"year":"2007"}}
