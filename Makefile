@@ -1,4 +1,5 @@
-
+.PHONY install:
+	npm i
 clean:
 	rm -rf .cache
 
