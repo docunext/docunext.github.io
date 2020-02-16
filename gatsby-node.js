@@ -1,5 +1,6 @@
 const path = require(`path`)
 const defaultComponentPath = path.resolve(`./src/templates/blog-post.js`)
+const yearComponentPath = path.resolve(`./src/templates/year.js`)
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -16,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  return graphql(`
+  const pages = graphql(`
     {
       allMarkdownRemark {
         edges {
@@ -29,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `
-).then(result => {
+  ).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
         createPage({
             path: node.fields.slug,
@@ -40,4 +41,31 @@ exports.createPages = ({ graphql, actions }) => {
         })
     })
   })
+
+
+
+  const years = graphql(`
+    {
+	  allDirectory(filter: {name: { regex: "/^20..$/" }}) {
+		  edges {
+			node {
+			  name
+			}
+		  }
+      }
+    }
+  `).then(result => {
+      console.log(result)
+      result.data.allDirectory.edges.forEach(({ node }, index)=> {
+          console.log(node.name)
+          createPage({
+            path: node.name,
+            component: yearComponentPath,
+            context: { dir: "/pages\\/" + node.name + "/" },
+          })
+    })
+  })
+
+  return Promise.all([years]);
+
 }

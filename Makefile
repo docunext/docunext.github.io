@@ -1,9 +1,11 @@
 
-develop:
+clean:
+	rm -rf .cache
+
+dev: clean
 	@npm run start
 
-build:
-	rm -rf .cache
+build: clean
 	@npm run build
 
 serve:
