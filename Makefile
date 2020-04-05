@@ -1,4 +1,5 @@
-
+.PHONY install:
+	npm i
 clean:
 	rm -rf .cache
 
@@ -12,5 +13,6 @@ serve:
 	@npm run serve
 
 deploy:
-	git add public && git commit -m "updated"
+	git add public
+	git commit -m "updated" & true
 	git subtree push --prefix=public origin master
