@@ -29,7 +29,7 @@ comments:
   - author: Albert
     date: 04/29/2009 01:11:24 AM
     text: >
-      Check out this post too:<br/><br/><a href="http://www.docunext.com/2009/01/25/csync2-part-ii/" rel="nofollow">http://www.docunext.com/2009/01/25/csync2-part-ii/</a>
+      Check out this post too:<br/><br/><a href="http://www.docunext.com/2009/01/csync2-part-ii/" rel="nofollow">http://www.docunext.com/2009/01/25/csync2-part-ii/</a>
 date: 2008-03-20
 tags: debian,sqlite
 ---

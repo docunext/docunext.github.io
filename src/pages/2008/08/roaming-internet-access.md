@@ -10,5 +10,5 @@ I'm still not sure whether this is any better, but I continue to feel that it is
 
 Right now I only have one ethernet port and two wireless cards, and although it works, I'm sometimes nervous about only having wireless access to the firewall. If something goes wrong, I'll have to dig out the serial null-modem cable to reconfigure it, and unnecessary re-configuring is what I'm trying to avoid.
 
-For the technical aspects of this setup, checkout the post about the portable <a href="http://www.docunext.com/2008/08/21/bringing-my-pfsense-firewall-along/">pfSense firewall VPN at Docunext</a>.
+For the technical aspects of this setup, checkout the post about the portable <a href="http://www.docunext.com/2008/08/bringing-my-pfsense-firewall-along/">pfSense firewall VPN at Docunext</a>.
 

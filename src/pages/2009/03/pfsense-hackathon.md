@@ -10,5 +10,5 @@ Clog is gone, replaced by fifolog, and is it true? Ftp proxy is gone? Nice, I ne
 
 In other news, the pfSense folks are adding some services to the pfSense offering, and so far it looks terrific. There is now (or soon to be) the ability to save your configuration to a secure service. Nice work people!
 
-I should also note that the <a href="http://www.docunext.com/2009/02/13/freebsd-glxsb/">glxsb (Geode LX Security Block) kernel module</a> continues to run well on my ALIX board. Excellent!
+I should also note that the <a href="http://www.docunext.com/2009/02/freebsd-glxsb/">glxsb (Geode LX Security Block) kernel module</a> continues to run well on my ALIX board. Excellent!
 

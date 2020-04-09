@@ -23,7 +23,7 @@ Today, one day after its release, I installed the Adobe Flash Player 10 for 64-b
 <a href="http://labs.adobe.com/downloads/flashplayer10.html">Flash Player 10 Prerelease</a>
 <h4>Related to Flash on Linux</h4>
 
-<a href="http://www.docunext.com/2008/05/13/gnash-adsense-iframes-and-analytics/">Gnash, Adsense Firefox3 iframes, Analytics</a>
+<a href="http://www.docunext.com/2008/05/gnash-adsense-iframes-and-analytics/">Gnash, Adsense Firefox3 iframes, Analytics</a>
 
 ¥
 

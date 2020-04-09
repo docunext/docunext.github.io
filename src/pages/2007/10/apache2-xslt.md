@@ -27,7 +27,7 @@ comments:
       Hi Grig, Thanks for the heads up! It looks terrific, I'll try it out and post how it works for me. :-)
 date: 2007-10-28
 ---
-<a href="http://www.docunext.com/2007/10/28/apache2-xslt/">
+<a href="http://www.docunext.com/2007/10/apache2-xslt/">
 
 I'm trying out the libapache2-modxslt module which is written in c an provides the ability to parse XML. :-)
 

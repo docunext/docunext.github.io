@@ -12,7 +12,7 @@ comments:
       Hi Mudai, thanks for commenting! I just tried that script and came up with this:<br/><pre><br/>Benchmark: timing 1000000 iterations of big, little...<br/>       big:  0 wallclock secs ( 0.51 usr +  0.00 sys =  0.51 CPU) @ 1960784.31/s (n=1000000)<br/>    little:  1 wallclock secs ( 0.43 usr +  0.00 sys =  0.43 CPU) @ 2325581.40/s (n=1000000)<br/></pre>
 date: 2007-10-23
 ---
-<a href="http://www.docunext.com/2007/10/23/perl-hash-performance/">
+<a href="http://www.docunext.com/2007/10/perl-hash-performance/">
 
 I'm always curious about computer performance. Can't help it, must be in my blood. So when I heard that perl hashes were fast, I had to do some research.
 

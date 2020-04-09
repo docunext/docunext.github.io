@@ -6,7 +6,7 @@ author: Albert Lash
 ---
 I'm trying to fix this bug:
 
-<a href="http://www.docunext.com/2008/10/22/svn_ra_get_log-assertion-path-failed/">Assertion `*path != '/'' failed.</a>
+<a href="http://www.docunext.com/2008/10/svn_ra_get_log-assertion-path-failed/">Assertion `*path != '/'' failed.</a>
 
 I was able to fix some stuff, and now I'm trying to use Alien::SVN. Awesome! It worked!
 

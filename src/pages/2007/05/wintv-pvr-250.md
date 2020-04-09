@@ -21,7 +21,7 @@ I'm Trying to get my WinTV-PVR-250 working in conjunction with MythTV.
 
 <a href="http://dipper.info/project/ivtv/">http://dipper.info/project/ivtv/</a>
 
-A continuation of this <a href="http://www.docunext.com/2007/04/26/knoppmyth/">failed attempt to install Knoppmyth</a>.
+A continuation of this <a href="http://www.docunext.com/2007/04/knoppmyth/">failed attempt to install Knoppmyth</a>.
 
 ¥
 

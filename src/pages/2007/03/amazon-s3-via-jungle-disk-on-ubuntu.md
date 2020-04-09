@@ -4,7 +4,7 @@ date: 2007-03-26
 tags: none
 author: Albert Lash
 ---
-We wrote an article about Amazon S3 ( <a href="http://www.docunext.com/2007/01/29/s3-duplicity-with-debian/">Amazon S3 Duplicity with Debian</a> ) awhile back and I'm again looking into it as a way to store backups remotely.
+We wrote an article about Amazon S3 ( <a href="http://www.docunext.com/2007/01/s3-duplicity-with-debian/">Amazon S3 Duplicity with Debian</a> ) awhile back and I'm again looking into it as a way to store backups remotely.
 
 JungleDisk remains the best way to connect to S3 (in my opinion). To install on ubuntu, download the tarfile from jungledisk, and you'll need libssl0.9.7 installed so:
 

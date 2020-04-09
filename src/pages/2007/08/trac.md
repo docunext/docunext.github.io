@@ -2,7 +2,7 @@
 title: Trac
 date: 2007-08-08
 ---
-I'm sold on Trac. As I said in my post about <a href="http://www.docunext.com/2007/08/07/what-i-like-and-dont-like-about-ruby/">ruby</a>, I was a little nervous about the ability of spammers to clog up a trac install via the wiki and trouble tickets. However - by using the command line tool trac-admin, you can really control who has access to do what.
+I'm sold on Trac. As I said in my post about <a href="http://www.docunext.com/2007/08/what-i-like-and-dont-like-about-ruby/">ruby</a>, I was a little nervous about the ability of spammers to clog up a trac install via the wiki and trouble tickets. However - by using the command line tool trac-admin, you can really control who has access to do what.
 
 The one show stopper is that Trac has no authentication mechanism other than that of the webserver, which is either clear text or digest based, digest requiring an isolated user database. The clear text password support allows a hook into pam or similar authentication mechanisms, but would require SSL for preventing sniffers. Most of the trac traffic would not require sniffers though.
 

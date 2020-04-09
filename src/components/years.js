@@ -22,7 +22,7 @@ export default () => (
             <span>Yearly Indexes: </span>
             {data.allDirectory.edges.filter(edge => {
                 return edge.node.relativePath.match(/\/20..$/)
-            }).map(({ node }) => (
+            }).sort().map(({ node }) => (
               
               <span
                 key={node.id}>

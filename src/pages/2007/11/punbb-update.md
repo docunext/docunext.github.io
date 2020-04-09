@@ -4,7 +4,7 @@ date: 2007-11-07
 tags: none
 author: Albert Lash
 ---
-<a href="http://www.docunext.com/2007/11/07/punbb-update/">
+<a href="http://www.docunext.com/2007/11/punbb-update/">
 
 This morning I've been working on a punbb plugin to insert the necessary Google Analytics code into the footer of a punbb forum. I got it working, but figured it might help to ask the punbb forums for advice.
 

@@ -53,7 +53,7 @@ comments:
   - author: admin
     date: 07/31/2007 01:54:27 PM
     text: >
-      Gotcha, I've seen that too on an <a href="http://www.docunext.com/2007/03/22/amcc-3ware-9650se-sata-ii-pci-express-raid-card-review/" rel="nofollow">AOpen machine I built with a 3Ware RAID card, wasn't sure what the issue was but I think it was because the onboard video was analog and was too close to the power supply</a>.<br/><br/>On the Intel D201GLY, I haven't had any such problems at all, the screen is clear for me and not wavy or fuzzy at all.
+      Gotcha, I've seen that too on an <a href="http://www.docunext.com/2007/03/amcc-3ware-9650se-sata-ii-pci-express-raid-card-review/" rel="nofollow">AOpen machine I built with a 3Ware RAID card, wasn't sure what the issue was but I think it was because the onboard video was analog and was too close to the power supply</a>.<br/><br/>On the Intel D201GLY, I haven't had any such problems at all, the screen is clear for me and not wavy or fuzzy at all.
   - author: John
     email: johns@ks.uiuc.edu
     date: 09/03/2007 05:36:16 AM

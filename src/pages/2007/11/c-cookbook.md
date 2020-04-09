@@ -4,7 +4,7 @@ date: 2007-11-01
 tags: none
 author: Albert Lash
 ---
-<a href="http://www.docunext.com/2007/11/01/c-cookbook/">
+<a href="http://www.docunext.com/2007/11/c-cookbook/">
 
 I'm reading the online version of the O'Reilly C++ cookbook and so far its pretty good. I also added the C++ in a Nutshell book as a reference. Its <strong>VERY NEW</strong> stuff to me, but I definitely want to be become more familiar with C and C++ in time.
 

@@ -14,7 +14,7 @@ date: 2007-07-01
 tags: none
 author: Albert Lash
 ---
-So I'm doing some tinkering with Darwin again as I'm trying to get <a href="http://www.docunext.com/2007/06/30/converting-parallels-machines-to-vmware-fusion/">kqemu to work on Mac OS X</a>. I don't think it will work but since I'm motivated I'm using this as an excuse to learn. :-)I've just downloaded the kernel sources, the extra kernel tools, and XCode 2.4 from Apple's sources. Actually I'm still downloading the XCode sources, big stuff (940MB)! While I have a little experience with kernel modules from my times with Gentoo and debian, I'm new to them on OSX. <a rel="nofollow" href="http://code.google.com/p/macfuse/wiki/HOWTO">Thankfully, Amit Singh and the MacFUSE project have provided a little bit of details for kernel extensions on OSX</a>.
+So I'm doing some tinkering with Darwin again as I'm trying to get <a href="http://www.docunext.com/2007/06/converting-parallels-machines-to-vmware-fusion/">kqemu to work on Mac OS X</a>. I don't think it will work but since I'm motivated I'm using this as an excuse to learn. :-)I've just downloaded the kernel sources, the extra kernel tools, and XCode 2.4 from Apple's sources. Actually I'm still downloading the XCode sources, big stuff (940MB)! While I have a little experience with kernel modules from my times with Gentoo and debian, I'm new to them on OSX. <a rel="nofollow" href="http://code.google.com/p/macfuse/wiki/HOWTO">Thankfully, Amit Singh and the MacFUSE project have provided a little bit of details for kernel extensions on OSX</a>.
 
 Actually, <a rel="nofollow" href="http://mike.kronenberg.org/mike/?p=11">Kberg does have a small post about darwin kqemu with some notes and a download</a>.
 

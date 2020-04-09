@@ -9,7 +9,7 @@ date: 2007-10-26
 tags: none
 author: Albert Lash
 ---
-<a href="http://www.docunext.com/2007/10/26/attempting-to-use-googles-tcmalloc-part-i/">
+<a href="http://www.docunext.com/2007/10/attempting-to-use-googles-tcmalloc-part-i/">
 
 I'm getting more interested in some of the more technical parts of computing, and so I decided to take a shot at compiling and using Google's tcmalloc.
 
@@ -49,7 +49,7 @@ ERROR: ld.so: object '/usr/lib/libtcmalloce.so' from LD_PRELOAD cannot be preloa
 
 UPDATE November 21, 2007: I'm now using tcmalloc on a low-traffic, semi-production server, and so far its working.
 
-UPATE February 10, 2008: I've compiled <a href="http://www.docunext.com/2008/02/06/swiftweasel-on-the-via-c7/">Iceweasel to link with Google's tcmalloc</a>, and plan to do more, including PHP, expat, libxml2, and libxslt.
+UPATE February 10, 2008: I've compiled <a href="http://www.docunext.com/2008/02/swiftweasel-on-the-via-c7/">Iceweasel to link with Google's tcmalloc</a>, and plan to do more, including PHP, expat, libxml2, and libxslt.
 
 ¥
 

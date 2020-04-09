@@ -3,7 +3,7 @@ title: Outlook IMAP Bug
 date: 2010-01-12
 tags: bugs,imap,outlook
 ---
-As a result of the <a href="http://www.docunext.com//outlook/">Outlook</a> to PST migration I posted about recently, the Outlook IMAP bug reared its ugly head.
+As a result of the Outlook to PST migration I posted about recently, the Outlook IMAP bug reared its ugly head.
 
 IMAP is great for a number of reasons, one of which is that the email store can be accessed from multiple clients.
 

@@ -9,7 +9,7 @@ comments:
   - author: Albert
     date: 03/08/2009 02:48:08 PM
     text: >
-      The alix with pfsense can now use the glxsb.ko module which supports hardware accelerated aes-128 encryption, so throughput is fantastic for the price of the device.<br/><br/>See <a href="http://www.docunext.com/2009/02/13/freebsd-glxsb/" rel="nofollow">http://www.docunext.com/2009/02/13/freebsd-glxsb/</a> for more information about this.
+      The alix with pfsense can now use the glxsb.ko module which supports hardware accelerated aes-128 encryption, so throughput is fantastic for the price of the device.<br/><br/>See <a href="http://www.docunext.com/2009/02/freebsd-glxsb/" rel="nofollow">http://www.docunext.com/2009/02/13/freebsd-glxsb/</a> for more information about this.
 date: 2008-08-21
 tags: none
 author: Albert Lash

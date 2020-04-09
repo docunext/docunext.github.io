@@ -20,7 +20,7 @@ echo $result;?></pre>
 
 Note, this code is just a sketch, and I don't expect it to function well.
 
-Also, of the post I made recently about <a href="http://www.docunext.com/2009/03/25/css-parsers/">css parsers</a>, <a href="http://rubyforge.org/projects/cssparser/">this one in ruby</a> again caught my attention.
+Also, of the post I made recently about <a href="http://www.docunext.com/2009/03/css-parsers/">css parsers</a>, <a href="http://rubyforge.org/projects/cssparser/">this one in ruby</a> again caught my attention.
 
 Lastly, I found <a href="http://appro.mit.jyu.fi/tools/csstoxml/">csstoxml</a>. Its written in java, so I'm a little hesitant to try it out due to my lack of experience with java.
 

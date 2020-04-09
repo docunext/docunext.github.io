@@ -23,5 +23,5 @@ UPDATE: This appears to have been fixed as of January 2009.
 
 UPDATE 2: No, it still happens.
 
-UPDATE 3: I think I found a <a href="http://www.docunext.com/2009/02/23/perl-svnweb/">solution</a>.
+UPDATE 3: I think I found a <a href="http://www.docunext.com/2009/02/perl-svnweb/">solution</a>.
 

@@ -17,7 +17,7 @@ I'm trying out <a href="http://wireless.kernel.org/en/users/Download">ath9k</a> 
 <pre>
 04:00.0 Ethernet controller: Atheros Communications Inc. AR242x 802.11abg Wireless PCI Express Adapter (rev 01)</pre>
 
-In the past on my <a href="http://www.docunext.com/2008/03/19/debian-macbook-good/">debian macbook</a>, I've used the madwifi drivers, which worked fine, but I prefer the free drivers.
+In the past on my <a href="http://www.docunext.com/2008/03/debian-macbook-good/">debian macbook</a>, I've used the madwifi drivers, which worked fine, but I prefer the free drivers.
 
 Hmmm - its not working. Doh! Back to madwifi I guess.... though it might be the laptop. Can't seem to figure out how to turn the wifi on.
 

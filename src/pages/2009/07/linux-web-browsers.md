@@ -22,6 +22,6 @@ UPDATE: I just added sid to my sources.list and epiphany-webkit is there. Instal
 
 Links:
 
-<ul><li><a href="http://www.docunext.com/2009/03/25/building-webkit-svn-on-debian/">My notes on building WebKit on Debian</a>
+<ul><li><a href="http://www.docunext.com/2009/03/building-webkit-svn-on-debian/">My notes on building WebKit on Debian</a>
 </li></ul>
 

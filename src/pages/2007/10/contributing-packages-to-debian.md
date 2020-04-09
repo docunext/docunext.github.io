@@ -4,7 +4,7 @@ date: 2007-10-21
 tags: none
 author: Albert Lash
 ---
-<a href="http://www.docunext.com/2007/10/21/contributing-packages-to-debian/">
+<a href="http://www.docunext.com/2007/10/contributing-packages-to-debian/">
 
 As a follow-up to the last docunext post on PHP5-Readline and a debian package for it, here are a few notes I've taken on what I believe it takes to contribute packages to debian:
 

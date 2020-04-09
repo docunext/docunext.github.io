@@ -36,7 +36,7 @@ comments:
       Thank you.  This is a help.
 date: 2007-10-19
 ---
-<a href="http://www.docunext.com/2007/10/19/no-php5-readline-in-debian/">
+<a href="http://www.docunext.com/2007/10/no-php5-readline-in-debian/">
 
 I'm working on a command line PHP script and I've come to realize that there is no readline capability compiled into the php5-cli package. That's too bad, as command line php usage is gaining a lot of popularity.
 
@@ -98,7 +98,7 @@ php5-readline/DEBIAN/control</pre>
 
 Note: The above debian package was created with my very limited experience! Use at your own risk!
 
-UPDATE November 12, 2007: Thanks to an email exchange with Felipe (see my new post on the <a href="http://www.docunext.com/2007/11/11/creating-debian-packages-part-ii/">php5-xsltcache package</a>), the licensing issue with a php5-readline has been confirmed. So this package will not make it into the debian repositories. See <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=341864">debian bug report #341864 regarding php5-readline licensing issues.</a>
+UPDATE November 12, 2007: Thanks to an email exchange with Felipe (see my new post on the <a href="http://www.docunext.com/2007/11/creating-debian-packages-part-ii/">php5-xsltcache package</a>), the licensing issue with a php5-readline has been confirmed. So this package will not make it into the debian repositories. See <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=341864">debian bug report #341864 regarding php5-readline licensing issues.</a>
 
 ¥
 

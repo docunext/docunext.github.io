@@ -9,7 +9,7 @@ date: 2007-02-24
 tags: none
 author: Albert Lash
 ---
-Following up on the recent post about setting proper <a href="http://www.docunext.com/2007/02/22/proper-host-and-domain-name-setups/">fully qualified domain name and hostname settings in linux</a>, I'm doing the same for Mac OS X.
+Following up on the recent post about setting proper <a href="http://www.docunext.com/2007/02/proper-host-and-domain-name-setups/">fully qualified domain name and hostname settings in linux</a>, I'm doing the same for Mac OS X.
 
 So far I've found different techniques:
 

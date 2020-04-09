@@ -4,7 +4,7 @@ date: 2007-01-10
 tags: none
 author: Albert Lash
 ---
-<p><a href="http://www.docunext.com/2007/01/10/ming-examples/">SWF output of this ming php code</a></p>
+<p><a href="http://www.docunext.com/2007/01/ming-examples/">SWF output of this ming php code</a></p>
 
 <pre><span style="color: #000000"><span style="color: #0000BB">&lt;?php
 

@@ -10,5 +10,5 @@ Several years ago, Apple said that they were no longer attending MacWorld Boston
 
 But beyond the importance of of MacWorld, the real kicker is that Steve Jobs will no longer be giving his renown keynote speeches.
 
-Many people have speculated that this is due to Jobs' health, but the company denies such rumors, saying that he's in good health. Not too long ago, there was an <a href="http://www.docunext.com/2008/08/28/steve-jobs-isnt-dead/">obituary accidentally printed for Steve Jobs, but he is still very much alive</a>!
+Many people have speculated that this is due to Jobs' health, but the company denies such rumors, saying that he's in good health. Not too long ago, there was an <a href="http://www.docunext.com/2008/08/steve-jobs-isnt-dead/">obituary accidentally printed for Steve Jobs, but he is still very much alive</a>!
 

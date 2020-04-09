@@ -4,7 +4,7 @@ date: 2007-10-22
 tags: none
 author: Albert Lash
 ---
-<a href="http://www.docunext.com/2007/10/22/pear-channel-server/">
+<a href="http://www.docunext.com/2007/10/pear-channel-server/">
 
 I'm finally going to setup a PEAR Server!
 

@@ -20,7 +20,7 @@ comments:
   - author: admin
     date: 09/13/2007 09:34:56 AM
     text: >
-      Hi David, that is indeed the same board, I didn't know mini-box had them in stock. I've also ordered from them and was satisfied with their service. FYI - the ALIX doesn't need a power supply (but it does need an adapter), but mini-box makes some great power supplies for other mini-itx boards like the D201GLY intel little valley. See this information for more about that:<br/><br/><a href="http://www.docunext.com/2007/06/22/intels-little-valley-mini-itx-board/" rel="nofollow">http://www.docunext.com/2007/06/22/intels-little-valley-mini-itx-board/</a><br/><br/>I like the PW-200M for the d201ly, and the picoPSU for the dg965ss, though that board isn't mini-itx.<br/><br/>What voltage is the electricity in Brazil? And plug design?
+      Hi David, that is indeed the same board, I didn't know mini-box had them in stock. I've also ordered from them and was satisfied with their service. FYI - the ALIX doesn't need a power supply (but it does need an adapter), but mini-box makes some great power supplies for other mini-itx boards like the D201GLY intel little valley. See this information for more about that:<br/><br/><a href="http://www.docunext.com/2007/06/intels-little-valley-mini-itx-board/" rel="nofollow">http://www.docunext.com/2007/06/22/intels-little-valley-mini-itx-board/</a><br/><br/>I like the PW-200M for the d201ly, and the picoPSU for the dg965ss, though that board isn't mini-itx.<br/><br/>What voltage is the electricity in Brazil? And plug design?
 date: 2007-07-26
 tags: embedded,energy
 ---

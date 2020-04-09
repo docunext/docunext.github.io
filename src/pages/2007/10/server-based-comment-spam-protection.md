@@ -3,7 +3,7 @@ title: Server Based Comment Spam Protection
 date: 2007-10-24
 tags: spam
 ---
-<a href="http://www.docunext.com/2007/10/24/server-based-comment-spam-protection/">
+<a href="http://www.docunext.com/2007/10/server-based-comment-spam-protection/">
 
 I've been thinking about how to protect Wordpress, Trac, and other "community-style" web applications against comment spam, so I figured I should write up an article about my thoughts here at Docunext.com.
 <h3>Spam Karma 2</h3>

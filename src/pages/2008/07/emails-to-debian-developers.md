@@ -4,7 +4,7 @@ date: 2008-07-11
 ---
 I'm going to send out two emails to some debian developers today. One to the maintainer of libapache2-mod-xslt, to ask that the module gets compiled without the signature, and to the maintainer of aolserver4-nsxml, to let them know that I'm doing some work on the nsxml.c code, and ask for feedback.
 
-My experience in communicating with debian developers has been good and bad. I've had a great time corresponding with <a href="http://etbe.coker.com.au/">Russell Coker</a>, form Australia, who I find to be polite, intelligent, and clear, if maybe a bit verbose. Unfortunately I've also corresponded with <a href="http://www.docunext.com/2008/05/18/so-much-for-reaching-out/">some who I apparently caught on a bad day</a>.
+My experience in communicating with debian developers has been good and bad. I've had a great time corresponding with <a href="http://etbe.coker.com.au/">Russell Coker</a>, form Australia, who I find to be polite, intelligent, and clear, if maybe a bit verbose. Unfortunately I've also corresponded with <a href="http://www.docunext.com/2008/05/so-much-for-reaching-out/">some who I apparently caught on a bad day</a>.
 
 Hopefully these emails go a little bit more like my correspondence with Russell!
 

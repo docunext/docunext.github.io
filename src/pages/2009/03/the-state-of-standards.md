@@ -28,7 +28,7 @@ Although a standard that has been around for a long time, I don't know of any ex
 
 <strong>OOXML</strong>
 
-Open Office XML, as the name suggests, is also based on XML. Therefore, its easy to generate these documents from any data source with XSLT. I've started some work with <a href="http://www.docunext.com/2009/02/14/open-document-spreadsheet-format/">Open Document Speadsheets</a> and I'm definitely going to do more.
+Open Office XML, as the name suggests, is also based on XML. Therefore, its easy to generate these documents from any data source with XSLT. I've started some work with <a href="http://www.docunext.com/2009/02/open-document-spreadsheet-format/">Open Document Speadsheets</a> and I'm definitely going to do more.
 
 <strong>PNG</strong>
 

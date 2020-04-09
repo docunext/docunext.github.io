@@ -15,7 +15,7 @@ date: 2007-10-25
 tags: none
 author: Albert Lash
 ---
-<a href="http://www.docunext.com/2007/10/25/ubuntu-gutsy/">
+<a href="http://www.docunext.com/2007/10/ubuntu-gutsy/">
 
 I just installed Gutsy - its so nice! I installed it on an AMD system, and now I'm trying again on intel, but I'm using a 2GB CF card and it doesn't want to fit. Hmmmm.
 

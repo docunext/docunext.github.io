@@ -23,7 +23,7 @@ sa-learn --ham -C /etc/mail/spamassassin --showdots --dir ./.maildir/cur/</pre>
 
 And maybe some help for the honeypot: <a href="mailto:spam.dropbox@savonix.com">spam.dropbox@savonix.com</a>
 
-<a href="http://www.docunext.com/2006/12/13/defending-against-unsolicited-commercial-email-uce-also-known-as-spam-page-3-spamassassin/">Defending against Unsolicited Commercial Email (UCE), also known as Spam - Page 3 - Spamassassin</a>
+<a href="http://www.docunext.com/2006/12/defending-against-unsolicited-commercial-email-uce-also-known-as-spam-page-3-spamassassin/">Defending against Unsolicited Commercial Email (UCE), also known as Spam - Page 3 - Spamassassin</a>
 
 And another command:
 

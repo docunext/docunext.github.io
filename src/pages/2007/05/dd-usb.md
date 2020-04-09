@@ -8,7 +8,7 @@ I'm trying to duplicate a usb drive I installed debian. To do so, I'm using the 
 
 <pre>dd bs=512 if=/dev/disk3 conv=sync,noerror of= ./usb_debian.img</pre>
 
-<a href="http://www.docunext.com/2006/08/15/ghosting-notes/">dd Ghosting / Backup Notes</a>
+<a href="http://www.docunext.com/2006/08/ghosting-notes/">dd Ghosting / Backup Notes</a>
 
 The final code and output:
 

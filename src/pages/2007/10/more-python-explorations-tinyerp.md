@@ -2,7 +2,7 @@
 title: More Python Explorations TinyERP
 date: 2007-10-29
 ---
-<a href="http://www.docunext.com/2007/10/29/more-python-explorations-tinyerp/">
+<a href="http://www.docunext.com/2007/10/more-python-explorations-tinyerp/">
 
 In my work with <a href="http://www.pbooks.org/">PBooks</a>, I occasionally do some research on <a href="http://www.pbooks.org/blog/open-source-accounting/">other bookkeeping programs</a>. I was encouraged by a forum member to examine tinyerp, and although I had come across it in the past, I didn't investigate too deeply as I didn't know too much about python at the time.
 

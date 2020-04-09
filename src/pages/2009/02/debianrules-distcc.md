@@ -4,7 +4,7 @@ date: 2009-02-05
 tags: none
 author: Albert Lash
 ---
-As docunext readers know, I'm a fan of debian and distcc. I've used <a href="http://www.docunext.com/2007/10/11/more-distcc-and-ccache-notes/">distcc to aid with building debian kernels</a>, and now I'm using it with building patched packages.
+As docunext readers know, I'm a fan of debian and distcc. I've used <a href="http://www.docunext.com/2007/10/more-distcc-and-ccache-notes/">distcc to aid with building debian kernels</a>, and now I'm using it with building patched packages.
 
 <pre>
 debian/rules binary CC=distcc CONCURRENCY_LEVEL=40</pre>
