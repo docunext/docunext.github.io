@@ -3,18 +3,6 @@ title: LXC on Ubuntu 11.10 Looks Good
 date: 2011-12-25
 tags: git,lxc,openvz,ubuntu
 ---
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9657495873329253";
-/* 728x90, created 1/5/08 */
-google_ad_slot = "9737089361";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
 I upgraded my Lenovo g555 laptop to Ubuntu Oneric Ocelot on Friday and it was
 a little rocky, but now its working really well.
 
@@ -59,18 +47,6 @@ Other stuff catching my attention:
 * mbr
 * mr (not related)
 * caspar ( see [this](http://www.hoppie.nl/pub/node/79))
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9657495873329253";
-/* 728x90, created 1/5/08 */
-google_ad_slot = "9737089361";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
 
 Probably going to stick with csync2, maybe? Actually I'm liking the idea of
 simply using git more and more. There are actually plenty of folks doing this,

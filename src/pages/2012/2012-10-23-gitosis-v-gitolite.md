@@ -4,18 +4,6 @@ date: 2012-10-23
 tags: git
 author: Albert
 ---
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9657495873329253";
-/* 728x90, created 1/5/08 */
-google_ad_slot = "9737089361";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
 Gitolite is newer, and offers more granular control, but it spreads the security
 measures beyond SSH's regularly peer-tested capacities. Let me explain:
 

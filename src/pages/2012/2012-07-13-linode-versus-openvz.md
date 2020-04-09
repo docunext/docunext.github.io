@@ -4,18 +4,6 @@ date: 2012-07-13
 tags: hosting,linode,lxc,openvz
 author: Albert
 ---
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9657495873329253";
-/* 728x90, created 1/5/08 */
-google_ad_slot = "9737089361";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
 I run two linodes and both run custom kernels a la pv\_grub, enabling me to run
 openvz containers in them (I know, how cool is that!!?!?).
 
