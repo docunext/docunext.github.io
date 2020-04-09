@@ -21,7 +21,7 @@ export default () => (
         <div>
             <span>Yearly Indexes: </span>
             {data.allDirectory.edges.filter(edge => {
-                return edge.node.relativePath.includes('20')
+                return edge.node.relativePath.match(/\/20..$/)
             }).map(({ node }) => (
               
               <span
@@ -29,7 +29,7 @@ export default () => (
                 <Link
                   to={node.relativePath.split('/')[1]}
                   css={css`
-                    
+                    padding: 0 2px;
                     text-decoration: none;
                     color: inherit;
                   `
