@@ -49,7 +49,7 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 25) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 50) {
       totalCount
       edges {
         node {
