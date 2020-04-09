@@ -2,12 +2,10 @@
 title: fail2ban iptable.conf action
 comments:
   - author: admin
-    email: albert.lash@savonix.com
     date: 12/13/2006 07:35:22 AM
     text: >
       I also want to mention that on both gentoo and debian the init scripts don't seem to work that well. I have much better luck with the commands:<br/><br/>fail2ban-client stop<br/>fail2ban-client start
   - author: Albert
-    email: albert.lash@savonix.com
     date: 11/27/2007 04:10:03 PM
     text: >
       As of more recent versions, the init scripts on both debian and gentoo are working much better.

@@ -2,12 +2,10 @@
 title: Fail2ban for SPAM
 comments:
   - author: admin
-    email: albert.lash@savonix.com
     date: 11/21/2006 02:51:39 AM
     text: >
       This is actually a very useful setup. Its incredible how relentless spammers are, they just keep trying to send spam even if they get denied. Its nice to just drop their efforts instead of continuously informing them that their mail will not be sent. Saves the dnsbls a little bandwidth too!
   - author: admin
-    email: albert.lash@savonix.com
     date: 11/20/2007 04:46:46 PM
     text: >
       I'm reconsidering this method of fighting spammers, wary of the load that log monitoring and scanning requires.

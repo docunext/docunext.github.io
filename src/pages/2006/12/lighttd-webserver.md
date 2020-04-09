@@ -38,5 +38,5 @@ mkdir /var/tmp/lighttpd/cache/compress/
 chown -R www-data /var/tmp/lighttpd
 </pre>
 
-That rocks that the compression is cached, saves a good amount of processing power I'm sure. I actually implemented something similar for the <a href="http://www.docunext.com/blog/2006/12/wordpress-cache-plugin.html">Wordpress cache plugin</a> I made, which uses PEAR's Cache_Lite.
+That rocks that the compression is cached, saves a good amount of processing power I'm sure. I actually implemented something similar for the <a href="http://www.docunext.com/2006/12/wordpress-cache-plugin.html">Wordpress cache plugin</a> I made, which uses PEAR's Cache_Lite.
 
