@@ -3,21 +3,16 @@ title: Fielding s REST Dissertation
 comments:
   - author: Blake
     email: dournaee@gmail.com
-    ip: 64.139.2.181
-    url:
     date: 07/02/2007 02:15:57 PM
     text: >
       Hey dude, Fielding's Dissertation was in Computer Science (it says so right on the dissertation itself). All Ph.D's are "Doctor of Philosophy" in X.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/02/2007 02:18:37 PM
     text: >
       Thanks for clearing that up Blake. Just checked, you are right.
   - author: Mutuelle
     email: elodycompareo@hotmail.fr
-    ip: 196.192.82.120
     url: http://mutuelle.compareo.net
     date: 08/09/2010 04:10:03 AM
     text: >

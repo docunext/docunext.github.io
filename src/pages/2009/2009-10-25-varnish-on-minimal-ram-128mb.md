@@ -3,8 +3,6 @@ title: Varnish on Minimal RAM 128MB
 comments:
   - author: Find PDF eBook
     email: findpdf@yahoo.com
-    ip: 125.164.193.222
-    url:
     date: 01/28/2011 02:02:08 AM
     text: >
       i guess that you are using openvz..<br/><br/>in openvz environment, varnish can eat all of your RAM. so, i created a simple cron shell to restart the varnish after it reach amount of memory.<br/><br/>vmem=$(ps aux | grep varnish | grep nobody | awk '{print $6}')<br/><br/>if [ $vmem -ge 10000 ] ; then<br/>	/etc/init.d/varnish restart<br/>	logger -s "varnish memory $vmem"<br/>fi<br/><br/>echo "varnish current memory $vmem KB"

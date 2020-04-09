@@ -3,15 +3,11 @@ title: pf Limits and Explanation of pfSense Advanced Firewall Rule Options
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 08/20/2009 06:44:49 PM
     text: >
       ACK! My initial settings were horrendously bad. I've removed the timeouts as that was not a good idea. I'm planning another follow-up post to this very soon.<br/><br/>In related news, I was very surprised to learn that Heroku put NGINX in-front of Varnish. Interesting, very interesting.
   - author: Cedric
     email: djnicofun@hotmail.com
-    ip: 93.9.244.96
-    url:
     date: 01/12/2010 06:12:36 PM
     text: >
       Hi,<br/><br/>Are find a perfect configuration to limit http request ?<br/><br/>Best regard.

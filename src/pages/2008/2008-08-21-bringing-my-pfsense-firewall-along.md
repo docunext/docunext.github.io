@@ -3,15 +3,11 @@ title: Bringing my pfSense Firewall Along
 comments:
   - author: luis
     email: cs@m5it.com
-    ip: 192.168.134.22
-    url:
     date: 01/31/2009 06:24:31 PM
     text: >
       Hello, I been looking in to the same kind of solution for some time. DO you happen to have any idea of the throughput the board can achieve. Thank you.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.134.22
-    url:
     date: 03/08/2009 02:48:08 PM
     text: >
       The alix with pfsense can now use the glxsb.ko module which supports hardware accelerated aes-128 encryption, so throughput is fantastic for the price of the device.<br/><br/>See <a href="http://www.docunext.com/blog/2009/02/13/freebsd-glxsb/" rel="nofollow">http://www.docunext.com/blog/2009/02/13/freebsd-glxsb/</a> for more information about this.

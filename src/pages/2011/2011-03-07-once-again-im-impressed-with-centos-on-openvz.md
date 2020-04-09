@@ -3,15 +3,11 @@ title: Once Again I m Impressed with CentOS on OpenVZ
 comments:
   - author: Boris
     email: boris.simkovich@light-kr.com
-    ip: 72.165.39.106
-    url:
     date: 04/20/2011 05:15:52 PM
     text: >
       I think I saw somewhere else that you play around with Varnish sometimes.  Did you ever try to install Varnish on the Centos OpenVZ partition?  And, if so, did you have any success?<br/><br/>My colleagues have been trying to get Varnish to work on an OpenVZ Centos partition, and it doesn't seem to work.  We tried a stack setting fix that was mentioned somewhere else on the Internet by someone working with Varnish on a Debian OpenVZ VPS, but the fix didn't help.  So I'm curious if you had any luck.<br/><br/>Thanks!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.215
-    url:
     date: 04/23/2011 10:33:25 AM
     text: >
       Hi Boris, thanks for commenting. I do use varnish extensively, but haven't ever on CentOS. I'm not even sure if its available by the standard YUM repos or via EPEL.<br/><br/>Nor actually have I used it within a container, and I'm not sure I'd want to, but maybe a virtual machine - like Xen or VMWare. Varnish does a terrific job of taking advantage of modern kernel capabilities, so I'd want it to be as close to a kernel as possible.<br/><br/>Good luck! Please let me know if you figure it out!

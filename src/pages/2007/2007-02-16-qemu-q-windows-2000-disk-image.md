@@ -3,15 +3,11 @@ title: QEMU Q Windows 2000 Disk Image
 comments:
   - author: Frank Furter
     email: frank@furter.org
-    ip: 192.168.8.200
-    url:
     date: 08/18/2008 05:32:19 PM
     text: >
       Cheeser Muffin!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.91
-    url:
     date: 08/18/2008 09:53:28 PM
     text: >
       What's up Mr. Furter?

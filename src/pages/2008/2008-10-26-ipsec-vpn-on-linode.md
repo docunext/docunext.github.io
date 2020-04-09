@@ -3,15 +3,11 @@ title: IPSec VPN on Linode
 comments:
   - author: Zac
     email: zac@z4c.us
-    ip: 131.107.0.115
-    url:
     date: 06/24/2011 03:43:07 PM
     text: >
       I'd be interested in a write-up on how you did this. I'm primarily interested in setting up IPSec on Linode so that I can force any iOS devices I own to use IPSec while I'm on any sort of public network. Any guidance would be appreciated!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.238.165
-    url:
     date: 06/24/2011 09:07:52 PM
     text: >
       Hi Zac, thanks for commenting. I actually don't use IPSec with Linode anymore. These days I'm using OpenVPN. Is there an OpenVPN client for iOS? I have to imagine there is one...

@@ -3,7 +3,6 @@ title: Linode Review
 comments:
   - author: Thomas Asaro
     email: tasaro@linode.com
-    ip: 68.80.172.246
     url: http://www.linode.com/
     date: 04/08/2009 09:24:21 AM
     text: >

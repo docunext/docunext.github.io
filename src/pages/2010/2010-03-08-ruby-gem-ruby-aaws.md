@@ -3,36 +3,28 @@ title: Ruby Gem ruby aaws
 comments:
   - author: Ian Macdonald
     email: ian@caliban.org
-    ip: 82.95.182.243
     url: http://caliban.org/
     date: 03/19/2010 06:34:42 AM
     text: >
       People who install the gem often overlook the introductory README file. I should probably move all of the information out of there and into the library itself, so that RDoc documentation gets generated for it.<br/><br/>I'm not sure why you have cache problems with UTF-8. What's the error you're getting?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 03/19/2010 08:05:38 AM
     text: >
       Hi Ian! Good idea. I had no idea that the Gem even includes examples, too. I'll test out the cache again and see what the error is. Its odd because the cache file was in good shape when I would open it manually.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 03/22/2010 10:26:58 AM
     text: >
       Hi Again Ian,<br/><br/>This is what I've found out:<br/><br/><pre><br/>missing attribute quote<br/>Line: 1<br/>Position: 1739<br/>Last 80 unconsumed characters:<br/>&lt;ItemSearchResponse xmlns=\"http://webservices.amazon.com/AWSECommerceService/200<br/>Line: 1<br/>Position: 1739<br/>Last 80 unconsumed characters:<br/>&lt;ItemSearchResponse xmlns=\"http://webservices.amazon.com/AWSECommerceService/200<br/>	/usr/lib/ruby/1.9.1/rexml/parsers/treeparser.rb:95:in `rescue in parse'<br/></pre><br/><br/>Looks like Rexml (or whatever is reading the cache file) is escaping the attribute quotes for some reason. The cached file does not have the attribute quotes escaped.
   - author: AJ ONeal
     email: coolaj86@gmail.com
-    ip: 76.8.213.6
     url: http://coolaj86.info
     date: 04/26/2010 11:44:41 PM
     text: >
       It is a problem with ruby-aaws, here's the snippet in amazon/aws.rb that fixes the issue:<br/><br/>      # Retrieve the cached response associated with _url_.<br/>      #<br/>      def fetch(url)<br/>          digest = Digest::MD5.hexdigest( url )<br/>          cache_file = File.join( @path, digest )<br/><br/>          return nil unless File.exist? cache_file<br/><br/>          Amazon.dprintf( 'Fetching %s from cache...', digest )<br/>          File.open( cache_file ).readlines.join().to_s<br/>      end<br/><br/>before it had<br/>          File.open( File.join(cache_file) ).readlines.to_s
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 04/27/2010 01:52:38 AM
     text: >
       Thanks for commenting AJ! I'm caching the resulting page, which seems to work OK.<br/><br/>Also, I recently starting using flix4r (Netflix API for ruby) and it uses the api_cache gem. I haven't scoped it out too much but I like the idea.

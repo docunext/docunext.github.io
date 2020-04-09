@@ -3,8 +3,6 @@ title: The people who live on Planet Debian
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 04/14/2008 06:08:58 PM
     text: >
       I can't believe I didn't find this site earlier! I subscribed to the email list for awhile, but I prefer web sites:<br/><br/><a href="http://mentors.debian.net/cgi-bin/welcome" rel="nofollow">http://mentors.debian.net/cgi-bin/welcome</a>

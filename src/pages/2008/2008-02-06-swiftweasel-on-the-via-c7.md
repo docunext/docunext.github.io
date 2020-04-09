@@ -3,22 +3,16 @@ title: Swiftweasel on the Via C7
 comments:
   - author: saulo
     email: aldighieri@gmail.com
-    ip: 201.82.134.151
-    url:
     date: 06/09/2008 11:22:36 PM
     text: >
       could you please explain these values:<br/><br/>dpkg-buildpackage -b -uc -ai386 -ti686-linux-gnu<br/><br/>why -ai386 and then -ti686-linux-gnu? there is any parameter to compile C7 insted i686?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 06/10/2008 10:47:23 AM
     text: >
       Hi Saulo, there are no c7-specific gcc optimizations that I know of, but the c7 should be able to take advantage of the same optimizations made for the prescott intel chip.<br/><br/>IIRC - I chose -ai386 -ti686-linux-gnu because that's what dpkg-buildpackage supports. If I were compiling it manually, I'd set mcpu or march (I forget which is deprecated) to prescott.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 06/10/2008 10:48:05 AM
     text: >
       Which C7 are you running? C7-D or C7-M?

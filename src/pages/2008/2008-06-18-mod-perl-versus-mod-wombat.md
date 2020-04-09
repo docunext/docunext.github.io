@@ -3,22 +3,17 @@ title: mod perl versus mod wombat
 comments:
   - author: Brian McCallister
     email: brianm@skife.org
-    ip: 208.82.18.93
     url: http://blog.skife.org/
     date: 06/19/2008 07:24:05 PM
     text: >
       mod_perl chews up more memory per thread than I expected, as was pointed out to me during the preso.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 06/19/2008 11:35:28 PM
     text: >
       Hi Brian, Thanks for the follow-up. I've been noticing that too - it does like memory.<br/><br/>I'm definitely interested in trying out mod_lua. Its described as a very light and fast programming language. NICE!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 06/19/2008 11:37:42 PM
     text: >
       Errr - mod_wombat!

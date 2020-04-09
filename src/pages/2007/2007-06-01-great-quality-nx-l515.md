@@ -3,8 +3,6 @@ title: Great Quality NX L515
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/11/2007 09:55:28 AM
     text: >
       Actually suspend is when the computer puts the state into ram, and hibernate is when it stores it on the hard drive.

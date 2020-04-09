@@ -3,8 +3,6 @@ title: Home Folder Data Storage
 comments:
   - author: veera
     email: veerapower@yahoo.com
-    ip: 143.166.255.66
-    url:
     date: 02/19/2010 03:39:38 AM
     text: >
       hi i'm veera

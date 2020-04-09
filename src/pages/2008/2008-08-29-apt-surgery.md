@@ -3,15 +3,12 @@ title: Its a Delicate Process but Sometimes Necessary Apt Surgery on Debian GNU 
 comments:
   - author: exco
     email: docunext.com@excogitation.de
-    ip: 192.168.8.200
     url: http://www.excogitation.de
     date: 10/06/2008 10:56:32 AM
     text: >
       After 2 days of fiddling around with libc6<br/>I found your Apt Surgery and ... what do you know - I also had "Triggers-Awaited: man-db".<br/><br/>Your solution also worked for me. Thanks.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.200
-    url:
     date: 10/06/2008 11:01:25 AM
     text: >
       Hi exco, thanks for commenting! I'm glad I was able to help. :-)

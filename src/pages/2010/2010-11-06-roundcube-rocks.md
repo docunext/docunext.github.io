@@ -3,8 +3,6 @@ title: RoundCube Rocks
 comments:
   - author: Serge
     email: sstepanov@gmail.com
-    ip: 69.108.217.95
-    url:
     date: 03/30/2011 12:46:01 PM
     text: >
       Been using it for a while on my mail server.  And yes, it does rock! The first versions (while it was in beta) were not terribly impressive, but the current rendition is amazing.<br/><br/>As a matter of fact, I had to write a blog post to praise it!<br/><br/><a href="http://sergestepanov.com/post/4210880994/roundcube-mail" rel="nofollow">http://sergestepanov.com/post/4210880994/roundcube-mail</a>

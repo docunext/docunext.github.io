@@ -3,22 +3,16 @@ title: Debian Squeeze Networking and Sysv rc
 comments:
   - author: Greg Armer
     email: greg@codelounge.org
-    ip: 71.196.4.151
-    url:
     date: 02/09/2011 11:37:09 AM
     text: >
       I had the exact same problem. The solution for me was to install 'ifupdown' which somehow got removed. These utilities are used by /etc/init.d/networking to bring up the interfaces.
   - author: Admin
     email: albert.lash@savonix.com
-    ip: 96.255.52.15
-    url:
     date: 02/10/2011 10:07:01 AM
     text: >
       Thanks for sharing, Greg. I'll try that and see what happens.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 97.23.219.38
-    url:
     date: 04/11/2011 12:01:51 AM
     text: >
       Greg, you were totally correct. I installed ifupdown and everything is copacetic. Thank you!

@@ -3,21 +3,16 @@ title: mod gnutls
 comments:
   - author: Remy
     email: remy@boltblue.com
-    ip: 82.229.14.85
-    url:
     date: 05/11/2008 02:25:33 PM
     text: >
       Hi Albert,<br/><br/>Thanks for sharing the info. I'm curious to know how the mod_gnutls is doing in a poduction environment. Have your users reported any untoward behavour? and have you had any downtime?<br/>Would really appreciate your experiences.<br/><br/>Thanks again.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/12/2008 06:35:16 PM
     text: >
       Hi Remy, I'm only using it in a staging environment at the moment, but the version I'm using (.5 I think) is going great. There are still lots of warnings in the Apache logs, but I don't notice any performance or stability issues.<br/><br/>Now that I think about it, the log errors could be due to Nagios checking it but not fully completing the handshake... something similar happens with postfix tls.<br/><br/>I probably won't use it in production until lenny is released.
   - author: vjt
     email: vjt@openssl.it
-    ip: 80.67.117.6
     url: http://sindro.me/
     date: 06/11/2009 08:00:43 AM
     text: >

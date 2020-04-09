@@ -3,29 +3,21 @@ title: A Problem with the Rails 3.1 Asset Pipeline...
 comments:
   - author: Andrew Ferk
     email: andrewferk@gmail.com
-    ip: 63.164.138.254
-    url:
     date: 10/12/2011 01:00:31 PM
     text: >
       I still find there to be an issue.<br/><br/>I have resources :assets in my routes, and when I run rake routes it does not include assets! I also get the routing error when I try to use my application.<br/><br/>I currently do no have a fix. Maybe rename my resource or put it into a namespace. Damn :(.
   - author: John Manuel
     email: bitencode@johnmanuel.org
-    ip: 72.11.89.238
-    url:
     date: 10/14/2011 11:48:49 AM
     text: >
       Yes, unfortunately this *still* broken in Rails 3.1.1 and as near as I can tell from digging through patches, pull-requests and fixes this one has still been missed totally and is not fixed.<br/><br/>I just did some testing on the newest release of Rails and you can't have a route that starts with "/assets" at all - even "/assetszyzzy" or "/assets_info".  The rake routes task is still hiding (rejecting) any route that begins with "assets" and is not using the value from config.assets.prefix like the sprokets helpers are doing now.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.218
-    url:
     date: 10/14/2011 02:36:38 PM
     text: >
       Argh, that's too bad. Although they are related, that problem is different than the one I was talking about. It sounds like the situation flipped - previously config.assets.prefix would avoid a controller catching /assets requests, but the helpers weren't using config.assets.prefix.<br/><br/>From what you've described, the helpers are using config.assets.prefix, but the default routes are still getting generated. I'll take a look and try to figure out what's happened.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.218
-    url:
     date: 10/14/2011 04:20:54 PM
     text: >
       John, it seems to work for me. Check out this new post.<br/>

@@ -3,15 +3,11 @@ title: Rails 3 ActiveRecord Email Validation validates format of
 comments:
   - author: Chmarusso
     email: chmarusso@gmail.com
-    ip: 207.192.71.184
-    url:
     date: 03/30/2012 12:29:49 PM
     text: >
       At Rails3 example you've missed close paren. Anyway, works great. Thanks!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 207.192.71.184
-    url:
     date: 04/01/2012 02:32:47 PM
     text: >
       Thanks Chmarusso!

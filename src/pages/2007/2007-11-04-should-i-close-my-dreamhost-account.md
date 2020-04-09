@@ -3,21 +3,17 @@ title: Should I close my Dreamhost account
 comments:
   - author: Sad M
     email: guclutolga@hotmail.com
-    ip: 85.103.138.114
-    url:
     date: 01/10/2008 06:33:50 AM
     text: >
       Dont buy dreamhost<br/>they are liar<br/>if anybody want to close account , they want 9.95$ for free domain<br/>where is free? 9.95 is not free , they dont close my account until take 9.95$
   - author: Geekhut
     email: greg.meloche@gmail.com
-    ip: 192.168.8.2
     url: http://geekhut.org
     date: 08/22/2008 02:21:07 AM
     text: >
       "they are liar"... Indeed.<br/><br/>Dreamhost is a wonderful SHARED hosting provider - the key is SHARED.  You'd have to be bonkers to think hosting any kind of mission-critical application on a shared host is a good idea.<br/><br/>I have sent many clients to Dreamhost to get their feet wet in the internet biz and they absolutely love it.  It is perfect for blogging or learning about the web - Customer support is usually pretty quick to respond to issues and they are all around great dudes.  The point is that when you buy a Ford Tempo, you know you are getting a bad car - but it gets you where you gotta go and occasionally breaks down.<br/><br/>I really would like to see what kind of production apps you are running that Dreamhost can't handle, I do find it hard to believe.<br/><br/>Anyway, in conclusion - Dreamhost is pretty much the best of the worst, they have their good and bad points as any shared host does - at least this Tempo has shell privs...
   - author: p@r@noid
     email: denharsh@gmail.com
-    ip: 127.0.0.1
     url: http://www.shoutmeloud.com
     date: 01/06/2009 11:22:59 PM
     text: >

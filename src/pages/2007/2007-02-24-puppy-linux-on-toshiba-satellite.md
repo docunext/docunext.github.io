@@ -3,8 +3,6 @@ title: Puppy Linux on Toshiba Satellite
 comments:
   - author: Keith
     email: keithmary1@gmail.com
-    ip: 72.73.247.150
-    url:
     date: 02/29/2008 06:39:05 PM
     text: >
       Hello, I have installed VectorLinux 5.9 on a Satellite 2805-201. I have been getting help at thier forum on the install and things are going fine except one thing. Do you know how to get the scroll buttons on this machine to work with this OS? The buttons I am referring to are the two small buttons above the two larger ones. Thank you, Keith

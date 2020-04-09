@@ -3,22 +3,16 @@ title: PHP Fatal error Call to undefined function sqgetGlobalVar in usr share sq
 comments:
   - author: james@drwotson.co.uk
     email: james@drwotson.co.uk
-    ip: 195.50.96.14
-    url:
     date: 08/12/2010 01:14:29 PM
     text: >
       I am having this exact issue, can you please tell me where i add your code to fix this issue ?<br/><br/>Thanks!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.96.186.74
-    url:
     date: 08/12/2010 01:36:31 PM
     text: >
       Hi Scott, on my debian machine the courier_vacation options file is:<br/><br/>/usr/share/squirrelmail/plugins/courier_vacation/options.php<br/><br/>Hope that helps! Good luck!
   - author: Sa.W
     email: epsilon@unixos.eu
-    ip: 87.172.48.31
-    url:
     date: 08/22/2010 02:15:54 PM
     text: >
       Hi Scott,<br/><br/>works very well. Please annotate that the user hast to modify<br/><pre><br/>      ...<br/>      include_once ('../src/validate.php');<br/>      ...<br/>      include_once ('../src/load_prefs.php');<br/></pre><br/>to<br/><pre><br/>      ...<br/>      include_once ('../include/validate.php');<br/>      ...<br/>      include_once ('../include/load_prefs.php');<br/></pre><br/><br/>Thank you!

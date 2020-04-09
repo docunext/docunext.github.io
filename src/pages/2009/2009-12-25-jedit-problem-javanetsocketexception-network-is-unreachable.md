@@ -3,15 +3,11 @@ title: jEdit Problem java.net.socketexception network is unreachable
 comments:
   - author: Marcello Messori
     email: m.messori@re-lab.it
-    ip: 155.185.248.29
-    url:
     date: 01/20/2010 08:37:04 AM
     text: >
       That was the problem! Thanks
   - author: Tom
     email: tpower21@gmail.com
-    ip: 207.192.71.184
-    url:
     date: 05/04/2012 04:10:16 AM
     text: >
       Ta!

@@ -3,22 +3,17 @@ title: Tortoise SVN
 comments:
   - author: Zeth
     email: warrior@commandline.org.uk
-    ip: 82.36.234.82
     url: http://commandline.org.uk/
     date: 01/11/2008 10:30:08 PM
     text: >
       Hello, is it possible for you to put the whole post in the RSS feed? I read the blogs via an RSS Reader (Straw), and I often leave the house, my RSS reader downloads all the blogs in the morning and I might not have the network after that.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 01/11/2008 11:54:04 PM
     text: >
       For you Zeth - absolutely. Just updated it.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 01/11/2008 11:56:46 PM
     text: >
       Max - as I explained today, the checkout / commit isn't exactly like Dreamweaver's PUT command, but they are similar enough to make the comparison. When you commit new changes via subversion, they don't go to a live site like with dreamweaver, they go to the repository, which can't be run directly. I then check them out onto another server to run  the application, run the test, or serve the page.

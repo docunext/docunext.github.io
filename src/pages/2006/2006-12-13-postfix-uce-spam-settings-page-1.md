@@ -3,8 +3,6 @@ title: Unsolicited Commercial Email UCE Spam Defenses
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/23/2007 02:32:24 AM
     text: >
       This is a good page on Postfig configuration:<br/><br/><a href="http://www.pantz.org/email/postfix/postfixconfigfiles.shtml" rel="nofollow">http://www.pantz.org/email/postfix/postfixconfigfiles.shtml</a><br/><br/>and this looks cool too:<br/><a href="http://k2net.hakuba.jp/targrey/index.en.html" rel="nofollow">http://k2net.hakuba.jp/targrey/index.en.html</a>

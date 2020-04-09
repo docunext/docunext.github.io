@@ -3,8 +3,6 @@ title: Farewell I m Putting My White Plastic Macbook to Rest in Pieces
 comments:
   - author: mich
     email: rileys_daddy@hotmail.com
-    ip: 74.56.4.65
-    url:
     date: 01/20/2010 03:08:24 PM
     text: >
       i could use ur cable tht connects the entire<br/>keyboard and mouse and power button to the motherboard. plz email if u cn help, thnx alot

@@ -3,8 +3,6 @@ title: Linux for Beginners
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/12/2007 09:55:53 AM
     text: >
       Check this out:<br/><br/><a href="http://www.freesoftwaremagazine.com/articles/beginner_intro_cli_part_2" rel="nofollow">http://www.freesoftwaremagazine.com/articles/beginner_intro_cli_part_2</a>

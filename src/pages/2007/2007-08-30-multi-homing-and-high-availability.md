@@ -3,8 +3,6 @@ title: Multi homing and high availability
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 70.195.35.208
-    url:
     date: 09/01/2007 01:46:19 PM
     text: >
       test

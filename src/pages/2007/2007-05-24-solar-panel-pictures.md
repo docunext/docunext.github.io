@@ -3,15 +3,11 @@ title: Solar Panel Pictures
 comments:
   - author: rae
     email: rachel.furst@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 05/25/2007 02:09:43 PM
     text: >
       That is wicked cool. Where did you get it? What are you going to do with it?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 05/29/2007 12:14:11 PM
     text: >
       I'm building a <a href="http://www.docunext.com/blog/2007/05/solar-powered-slug.html" rel="nofollow">Solar Powered Slug</a>!

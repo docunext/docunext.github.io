@@ -3,15 +3,12 @@ title: The NGINX Web Server XSL Module Works Wonders
 comments:
   - author: kjetil
     email: kjetil.midtlie@gmail.com
-    ip: 81.167.79.153
     url: http://docstream.no
     date: 04/17/2010 02:58:33 AM
     text: >
       Witch XSLT impl is being used?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 04/18/2010 08:43:22 PM
     text: >
       I'm pretty sure its libxslt.

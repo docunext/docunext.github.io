@@ -3,15 +3,11 @@ title: Another ejabberd attempt
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/17/2007 05:51:46 PM
     text: >
       Trying again.... I think these are the problems:<br/><pre> 2493 ?        00:00:00 ssl_esock<br/> 2495 ?        00:00:00 inet_gethost</pre>
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/17/2007 06:36:40 PM
     text: >
       I changed my apt sources to use unstable instead of etch and the issue went away. :-)

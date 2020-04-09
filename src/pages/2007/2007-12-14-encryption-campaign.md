@@ -3,8 +3,6 @@ title: Encryption Campaign
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.224.45.140
-    url:
     date: 12/24/2007 02:18:56 PM
     text: >
       I just tried posting this to Zeth, but Akismet blocked me:<br/><br/>I bring my laptop to work, even though I use a desktop there. :-) I do plan on encrypting my home though, but I might be running out of time to do so by tomorrow!

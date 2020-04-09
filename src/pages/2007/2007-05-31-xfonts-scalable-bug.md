@@ -3,22 +3,16 @@ title: xfonts scalable bug
 comments:
   - author: charlie
     email: yujianfei2@gmail.com
-    ip: 192.11.236.114
-    url:
     date: 06/16/2007 02:29:55 AM
     text: >
       I had exactly same problem when upgrading from 6.10 to 7.0.4.<br/><br/>I tried to twist the /var/lib/dpkg/xfonts-scalable.preinst, postinst...<br/><br/>The problem seems to be the update-fonts-dir does not support -x11layout, may not be accurate, but something like that...<br/><br/>Not be able to resolved it right now... and ever worse, I can not have my X working right now....<br/><br/>looking forward to a fix...
   - author: Mate LABADI
     email: labadimate@freemail.hu
-    ip: 160.114.81.21
-    url:
     date: 07/26/2007 05:27:07 AM
     text: >
       I had the same problem, while upgrading from edgy to feisty.<br/>Then I upgraded xfonts-utils first (it contains update-fonts-dir).<br/>This new update-fonts-dir accepts the -x11layout option.<br/><br/>Cheers,<br/>Mate
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/26/2007 08:37:12 AM
     text: >
       Thanks for that tip Mate - totally appreciate it. I actually nuked my machine that was giving me those issues and now use it as a LTSP client, but its good to know. Hopefully your tip will help charlie above.<br/><br/>Instead of xubuntu, I'm now using debian with fluxbox, even lighter and simpler than xubuntu. A little harder to setup but not by much.<br/><br/><a href="http://www.docunext.com/blog/2007/07/minideb.html" rel="nofollow">http://www.docunext.com/blog/2007/07/minideb.html</a>

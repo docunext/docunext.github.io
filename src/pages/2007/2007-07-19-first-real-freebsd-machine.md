@@ -3,15 +3,11 @@ title: First Real FreeBSD Machine
 comments:
   - author: Rob
     email: rbyrnes@gmail.com
-    ip: 203.194.27.78
-    url:
     date: 07/23/2007 08:44:00 PM
     text: >
       WOL is a known issue on FreeBSD ... see <a href="http://www.freebsd.org/news/status/report-2007-04-2007-06.html#FreeBSD-and-Wake-On-Lan" rel="nofollow">http://www.freebsd.org/news/status/report-2007-04-2007-06.html#FreeBSD-and-Wake-On-Lan</a>
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/26/2007 12:42:28 PM
     text: >
       Hi Rob, yeah I found that too - I tried the patch but still couldn't get it to work. I contacted the author who was helpful, but I didn't know enough about FreeBSD and device drivers to help. I'm just using the hardware reboot now.

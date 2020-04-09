@@ -3,15 +3,12 @@ title: URL Rewriting and Routing with XSL
 comments:
   - author: Jose E.
     email: tank6b@gmail.com
-    ip: 127.0.0.1
     url: http://nlapse.com
     date: 11/07/2008 08:22:29 AM
     text: >
       Can you explain how to do it with Nexista?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 11/19/2008 01:44:25 AM
     text: >
       I've finally got an example setup with Nexista - check out phunkybb.

@@ -3,15 +3,11 @@ title: Learning CSS
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/07/2007 04:58:21 PM
     text: >
       Good work, Max. CSS is pretty straightforward, but it can do so much as well. Once you get the idea down, I'll show you how to apply CSS to classes and specific div tags.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/08/2007 11:53:34 PM
     text: >
       Also remind me to show you how to use an external CSS file.

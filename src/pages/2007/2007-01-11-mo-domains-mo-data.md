@@ -3,7 +3,6 @@ title: Mo domains mo data
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 71.162.104.37
     url: http://www.docunext.com/
     date: 01/11/2007 06:13:51 PM
     text: >

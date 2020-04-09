@@ -3,15 +3,11 @@ title: Awesomewm Sticky Windows Solved
 comments:
   - author: i5513
     email: javibarroso@gmail.com
-    ip: 89.140.6.2
-    url:
     date: 09/10/2009 10:46:50 AM
     text: >
       Now it is: c.ontop = true<br/><br/>But it seems like doesn't work with ekiga :(
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 09/23/2009 03:36:53 PM
     text: >
       Actually, sticky and ontop are different. Sticky will keep a window visible on all tags, while ontop will keep it the foremost window within one tag.<br/><br/>I'm using ontop for my gimp toolbox. :-)

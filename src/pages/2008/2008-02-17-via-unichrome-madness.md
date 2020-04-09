@@ -3,8 +3,6 @@ title: VIA Unichrome Madness
 comments:
   - author: Sean Whitney
     email: sean.whitney@gmail.com
-    ip: 192.168.8.200
-    url:
     date: 12/02/2008 02:56:00 PM
     text: >
       I finally got the video on my Everex working with Ubuntu 8.10 with this webpage.<br/><br/><a href="https://help.ubuntu.com/community/OpenChrome" rel="nofollow">https://help.ubuntu.com/community/OpenChrome</a>

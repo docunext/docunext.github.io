@@ -3,8 +3,6 @@ title: NGINX Ports Includes Passenger Option
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 09/04/2009 09:38:48 PM
     text: >
       Haven't been able to get this working yet. I'm not sure if the build worked properly. I thought I might need to install passenger separately, but that seemed to try and install <a href="http://www.docunext.com/wiki/Apache">Apache</a>.

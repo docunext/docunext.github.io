@@ -3,7 +3,6 @@ title: Reducing Heat
 comments:
   - author: Russell Coker
     email: russell@coker.com.au
-    ip: 220.237.159.196
     url: http://etbe.coker.com.au/
     date: 04/15/2008 12:45:08 AM
     text: >

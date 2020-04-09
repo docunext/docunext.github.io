@@ -3,8 +3,6 @@ title: Rspec Rails 3 and AuthLogic
 comments:
   - author: SSCirrus
     email: sscirrus@gmail.com
-    ip: 72.196.251.60
-    url:
     date: 08/27/2011 03:21:50 AM
     text: >
       Thank you so much!! There are lots of articles out there about rspec/Authlogic but this is exactly what I've been looking for.

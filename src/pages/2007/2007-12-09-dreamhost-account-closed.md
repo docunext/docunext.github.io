@@ -3,8 +3,6 @@ title: Dreamhost Account Closed
 comments:
   - author: sahITH
     email: sahithp@gmail.com
-    ip: 127.0.0.1
-    url:
     date: 06/19/2008 03:30:17 AM
     text: >
       Hi, iam sahith.<br/><br/>Friends if u r in dreamhost get out of there,they are blood and money suckers,yesterday disabled my account without any warning.And they are not so best.,their server always down.<br/><br/>If you are in dreamhost,,get out of there and choose another best host.

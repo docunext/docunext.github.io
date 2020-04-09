@@ -3,7 +3,6 @@ title: Catalyst with XSLT
 comments:
   - author: Richard Lewis
     email:
-    ip: 207.192.71.184
     url: http://www.richardlewis.me.uk/
     date: 07/17/2012 07:20:48 AM
     text: >

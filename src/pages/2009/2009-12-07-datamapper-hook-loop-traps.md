@@ -3,15 +3,11 @@ title: DataMapper Hook Loop Traps
 comments:
   - author: namelessjon
     email: jonathan.stott@gmail.com
-    ip: 62.49.1.168
-    url:
     date: 12/07/2009 06:15:35 PM
     text: >
       If you're redefining `save` you will probably want to make it<br/><br/>def save(context = :default)<br/><br/>Where  context is the validation context of the resource, which is usually :default, but might be others.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 12/07/2009 06:19:42 PM
     text: >
       Thanks namelessjon! Datamapper is really amazing - I  saw your other comment and will definitely update my version.

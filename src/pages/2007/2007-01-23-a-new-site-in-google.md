@@ -3,7 +3,6 @@ title: A new site in Google
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 72.70.80.110
     url: http://www.docunext.com/
     date: 02/04/2007 11:54:17 PM
     text: >

@@ -3,7 +3,6 @@ title: Nagios Thoughts
 comments:
   - author: Peter Mui
     email: pmui@groundworkopensource.com
-    ip: 67.107.141.2
     url: http://www.groundworkopensource.com
     date: 02/05/2007 01:10:55 PM
     text: >

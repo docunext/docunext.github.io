@@ -3,7 +3,6 @@ title: bbpress themes
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 71.224.45.140
     url: http://www.docunext.com/
     date: 12/23/2006 03:13:38 PM
     text: >

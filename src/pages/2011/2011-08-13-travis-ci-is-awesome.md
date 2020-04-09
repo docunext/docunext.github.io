@@ -3,15 +3,11 @@ title: Travis CI is Awesome
 comments:
   - author: gretch
     email: gapolgretchen@gmail.com
-    ip: 112.202.98.116
-    url:
     date: 09/30/2011 06:33:10 PM
     text: >
       Hi,<br/><br/>I would like to setup Travis CI for my private repos as well. Was it a success?<br/><br/>Thanks
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.218
-    url:
     date: 10/03/2011 08:44:44 PM
     text: >
       Hi gretch, I haven't set it up locally yet...

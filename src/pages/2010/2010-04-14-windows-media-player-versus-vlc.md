@@ -3,21 +3,16 @@ title: Windows Media Player versus VLC
 comments:
   - author: Andrew
     email: acsulli@get-admin.com
-    ip: 155.8.89.2
-    url:
     date: 04/15/2010 08:17:48 AM
     text: >
       <a href="http://mpc-hc.sourceforge.net/" rel="nofollow">Media Player Classic</a>...fantastic player for Windows...can handle a DVD ISO and/or files in a directory, plays nearly any format.<br/><br/>I still prefer VLC most of the time, but it can't do DVDs well.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 04/15/2010 08:21:49 AM
     text: >
       Thanks Andrew! I will check this out. I gave up last night after MPlayer started crashing and ended up attaching my portable DVD player to my television. Worked like a charm but not a convenient option. I'll try Media Player Classic today, looks perfect!
   - author: John Thomas
     email: therandshow@gmail.com
-    ip: 96.248.80.44
     url: http://therandshow.blogspot.com
     date: 04/15/2010 08:28:25 PM
     text: >

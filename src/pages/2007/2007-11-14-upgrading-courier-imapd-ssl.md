@@ -3,15 +3,11 @@ title: Upgrading Courier Imapd ssl
 comments:
   - author: Jiri Barton
     email: jbar@hosting4u.cz
-    ip: 77.179.8.33
-    url:
     date: 02/06/2008 06:02:27 PM
     text: >
       This helped indeed. I upgraded some old machines yesterday and that is what happened. I see your page is kind of old but the advice is still valid - for me. Problem solved!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 02/06/2008 06:21:54 PM
     text: >
       Thanks for commenting! I'm glad it helped. :-)

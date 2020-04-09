@@ -3,15 +3,12 @@ title: pfSense and lan1621
 comments:
   - author: Chris Buechler
     email: cbuechler@gmail.com
-    ip: 74.130.92.110
     url: http://chrisbuechler.com
     date: 02/15/2008 07:55:51 PM
     text: >
       Embedded upgrades work from the console, disabled in the web interface because that way caused problems.<br/><br/>One caveat - there is a known issue that causes multiple binaries to crash right before the system reboots. This isn't an issue on most hardware, it reboots fine regardless. But some hardware hangs during these crashes and never reboots without power cycling. It'll work fine after power cycling.<br/><br/>This will be the case for the lifetime of 1.2. 1.3 will completely change the way the embedded images are built, going back to the same style m0n0wall uses since that should fix all the upgrade issues we've fought forever.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 02/15/2008 11:54:14 PM
     text: >
       Hi Chris! Thanks for the information. I'll try the console upgrade...

@@ -3,7 +3,6 @@ title: No More GoDaddy Coupon Codes
 comments:
   - author: Patrica Southard
     email: rocker823@att.net
-    ip: 127.0.0.1
     url: http://webpromocode.com/coupons/cheap-domains/
     date: 12/14/2008 08:48:01 AM
     text: >

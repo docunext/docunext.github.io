@@ -3,8 +3,6 @@ title: Ubuntu Terminal Problem with NVidia and Xinerama
 comments:
   - author: zeeshan
     email: flash2_mail@yahoo.com
-    ip: 194.47.150.44
-    url:
     date: 02/16/2008 04:33:35 PM
     text: >
       Hi,<br/>can u let me know about the shortcoming or u can say drawbacks of DITrack.

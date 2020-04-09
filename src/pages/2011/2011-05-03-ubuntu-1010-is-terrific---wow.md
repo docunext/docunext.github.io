@@ -3,8 +3,6 @@ title: Ubuntu 10.10 Is Terrific WOW
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 12.156.192.248
-    url:
     date: 05/05/2011 11:58:08 AM
     text: >
       NOTE: I still like Debian better! :-)

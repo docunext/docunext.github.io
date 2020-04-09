@@ -3,8 +3,6 @@ title: Attempting to use Google s Thread Caching Memory Allocator tcmalloc Part 
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 02/11/2008 05:27:02 PM
     text: >
       I'm canceling my plans to compile PHP with links to tcmalloc. While PHP itself is threadsafe, many of its extensions are not, so there isn't much point at this point in time.

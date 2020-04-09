@@ -3,15 +3,11 @@ title: Free and Open Source Software on my Titanium Powerbook
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/21/2008 11:57:07 PM
     text: >
       Rae you gotta make those links active...
   - author: rae
     email: rachel.furst@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 03/28/2008 12:07:45 PM
     text: >
       woops all set now =)

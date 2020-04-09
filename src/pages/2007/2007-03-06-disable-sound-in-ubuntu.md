@@ -3,15 +3,11 @@ title: Disable Sound in Ubuntu
 comments:
   - author: melbert
     email: melbert.baqueriza@gmail.com
-    ip: 203.131.110.30
-    url:
     date: 03/17/2008 01:50:16 AM
     text: >
       i dont know what to do
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 03/17/2008 11:27:10 AM
     text: >
       Hi Melbert, what is it you are trying to do?

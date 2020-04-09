@@ -3,14 +3,12 @@ title: 1and1.com Price Change for Beginner Package
 comments:
   - author: Jason
     email: jason@blarged.com
-    ip: 127.0.0.1
     url: http://www.pawlak.ws
     date: 06/20/2008 03:41:25 PM
     text: >
       Thanks for the post.  Did your transfer go through after the 5-7 days?  I am also attempting to transfer a domain from 1and1 to GoDaddy.  I am at the "Accept transfer at current registrar" stage with GoDaddy.  I think I will give a few days (seeing as the status changed to this today) then maybe next week give 1and1 and question or two if things don't change.
   - author: Jason
     email: jason@blarged.com
-    ip: 127.0.0.1
     url: http://www.pawlak.ws
     date: 06/20/2008 03:42:58 PM
     text: >

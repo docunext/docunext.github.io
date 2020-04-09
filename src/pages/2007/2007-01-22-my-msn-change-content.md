@@ -3,7 +3,6 @@ title: My MSN Change Content
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 72.70.81.28
     url: http://www.docunext.com/
     date: 01/23/2007 12:28:33 PM
     text: >

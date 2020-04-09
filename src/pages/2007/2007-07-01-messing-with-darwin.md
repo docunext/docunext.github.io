@@ -3,15 +3,11 @@ title: Messing with Darwin Kernel Extensions kext
 comments:
   - author: Michael
     email: public@byu.edu
-    ip: 72.8.105.17
-    url:
     date: 07/07/2007 05:49:54 PM
     text: >
       Good luck, I hope you get it to work!<br/><br/>It'll be a great contribution to OSS users and Mac users both (and OSS Mac users :-) )<br/><br/>Thanks,<br/>Michael
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/08/2007 01:44:51 AM
     text: >
       Thanks Michael!

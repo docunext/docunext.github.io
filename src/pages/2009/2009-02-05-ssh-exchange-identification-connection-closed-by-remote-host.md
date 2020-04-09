@@ -3,8 +3,6 @@ title: ssh exchange identification Connection closed by remote host
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.241.16.89
-    url:
     date: 07/23/2010 01:50:38 AM
     text: >
       Turns out that hosts.deny and hosts.allow (tcp wrappers) can cause this as well. The auth.log file looks like this:<br/><br/>warning: /etc/hosts.allow, line 13: can't verify hostname: getaddrinfo(pool-96-xxx-xx-xx.washdc.fios.verizon.net, AF_INET) failed

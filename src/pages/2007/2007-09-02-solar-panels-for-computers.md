@@ -3,15 +3,12 @@ title: Solar Panels for Computers
 comments:
   - author: scruss
     email: scruss@scruss.com
-    ip: 206.248.137.140
     url: http://scruss.com/blog/
     date: 10/28/2007 11:46:50 AM
     text: >
       Yes, you really don't need a charge controller for simple single-panel setups.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 10/28/2007 01:32:44 PM
     text: >
       Hi Scruss, turns out I'm going to need a second solar panel for my solar powered computer, just need to find the extra dough. Thanks for commenting!

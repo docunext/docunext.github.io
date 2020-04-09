@@ -3,15 +3,12 @@ title: Debian versus the Cheeseshop
 comments:
   - author: Andrey Nordin
     email: anrienord@inbox.ru
-    ip: 195.131.172.230
     url: http://abstracthack.wordpress.com/
     date: 01/01/2008 07:39:45 PM
     text: >
       Thanks for the link on debianizing Pylons!<br/><br/>P. S. I'm preparing my example project to try out dpkg and compare it to RPM. I'll be ready to continue our email conversation a little bit later.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 01/01/2008 09:37:42 PM
     text: >
       Cool, take your time. I'll be bugging you about pycoon in the meantime. :-)

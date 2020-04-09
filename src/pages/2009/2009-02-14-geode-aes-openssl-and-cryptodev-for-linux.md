@@ -3,8 +3,6 @@ title: Geode AES OpenSSL and Cryptodev for linux
 comments:
   - author: Pankaj Singh
     email: psingh.ait@gmail.com
-    ip: 172.16.3.231
-    url:
     date: 08/24/2009 06:15:31 AM
     text: >
       Hi,<br/>   I am trying to use this patch on 2.6.26 kernel giving the same error as above. I think CRYPTO_TFM_MODE_ECB macro is not present in crypto.h from 2.6.21. So, I am getting same error even after using Michal's code changes.<br/><br/>Could some buddy help me in this? May be i am missing some thing.<br/><br/>Thanks,<br/>~Pankaj Singh

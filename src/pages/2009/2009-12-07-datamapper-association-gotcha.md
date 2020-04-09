@@ -3,8 +3,6 @@ title: DataMapper Association Gotcha
 comments:
   - author: namelessjon
     email: jonathan.stott@gmail.com
-    ip: 62.49.1.168
-    url:
     date: 12/07/2009 05:46:41 PM
     text: >
       Hi<br/><br/>You might want to update your checkout of DataMapper, and also your dm-gems.  DataMapper is currently on 0.10.1, and 0.10.2 is about to drop.  There are over 100 commits between your repository and the current edge :)<br/><br/>In the new version of the code, :model is the correct usage, or even:<br/><br/>belongs_to :author, 'User', :child_key => [:post_id]

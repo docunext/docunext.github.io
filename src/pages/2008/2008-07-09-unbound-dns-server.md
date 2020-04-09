@@ -3,8 +3,6 @@ title: Unbound DNS Server
 comments:
   - author: kab
     email: kevin@bortis.ch
-    ip: 212.25.18.108
-    url:
     date: 07/27/2008 09:58:28 AM
     text: >
       You can specify more than one interface: directive in your config. This way you can bind unbound to loopback and a public interface.<br/><br/>Bind to all available addresses use:<br/><br/>interface: 0.0.0.0<br/><br/>Bind to localhost and public server address 192.168.1.2<br/><br/>interface: 127.0.0.1<br/>interface: 192.168.1.2<br/><br/>The same goes for IPv6 and dualstack setups.

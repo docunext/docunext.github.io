@@ -3,15 +3,12 @@ title: MySQL Replication Manager
 comments:
   - author: Alexey Kovyrin
     email: alexey@kovyrin.net
-    ip: 208.100.36.32
     url: http://blog.kovyrin.net
     date: 11/28/2007 02:14:40 PM
     text: >
       No, MMM does not use LVM. I mean if you want, you can use it, but if you're going to manage your servers' data manually - NP, just don't use MMM's features for that.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 11/29/2007 04:22:00 PM
     text: >
       Thanks for clearing that up Alexey. My mistake!

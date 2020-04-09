@@ -3,15 +3,12 @@ title: Missing Gentoo
 comments:
   - author: JasonA
     email: existx@gmail.com
-    ip: 64.119.130.66
     url: http://existx.net
     date: 02/12/2008 03:57:41 PM
     text: >
       Howdy Al,<br/><br/>I've been running Gentoo on my desktop @ home. More flexibility for me to optimize my machine with fairly recent versions of apps!<br/><br/>I'll shoot you an e-mail soon.. got busy again!<br/><br/>-Jay
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 02/12/2008 05:07:43 PM
     text: >
       Hi Jay, Let's meet for food soon! And thanks for introducing me to Debian! :-)

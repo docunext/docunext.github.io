@@ -3,8 +3,6 @@ title: Why remove s2ram
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/26/2008 05:23:28 PM
     text: >
       As of the new Ubuntu 8.04 - s2ram is back - thankfully!

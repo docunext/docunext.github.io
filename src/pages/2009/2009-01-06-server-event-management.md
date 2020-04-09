@@ -3,15 +3,11 @@ title: Server Event Management
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.2
-    url:
     date: 01/15/2009 02:43:13 AM
     text: >
       Reviewing the list there - I think that puppet, csync2, and pssh will be helpful to me in general.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.2
-    url:
     date: 01/18/2009 01:23:18 PM
     text: >
       Keyword: "require"

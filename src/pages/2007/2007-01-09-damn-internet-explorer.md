@@ -3,8 +3,6 @@ title: Damn Internet Explorer
 comments:
   - author: alby
     email: alby@thirteen.net
-    ip: 75.194.215.7
-    url:
     date: 01/09/2007 04:27:11 PM
     text: >
       ie? firefox rulez!

@@ -3,8 +3,6 @@ title: BIG SURPRISE Adobe Flash for linux x86 64
 comments:
   - author: Jim Maher
     email: jimmi@aapt.net.au
-    ip: 192.168.8.2
-    url:
     date: 12/10/2008 06:32:19 AM
     text: >
       Yes, I go the .so file, ok, so now what do I do with it? I've put it in quite a few directories, and it does nothing.<br/><br/>Jim

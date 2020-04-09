@@ -3,15 +3,11 @@ title: reCaptcha
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 10/30/2007 03:09:37 PM
     text: >
       test
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 10/30/2007 03:25:50 PM
     text: >
       more testing...

@@ -3,7 +3,6 @@ title: Marvell Sheeva Plug
 comments:
   - author: pushbx
     email: pushbx@live.com
-    ip: 127.0.0.1
     url: http://computingplugs.com
     date: 04/28/2009 05:58:08 AM
     text: >

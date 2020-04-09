@@ -3,15 +3,11 @@ title: Trac Apache Proxies and Digest Auth
 comments:
   - author: Jonas
     email: jonas.carlstedt@ericsson.com
-    ip: 194.237.142.10
-    url:
     date: 07/18/2008 04:50:46 AM
     text: >
       Can you publish how you solved this? I've been trying to achieve what you have done in your solution, but can only get the digest authentication to work for all the pages and not the selected few that I'm looking to have authentication on. It seems like Apache doesn't give me the Digest Domain parameters back.<br/><br/>Thanks.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 07/20/2008 10:27:03 PM
     text: >
       Hi Jonas,<br/><br/>I was only able to get the digest authentication working when the proxy url location is the same as the url on the proxied-to server.<br/><br/>For example:<br/><br/>www.example.com/proxy/<br/><br/>www.example.net/proxied-to/<br/><br/>didn't work for me, but this did:<br/><br/>www.example.com/example/ (proxy server)<br/><br/>www.example.net/example/ (proxied-to server)<br/><br/>Is this what you are faced with?

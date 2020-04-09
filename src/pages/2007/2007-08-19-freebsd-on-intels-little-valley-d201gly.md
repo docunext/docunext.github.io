@@ -3,29 +3,21 @@ title: FreeBSD on intel s Little Valley D201GLY
 comments:
   - author: Liquid
     email: liquid@liquid.cz
-    ip: 88.102.7.4
-    url:
     date: 11/08/2007 04:20:14 PM
     text: >
       Hi, im trying to get working the same motherboard with FBSD 6.2. But im in trouble when im trying to get working 4port NIC on PCI. Only 1 port function. On another system works great. I thing, this is problem about plug ang play, or IRQ around bios and FBSD. Have you any tips what can i do to have working all 4 port of nic? No plug and play options is in bios. :-(
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/08/2007 04:36:32 PM
     text: >
       Hi Liquid, are you by chance using a natsemi nic from soekris, or is it an HP? If its a natsemi from soekris I might be able to help as I have some 2-ports from them, and I know they have 4-port models.<br/><br/>However, if its an HP, you might be unhappy. There exists an HP 4-port nice which only has one controller, the rest are just bridged ports like in a switch.<br/><br/>Please follow-up, and thanks for commenting!
   - author: Liquid
     email: liquid@liquid.cz
-    ip: 88.102.7.4
-    url:
     date: 11/13/2007 02:27:22 PM
     text: >
       Hi,<br/><br/>no im not using soerkis. Im tryin to get working Routeroad 44G 4 port nic.<br/><a href="http://routerboard.com/rb44.html" rel="nofollow">http://routerboard.com/rb44.html</a><br/><br/>It has Realtek 8169SC chipset.<br/><br/>re driver found only the last port.<br/><br/>pcib2:  at device 5.0 on pci0<br/>pci2:  on pcib2<br/>pci2:  at device 8.0 (no driver attached)<br/>pci2:  at device 9.0 (no driver attached)<br/>pci2:  at device 10.0 (no driver attached)<br/>re0:  port 0x1000-0x10ff mem 0x4a000000-0x4a0000ff irq 16 at device 11.0 on pci2<br/>miibus1:  on re0<br/>rgephy0:  on miibus1<br/>rgephy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseTX, 1000baseTX-FDX, auto<br/>re0: Ethernet address: 00:0c:42:07:36:3b<br/>re0: [FAST]
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/13/2007 05:14:43 PM
     text: >
       Hi Liquid, ah well in that case I have no clue. Those routerboard products look cool though.

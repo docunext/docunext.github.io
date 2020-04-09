@@ -3,15 +3,11 @@ title: C Get a Compiler check
 comments:
   - author: none
     email: none@none.no
-    ip: 192.168.8.2
-    url:
     date: 09/28/2008 02:52:06 PM
     text: >
       Check <a href="http://www.mindview.net/Books/TICPP/ThinkingInCPP2e.html" rel="nofollow">http://www.mindview.net/Books/TICPP/ThinkingInCPP2e.html</a>
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.176
-    url:
     date: 10/01/2008 08:58:59 PM
     text: >
       Also:<br/><br/><a href="http://www.docunext.com/wiki/CPlusPlus" rel="nofollow">http://www.docunext.com/wiki/CPlusPlus</a>

@@ -3,15 +3,11 @@ title: Sil 3132 PCI Express SATA II Cards
 comments:
   - author: ariel
     email: ariel@ezsolutions.com.ar
-    ip: 190.189.233.217
-    url:
     date: 05/21/2011 02:57:52 PM
     text: >
       hi!! i don't find this version of bios in the silicon image page support. where do you find it? many thank you so much!!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.215
-    url:
     date: 05/21/2011 03:30:45 PM
     text: >
       Hi Ariel, its been too long, I can't remember. Let me know if you do find it though. Thanks, Albert

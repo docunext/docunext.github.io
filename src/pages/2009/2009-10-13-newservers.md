@@ -3,7 +3,6 @@ title: NewServers
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
     url: http://www.informedhosting.com/blog/
     date: 10/13/2009 08:45:39 PM
     text: >

@@ -3,7 +3,6 @@ title: OpenSwan Debian M0n0wall VPN
 comments:
   - author: Paul Wouters
     email: paul@cypherpunks.ca
-    ip: 193.110.157.19
     url: http://www.openswan.org
     date: 02/22/2007 10:54:02 PM
     text: >

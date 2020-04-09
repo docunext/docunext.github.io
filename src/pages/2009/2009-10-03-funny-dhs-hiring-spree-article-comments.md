@@ -3,8 +3,6 @@ title: Funny DHS Hiring Spree Article Comments
 comments:
   - author: Thomas Hardman
     email: thardman@thomashardman.com
-    ip: 207.192.71.184
-    url:
     date: 10/12/2012 12:22:56 PM
     text: >
       The Patent Examiner asked me, "you do know that knoppix has been around forever, there's nothing new about a Live CD", and I pointed out, that I wasn't trying to patent a Live CD or any kind of OS packaging... I was patenting a NETWORK SYSTEM". It's not a Live CD. It's a NETWORK of Live CDs... and I am applying for a patent for the means of generating those preconfigured networks, for assigning such host-specific things as encryption keys and networking information to "individualize" each of the Live CD nodes so that they come up networking with IPSec and Kerberos. Understand the difference between a generic Live CD and a preconfigured secure network of individualized Live CD. Once the Patent Examiner saw the difference, patent quickly issued.<br/><br/>Let other people provide the OS and software loads to their own needs and satisfaction.<br/><br/>Let ME provide the means to quickly generate a Secure Authenticated Network of such Live CDs, whatever the OS.<br/><br/>You get hit by some Zero Day hack on your read-only media? Patch it on the master, and then run against the patched master to generate a new batch of ISO and burn them to CD or DVD. Personally I find for most uses, you can get everything you need on a CD and as an archival medium, CD is far more robust than DVD.<br/><br/>BTW since I'm not running knoppix or any variant of the UnionFS or Aufs, it's not running out of ramdisk and there's nothing there that's read-write other than the /tmp directory.<br/>

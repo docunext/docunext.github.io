@@ -3,15 +3,12 @@ title: Javascript HEAD keepalive
 comments:
   - author: Marco
     email: marcusbu@gmail.com
-    ip: 192.168.8.2
     url: http://markon.netsons.org
     date: 08/04/2009 04:30:59 AM
     text: >
       Thank you for this explanation ;)<br/>keepalive! :-)<br/>
   - author: http://www.openid.albertlash.com/openid/
     email:
-    ip: 71.163.55.98
-    url:
     date: 08/09/2009 01:14:28 AM
     text: >
       Gratzie Marco!

@@ -3,7 +3,6 @@ title: Google Coop
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 72.70.93.44
     url: http://www.docunext.com/
     date: 12/10/2006 12:52:11 PM
     text: >

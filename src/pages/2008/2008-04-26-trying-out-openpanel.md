@@ -3,29 +3,23 @@ title: Trying Out OpenPanel
 comments:
   - author: Peter van Dijk
     email: peter-docunextblog@openpanel.com
-    ip: 82.170.77.133
     url: http://blog.openpanel.com/
     date: 05/13/2008 06:00:39 AM
     text: >
       Hello Albert! We're happy to see you like OpenPanel. If you don't mind, I'd like to clarify some points :)<br/><br/>The Apache controls are in the Domain tab - same for DNS and Mail. authd is a very simple daemon that runs as root to do those tasks that require root; that way, opencore doesn't run as root.<br/><br/>As for C++: modules can be written in any language so that should not be a limiting factor if you intend to develop for OpenPanel. Some modules are written in bash, and there's a (-very- lightly tested, i admit) Python module. Rolling your own in Perl or another language should prove trivial too.<br/><br/>OpenPanel wants to be a lot more than a simple control panel; then again, it wants to be a lot less than that if that is what you need. If you don't install the metapackage, you can cherrypick the components you like (with a bare minimum of opencore+authd+mod-user) and control whatever services you'd like.<br/><br/>The weight of the JavaScript is mostly coming from extjs now, and we're getting rid of that, so it'll be somewhat lighter soon!<br/><br/>Feel free to drop by in our IRC channel if you have more questions. Thanks! Peter
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/13/2008 04:53:01 PM
     text: >
       Hi Peter! Thanks for commenting, I'm glad to learn you are ditching extjs, the license is bizarre in my opinion. I am a big fan of jQuery, have you tried it?
   - author: JP
     email: jp@jp10000.com
-    ip: 217.77.131.20
     url: http://blog.openpanel.com
     date: 05/14/2008 05:48:13 PM
     text: >
       Hi Albert, good to hear you like Openpanel!<br/><br/>When we were creating the OpenPanel GUI we started using JQuery. Later, when we needed widgets we added ExtJS, which is great stuff, but it's too heavy in terms of memory use and performance, and too extensive for what we're trying to do: build a lightweight interface with a small memory footprint and satisfying responsiveness. This means that ExtJS will have to go. However, prototyping with ExtJS saved us a lot of time and frustration since we did not have to worry about form widgets and form handling.<br/><br/>Since we saw that moment coming we did not actually build our code base on ExtJS: all coupling was done very loosely. (Besides, I don't feel very comfortable fully relying on (the brittleness of) any JavaScript framework.)<br/><br/>As for JQuery, we're using it for http requests, and we probably will continue using it. What I really like about JQuery is its chaining. We're not using it at the moment but it's a great concept :) What do you like best about it?<br/><br/>JP
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/14/2008 05:53:59 PM
     text: >
       The plugins are amazing too - I use tablesorter, tablesorter cookie, cookiejar, and the basic http request stuff.<br/><br/>You are smart to be wary of javascript frameworks - I had abstained entirely until I found jQuery.<br/><br/>Just posted this to your blog but not sure if it went through:<br/><blockquote><br/>Hey OpenPanel! Thanks for commenting on my blog post about openpanel. Take a look at hypermagnet - its a project I've been working on to centrally manage debian packages. Not much at the site yet, but the idea is to use XSL to generate the various types of configuration files used by open source operating systems and applications.<br/><br/><a href="http://www.hypermagnet.com/blog/" rel="nofollow">http://www.hypermagnet.com/blog/</a><br/></blockquote>

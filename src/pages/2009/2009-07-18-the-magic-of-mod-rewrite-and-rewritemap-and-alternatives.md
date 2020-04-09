@@ -3,8 +3,6 @@ title: The Magic of mod rewrite and RewriteMap and Alternatives
 comments:
   - author: http://www.openid.albertlash.com/openid/
     email:
-    ip: 71.163.55.98
-    url:
     date: 08/05/2009 04:06:19 PM
     text: >
       I've done some more thinking about this, and I believe that the best alternative to the Apache solution really depends on the application, more specifically - what should happen if the request does not result in a redirect.<br/><br/>First and foremost, it should be noted that, like Apache2, Lighttpd can be used as a proxy, which is a big bonus. This makes the solution quite flexible when there is no match of the request to redirect.<br/><br/>With the other solutions, I'm not sure what options there are in the case when there is no redirect. In the case of AOLServer and qHttpd, I'll have to do more research and testing.

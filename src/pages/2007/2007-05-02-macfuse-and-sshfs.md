@@ -3,22 +3,16 @@ title: MacFUSE and sshfs
 comments:
   - author: Graham Perrin
     email: grahamperrin@gmail.com
-    ip: 87.81.165.9
-    url:
     date: 05/06/2007 09:21:05 PM
     text: >
       You'll probably be prompted for a restart after installation of MacFUSE.<br/><br/>MacFusion should be launchable after MacFUSE has been installed and recognised by your system.<br/><br/>Enhancements and bug fixes to MacFUSE and MacFusion are in the pipeline, so please bookmark <a href="http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/" rel="nofollow">http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/</a> for the most up-to-date information on installation routines.<br/><br/>We hope that you will enjoy the improvements.
   - author: Graham Perrin
     email: grahamperrin@gmail.com
-    ip: 87.81.165.9
-    url:
     date: 05/12/2007 03:43:40 PM
     text: >
       There are now many enhancements.<br/><br/>Considering the recent activity in the Google Groups and Google Code project areas for both MacFUSE and MacFusion, I should recommend a visit to the MacFusion Project Home page <a href="http://code.google.com/p/macfusion/" rel="nofollow">http://code.google.com/p/macfusion/</a> where you'll find FAQ, links and other useful information.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 05/18/2007 06:20:04 PM
     text: >
       Yup! I'm using the latest beta, which even includes the ability to pass command line arguments including the ability to turn off caching. Macfusion is awesome.

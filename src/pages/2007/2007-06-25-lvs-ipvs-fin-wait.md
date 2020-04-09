@@ -3,43 +3,31 @@ title: LVS ipvs FIN WAIT
 comments:
   - author: Jeff
     email: jrobill@mail.cslf.org
-    ip: 63.175.182.195
-    url:
     date: 10/02/2007 12:39:57 PM
     text: >
       any chance you can help me with my first ha attempt?<br/><br/>I have two ubuntu servers installed with ipvsadm ldirectd and heartbeat.  I have two iis servers running.    All of this is in vmware server, so its all on a virtual network in vmware.<br/><br/>The ultramonkey documentation for debian, lots of websites, and this link <a href="http://www.puryear-it.com/pubs/conferences/lisa2003/download-lisa/lvs-3.ppt#295,43,LVS-DR" rel="nofollow">http://www.puryear-it.com/pubs/conferences/lisa2003/download-lisa/lvs-3.ppt#295,43,LVS-DR</a>  all helped get it started, but it still doesnt work.<br/><br/>The virtual IP is created.  When I looked ipvsadm -l -n --stats it shows<br/><br/>connections on the VIP, and both RIP servers.   The load balancing appears to be working perfectly as the connections and inpkts are spread across both RIP1 and RIP2.    However, there is zero outpkts for any of the connections.<br/><br/>No matter how I configure this it never sends anything out.<br/><br/>Thanks in advance for any advice you can offer.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 10/02/2007 01:56:30 PM
     text: >
       Hi Jeff, its been awhile since I setup my firs ultramonkey install... nothing springs to mind.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 10/02/2007 02:47:51 PM
     text: >
       Hi Jeff, was just thinking I should ask what you are trying to accomplish? It you are doing basic load balancing, check out pfsense. It uses the pf packet filter from openbsd and works really well for simple setups, and I believe there is a VMWare image with two setup. Let me know what you think.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 12/01/2007 08:36:59 AM
     text: >
       I've been using pfSense more and more in my operations, and I just added a link to their blog which features a diagram of TCP states I found helpful.<br/><br/>In the pfSense load balancer, I was seeing a lot of fin_wait states too, so I switched from tcp monitoring to icmp. Not sure how or if that will change anything, but I imagine it will reduce load on the pfsense machine a little, at the cost of the heartbeat being slightly less accurate - in that the icmp could be "alive", but the load balanced web server be down. In the case I'm referring to in this context, I'm merely load balancing across two nic cards on one server, so if the tcp service is down for one, its most likely down for both. On the flip side, if the icmp is down for one, it would mean tcp would be down for the same one, but not necessarily icmp or tcp for the other.
   - author: Fleish
     email: underhill@fleish.org
-    ip: 76.102.73.3
-    url:
     date: 01/02/2008 01:37:12 PM
     text: >
       Jeff - it sounds like your setup is using LVS_DR ... the incoming packets go through the IPVS code ... but the outbound packets are simply routed back out the network stack ... hence you won't see any outgoing packets/connections in the IPVS tables.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 01/04/2008 05:23:51 PM
     text: >
       Hi Fleish - thanks for commenting and helping out Jeff with the LVS_DR setup.

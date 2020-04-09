@@ -3,8 +3,6 @@ title: When Facebook Friends Accounts Get Hacked
 comments:
   - author: rae
     email: rachel.furst@savonix.com
-    ip: 192.168.8.103
-    url:
     date: 05/26/2009 10:38:40 AM
     text: >
       This makes my stomach turn. It highlights my love hate relationship with social networking websites.<br/><br/>I love to be connected and hate to be infected.

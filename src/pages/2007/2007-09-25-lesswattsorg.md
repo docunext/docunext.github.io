@@ -3,15 +3,12 @@ title: LessWatts.org
 comments:
   - author: Russell Coker
     email: russell@coker.com.au
-    ip: 220.237.147.110
     url: http://etbe.coker.com.au
     date: 01/26/2008 01:21:52 AM
     text: >
       Can you substantiate your claim that hard drives wear out after being stopped and started repeatedly?<br/><br/>I would expect that drives with such a feature are designed to have it used without dying.<br/><br/>The last time I had an opportunity to ask a senior person at a hard drive manufacturing company about such things I was told that they made drives which were designed to perform any combination of operations repeatedly for the duration of the warranty period...
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 01/26/2008 11:18:31 AM
     text: >
       Hi Russell, I haven't done any testing myself, but I've read a lot of materials concerning the matter. For hard drives, there are a few usage measurements, kind of like mileage in a automobile: hours of operation and start / stop cycles. Here is a link to Wikipedia which should help:<br/><br/><a href="http://en.wikipedia.org/wiki/Hard_disk#Landing_zones_and_load.2Funload_technology" rel="nofollow">http://en.wikipedia.org/wiki/Hard_disk#Landing_zones_and_load.2Funload_technology</a><br/><br/>You are absolutely correct about the warranty period though, if I understand correctly, desktop drives can start and stop 10 times per day and stay under the estimated number of start / stop cycles before failure.<br/><br/>In comparing desktop drives to notebook drives, most notebook drives have substantially higher estimated start / stop cycles before failure.

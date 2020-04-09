@@ -3,8 +3,6 @@ title: Global File System GFS on Debian
 comments:
   - author: sulio
     email: loop@iservice.bg
-    ip: 192.168.8.200
-    url:
     date: 09/12/2008 12:38:49 PM
     text: >
       That's probably because GFS(2) is intended to work over a LVM volume. You have to put LVM on top of the DRBD device, and format that logical volume instead. ALso you must put in work the whole red-hat cluster stuff to make that work.<br/><br/>Greets.

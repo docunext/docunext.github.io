@@ -3,8 +3,6 @@ title: Debian dhclient ath oddity
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 07/04/2009 11:30:11 AM
     text: >
       This keeps happening, I wish I knew the fix.

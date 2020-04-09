@@ -3,43 +3,31 @@ title: Awesome WM Java GUIs
 comments:
   - author: Bruno
     email: brunovern.a@gmail.com
-    ip: 10.20.3.241
-    url:
     date: 07/30/2009 05:33:22 AM
     text: >
       There is an easier and more robust solution: use wmname. 
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 08/02/2009 01:38:01 PM
     text: >
       Bruno, you are a lifesaver! Thank you for posting this workaround on my blog.<br/><br/>The ia32 / MToolkit workaround was still a little buggy on my AMD64 system. Yours is working like a charm. Thanks again.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 08/03/2009 08:19:29 PM
     text: >
       Unfortunately, I'm still having problems with the search and replace dialog. It opens and runs fine, but when I close it, Awesome still thinks its open.<br/><br/>Its quite strange actually. I've turned on titlebars for it, and when I close the search and replace dialog, the titlebar remains. Doh! I'm not even able to click the X to close it.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 08/03/2009 08:33:29 PM
     text: >
       I've had to revert back to the ia32 libs and MToolkit solution. That works fine with the search and replace dialog.
   - author: G
     email: spamous@gmail.com
-    ip: 80.213.248.10
-    url:
     date: 10/31/2010 02:35:57 PM
     text: >
       Have you found any solution to this? I am running Java applications with OpenJDK 64-bit and experience the same problem with windows not closing.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.96.185.154
-    url:
     date: 10/31/2010 08:36:28 PM
     text: >
       Not for java in general, but I am successfully using jEdit with openjdk, but actually its in 32-bit.

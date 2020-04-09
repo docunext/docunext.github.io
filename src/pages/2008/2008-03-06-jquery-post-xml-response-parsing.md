@@ -3,29 +3,21 @@ title: jQuery Post XML Response Parsing
 comments:
   - author: Rey Bango
     email: reybango@gmail.com
-    ip: 68.142.2.184
-    url:
     date: 03/06/2008 08:24:48 PM
     text: >
       Hi Albert. Xpath is actually available via plugin. <a href="http://docs.jquery.com/Release:jQuery_1.2#XPath_Compatibility_Plugin" rel="nofollow">http://docs.jquery.com/Release:jQuery_1.2#XPath_Compatibility_Plugin</a><br/><br/>HTH.<br/><br/>Rey<br/>jQuery Team
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/06/2008 09:27:11 PM
     text: >
       Hi Rey, thanks! I'll check it out.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/06/2008 09:27:39 PM
     text: >
       The plugins for jQuery look terrific, I'll have dig more into there.
   - author: Luis
     email: luis@luis.com
-    ip: 187.7.56.48
-    url:
     date: 06/07/2010 08:56:09 PM
     text: >
       Thank You !!!!!!!!!!!

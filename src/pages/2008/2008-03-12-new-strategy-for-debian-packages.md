@@ -3,22 +3,17 @@ title: New Strategy for Debian Packages
 comments:
   - author: Andrey Nordin
     email: anrienord@gmail.com
-    ip: 195.131.172.230
     url: http://abstracthack.wordpress.com/
     date: 03/13/2008 04:34:30 PM
     text: >
       Cool! Could you put here or in your wiki more info on your current packaging activities?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/13/2008 05:16:08 PM
     text: >
       Hi Andrey - Sure! It worked out well this time because there is a package called dh-make-php which can be used to create debian packages from pear packages. Its not as simple as calling a command, but it did help.<br/><br/>My next goal is to setup a debian repository.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/13/2008 05:18:32 PM
     text: >
       FYI I took a bunch of notes (I added the link to the post too):<br/><br/><a href="http://www.docunext.com/wiki/Disassembling_php-cache-lite" rel="nofollow">http://www.docunext.com/wiki/Disassembling_php-cache-lite</a>

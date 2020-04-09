@@ -3,8 +3,6 @@ title: Retrieving data from your mac
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/06/2007 09:33:31 PM
     text: >
       test

@@ -3,14 +3,11 @@ title: AwesomeWM Volume Control
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 03/20/2010 01:32:35 PM
     text: >
       I'm using alsamixer now, and that works fine.
   - author: xuedi
     email: xuedi.beijing@googlemail.com
-    ip: 207.192.71.184
     url: http://xuedi.de/blog
     date: 10/09/2012 05:27:40 AM
     text: >

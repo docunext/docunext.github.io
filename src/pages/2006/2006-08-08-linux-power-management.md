@@ -3,15 +3,12 @@ title: Linux Power Management
 comments:
   - author: SmokinJoe
     email: joe.greer@aarcorp.com
-    ip: 12.31.57.124
     url: http://www.aarcorp.com
     date: 12/01/2007 02:46:12 PM
     text: >
       I am trying to get power management to work on the HP T5135 thin clients.  HP is no help at all.  The OS S1ST0031 has a 10 minute timeout to blank the display and then like a 30 minute time out to put the display to sleep.  The thin client never goes to sleep, just keeps burning 10 watts of power.  In sleep mode these thin clients should only take 1 watt of power.<br/><br/>Have you ever had the T5135 wake up without crashing?  From searching with Google it sounds like crashing after sleep is common with the via Eden processor. :-(<br/><br/>I see you are using quite a few of these terminals. :-)  I am also looking at trying to use a USB phone on these clients.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 12/01/2007 04:17:55 PM
     text: >
       Hey SmokinJoe - Thanks for commenting with your questions. Good to hear that more people are trying to take advantage of computer power controls to save some cash on energy costs. Unfortunately, I don't think the t5135 has the ability to sleep. What do your BIOS look like? On mine, I'm able to wake up from S5, but not S3, at least in debian linux. What OS you running?<br/><br/>Well, actually maybe you can sleep, but can't wakeup by LAN, that's probably why I never pursued the possibility.

@@ -3,15 +3,12 @@ title: nfs user server on Debian OpenVZ
 comments:
   - author: Marius M.
     email: devilx@devilx.net
-    ip: 83.236.207.190
     url: http://www.devilx.net
     date: 06/19/2009 06:41:30 AM
     text: >
       Hi there,<br/><br/>thank you BIG times for this post. Holy crap, I spent an hour on finding out why my Mac OS X tells me "Permission" deniend. Since I've converted a VM to an OpenVZ Container, I though that if it worked before, it actually HAS to work after. Ouff.<br/><br/>Thanks again! :-)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 06/19/2009 08:26:56 AM
     text: >
       Glad to help Marius, thanks for commenting!

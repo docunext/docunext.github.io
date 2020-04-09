@@ -3,15 +3,12 @@ title: Playing Nicely and Benefitting without Belonging
 comments:
   - author: Russell Coker
     email: russell@coker.com.au
-    ip: 220.237.144.140
     url: http://etbe.coker.com.au/
     date: 05/17/2008 07:54:50 PM
     text: >
       It seems a little ironic that you list "link to the debian web page" as one of the things you do for Debian - but don't include such a link in your post!<br/><br/>It does seem unlikely that there is anyone who doesn't know that the web site is <a href="http://www.debian.org/" rel="nofollow">http://www.debian.org/</a> and yet has enough background knowledge to understand your post.  So I don't think any readers are missing out.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/18/2008 10:32:32 PM
     text: >
       Hi Russell, actually the link is prominently displayed on every page of the docunext blog right under the title. It reads: "We proudly use Debian GNU/Linux". I'm surprised you missed it.<br/><br/>Judging from the server logs, the great majority of people who visit this site are "bump and run" visitors, who are searching for a random answer to a technical problem, and I hope the link shows my respect for the quality of the debian distribution.<br/><br/>Personally, I had been using linux for about 8 years before I tried debian. I used RedHat and then Gentoo, and about two years ago, someone suggested Debian because of its stability, and I'm so glad to have found out about it.<br/><br/>Also, I've strategically placed the link at the top of the page. I believe it makes a difference when it comes to seo.

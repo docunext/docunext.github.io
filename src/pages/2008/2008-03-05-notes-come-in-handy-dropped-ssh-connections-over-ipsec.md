@@ -3,8 +3,6 @@ title: Notes Come in Handy Dropped SSH Connections Over IPSEC
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/26/2008 03:43:37 PM
     text: >
       This also happened when I have the PF Scrubbing disabled.

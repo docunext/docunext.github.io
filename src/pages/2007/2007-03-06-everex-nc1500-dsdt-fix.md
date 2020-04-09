@@ -3,22 +3,16 @@ title: Everex NC1500 DSDT Fix
 comments:
   - author: Scott
     email: sjmacewan@gmail.com
-    ip: 127.0.0.1
-    url:
     date: 04/18/2009 05:27:00 PM
     text: >
       I'm not sure if you still know about this, but could you give a better description of what file you mean by 'your-initrd-file-here'? I'm not THAT familiar with Linux yet (Ubuntu 8.04LTS)<br/>Thanks!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 04/18/2009 05:54:03 PM
     text: >
       Hi Scott, the 'your-initrd-file-here' would likely mean the initial ram disk used to boot the system. For ubuntu and debian its usually located in the /boot/ directory and starts with initrd.<br/><br/>Does that help?
   - author: Scott
     email: sjmacewan@gmail.com
-    ip: 127.0.0.1
-    url:
     date: 04/18/2009 06:13:29 PM
     text: >
       Albert,<br/>Thanks for your quick reply!<br/>That does answer my question, unfortunately, the fan on my VA1500 still runs nonstop. Oh well! Worth a try!

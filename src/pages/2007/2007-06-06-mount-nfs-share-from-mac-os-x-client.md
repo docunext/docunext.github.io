@@ -3,22 +3,16 @@ title: Mount NFS share from Mac OS X client
 comments:
   - author: mike
     email: bucky_geo@bigpond.com
-    ip: 203.59.129.54
-    url:
     date: 12/12/2007 09:56:46 PM
     text: >
       Thanks - it worked for me.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 12/13/2007 04:23:46 PM
     text: >
       Great! Glad to hear it, and thanks for commenting.
   - author: Andy Drummachine
     email: everybodyintheplaceletsgo@yahoo.com
-    ip: 127.0.0.1
-    url:
     date: 04/03/2009 09:14:16 AM
     text: >
       Thanx, Albert.

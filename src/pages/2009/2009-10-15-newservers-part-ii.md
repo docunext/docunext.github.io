@@ -3,15 +3,12 @@ title: NewServers Part II
 comments:
   - author: Chris Valean
     email: chris@newservers.com
-    ip: 188.24.43.148
     url: http://newservers.com
     date: 04/07/2010 09:30:42 AM
     text: >
       Hello,<br/>I just found this and although this post is a bit old by now I just wanted to clarify a few things in this post to make sure everything is clear.<br/><br/>DELL OMSA is a free monitoring tool which we use to monitor servers health and availability. Since it's a free product you don't have to worry about licensing or fees.<br/><br/>Regarding the imaging of an Ubuntu -any version- this is an issue of how Ubuntu distro handles the networking part - at first boot it creates a file which stores the MAC address of the active NIC. If you create & restore an image to another server the network will not work because of that file which must be manually removed just before you reboot to create the image. This is now a NewServers related issue.<br/><br/>Billing is done hourly, can't do by minute billing with real dedicated servers... :)<br/>Hourly is enough since we were the only ones in market offering this instead of monthly contracts.<br/><br/>For the KVM/ DELL iDRAC functionality - Large and above types have dedicated iDRAC interface but the DELL 1855 models have only a single KVM interface for all servers in a chassis, so we cannot offer dedicated KVM access for 1855 model, only by request and for a limited ammount of time.<br/><br/>This should be it for now, if you have any questions or want to clarify something I recommend contacting us on Live chat or send us a ticket.<br/>Regards,<br/>Chris Valean<br/>MCSA, MCITP, MCTS, Tech Support Team<br/>NewServers Inc. <a href="http://newservers.com" rel="nofollow">http://newservers.com</a>
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 24.62.51.31
-    url:
     date: 04/09/2010 08:02:57 PM
     text: >
       Hi Chris, Thanks for commenting. The hourly billing is fine, but if I recall correctly, by stopping and starting my servers twice within one hour, I was billed for two hours. I'd have to check to confirm that, but its didn't seem to make sense at the time.<br/><br/>I only use my NewServers account occasionally at this time, but overall, I think NewServers is an important and unique offering in the hosting marketplace.

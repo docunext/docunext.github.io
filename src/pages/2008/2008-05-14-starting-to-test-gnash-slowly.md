@@ -3,15 +3,11 @@ title: Starting to test gnash slowly
 comments:
   - author: strk
     email: strk@keybit.net
-    ip: 80.67.123.78
-    url:
     date: 05/15/2008 10:09:57 AM
     text: >
       Your guess seems wrong to me, the effect seems to be the same as setRate(12).<br/><br/>BTW, I'd discourage you from trying to go as fast as possible, as the effect<br/>is really you wouldn't give any rest to the CPU, with debatable visual effects.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/15/2008 11:41:39 AM
     text: >
       Hi strk, I didn't want to go as fast as possible, I wanted the movie to stop. My bad, but still I'd want gnash to do a sanity check for me.

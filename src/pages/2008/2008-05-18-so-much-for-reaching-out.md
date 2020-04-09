@@ -3,29 +3,23 @@ title: So Much for Reaching Out
 comments:
   - author: Russell Coker
     email: russell@coker.com.au
-    ip: 220.237.144.140
     url: http://etbe.coker.com.au/
     date: 05/20/2008 04:06:48 AM
     text: >
       Don't get too disheartened by that.  It's just one person who's probably having a bad day.  Dealing with the GnuCash upstream that they describe could also be the cause of some bad attitude too.<br/><br/>Why not just fork GnuCash or write a replacement?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 05/20/2008 11:17:18 AM
     text: >
       Hi Russell, thank you for the reassurance, it helps! Its odd, but with computers I keep trying until I "push the right button". With people, I push one wrong button and I give up.<br/><br/>So here's my story with GnuCash, I've been working on PBooks for about 4 years, primarily for my own use, but then decided to open source it. I did a lot of research and felt that there was a window for small business, web-based accounting packages. Furthermore, I felt it would help to try and "play nicely" with the data formats that GnuCash has come up with. Similar to how NetBSD benefits from being able to run on so many platforms, I figure it would also benefit PBooks to review a project which has been around for a lot longer.<br/><br/>GnuCash does have a relational back end via gda, and it is currently being worked on and tested by a few people, including myself. I've been able to get sqlite to work a little (and supposedly MySQL and postgres work with a little effort), and was able to view the data model created by gnucash and gda.<br/><br/>Even if PBooks can act as a remote interface for reading GnuCash data, I'd be thrilled that PBooks is able to be leveraged by another project.<br/><br/>I guess what bothered me so much about the response from Neil was that he judged the quality of the code without examining it. In fact, PBooks is hardly written in PHP. It runs on top of PHP, but is primarily written in XSL, XML, and SQL. I chose to write it that way so that it would be easy to run on top of other programming languages, like python or java.
   - author: Bill
     email: osprey@tranquilpenguin.com
-    ip: 127.0.0.1
     url: http://tranquilpenguin.com
     date: 04/30/2009 12:25:05 PM
     text: >
       While I admit PHP has it's issues, it's not fair to call a SERVER-side scripting language insecure... He has poor code mistaken for a poor language.<br/><br/>As for GNUCash... My business model is based on FOSS. I can track accounts and write invoices.<br/><br/>As for the backend... I'll cross that bridge when I come to it.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 04/30/2009 06:05:56 PM
     text: >
       Hi Bill, thanks for commenting. He couldn't have mistaken poor code because he didn't even look at the code, he judged it without seeing it - what it commonly referred to as "prejudice".<br/><br/>I don't use GNUCash but I'm still very impressed by it. I continue to develop and use PBooks:<br/><br/><a href="http://www.pbooks.org/blog/" rel="nofollow">http://www.pbooks.org/blog/</a><br/><br/>Cool website by the way.

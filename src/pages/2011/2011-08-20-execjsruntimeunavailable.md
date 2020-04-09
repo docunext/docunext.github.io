@@ -3,8 +3,6 @@ title: ExecJS RuntimeUnavailable
 comments:
   - author: preth00nker
     email: preth00nker@gmail.com
-    ip: 189.221.213.233
-    url:
     date: 09/12/2011 08:56:02 PM
     text: >
       tnx you so much. I've just gotten my rails installation working.<br/>In other hand. Mongrel is another story..<br/>kind regards!

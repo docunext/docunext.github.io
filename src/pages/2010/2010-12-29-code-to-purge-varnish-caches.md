@@ -3,8 +3,6 @@ title: Code to Purge Varnish Caches
 comments:
   - author: kenya
     email: kenyajamison@ymail.com
-    ip: 65.125.92.2
-    url:
     date: 01/10/2011 04:26:52 PM
     text: >
       how do i use it on a school computer

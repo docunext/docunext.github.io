@@ -3,29 +3,21 @@ title: Trac with MySQL
 comments:
   - author: cheriyath
     email: cheriyath@live.com
-    ip: 122.166.40.170
-    url:
     date: 02/07/2008 07:19:14 AM
     text: >
       My friend.<br/><br/>Try to work and improve on this script<br/><a href="http://www.fadingred.org/blog/articles/2007/05/04/trac-migration-sqlite-to-mysql/" rel="nofollow">http://www.fadingred.org/blog/articles/2007/05/04/trac-migration-sqlite-to-mysql/</a><br/><br/>Cheers<br/>Cheriyath
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 02/07/2008 11:12:04 AM
     text: >
       Thanks for the link cheriyath, looks pretty good! I'm initializing all my new Trac setups so I no longer have any SQLite dbs to convert.
   - author: ugur
     email: ugurb@anadolu.edu.tr
-    ip: 193.140.186.26
-    url:
     date: 11/23/2009 06:24:35 AM
     text: >
       hi i have the same problem and i would like to change my sql. but the link that u gave is gone. can u reload the documant?<br/>thanks.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.231.130.53
-    url:
     date: 11/29/2009 03:25:53 PM
     text: >
       Hi ugur, yeah that link is dead, I'll remove it. Are you trying to migrate your SQLite data to MySQL?

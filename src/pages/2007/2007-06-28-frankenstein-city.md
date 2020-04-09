@@ -3,15 +3,12 @@ title: Frankenstein City
 comments:
   - author: Ales.P
     email: ales@pirec.info
-    ip: 194.152.8.51
     url: http://www.pirec.info
     date: 06/28/2007 02:07:46 PM
     text: >
       Nice looking case :)
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/16/2007 07:46:16 AM
     text: >
       Thanks!

@@ -3,8 +3,6 @@ title: the latest and greatest in Machines
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 05/18/2007 11:08:40 PM
     text: >
       Computer cases need better design though. Back in the day I had my computer case painted in an auto body shop: green, red, with a silver fade. It looked awesome. Then Apple came out with the iMac, which were a big improvement over the beige boxes which have been around forever. I like the Alienware computers that are available now too.<br/><br/>I've always wanted a wooden and glass computer for some reason. Tried to build one years ago but it didn't come out very good.

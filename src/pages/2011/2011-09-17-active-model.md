@@ -3,15 +3,11 @@ title: ActiveModel and ActiveRelation
 comments:
   - author: lulalala
     email: endofsummer1981@gmail.com
-    ip: 207.192.71.184
-    url:
     date: 10/17/2012 03:50:58 AM
     text: >
       You meant ' the Account class would need to have an all method'?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 207.192.71.184
-    url:
     date: 11/07/2012 06:09:57 AM
     text: >
       Yep, it would be a class method.

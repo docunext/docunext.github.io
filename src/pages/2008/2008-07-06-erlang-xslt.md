@@ -3,7 +3,6 @@ title: Do Erlang Gnome LibXSLT Bindings Exist
 comments:
   - author: Tim Watson
     email: watson.timothy@gmail.com
-    ip: 192.168.8.200
     url: http://hyperthunk.wordpress.com
     date: 09/18/2008 07:54:03 AM
     text: >

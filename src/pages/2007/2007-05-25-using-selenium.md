@@ -3,8 +3,6 @@ title: Using Selenium
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 05/25/2007 04:03:51 PM
     text: >
       Can you include some screenshots? Do you know how to take screen shots with windows? I used to know, but I forget. Its something like alt-control-printscreen

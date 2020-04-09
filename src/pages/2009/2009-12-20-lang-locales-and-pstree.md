@@ -3,8 +3,6 @@ title: LANG Locales and pstree
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.231.130.53
-    url:
     date: 01/06/2010 07:07:04 PM
     text: >
       I found this page helpful too:<br/><br/><a href="http://www.divvun.no/doc/tools/utf-8-setup.html">http://www.divvun.no/doc/tools/utf-8-setup.html</a>

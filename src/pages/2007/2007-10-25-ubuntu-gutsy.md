@@ -3,15 +3,12 @@ title: Ubuntu Gutsy Rocks
 comments:
   - author: Rick Harding
     email: rharding@mitechie.com
-    ip: 68.42.84.176
     url: http://www.mitechie.com
     date: 10/25/2007 02:54:09 PM
     text: >
       Very cool, welcome to the wild side. I've been running it on my T61 for a while and love it.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 10/25/2007 08:22:05 PM
     text: >
       Hi Rick! Yeah it is really nice, I'm looking forward to using it everyday!

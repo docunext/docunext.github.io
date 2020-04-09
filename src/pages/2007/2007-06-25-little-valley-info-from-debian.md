@@ -3,99 +3,71 @@ title: Little Valley Info from Debian
 comments:
   - author: ajc
     email: ajc27_1979@yahoo.com
-    ip: 81.179.164.62
-    url:
     date: 06/26/2007 10:00:32 AM
     text: >
       Is the onboard NIC supported in Linux and and freebsd?<br/><br/>Can you post a dmesg output from debian?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/26/2007 12:33:43 PM
     text: >
       Yes it is supported by linux and m0n0wall (which is freebsd). I should have captured a dmesg before I removed debian, but now its running m0n0wall.<br/><br/>Its a broadcom driver, though I couldn't find anything about it.
   - author: ajc
     email: ajc27_1979@yahoo.com
-    ip: 81.179.164.62
-    url:
     date: 06/26/2007 05:42:37 PM
     text: >
       Thanks ... good to know it works.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/26/2007 07:06:56 PM
     text: >
       No problem - here's an update: it uses the sis0 driver on m0n0wall, which is good!
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/12/2007 11:06:50 AM
     text: >
       An update to my comments about power - it appears that the AC-DC external power converter has a big effect on the power consumption. I'm using a different one now and it's only consuming 23 watts at full power. I'm also using a USB stick instead of compact flash, which could have an effect, though I doubt it.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/12/2007 11:31:01 AM
     text: >
       I think the p4-clockmod driver only scales the cpu frequency, not the voltage.<br/><br/><blockquote><br/>                       "The speedstep-ich or acpi cpufreq modules offer "<br/>                       "voltage scaling in addition of frequency scaling. "<br/>                       "You should use either one instead of p4-clockmod, "<br/>                       "if possible.\n");<br/></blockquote><br/><br/>It might help in the reduction of heat however.
   - author: mykhal
     email: mykhal@centrum.cz
-    ip: 147.33.1.151
-    url:
     date: 07/30/2007 05:36:23 AM
     text: >
       I wonder how does the the picture look on LCD display. Is it sharp ?
   - author: mykhal
     email: mykhal@centrum.cz
-    ip: 147.33.1.151
-    url:
     date: 07/30/2007 06:00:38 AM
     text: >
       .. and did you try using acpi-cpufreq module instead of p4-clockmod ?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/30/2007 10:44:18 AM
     text: >
       I can't really say, because I've mainly used it for console output,  meaning that all I see is a command line interface, no graphical user interface. I have no complaints about the console video output.<br/><br/>When it first boots, there is an intel splash screen displaying a fade and a couple of intel logos, that looks good too.<br/><br/>What type of graphics are you referring to mykhal?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/30/2007 02:10:03 PM
     text: >
       And yes I did try using acpi-cpufreq with no luck. It might be that the board is too new and the acpi-cpufreq driver will support it in the future.
   - author: mykhal
     email: mykhal@centrum.cz
-    ip: 147.33.1.151
-    url:
     date: 07/31/2007 03:59:28 AM
     text: >
       &gt; What type of graphics are you referring to mykhal?<br/><br/>I am only interested in quality of the integrated video in general - some integrated video cards may have blurry or unstable picture and are not appropriate for using on desktop.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/31/2007 01:54:27 PM
     text: >
       Gotcha, I've seen that too on an <a href="http://www.docunext.com/blog/2007/03/22/amcc-3ware-9650se-sata-ii-pci-express-raid-card-review/" rel="nofollow">AOpen machine I built with a 3Ware RAID card, wasn't sure what the issue was but I think it was because the onboard video was analog and was too close to the power supply</a>.<br/><br/>On the Intel D201GLY, I haven't had any such problems at all, the screen is clear for me and not wavy or fuzzy at all.
   - author: John
     email: johns@ks.uiuc.edu
-    ip: 74.134.246.53
-    url:
     date: 09/03/2007 05:36:16 AM
     text: >
       What power supply are you using that allows you to get down to 23 watts?<br/>With a run-of-the-mill desktop PSU, mine is using 40 watts.  I'd love to get it down to 23!
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 09/03/2007 07:11:38 AM
     text: >
       I'm using a DC-DC power supply, the picoPSU. It is very efficient.<br/><br/><a href="http://www.mini-box.com/s.nl/it.A/id.417/.f" rel="nofollow">http://www.mini-box.com/s.nl/it.A/id.417/.f</a><br/><br/>You'll need a AC-DC adapter, and I use a molex to 4-pin motherboard cable, but those only cost about a buck or so.

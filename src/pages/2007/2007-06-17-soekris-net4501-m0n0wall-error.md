@@ -3,15 +3,11 @@ title: Soekris net4501 m0n0wall error
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/26/2007 09:09:23 AM
     text: >
       Time to update the BIOS! Just posted this to the m0n0wall list as a follow-up to my many rants about the net4501 + m0n0:<br/><br/><blockquote>I knew I wasn't crazy! Soren introduced a bug into the bios of the most recent net4501 batch circa June 07, and has released an updated bios.<br/><br/>More info on this thread:<br/><br/><a href="http://readlist.com/lists/lists.soekris.com/soekris-tech/0/2128.html" rel="nofollow">http://readlist.com/lists/lists.soekris.com/soekris-tech/0/2128.html</a><br/><br/>I've updated one of my net4501's and plan to do the other today. Haven't done any real testing yet, but will post details when possible.</blockquote>
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/01/2007 09:10:20 PM
     text: >
       Actually - I think I figured out the problem here. The dropped ssh connections were caused by "enable filtered bridge" in the advanced menu. I thought I had to have this enabled to accomplish the bridge mode, but I don't - the filtering is only necessary if you plan to have firewall rules on the bridge, and I don't.

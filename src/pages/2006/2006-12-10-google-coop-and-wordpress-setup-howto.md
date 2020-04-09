@@ -3,29 +3,23 @@ title: Google coop and Wordpress Setup Howto
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 72.70.93.44
     url: http://www.docunext.com/
     date: 12/10/2006 02:19:42 PM
     text: >
       Another thought: Google coop = del.icio.us killer.
   - author: Nico
     email: nv@rezonova.com
-    ip: 84.101.174.121
-    url:
     date: 12/27/2006 10:17:49 AM
     text: >
       Hello,<br/><br/>for the last point can I do this when the url rewriting is activate ?<br/><br/>Thanx
   - author: admin
     email: albert.lash@savonix.com
-    ip: 71.162.104.37
     url: http://www.docunext.com/
     date: 12/27/2006 10:24:06 AM
     text: >
       Yes. As an example of Google coop and Worpress pretty permalinks, visit <a href="http://www.informedbanking.com/resources/blog/?page_id=16" rel="nofollow">Informed Banking Search</a> and you'll see that the get variable will work, even with mod_rewrite, or pretty permalinks as wordpress puts it.<br/><br/>Then view the rest of the site to see the permalinks in action.
   - author: Nico
     email: nv@rezonova.com
-    ip: 84.101.174.106
-    url:
     date: 12/29/2006 07:08:54 AM
     text: >
       Ok, It's works perfectly. Thanks a lot.

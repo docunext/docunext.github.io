@@ -3,15 +3,12 @@ title: Copy and Paste from jEdit to Gnome Terminal RESOLVED
 comments:
   - author: taiganaut
     email: taiganaut@thisblueroom.net
-    ip: 207.192.71.184
     url: https://twitter.com/#!/taiganaut
     date: 04/24/2012 03:00:24 PM
     text: >
       This is Linux yakshaving fail of truly rare and pure quality. I have not seen such a fine specimen in months, possibly years.<br/><br/>BTW, it's still broken in 2012.<br/><br/>My "solution" is going to be to get another editor, and next time we get new workstations at work, not give up on getting a frigging Mac this time.  I have been using Linux since 1994.  OVER IT.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 207.192.71.184
-    url:
     date: 04/28/2012 12:29:17 AM
     text: >
       Vim is dead! Long live vim!

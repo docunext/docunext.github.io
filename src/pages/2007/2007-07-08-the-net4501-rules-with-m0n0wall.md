@@ -3,15 +3,11 @@ title: The net4501 Rules with m0n0wall
 comments:
   - author: Ivan
     email: ivan@bloodymayhem.com
-    ip: 71.195.119.159
-    url:
     date: 01/03/2011 06:31:14 PM
     text: >
       Great article, Thanks! I just bought one and cant wait to get started using it.
   - author: Albert
     email: albert.lash@gmail.com
-    ip: 74.96.184.198
-    url:
     date: 01/08/2011 09:59:51 AM
     text: >
       Thanks Ivan, good luck with it!

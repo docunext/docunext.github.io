@@ -3,7 +3,6 @@ title: Web Server Thoughts
 comments:
   - author: Vidar
     email: vidar@hokstad.com
-    ip: 82.70.200.181
     url: http://www.hokstad.com/
     date: 01/23/2008 07:08:10 AM
     text: >

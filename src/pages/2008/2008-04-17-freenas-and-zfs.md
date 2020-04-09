@@ -3,35 +3,28 @@ title: FreeNAS with FreeBSD 7 and Support for the ZFS Filesystem
 comments:
   - author: erast
     email: erast@gnusolaris.org
-    ip: 98.210.100.72
     url: http://www.nexenta.org
     date: 04/17/2008 11:33:58 PM
     text: >
       As an alternative to FreeNAS - try NexentaStor - it is free for up to 1TB deployments
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 04/18/2008 10:28:11 AM
     text: >
       Hi Erast, how is NexentaStor different than the open source Nexenta? Are there proprietary components?
   - author: Joe Little
     email: jmlittle@gmail.com
-    ip: 171.64.100.111
     url: http://jmlittle.blogspot.com
     date: 04/18/2008 12:47:44 PM
     text: >
       I'm a little partisan to NexentaStor, but yes, its a full appliance targeted at being a NAS, and its Nexenta's commercial solution that sits on top of Nexenta Core. Its proprietary in that the management layer is not open source, but the APIs to use and extend are published. Their Developer Edition is free to 1TB, and their Basic subscription model for 2, 4, or 6TB is extremely cheap, but is supported. I've been following the free/OS NAS as well as some commercial variants based on Linux/BSD for quite some time, and we've settled on NexentaStor long term. 50TB currently, and expect to hit 70TB this year.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 04/19/2008 12:37:55 AM
     text: >
       No problem there - it sounds awesome. Its overkill for me, and I'm interested in trying out their developer edition. I've been having a heck of a time with hardware drivers on nexenta lately though - I'll have to identify some confirmed compatibility sets and try those out.
   - author: Matt Newcombe
     email: blog@sysadminman.net
-    ip: 74.237.5.182
     url: http://sysadminman.net
     date: 04/22/2008 09:25:09 PM
     text: >

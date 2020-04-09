@@ -3,7 +3,6 @@ title: Debian Dimensions
 comments:
   - author: Christian Jensen
     email: cj2003@debian-news.net
-    ip: 87.49.91.102
     url: http://debian-news.net/
     date: 04/21/2008 01:10:13 PM
     text: >

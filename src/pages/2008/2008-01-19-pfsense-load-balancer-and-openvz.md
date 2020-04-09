@@ -3,22 +3,17 @@ title: pfSense Load Balancer and OpenVZ
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 01/28/2008 10:57:54 AM
     text: >
       UPDATE: I'm now trying the TCP monitor instead of the ICMP, maybe that will help.
   - author: Al
     email: al11@gmail.com
-    ip: 192.168.134.22
     url: http://hubshout.com
     date: 01/06/2009 08:34:24 PM
     text: >
       Let us know how that goes. I wish there were more options in the load balancer myself - such as an HTTP check with evaluation of text....
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.134.22
-    url:
     date: 01/06/2009 09:08:54 PM
     text: >
       That would be awesome - I wonder if ldirectord could help:<br/><br/><a href="http://www.vergenet.net/linux/ldirectord/" rel="nofollow">http://www.vergenet.net/linux/ldirectord/</a><br/><br/>Nice site by the way...

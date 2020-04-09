@@ -3,8 +3,6 @@ title: instance method metaclass singleton class is not a symbol TypeError RESOL
 comments:
   - author: cam
     email: cameron.matheson@gmail.com
-    ip: 174.23.248.146
-    url:
     date: 06/30/2010 04:40:01 AM
     text: >
       I ran into this same error, but unfortunately your workaround didn't work for me (one of my gems required activesupport >= 2.3.6).  I solved this by commenting out line 13 of activesupport-2.3.6/lib/active_support/core_ext/object/metaclass.rb:<br/><pre>#deprecate :metaclass => :singleton_class</pre>)

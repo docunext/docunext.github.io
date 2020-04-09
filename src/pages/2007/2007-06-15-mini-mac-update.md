@@ -3,8 +3,6 @@ title: Mac Mini Migration Assistant
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/22/2007 12:40:27 PM
     text: >
       Some of the programs that were transferred were compiled for PowerPC and are getting translated via "Rosetta" to run on Intel "x86" architecture. You can download intel optimized versions of Camino, jEdit, NeoOffice, and more. They will run a lot faster!

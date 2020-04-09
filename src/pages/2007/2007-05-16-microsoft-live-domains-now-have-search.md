@@ -3,15 +3,12 @@ title: Microsoft Live Domains now have search
 comments:
   - author: Windows Observer
     email: webmaster@windowsobserver.com
-    ip: 213.42.21.80
     url: http://WindowsObserver.com
     date: 06/08/2007 02:57:05 PM
     text: >
       Hey - glad the site was helpful - that post gets a lot of visits for similar reasons - there is not very good help in getting moved from Office Live.<br/><br/>Thanks for the link.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 06/13/2007 05:52:17 AM
     text: >
       Absolutely, thanks for posting the page! :-)

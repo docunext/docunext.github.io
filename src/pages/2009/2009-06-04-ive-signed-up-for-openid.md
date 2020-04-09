@@ -3,7 +3,6 @@ title: I ve Signed Up for OpenID
 comments:
   - author: SpookyET
     email: SpookyET@gmail.com
-    ip: 66.168.187.62
     url: http://spookyet.wordpress.com
     date: 06/06/2009 05:33:29 PM
     text: >

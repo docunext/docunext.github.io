@@ -3,22 +3,16 @@ title: PHP LDAP Admin Errors
 comments:
   - author: turk182
     email: dservellon75@yahoo.es
-    ip: 10.10.2.8
-    url:
     date: 04/29/2010 11:35:46 AM
     text: >
       Albert, just delete this: "=0"<br/><br/>and restart slapd.<br/><br/>hope this help you, good luck!!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 05/01/2010 05:46:44 AM
     text: >
       Hi Turk182 - thanks for commenting! I will give it a try and let you know if it works.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 05/01/2010 09:42:55 AM
     text: >
       Oh yes - I had actually already done that. Worked like a charm!

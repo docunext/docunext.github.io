@@ -3,8 +3,6 @@ title: Debian on a Via C7
 comments:
   - author: park
     email: tsogusa@paranoici.org
-    ip: 192.168.8.176
-    url:
     date: 10/15/2008 01:30:22 PM
     text: >
       sata is needed,<br/>great processor useful Luks-cryptsetup and ecryptfs, AES harware support.. fanless :)

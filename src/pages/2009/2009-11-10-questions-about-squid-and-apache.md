@@ -3,15 +3,11 @@ title: Questions about Squid and Apache
 comments:
   - author: Niko2
     email: nicolas.marot@gmail.com
-    ip: 86.69.110.180
-    url:
     date: 03/06/2010 03:58:04 PM
     text: >
       I use squid3 for reverse proxy<br/>Options are not well documented, but it works.<br/>Varnish or nginx are better, but it works with squid (even 2.7)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 03/06/2010 10:21:34 PM
     text: >
       Hi Niko2, I totally agree. In my opinion, nothing beats Varnish when it comes to the reverse proxy cache. For hybrid reverse proxy and fastcgi cache, nginx is tough to beat because it can handle connections and serve static files so well.<br/><br/>For forward proxies, Squid is nice because it has so many configuration options. But that's a double edged sword. It does almost too much in many situations!!<br/><br/>Other alternatives to Squid are tinyproxy and polipo, but they are very simple.<br/><br/>And there are plenty of reverse proxy caches too... pound (quite nice for ssl), or lighttpd.

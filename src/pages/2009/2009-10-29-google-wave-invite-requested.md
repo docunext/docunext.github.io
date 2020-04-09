@@ -3,15 +3,11 @@ title: Google Wave Invite Requested
 comments:
   - author: Loop
     email: rbyrnes@gmail.com
-    ip: 153.107.97.161
-    url:
     date: 11/11/2009 11:43:57 PM
     text: >
       Did you end up getting an invite?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 11/12/2009 06:53:16 AM
     text: >
       Hi Loop,<br/><br/>No, unfortunately I haven't.

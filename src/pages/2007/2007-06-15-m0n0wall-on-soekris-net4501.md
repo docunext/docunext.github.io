@@ -3,15 +3,12 @@ title: m0n0wall on Soekris net4501
 comments:
   - author: Chris Buechler
     email: cbuechler@gmail.com
-    ip: 74.130.85.39
     url: http://chrisbuechler.com
     date: 06/17/2007 04:08:55 PM
     text: >
       A 4501 is, of course, drastically slower than a WRAP. You're talking about a 486 133 MHz vs. a 586 266 MHz. A WRAP is more than twice as fast of a CPU. m0n0wall runs much better than anything else I've ever tried on a 4501, though the page load times are a bit slow for some pages.<br/><br/>The problem with SSH connections dying over VPN is MTU related.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/20/2007 01:28:57 PM
     text: >
       Thanks for commenting Chris, and thanks for your help on the m0n0wall lists. The 4501 is a great little device, and I'm really getting into m0n0wall. I can't believe I've survived this long without it!

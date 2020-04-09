@@ -3,8 +3,6 @@ title: Emailing PEEJ
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 05/19/2007 11:36:33 AM
     text: >
       No word back from PEEJ yet, I wonder what happened?

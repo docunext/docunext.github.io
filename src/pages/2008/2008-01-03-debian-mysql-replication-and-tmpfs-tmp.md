@@ -3,7 +3,6 @@ title: Debian MySQL Replication and tmpfs tmp
 comments:
   - author: Freehill Media Website Design
     email: dallas@freehillmedia.com
-    ip: 127.0.0.1
     url: http://www.freehillmedia.com
     date: 04/02/2009 06:14:03 AM
     text: >

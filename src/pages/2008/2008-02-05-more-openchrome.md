@@ -3,71 +3,51 @@ title: More Openchrome Battles Less DRI GLX 3D
 comments:
   - author: Jay Armstrong
     email: jaygosan@gmail.com
-    ip: 24.216.240.132
-    url:
     date: 02/21/2008 10:44:10 PM
     text: >
       Good to hear. I got vesa working, played with unichrome today (which I can't get to run at all - xubuntu 7.10), so next is openchrome. Thanks for the links.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 02/22/2008 12:34:25 AM
     text: >
       Hi Jay! Good luck with openchrome, its worked well for me. What mainboard / chipset / graphics chip do you have?
   - author: Gerson Barreiros
     email: fserve@gmail.com
-    ip: 201.9.245.115
-    url:
     date: 03/22/2008 09:39:22 AM
     text: >
       i got the new 3D via drivers workin on my laptop, 1000 fps @ gears but i cant make it work in 1440x900 that is my monitor res...<br/><br/>compiz-fusion work with some glitchs...<br/><br/>so i've needed to come back to openchrome, without 3D accel.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 03/22/2008 01:19:45 PM
     text: >
       Hi Gerson! That's awesome - I'm still using the via drivers (w/o 3D) because it feels a little faster, but I'm planning to switch back to openchrome because the via drivers cause some strange image distortion from time to time. I've been hoping that openchrome would get support for panel, agp, and 3d, but it probably won't be for awhile...
   - author: Gerson Barreiros
     email: fserve@gmail.com
-    ip: 201.9.240.152
-    url:
     date: 03/24/2008 09:08:03 AM
     text: >
       Hey albert, try the new ubuntu 8.04. It's using openchrome and wow, is very good just out of the box workin very good with 3D/widescreen res, but no Compiz-fusion yet in openchrome.<br/><br/>to make VIA's Unichrome work with compiz you need add via to whitelist at /usr/bin/compiz
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 03/24/2008 01:26:25 PM
     text: >
       I will definitely check that out - ubuntu 8.04 looks sweet - Firefox 3 included, very cool. I just noticed that the problems I had with jEdit and compiz on debian lenny aren't a problem in gutsy. Weird, if I have time I'll try and track down the proper fix. Right now I'm installing debian on my Alix1c board so I can get back to working with OCF-linux... fun!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 03/25/2008 02:11:45 PM
     text: >
       Hello again Gerson, I tried hardy with openchrome on an nc1503 last night but couldn't get 1440x900 resolution at all - which machine did you get it working on?
   - author: Gerson Barreiros
     email: fserve@gmail.com
-    ip: 201.9.242.118
-    url:
     date: 05/13/2008 05:26:01 PM
     text: >
       Hey albert, long time huh?<br/><br/>i'm using a Itautec W7630, it's a brazilian laptop.
   - author: Gerson Barreiros
     email: fserve@gmail.com
-    ip: 201.9.242.118
-    url:
     date: 05/13/2008 05:30:14 PM
     text: >
       new unichrome for linux, <a href="http://linux.via.com.tw/" rel="nofollow">http://linux.via.com.tw/</a><br/><br/>but, again, isnt working proper : (
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/13/2008 06:51:58 PM
     text: >
       Hi Gerson, good to hear from you! Cool, I see - that makes sense that you are able to get 1440x900 on that then, and that I can't get it on the everex. I'm now using the new 3D drivers and can get several hundred FIPS with glgears, though I haven't gotten compiz to work yet.

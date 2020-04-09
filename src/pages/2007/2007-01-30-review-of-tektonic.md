@@ -3,8 +3,6 @@ title: Review of Tektonic
 comments:
   - author: Farhad
     email: ff@onebeat.com
-    ip: 76.252.220.180
-    url:
     date: 02/21/2008 09:33:23 PM
     text: >
       I've read a bunch of poor reviews of tektonic.  I have to say that I have recently been using their live chat support at all hours (including 3am PST) and have been very happy with them.

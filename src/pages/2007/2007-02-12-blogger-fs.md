@@ -3,7 +3,6 @@ title: Blogger FS
 comments:
   - author: Elizeu Santos-Neto
     email: elsantosneto@gmail.com
-    ip: 137.82.252.150
     url: http://mundau.blogspot.com
     date: 02/14/2007 01:08:09 AM
     text: >

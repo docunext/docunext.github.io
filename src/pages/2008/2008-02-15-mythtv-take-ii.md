@@ -3,8 +3,6 @@ title: MythTV Take II
 comments:
   - author: Max
     email: max.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 02/15/2008 02:37:17 PM
     text: >
       I'm really intrigued by the whole idea behind MythTV.  Let me know if you get it up and running, and how you're liking it.

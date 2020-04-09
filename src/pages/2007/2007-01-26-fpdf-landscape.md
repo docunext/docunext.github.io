@@ -3,14 +3,11 @@ title: FPDF Landscape
 comments:
   - author: anonhelper
     email: anonhelper@yahoo.com
-    ip: 69.108.80.142
-    url:
     date: 01/04/2010 05:38:27 PM
     text: >
       well here is a better way to use landscape with fpdf<br/><a href="http://www.id.uzh.ch/cl/zinfo/fpdf/tutorial/tuto1.htm" rel="nofollow">http://www.id.uzh.ch/cl/zinfo/fpdf/tutorial/tuto1.htm</a><br/><br/>...actually i'm still not sure what fpdi is used for after looking through it for the "landscape" solution.
   - author: Sarah R. Lewis
     email: sarah@happyhumans.com
-    ip: 174.19.116.177
     url: http://metamorphevents.org
     date: 07/06/2010 12:44:43 AM
     text: >

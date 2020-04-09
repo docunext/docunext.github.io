@@ -3,8 +3,6 @@ title: VirtuaLenny
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 07/24/2008 02:21:34 PM
     text: >
       Gunnar Wolf also posted a great review of Xen, KVM, and Qemu recently:<br/><br/><a href="http://gwolf.org/node/1845" rel="nofollow">http://gwolf.org/node/1845</a>

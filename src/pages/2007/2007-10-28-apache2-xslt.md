@@ -3,36 +3,28 @@ title: Apache2 XSLT
 comments:
   - author: niq
     email: niq@apache.org
-    ip: 80.229.52.226
     url: http://bahumbug.wordpress.com
     date: 11/01/2007 10:57:39 AM
     text: >
       Apache nowadays is an applications platform, and there are many good reasons to prefer a filter module (which works with any data source) over PHP - which doesn't.  Quite apart from the overhead of having PHP installed at all!<br/><br/>As for producing that boilerplate ... that's a new one on me.  You could use mod_transform for XSLT and XInclude instead.  Or for much faster XML processing, one of the range of SAX-based filters.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 11/01/2007 11:06:28 AM
     text: >
       Hi niq!! Thanks for stopping by and commenting!<br/><br/>I'll definitely review mod_transform, XInclude, and the SAX-based filters, those are all new to me.<br/><br/>I'm a little familiar with filters - when you say a filter module are you referring ExtFilterDefine, and stuff like that?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 11/01/2007 11:16:42 AM
     text: >
       Interesting, both Xerces and Xalan look pretty cool for C++ XML and XSLT processing. I'm installing them now from debian lenny, and thinking it might be possible to use them as external filters via apache2...<br/><br/>If I can't get that to work, I'll try out mod_include, looks easy enough to compile, but too bad its not in debian. :-(
   - author: grig
     email: grig@deviurg.com
-    ip: 78.37.16.113
     url: http://sourceforge.net/projects/xslt-filter/
     date: 05/05/2008 01:11:36 PM
     text: >
       Albert, check this module <a href="http://sourceforge.net/projects/xslt-filter/" rel="nofollow">http://sourceforge.net/projects/xslt-filter/</a><br/>It was written about one year ago as a "View" part for several Mod_perl based projects. The dynamic tranformation on the fly is the main goal. Today the module is used in a mixed envirenments - PHP/Mod_perl/static files.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/05/2008 03:19:55 PM
     text: >
       Hi Grig, Thanks for the heads up! It looks terrific, I'll try it out and post how it works for me. :-)

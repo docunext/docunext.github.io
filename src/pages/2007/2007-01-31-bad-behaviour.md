@@ -3,7 +3,6 @@ title: Bad Behaviour
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 72.70.80.110
     url: http://www.docunext.com/
     date: 02/05/2007 05:02:09 PM
     text: >

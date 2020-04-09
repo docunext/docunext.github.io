@@ -3,15 +3,11 @@ title: Redis MemcacheDB or CouchDB
 comments:
   - author: grantmichaels
     email: grantmichaels@hotmail.com
-    ip: 98.219.118.149
-    url:
     date: 02/21/2010 11:52:58 AM
     text: >
       fwiw, couchdb is built on erlang and doesn't require java ...<br/><br/>you might also like voldemort, cassandra, neo4j, dynomite, riak ...
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 02/21/2010 01:32:47 PM
     text: >
       Hi Grant, you are absolutely right. I forgot it was written in Erlang. I will check out those others you mentioned.

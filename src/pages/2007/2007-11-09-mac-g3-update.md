@@ -3,15 +3,11 @@ title: Mac G3 Update
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 11/09/2007 12:52:46 PM
     text: >
       <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=fr_en&url=http%3A%2F%2Fwww.macbook-fr.com%2Fibook%2Fdemontage%2Fibook_dual_usb_article18.html%3Fpage%3D1" rel="nofollow">Babel fish translation</a>
   - author: rae
     email: rachel.furst@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 11/09/2007 04:12:09 PM
     text: >
       wow that's incredible. it's not perfect, but I can almost totally understand the directions.<br/>gotta love the hitchhiker's guide reference too. =)

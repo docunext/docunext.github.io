@@ -3,8 +3,6 @@ title: NFS Export and Mount Options
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.2
-    url:
     date: 02/07/2009 11:59:12 PM
     text: >
       These options are working great for me within IPSec over the internet, using a 10M pipe. :-)

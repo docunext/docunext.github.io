@@ -3,15 +3,12 @@ title: Ruby it is then
 comments:
   - author: grantmichaels
     email: grantmichaels@hotmail.com
-    ip: 66.14.102.166
     url: http://grantmichaels.com
     date: 08/17/2009 01:46:26 PM
     text: >
       I highly suggest:<br/><br/>1) obtain and read through The Well-Grounded Rubyist ...<br/><br/>2) check out Sinatra to use while you are learning since Merb is being merged into Rails 3 ...<br/><br/>3) nginx-passenger ...<br/><br/>enjoy!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.163.55.98
-    url:
     date: 08/20/2009 09:50:04 PM
     text: >
       Sinatra is awesome. Very impressed, thanks for the tips!!

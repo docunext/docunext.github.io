@@ -3,8 +3,6 @@ title: Csync2 Part II
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.12
-    url:
     date: 01/27/2009 09:51:51 PM
     text: >
       I again got it to work by using my old certificates. Hmmm.

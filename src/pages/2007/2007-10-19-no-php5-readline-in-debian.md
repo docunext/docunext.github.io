@@ -3,50 +3,37 @@ title: No PHP5 Readline in Debian
 comments:
   - author: troels
     email: troelskn@gmail.com
-    ip: 88.131.34.34
-    url:
     date: 11/14/2007 05:25:02 PM
     text: >
       I tried downloading the package, but get a 404. I would really like to get my hands on this package.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/14/2007 05:30:45 PM
     text: >
       Hi Troels, thanks for the heads up. Try it now, should be fixed. Might have to refresh.
   - author: outsider
     email: n@n.com
-    ip: 59.93.211.74
-    url:
     date: 03/20/2008 12:36:29 PM
     text: >
       I cannot get the debian Packeg through this Link it redirects to another Page
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/20/2008 02:13:21 PM
     text: >
       Hi outsider - thanks for the heads up. I fixed it so you should be able to download it now.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/20/2008 02:15:05 PM
     text: >
       I plan to update this package with one of these:<br/><br/><a href="http://www.s11n.net/editline/" rel="nofollow">http://www.s11n.net/editline/</a><br/><br/><a href="http://www.thrysoee.dk/editline/" rel="nofollow">http://www.thrysoee.dk/editline/</a><br/><br/>to free it from license issues.
   - author: Charles Melbye
     email: charlie@yourwiki.net
-    ip: 192.168.134.22
     url: http://www.yourwiki.net/
     date: 02/20/2009 11:00:12 PM
     text: >
       You rock! I've been looking for this in all of Debian's package repositories.<br/><br/>Thanks for compiling this package!<br/><br/>- Charlie
   - author: David S.
     email: anonymous@foo.bar
-    ip: 58.178.150.224
-    url:
     date: 04/19/2010 06:29:11 AM
     text: >
       Thank you.  This is a help.

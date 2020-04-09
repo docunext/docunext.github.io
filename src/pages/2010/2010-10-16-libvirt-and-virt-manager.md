@@ -3,15 +3,11 @@ title: Libvirt and virt manager
 comments:
   - author: Russell Coker
     email: russell@coker.com.au
-    ip: 59.167.196.118
-    url:
     date: 10/24/2010 05:06:57 AM
     text: >
       Yes, please do a detailed comparison of libvirt and Eucalyptus!  I've been wanting to do that for a while but I'll probably never get time.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.96.185.154
-    url:
     date: 10/27/2010 07:24:06 AM
     text: >
       Hi Russell, Thanks for chiming in!<br/><br/>I expect to start work with Eucalyptus next week and will then have enough information to start my subjective comparison.<br/><br/>Albert

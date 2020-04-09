@@ -3,8 +3,6 @@ title: G4 reformat and install
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 11/23/2007 12:52:33 AM
     text: >
       That's a "kernel panic" by the way.

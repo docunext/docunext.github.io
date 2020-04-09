@@ -3,15 +3,11 @@ title: Rspec 2 Shoulda Rails 3.1 Awesome
 comments:
   - author: Brian Cardarella
     email: bcardarella@gmail.com
-    ip: 74.104.169.97
-    url:
     date: 10/31/2011 01:31:11 AM
     text: >
       Shoulda the gem has two parts: context and matchers. The matchers are the only part that is activated when used with RSpec. The matchers themselves then are mostly only relevant for Rails models and controllers. For example, you'd use shoulda-matchers for validations or when testing the behavior of a controller action.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 97.242.107.247
-    url:
     date: 10/31/2011 09:27:32 AM
     text: >
       Thanks Brian! Well, don't I feel silly! I will update the examples with some should components.

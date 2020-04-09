@@ -3,43 +3,32 @@ title: pfsense versus m0n0wall
 comments:
   - author: anthony
     email: anthony@bizroutesolutions.com
-    ip: 124.107.66.54
-    url:
     date: 12/19/2007 03:02:55 PM
     text: >
       hey! i'm actually thinking of using Monowall over Pfsense since your right..simplicity really is a big factor.. but one question can I use monowall as a firewall for Voip? are there any changes or certain factors I need to consider..and How easy it is for a newbie like me? well anyways thanx for what you posted it really helped me a lot.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 12/19/2007 03:06:01 PM
     text: >
       Hey Anthony - yeah absolutely you can use m0n0wall for voip, it includes a traffic shaper. voip can be tricky behind nat though, what is your voip client? Have you checked out askoziapbx?
   - author: Jean
     email: jeantet@fieldsnetworks.com
-    ip: 12.50.12.130
-    url:
     date: 07/12/2009 10:14:45 PM
     text: >
       Thanks for the comparison... a friend recommended I go with PFsense simply because it's "better" but now I know why... reading this was much easier than setting them both up and comparing myself :)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 98.217.173.101
-    url:
     date: 07/12/2009 10:26:34 PM
     text: >
       Thanks for commenting Jean. Since I've written this article, I'm even more of a pfSense fan. It has rrd graphs of traffic that I use all the time, as well as really good wireless card support.
   - author: Kieran Osborne
     email: kieran_osborne@live.co.uk
-    ip: 86.171.107.240
     url: http://www.kieran-osborne.co.uk
     date: 12/16/2009 03:50:55 PM
     text: >
       Hey nice article! Ive recently setup a m0n0wall box after tinkering with IPCop and deciding it was to much for what i needed - Everything is running smoothly except when you reboot due to power down or what ever reason it looses trafic stats like how much data has been transfered and what not between lan / wan which is a bit anoyying concidering thats one of the main reasons i setup a dedicated box! - My question is does PFSense have a built in traffic logger, for example can you see useage stats for previous months / weeks or even days or is it like m0n0wall on the fly? I picked m0n0wall for its simple design but then i stumbled across PFSense.. Descisions descisions!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.231.130.53
-    url:
     date: 12/16/2009 04:43:37 PM
     text: >
       It does! pfSense uses RRD to track network usage. Here's and example:<br/><br/><a href="http://www.docunext.com/wiki/PfSense#rrd_Graphs">http://www.docunext.com/wiki/PfSense#rrd_Graphs</a>

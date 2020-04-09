@@ -3,15 +3,11 @@ title: etc hosts is my friend
 comments:
   - author: a9db0
     email: a9db0@myway.com
-    ip: 98.195.60.153
-    url:
     date: 03/28/2008 10:09:59 AM
     text: >
       Next time you decide to try dns on your local subnet, try dnsmasq.  Works very well, is well supported and documented, and is in the Debian repository.  I use it on several networks - far easier to cope with than bind.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/28/2008 10:24:04 AM
     text: >
       Hi a9db0 - yeah I love dnsmasq! I use it for caching dnsbl requests for several mail servers. Good stuff.

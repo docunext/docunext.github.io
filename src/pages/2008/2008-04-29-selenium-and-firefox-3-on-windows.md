@@ -3,7 +3,6 @@ title: Selenium and Firefox 3 on Windows
 comments:
   - author: KIRAN
     email: kiran.r@brioinfotech.com
-    ip: 192.168.8.200
     url: http://www.rpath.org/rbuilder/project/windmill/releases
     date: 10/03/2008 04:37:15 AM
     text: >

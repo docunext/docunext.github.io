@@ -3,15 +3,11 @@ title: Interesting Ruby Rails3 Links
 comments:
   - author: John
     email: psujohn@gmail.com
-    ip: 207.192.71.184
-    url:
     date: 09/04/2012 06:15:02 AM
     text: >
       I think you need to brush up on concerns and do a presentation at DCRUG. (Yeah this is basically me asking you to do the research for me)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 207.192.71.184
-    url:
     date: 09/08/2012 11:02:55 PM
     text: >
       I would love to do a presentation at DCRUG about concerns. I tinkered with ActiveSupport::Concern a bunch today and have only come to appreciate it more. Here's a quick example of a module I wrote that uses it. Its just a quick way to add some customizable functionality to ActiveRecord models (though of course ActiveSupport::Concern can be used for various other purposes).

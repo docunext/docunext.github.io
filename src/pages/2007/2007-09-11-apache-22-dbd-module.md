@@ -3,15 +3,12 @@ title: Apache 2.2 DBD Module
 comments:
   - author: Shawn
     email: holwegner@gmail.com
-    ip: 201.199.3.254
     url: http://www.holwegner.com/
     date: 09/22/2007 09:53:40 PM
     text: >
       I feel your pain.<br/><br/>Feel free to lift my little 'walkthrough'; it's fairly commented, and I came to essentially the same conclusions in April.  :)<br/><br/><a href="http://www.holwegner.com/article/448/fixing-debian-etchs-broken-apache-mod_dbd" rel="nofollow">http://www.holwegner.com/article/448/fixing-debian-etchs-broken-apache-mod_dbd</a>
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 09/22/2007 10:40:04 PM
     text: >
       Hi Shawn, thanks for commenting. I checked out your site - very cool. Thankfully, the MySQL drivers are now in Apache's SVN base, so we might have it in the next release. :-)<br/><br/><a href="http://bahumbug.wordpress.com/2007/09/05/new-dbd-drivers/" rel="nofollow">http://bahumbug.wordpress.com/2007/09/05/new-dbd-drivers/</a>

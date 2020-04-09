@@ -3,7 +3,6 @@ title: Image Magick
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 71.162.104.37
     url: http://www.docunext.com/
     date: 01/06/2007 07:30:42 AM
     text: >

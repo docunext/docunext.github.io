@@ -3,15 +3,11 @@ title: Perl Perl Perl Perl Perl Perl Perl
 comments:
   - author: Frank
     email: dearfrankg@gmail.com
-    ip: 24.143.230.235
-    url:
     date: 06/21/2008 09:14:07 PM
     text: >
       Nice blog - come code examples would be nice :)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/24/2008 11:30:50 AM
     text: >
       Hi Frank, thanks! I'm working on an open source perl program, so it will all be released soon!

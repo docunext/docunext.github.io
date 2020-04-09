@@ -3,22 +3,16 @@ title: Microsoft versus the world
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 05/19/2007 03:55:26 PM
     text: >
       My sister emailed me these links as they relate to Microsoft's legal threats to the open source community.<br/><br/><a href="http://www.npr.org/templates/story/story.php?storyId=10239441" rel="nofollow">http://www.npr.org/templates/story/story.php?storyId=10239441</a><br/><br/><a href="http://money.cnn.com/magazines/fortune/fortune_archive/2007/05/28/100033867/" rel="nofollow">http://money.cnn.com/magazines/fortune/fortune_archive/2007/05/28/100033867/</a><br/><br/>I gotta laugh. Forbed titled their article "Microsoft versus the free world", but I really believe "Microsoft versus the world" is more appropriate, hence the title of my blog entry about Microsoft's legal threats.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 05/19/2007 04:12:33 PM
     text: >
       <a href="http://www.nodows.com" rel="nofollow">NODOWS</a>
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 05/19/2007 05:27:05 PM
     text: >
       <a href="http://www.opensource.org/node/147" rel="nofollow">http://www.opensource.org/node/147</a>

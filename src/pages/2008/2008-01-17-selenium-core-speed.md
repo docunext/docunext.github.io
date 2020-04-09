@@ -3,14 +3,11 @@ title: Selenium Core Speed
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/10/2008 07:03:32 PM
     text: >
       I ended up doing this manually in the selenium javascript, not the best way but it works.
   - author: christian
     email: asd@sd.de
-    ip: 84.149.113.205
     url: http://asd
     date: 10/27/2009 06:42:35 AM
     text: >

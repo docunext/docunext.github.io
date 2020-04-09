@@ -3,15 +3,11 @@ title: ntfsprogs ntfsresize and ntfsclone
 comments:
   - author: rolf
     email: superzouz@hotmail.com
-    ip: 192.168.8.2
-    url:
     date: 02/11/2009 06:00:05 AM
     text: >
       ntfsclone is getting stuck i the syncing step...<br/>Seriously, open source can be such a pain sometimes...<br/>Yesterday ntfsclone got stuck at 80%, today at syncing, what kind of torture is that...<br/>I wish it would only tell me why, so that i know.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.2
-    url:
     date: 02/11/2009 06:04:29 AM
     text: >
       Hi rolf, I haven't used ntfsclone in awhile, but I hear that there is a new fuse filesystem for ntfs that might help. Good luck!

@@ -3,8 +3,6 @@ title: Rails 3.1 Engines and Views Inheritance
 comments:
   - author: Tom J
     email: tom@crystae.net
-    ip: 108.77.227.188
-    url:
     date: 11/05/2011 06:27:21 AM
     text: >
       Thank you so much! This had me going up the wall. By the way, I am also using Forem for reference.

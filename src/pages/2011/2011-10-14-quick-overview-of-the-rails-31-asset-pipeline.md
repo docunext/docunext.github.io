@@ -3,29 +3,21 @@ title: Quick Overview of the Rails 3.1 Asset Pipeline
 comments:
   - author: Mike Santo
     email: mike@rsdcompany.com
-    ip: 174.74.66.37
-    url:
     date: 11/21/2011 05:21:47 PM
     text: >
       Albert, I don't see how this is working for you. I've been running 3.1.1 since it was released, and now I'm trying to rename one of my models/controllers to "assets". Routes still isn't showing it, and the asset tag helpers aren't picking up the new prefix. You're the only person I've found that has gotten this to work.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.218
-    url:
     date: 11/27/2011 04:50:58 PM
     text: >
       I dunno Mike, I've tried it out several times and it just worked. You are setting the asset prefix in the environment, right?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.218
-    url:
     date: 11/30/2011 05:11:38 PM
     text: >
       Actually Mike, I am now experiencing the problem again of the asset prefix not working. In my case, I think its due to my application having been created with Rails 3.0 or an early version of Rails 3.1.<br/><br/>Without a doubt, I am able to create a new rails app with 3.1.3 that supports custom asset prefixes *and* has the helpers to make stuff like the stylesheet link work.<br/><br/>I've tried to copy over most of the config differences, but so far the cause still evades me. Have you had any luck?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.178.29.218
-    url:
     date: 11/30/2011 07:48:10 PM
     text: >
       Actually no, its persistent in the rails 3.1.3. Its very odd, but if routes.rb contains resources :assets, the helper does not use the prefix configuration setting.

@@ -3,42 +3,33 @@ title: decTop Debian Tips
 comments:
   - author: olarcheveque
     email: olivier.larcheveque@gmail.com
-    ip: 69.70.28.74
-    url:
     date: 12/20/2007 11:04:32 AM
     text: >
       Nice tips!<br/>I have just bought one, and I am wondering what performances I can hope : actually, I would install subversion, trac, apache, mysql, so do you think I dream?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 12/20/2007 07:04:06 PM
     text: >
       You should be OK, but you might run out of RAM, and take note that the USB - Ethernet dongle is USB 1.1, meaning it is really slow.
   - author: Christoph Flügel
     email: blog@fluegel.name
-    ip: 84.141.219.14
     url: http://blog.fluegel.name/christoph/
     date: 01/27/2008 01:16:56 PM
     text: >
       I will get my Dectop in the next few days. And I saw that you added the sound-modules to the blacklist file. Is there a sound support for the dectop yet?<br/><br/>I'll rant about my experience with the Dectop in my blog. (in german)  ;)
   - author: Christoph Flügel
     email: blog@fluegel.name
-    ip: 84.141.243.34
     url: http://blog.fluegel.name/christoph/
     date: 01/31/2008 03:18:28 PM
     text: >
       Ok after I played a bit around I can now see why you have added the sound modules to the blacklist ;) I have a few things on my todo list, but so far I am sure I can install the dectop into my car to do the dirty wlan/gps work for me.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 01/31/2008 03:40:16 PM
     text: >
       Hi Christopher! That is a great idea for the dectop. What wlan / gps unit are you going to use? I guess it would have to be USB?
   - author: Christoph Flügel
     email: cfluegel@gmail.com
-    ip: 84.141.241.167
     url: http://blog.fluegel.name/christoph
     date: 03/09/2008 11:56:48 AM
     text: >

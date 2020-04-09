@@ -3,36 +3,26 @@ title: ld cannot find lgcc s
 comments:
   - author: brad
     email: brad@chickcentral.com
-    ip: 127.0.0.1
-    url:
     date: 04/28/2009 12:41:11 PM
     text: >
       i have this same issue currently. what was the resolution?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 04/28/2009 12:52:31 PM
     text: >
       Hi brad, you using debian?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 04/28/2009 12:53:23 PM
     text: >
       I'll have to look back in my emails to find out what dossy said.
   - author: brad
     email: brad@chickcentral.com
-    ip: 127.0.0.1
-    url:
     date: 04/28/2009 03:09:02 PM
     text: >
       I wish these were debian, but they are CentOS.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 04/29/2009 01:08:08 AM
     text: >
       Ah, OK. I just found this other post:<br/><br/><a href="http://www.docunext.com/blog/2008/07/14/aolserver4-nsmysql/" rel="nofollow">http://www.docunext.com/blog/2008/07/14/aolserver4-nsmysql/</a><br/><br/>And I'm posting the emails we exchanged in the wiki:<br/><br/><a href="http://www.docunext.com/wiki/The_Emails_Between_Dossy_and_I_about_AOLServer_and_MySQL" rel="nofollow">http://www.docunext.com/wiki/The_Emails_Between_Dossy_and_I_about_AOLServer_and_MySQL</a>

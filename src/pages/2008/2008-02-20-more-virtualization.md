@@ -3,7 +3,6 @@ title: More Virtualization
 comments:
   - author: Vidar
     email: vidar@hokstad.com
-    ip: 82.70.200.181
     url: http://www.hokstad.com/
     date: 02/22/2008 05:20:44 AM
     text: >

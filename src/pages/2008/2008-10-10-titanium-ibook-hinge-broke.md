@@ -3,8 +3,6 @@ title: Titanium iBook hinge broke
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.200
-    url:
     date: 10/18/2008 11:19:03 AM
     text: >
       The quotes you mentioned for the repair seem too high to me. I would tell the guys at the loft that if they come by a junk tibook with intact hinges to let you know (kind of like your <a href="http://www.my-clean-teeth.com/site/2008/10/tooth-sealant.html" rel="nofollow">dentist appointments</a>!). Buy it from them for $10 and replace the hinges yourself. In the meantime, be gentle!<br/><br/>That laptop is definitely worth saving, but don't put any more money into it. You could probably buy a working used one for not much more than the hinge replacement would cost.

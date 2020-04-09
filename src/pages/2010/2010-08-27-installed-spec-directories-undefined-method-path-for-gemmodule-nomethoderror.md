@@ -3,8 +3,6 @@ title: installed spec directories undefined method path for Gem Module NoMethodE
 comments:
   - author: chris floess
     email: skeptikos@gmail.com
-    ip: 193.159.180.26
-    url:
     date: 01/06/2011 07:30:09 AM
     text: >
       I got rid of this on Arch linux by removing (moving to a non-system place) the entire /usr/lib/ruby (on Debian /usr/local/lib/ruby perhaps) directory and then re-installing ruby 1.9.2

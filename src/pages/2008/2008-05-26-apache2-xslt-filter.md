@@ -3,7 +3,6 @@ title: Apache2 xslt filter
 comments:
   - author: deviurg
     email: info@deviurg.com
-    ip: 192.168.8.2
     url: http://xslt-filter.deviurg.com/
     date: 12/09/2008 05:27:12 PM
     text: >

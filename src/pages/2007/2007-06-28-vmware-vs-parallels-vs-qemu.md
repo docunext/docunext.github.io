@@ -3,15 +3,12 @@ title: VMWare vs. Parallels vs. QEMU
 comments:
   - author: Johan
     email: johan@mothugg.se
-    ip: 213.112.136.68
     url: http://www.mothugg.se
     date: 08/24/2007 08:51:08 AM
     text: >
       How does Q compare to Parallels and VMWare? I've tried both VMWare and Parallels, but would o course prefer something open sourced, to run WinXP and Ubuntu on a MacBook Pro.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 08/24/2007 11:37:47 AM
     text: >
       Q is much slower unfortunately. It is possible to run Windows and Ubuntu on Q, but in my opinion too slow. I only have a Macbook, so your pro model might fare better. I tried compiling KQEMU on Mac OS X but couldn't figure it out:<br/><br/><a href="http://www.osxcentral.com/blog/2007/07/01/messing-with-darwin/" rel="nofollow">http://www.osxcentral.com/blog/2007/07/01/messing-with-darwin/</a><br/><br/>If and when that happens, you'll be able to run Q with Windows and Ubuntu at much faster speeds.

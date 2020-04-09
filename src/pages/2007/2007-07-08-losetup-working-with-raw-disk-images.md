@@ -3,36 +3,27 @@ title: Losetup Working with Raw Disk Images
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 07/09/2007 12:40:08 AM
     text: >
       PS - You can use these theories and techniques for mounting ISO images. :-)
   - author: Varghese Mathew
     email: vmathew@wisc.edu
-    ip: 192.168.8.200
     url: http://varghese85-cs.blogspot.com/
     date: 11/06/2008 07:18:33 PM
     text: >
       Awesome.. just what I was looking for..<br/>.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.200
-    url:
     date: 11/06/2008 07:20:51 PM
     text: >
       Hi Varghese, Glad it helped!
   - author: Chris Jones
     email: chris@rassalon.org
-    ip: 192.168.8.2
-    url:
     date: 12/09/2008 02:08:53 PM
     text: >
       All,<br/><br/>You'll be glad to know that there's a much more intuitive (and arguably safer) way to do mount partitioned disks.  No math minor required.<br/><br/>1) stop any existing loop device usage<br/>2) rmmod loop<br/>3) modprobe loop max_part=63<br/>3) losetup -f /path/to/raw/image.raw<br/><br/>If the loop module's been setup with max_part=63, it will automatically setup devices for the partitions as /dev/loop0p1 through /dev/loop0p63, just like you'd see for a partitioned hard disk.<br/><br/>There's one caviat - you need a pretty recent kernel - I'd suggest 2.2.26 or later.<br/><br/>Chris
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.2
-    url:
     date: 12/20/2008 01:08:16 PM
     text: >
       Thanks for commenting Chris!

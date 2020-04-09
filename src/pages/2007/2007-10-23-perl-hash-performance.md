@@ -3,15 +3,11 @@ title: Perl Hash Performance
 comments:
   - author: Mudai
     email: mudai@arcor.de
-    ip: 84.59.112.158
-    url:
     date: 12/22/2007 09:49:33 AM
     text: >
       I would ignore the "Building a Better Hash" article.<br/>Why?<br/><br/>      use Benchmark;<br/><br/>      for $i (1..10) {$little_hash{$i} = $i}<br/>      for $i (1..100) {$big_hash{$i} = $i}<br/><br/>      # make it a hash test (instead of an array test)<br/>      $lkeys = [keys %little_hash];<br/>      $bkeys = [keys %big_hash];<br/><br/>      timethese (1000000, {<br/>                  little =&gt; sub {$foo = (@$lkeys)[rand @$lkeys]},<br/>                  big =&gt; sub {$foo =  (@$bkeys)[rand @$bkeys]},<br/>                 });
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.224.45.140
-    url:
     date: 12/22/2007 02:14:17 PM
     text: >
       Hi Mudai, thanks for commenting! I just tried that script and came up with this:<br/><pre><br/>Benchmark: timing 1000000 iterations of big, little...<br/>       big:  0 wallclock secs ( 0.51 usr +  0.00 sys =  0.51 CPU) @ 1960784.31/s (n=1000000)<br/>    little:  1 wallclock secs ( 0.43 usr +  0.00 sys =  0.43 CPU) @ 2325581.40/s (n=1000000)<br/></pre>

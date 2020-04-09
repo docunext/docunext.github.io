@@ -3,15 +3,11 @@ title: I Can Believe Its Windows Vista and that Autotask is Good
 comments:
   - author: Richard
     email: rakullian@autotask.com
-    ip: 66.162.188.226
-    url:
     date: 09/29/2010 10:22:38 AM
     text: >
       Hey Albert!<br/><br/>Thanks for the nice comments about Autotask! I wanted to let you know that we did make sections of Autotask Cross-browser independent just last week as part of our most recent release!<br/><br/>All the best,<br/><br/>Richard<br/>
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.96.185.154
-    url:
     date: 10/04/2010 08:50:09 PM
     text: >
       Hi Richard, I did see that. Keep up the good work! If I were you, I'd use AJAX, not Direct X.

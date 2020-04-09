@@ -3,8 +3,6 @@ title: Nokia N800 Flashing
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 05/14/2008 10:29:29 PM
     text: >
       Woot! Just found out the 770 can run the hacker edition of OS2008!<br/><br/><a href="http://maemo.org/news/announcements/view/internet_tablet_hacker_edition_pushed_at_chinook_level.html" rel="nofollow">http://maemo.org/news/announcements/view/internet_tablet_hacker_edition_pushed_at_chinook_level.html</a>

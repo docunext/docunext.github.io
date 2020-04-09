@@ -4,7 +4,6 @@ author: Albert
 comments:
   - author: Rob Morris
     email: rob@irongaze.com
-    ip: 207.192.71.184
     url: http://irongaze.com
     date: 05/28/2012 09:18:04 AM
     text: >

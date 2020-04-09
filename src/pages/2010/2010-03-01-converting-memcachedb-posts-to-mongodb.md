@@ -3,15 +3,12 @@ title: Converting MemcacheDB Posts to MongoDB
 comments:
   - author: Scott F
     email: scottf@2levelsabove.com
-    ip: 71.40.20.50
     url: http://alltherides.com
     date: 05/11/2010 02:21:41 PM
     text: >
       Any particular reason you went to MongoDB instead of MemcacheDB?<br/><br/>Thank You
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 96.240.136.9
-    url:
     date: 05/12/2010 03:31:37 PM
     text: >
       Hi Scott, yes - mainly because MongoDB allows you to search sub-fields within a json document.

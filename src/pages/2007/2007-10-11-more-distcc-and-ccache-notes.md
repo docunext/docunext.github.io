@@ -3,8 +3,6 @@ title: Debian kernel distcc and ccache notes
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.12
-    url:
     date: 01/27/2009 11:46:00 PM
     text: >
       For manually building kernels, I use this:<br/><br/>make -j12 CC="distcc"

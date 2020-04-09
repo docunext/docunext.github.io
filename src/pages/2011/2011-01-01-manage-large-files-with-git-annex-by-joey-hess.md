@@ -3,15 +3,11 @@ title: Manage Large Files with Git Annex by Joey Hess
 comments:
   - author: Joey Hess
     email: joey@kitenet.net
-    ip: 68.118.108.224
-    url:
     date: 03/01/2011 12:38:35 PM
     text: >
       git-annex certainly does support local "remotes".<br/><br/>My guess is that you confused it by pointing git clone at foo/.git, which is an unusual way to clone. I think you're basically lying to git here and it'll think it's cloned from a bare repoisitory, rather than from a non-bare repository. Git-annex only supports remotes that are not bare repositories.<br/><br/>git clone gitannextesting/.git testclone2<br/><br/>Probably this would have worked:<br/><br/>git clone gitannextesting testclone2<br/><br/>Yep, tested it and it's you're use of .git in the clone that confuses it. I will see if I can fix that buglet.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 173.230.157.110
-    url:
     date: 03/01/2011 06:37:47 PM
     text: >
       Thanks Joey, you rock!

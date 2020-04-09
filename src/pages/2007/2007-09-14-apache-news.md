@@ -3,15 +3,11 @@ title: Apache News
 comments:
   - author: ziyad
     email: abderahman@zohry.net
-    ip: 41.249.35.164
-    url:
     date: 01/10/2008 05:20:00 PM
     text: >
       "mod_rewrite<br/><br/>... For example, you could setup your virtual host environment in a relational database. This is something that lighttpd has had for awhile in mod_mysql_vhost, which Apache didn’t have."<br/><br/>Can you explain please how to do that?<br/><br/>Greets.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 01/14/2008 04:03:01 PM
     text: >
       Hi Ziyad,<br/><br/>Sure, you need to use the external application feature of mod_rewrite, which can start and run a perl script (or php, or python, or ruby) which would connect to a rdbms and return the vhosting information. Hope that helps...

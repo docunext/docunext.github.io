@@ -3,7 +3,6 @@ title: NewServers etc rc.local and what about the Hostname
 comments:
   - author: Chris Valean
     email: chris@newservers.com
-    ip: 188.24.43.148
     url: http://newservers.com
     date: 04/07/2010 09:36:29 AM
     text: >

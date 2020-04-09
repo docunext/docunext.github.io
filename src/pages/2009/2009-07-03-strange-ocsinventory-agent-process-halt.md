@@ -3,8 +3,6 @@ title: Strange OCSInventory Agent Process Halt
 comments:
   - author: Goneri
     email: goneri@rulezlan.org
-    ip: 82.235.219.34
-    url:
     date: 09/06/2009 08:52:38 PM
     text: >
       Edit /etc/ocsinventory/modules.conf<br/><br/>and uncomment:<br/><br/>use Ocsinventory::Agent::Option::Download;<br/><br/>You should post on the forum instead:)

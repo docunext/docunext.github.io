@@ -3,21 +3,16 @@ title: Duplicity to dreamhost and Amazon S3
 comments:
   - author: neurophyre
     email: spambox@evernex.com
-    ip: 71.236.202.153
-    url:
     date: 10/26/2007 09:47:26 PM
     text: >
       Dreamhost has officially disallowed the use of its servers for backup purposes:<br/><br/><a href="http://www.dreamhoststatus.com/2007/10/17/policy-clarification-personal-storage-back-ups" rel="nofollow">http://www.dreamhoststatus.com/2007/10/17/policy-clarification-personal-storage-back-ups</a><br/><br/>Also, slightly unrelated but anyone who may be considering using the JetS3t tool for S3 backups should be aware that it uses weak 56-bit DES encryption by default and that the authors do not currently intend to fix it.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 10/27/2007 12:10:55 AM
     text: >
       Thanks for the heads up neurophyre, I'm not too keen on dreamhost these days anyway.
   - author: weakish
     email: weakish@gmail.com
-    ip: 122.96.50.156
     url: http://weakish.pigro.net
     date: 07/10/2010 02:03:06 AM
     text: >

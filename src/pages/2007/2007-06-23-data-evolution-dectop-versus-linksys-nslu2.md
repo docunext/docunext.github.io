@@ -3,29 +3,22 @@ title: Data Evolution decTop versus Linksys NSLU2
 comments:
   - author: Mark Phillips
     email: g7ltt@g7ltt.com
-    ip: 71.172.53.152
     url: http://www.enicomms.com/decTOP
     date: 06/28/2007 07:40:12 AM
     text: >
       Your decTOP as listed in the article is not typical. The decTOP ships with a 10GB HDD and not the 80GB listed. Subsequently the power consumption is somewhat lower (around 8W).
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 06/28/2007 10:25:22 AM
     text: >
       You are absolutely right about the hard drive, and thanks for adding the wattage rating you measured with the stock drive. I couldn't get the install to work correctly on the 10GB for some reason. It was nice to read on the astlinux list that the drive isn't locked. I wonder why mine wasn't working?<br/><br/>I'm planning to install AskoziaPBX on the next one using a disk-on-module for the hard drive, and use an  extra belkin usb ethernet adapter I have for the ethernet connection. It uses the pegasus driver and should fare better than the crappy one that shipped with the dectop (again thanks to the astlinux list for such extensive testing on that one!).
   - author: Help!!!
     email: kriptonomicon@gmail.com
-    ip: 189.165.25.231
-    url:
     date: 07/30/2007 04:22:08 AM
     text: >
       How did you install debian on dectop?<br/>any hw to, or guide?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/30/2007 10:42:03 AM
     text: >
       Actually its pretty easy - you just have to use a USB CD-ROM drive:<br/><br/><a href="http://www.docunext.com/blog/2007/04/build-your-own-external-cd-burner.html" rel="nofollow">Build Your Own USB CD-ROM Drive</a><br/><br/>And then follow the debian install as usual. I had problems with the HD that was inside the DecTOP, so I replaced it with a different one.<br/><br/>Can you describe where you are having trouble with the debian install?

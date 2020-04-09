@@ -3,15 +3,11 @@ title: pfSense ProFTPd and the FTP Helper
 comments:
   - author: Gwen
     email: gwen@nospam.net
-    ip: 24.131.191.211
-    url:
     date: 10/29/2009 09:47:39 AM
     text: >
       Thank you, thank you, thank you. I have been struggling with this for over a week now.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 10/30/2009 03:12:30 PM
     text: >
       Hi Gwen,<br/><br/>I'm glad you found this post helpful. I still wrestle with ftp from time to time and found an awesome project I'm trying to revive and get included into debian:<br/><br/><a href="http://www.proxy-sys.com/blog/ftpproxy/">http://www.proxy-sys.com/blog/ftpproxy/</a><br/><br/>Essentially its a REAL ftp proxy, not just a firewall workaround. When I say REAL ftp proxy, I mean it can connect FTP users to different back-ends based on their username.<br/><br/>Actually, I just checked out the site:<br/><br/><a href="http://www.ftpproxy.org/">http://www.ftpproxy.org/</a><br/><br/>and it looks like the maintainer has published two new releases - the first since 2005. Awesome!!

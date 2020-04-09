@@ -3,15 +3,11 @@ title: iPod touch
 comments:
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 05/19/2009 10:47:30 AM
     text: >
       I think its even possible to use the ipod touch as a phone using VOIP over wifi.
   - author: rae
     email: rachel.furst@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 05/19/2009 11:00:33 AM
     text: >
       really!! that's incredible. you would need the microphone attachment for the ipod touch.<br/><br/>That's pretty funny if the ipod touch can totally circumvent the whole phone plan business simply by using VOIP.

@@ -3,50 +3,37 @@ title: Debian Perl Conflict libxml sax perl local version
 comments:
   - author: JOhn
     email: john.z.olson@gmail.com
-    ip: 127.0.0.1
-    url:
     date: 05/01/2009 02:55:34 PM
     text: >
       Thanks for the info this was exactly what I needed to get out of the spot I was in! That will teach me to use cpan in distros.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 05/01/2009 11:13:33 PM
     text: >
       Glad to help John, and thanks for commenting!
   - author: Swathy prabhu
     email: swathyprabhu@gmail.com
-    ip: 127.0.0.1
     url: http://www.rkmvu.ac.in
     date: 05/22/2009 02:42:03 AM
     text: >
       Thanks Albert.  A newbie like me otherwise could not have crossed this hurdle so easily...
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 127.0.0.1
-    url:
     date: 05/22/2009 03:59:23 AM
     text: >
       Hey Swathy - thanks for commenting, glad I could help!
   - author: Hanz
     email: hanzam@gmail.com
-    ip: 60.53.138.164
-    url:
     date: 08/08/2009 11:41:31 AM
     text: >
       It was so GREAT....thanks man !!!!
   - author: J. Alves
     email: jotajj@usp.br
-    ip: 128.172.67.111
-    url:
     date: 11/30/2009 04:13:01 PM
     text: >
       I was searching for this too, and it's a well known incompatibility.<br/><br/>This is a problem in the interaction between the CPAN version of XML::SAX and the one Debian packages, or something like that.<br/><br/>When I followed the error's message advice and read /usr/share/doc/libxml-sax-perl/README.Debian.gz (no need to uncompress, just use "less") and used the little Perl script at the end of that to remove XML::SAX (have to "sudo" or it does not do it and does NOT give error, just looks like it was done), things worked fine.
   - author: Mag
     email: mag@laposte.net
-    ip: 62.244.82.38
-    url:
     date: 07/19/2010 10:52:16 AM
     text: >
       Thank you so much!!<br/>

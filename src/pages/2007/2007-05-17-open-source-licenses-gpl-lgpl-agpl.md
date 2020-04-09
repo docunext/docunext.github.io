@@ -3,8 +3,6 @@ title: Open Source Licenses GPL LGPL AGPL
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 05/18/2007 03:54:57 AM
     text: >
       Just testing the comments field...

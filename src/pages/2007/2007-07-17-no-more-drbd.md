@@ -3,15 +3,11 @@ title: No more DRBD
 comments:
   - author: Harvey
     email: acidforums@aol.com
-    ip: 172.189.98.95
-    url:
     date: 11/26/2007 03:50:25 PM
     text: >
       well after reading ur review on how freenas went i tried it for myself too,<br/>i had a old dell poweredge i thought i'll give it a try onit first and if it runs better then naslite i'll switch over and after minute i was up and running i really do like this version, much better then using naslite and another major difference is naslite cost money to download and freenas doesnt.......<br/>i have already wipe my other system and installed freenas onto it,<br/>still to try all the featurs but sooooooooooooooooooooo far very very good..........<br/>by the way anyone want a free copy of naslite before i throw it where it belongs in the BIN!!!<br/>FREENAS RULES!!!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 11/26/2007 03:53:54 PM
     text: >
       Hey Harvey! If you like Freenas, you might also like m0n0wall, pfsense, and askoziaPBX. All good stuff. Thanks for commenting...

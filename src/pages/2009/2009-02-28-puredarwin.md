@@ -3,22 +3,16 @@ title: Puredarwin
 comments:
   - author: _sjc_
     email: stuart@echus.demon.co.uk
-    ip: 192.168.8.12
-    url:
     date: 02/28/2009 03:19:38 PM
     text: >
       Hi, Albert. Glad to see the progress you're making.<br/><br/>You've probably already found the networking notes on puredarwin.org. As for what's up with launchd... well, how long have you got?<br/><br/>You might like to try the patched version of CFLite available from <a href="http://code.google.com/p/purefoundation/downloads/list" rel="nofollow">http://code.google.com/p/purefoundation/downloads/list</a> since it resolves (or at least suppresses) some of them.
   - author: Daniel Bethe
     email: dtm@smuckola.org
-    ip: 207.192.71.184
-    url:
     date: 08/20/2012 11:37:21 PM
     text: >
       Hi there.  We're rebooting the PureDarwin project.  We'd like your help in getting PureDarwin running in modern virtual machines.  Come to #puredarwin in irc.freenode.net and let's talk about it.  Thanks!
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 207.192.71.184
-    url:
     date: 08/28/2012 05:33:19 AM
     text: >
       Awesome! I'll check in to find out what's new.

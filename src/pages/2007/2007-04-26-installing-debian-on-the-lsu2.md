@@ -3,8 +3,6 @@ title: Installing Debian on the NLSU2
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 04/26/2007 10:30:44 PM
     text: >
       I ended up trying again, and I think I got it to work this time because I increased the swap space. Not sure why, but the auto-partitioner sets up the slug with only 96MB, when it needs at least 128MB. I set up 256MB. The other partitions came to just a few gigs, and the home had approx 390GB.

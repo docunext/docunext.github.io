@@ -3,15 +3,12 @@ title: Python WSGI
 comments:
   - author: Rick Harding
     email: rharding@mitechie.com
-    ip: 68.42.84.176
     url: http://www.mitechie.com
     date: 12/22/2007 11:38:55 PM
     text: >
       Thanks for bringing this up. I'm trying to play with Pylons and this idea of WIGO middleware seems so strange coming from the PHP world. I need to spend some more time on it.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.92.61.253
-    url:
     date: 12/25/2007 10:24:22 PM
     text: >
       Hi Rick! What do you mean by WIGO? The python stuff is making more and more sense to me, slowly but surely. I like the idea of mod_wsgi, so I can rely on Apache for authentication, compression and logging, yes use a daemon application server for semi-persistence. Its still a little foggy but starting to congeal. :-)

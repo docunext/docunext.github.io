@@ -3,15 +3,11 @@ title: Everex NC1501 Wireless Switch
 comments:
   - author: General
     email: generaljohnget@yahoo.com
-    ip: 71.79.55.63
-    url:
     date: 03/29/2010 12:36:03 PM
     text: >
       Thank you, thank you. I was going nuts trying to figure out how to turn on the wireless module.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 04/04/2010 05:52:23 PM
     text: >
       Glad I could help, and thanks for commenting!

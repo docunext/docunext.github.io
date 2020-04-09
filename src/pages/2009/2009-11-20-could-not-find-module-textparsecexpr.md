@@ -3,8 +3,6 @@ title: Could not find module Text.Parsec.Expr
 comments:
   - author: ypocat
     email: juraj.vitko@gmail.com
-    ip: 94.71.115.163
-    url:
     date: 07/26/2010 10:14:54 AM
     text: >
       from a command line:<br/>cabal install parsec-extra<br/><br/>then in as3tohaxe/build, add to the second command:<br/>-hide-package mtl<br/>

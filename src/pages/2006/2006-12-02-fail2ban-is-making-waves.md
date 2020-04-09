@@ -3,21 +3,17 @@ title: fail2ban is making waves
 comments:
   - author: yarikoptic
     email: site-docunext@onerussian.com
-    ip: 165.230.95.119
-    url:
     date: 12/04/2006 03:49:52 PM
     text: >
       Tried to email back to your email but<br/>" mail for docunext.com loops back to myself"<br/>My reply was<br/><br/>actually we have already some similar rules<br/>in postfix.conf.<br/>Could you please describe a bit more on when a given error code is reported, and may be if there is sense to merge them all into 1 filter?
   - author: admin
     email: albert.lash@savonix.com
-    ip: 72.70.92.117
     url: http://www.docunext.com/
     date: 12/04/2006 04:10:19 PM
     text: >
       Absolutely. Thanks for the heads up re document email.
   - author: admin
     email: albert.lash@savonix.com
-    ip: 70.90.101.141
     url: http://www.docunext.com/
     date: 12/13/2006 11:00:20 AM
     text: >

@@ -3,57 +3,41 @@ title: PHP Interpreter
 comments:
   - author: 7ota
     email: 7ot@7ot.cc
-    ip: 212.116.219.211
-    url:
     date: 07/10/2008 07:38:24 AM
     text: >
       do you mean you have a success result with PHP::Interpreter ?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 07/10/2008 08:17:51 AM
     text: >
       I 70ta - yeh - I did get it to work successfully. Its a really interesting idea, don't you think?
   - author: 7ota
     email: 7ot@7ot.cc
-    ip: 212.116.219.211
-    url:
     date: 07/10/2008 01:08:45 PM
     text: >
       Yeah , i know its good idea :D<br/><br/>but i faced a lot of failed steps when i install it , do you mind if you tell me what is the way that you followed to install it ?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 07/10/2008 01:14:53 PM
     text: >
       Are you on Debian?
   - author: 7ota
     email: 7ot@7ot.cc
-    ip: 212.116.219.82
-    url:
     date: 07/10/2008 01:18:06 PM
     text: >
       iam on Centos 4
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 07/11/2008 11:35:19 AM
     text: >
       Hmmm, well I'm not too sure on how to work on Cent OS, but what have you tried so far? Maybe I can help if I understand your specific problem better. Have you downloaded the php src?
   - author: 7ota
     email: 7ot@7ot.cc
-    ip: 79.173.241.180
-    url:
     date: 07/31/2008 03:05:16 PM
     text: >
       Yes i tried it several times , visit more than 10 Sites that talk about PHP::Interpreter and no succes result , i tomorow i will try to compile php without apache becuz some thread on the net say may be i want to compile php without apache :S
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 74.94.149.33
-    url:
     date: 07/31/2008 03:16:56 PM
     text: >
       Hi 7ota - yeah try that. I use fastcgi instead of PHP as an apache module...

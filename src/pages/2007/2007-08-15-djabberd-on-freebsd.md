@@ -3,15 +3,12 @@ title: DJabberd on FreeBSD
 comments:
   - author: Om Kumawat
     email: h2005428@bits-pilani.ac.in
-    ip: 203.83.248.32
     url: http://www.bits-pilani.ac.in
     date: 03/31/2008 04:10:17 AM
     text: >
       Hi:<br/>My Djabberd Server is not working. First let me explain what I have done:<br/>Installed Djabberd Server on Linux machine from <a href="http://search.cpan.org/~bradfitz/DJabberd-0.83/lib/DJabberd.pm" rel="nofollow">http://search.cpan.org/~bradfitz/DJabberd-0.83/lib/DJabberd.pm</a><br/><br/>Installed all the requiered packages<br/><br/>Installed SamePlace for connecting it to Djabberd Server<br/>my machine hostname is "jpr.om.com"<br/><br/>when I run<br/>"telnet jpr.om.com 5222"<br/>"telnet jpr.om.com 5269"<br/>than its showing CONNECTED<br/><br/>my djabberd.users file as follos:<br/><br/>Policy accept<br/>AllowedUsers om1 om2<br/><br/>Password password<br/><br/>my djabberd.conf file as follows:<br/><br/>OldSSL enable<br/><br/># defaults:<br/>ClientPort 5222<br/>ServerPort 5269<br/><br/>#PerlModule DJabberd::SixApart<br/><br/>S2S enable<br/>RequireSSL no<br/><br/>Policy accept<br/>AllowedUsers om1 crucially test om2<br/><br/>Password password<br/><br/>Database roster.sqlite<br/><br/>So now when I try to connect SamePlace to Djabberd Server It does not connect<br/>I give following parameters in SamePlace<br/>open account wizard than select second jabber service and enter following details:<br/><br/>Username: om1<br/>Domain: jpr.om.com<br/>Password: 123456<br/>Resource: SamePlace<br/>Server: jpr.om.com<br/>Port: 5223/5222/5269(check for all these three port)<br/>Encryption: SSL/None(check for both SSL as well as None)<br/><br/>Than it does not show any error massage or anything.<br/><br/>So please tell me what's wrong is going on here. if anything isrequired more to explain than please let me know. I highly need a help because its a my MTech term project. if I be unable to complete it thanI will be getting poor Grade. So please tell me how do I run it.<br/><br/>Please do reply asap.<br/><br/>Best regards,<br/>Om Kumawat<br/>MTech(Computer Science)<br/>4th Sem<br/>BITS-PILANI, Pilani(Rajasthan-India)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 03/31/2008 09:28:03 PM
     text: >
       Hi Om,<br/><br/>How are you starting djabberd?<br/><br/>Can you run tcpdump on the machine running djabberd?<br/><br/>Albert

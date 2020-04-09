@@ -3,15 +3,11 @@ title: Memory tips for Debian on t5135
 comments:
   - author: Ben
     email: b.ansems.de.vries@hccnet.nl
-    ip: 192.168.8.200
-    url:
     date: 11/30/2008 10:31:51 AM
     text: >
       Hello,<br/><br/>Did you get the network working?<br/>module vai-rhine is loaded, ifup eth0 gives no device<br/><br/>Greetz,<br/><br/>Ben
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.8.200
-    url:
     date: 11/30/2008 11:36:07 AM
     text: >
       Yes - these work fine for me. What does dmesg say? You using debian?

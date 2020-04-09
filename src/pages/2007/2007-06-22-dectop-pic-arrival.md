@@ -3,22 +3,17 @@ title: decTop Pic Arrival
 comments:
   - author: Tai Viinikka
     email: tai@eastpole.ca
-    ip: 38.99.179.162
     url: http://www.eastpole.ca
     date: 06/17/2008 01:19:57 PM
     text: >
       I'd love to hear what you are doing with your DecTops these days. I just got one and I love the silence.<br/><br/>One additional use I am hoping will pan out is as a low-performance log server. Hopefully my firewall etc. won't need to send more than ~ 4 Mbit/s of syslog messages.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 75.69.165.231
-    url:
     date: 06/17/2008 09:36:34 PM
     text: >
       Hi Tai - yeah they are very cool little boxen. I'm running Xubuntu on one of mine, and the other one is in pieces, to be built again.<br/><br/>I keep getting frustrated by the lack of an ethernet port though. The USB 1.1 dongle just isn't that great. :-(
   - author: Fed
     email: fedarik@gmail.com
-    ip: 127.0.0.1
-    url:
     date: 08/11/2008 02:18:28 PM
     text: >
       Could you find a way to install Ubuntu in the hard disk itself??

@@ -3,22 +3,16 @@ title: My experience with prgmr.com
 comments:
   - author: Luke Crawford
     email: lsc@prgmr.com
-    ip: 69.12.128.197
-    url:
     date: 07/25/2009 06:17:48 PM
     text: >
       ah.  sorry.  did we at least get you a refund?
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.202.85.141
-    url:
     date: 07/26/2009 06:57:40 PM
     text: >
       Hi Luke, thanks for following up. I got your emails and responded from both my main account and a backup in case they are getting filtered for some reason.
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 71.202.85.141
-    url:
     date: 07/26/2009 06:58:12 PM
     text: >
       Once I get up and running with your service I'll definitely write up another review.

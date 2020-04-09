@@ -3,15 +3,11 @@ title: Why Aren t You Using Linux
 comments:
   - author: Rob
     email: rbyrnes@gmail.com
-    ip: 192.168.8.2
-    url:
     date: 01/14/2009 07:48:17 PM
     text: >
       Why aren't I using Linux?  Because I'm using FreeBSD :)
   - author: Albert
     email: albert.lash@savonix.com
-    ip: 192.168.134.22
-    url:
     date: 01/21/2009 08:27:56 AM
     text: >
       That's a reasonable excuse! :-)
