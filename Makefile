@@ -17,6 +17,7 @@ serve: ## serve
 	@npm run serve
 
 deploy: ## deploy
+	cp CNAME public/
 	git add public
 	git commit -m "updated" & true
 	git subtree push --prefix=public origin master
