@@ -44,7 +44,8 @@ export default ({ data }) => (
 
 export const query = graphql`
   query($dir: String!) {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: $dir} }, sort: { fields: [frontmatter___date], order: DESC }, limit: 50) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: $dir} },
+      sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {

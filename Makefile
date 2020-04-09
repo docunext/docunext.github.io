@@ -1,18 +1,23 @@
-.PHONY install:
+help:     ## Show this help.
+	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
+
+install: ## install
 	npm i
-clean:
+
+clean: ## clean
 	rm -rf .cache
 
-dev: clean
+dev: clean ## dev
 	@npm run start
 
-build: clean
+build: clean ## build
 	@npm run build
 
-serve:
+serve: ## serve
 	@npm run serve
 
-deploy:
+deploy: ## deploy
 	git add public
 	git commit -m "updated" & true
 	git subtree push --prefix=public origin master
+
