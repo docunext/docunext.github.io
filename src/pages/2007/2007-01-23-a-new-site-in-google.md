@@ -3,7 +3,6 @@ title: A new site in Google
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 02/04/2007 11:54:17 PM
     text: >
       As of February 4, 2007, still only one page. :-(

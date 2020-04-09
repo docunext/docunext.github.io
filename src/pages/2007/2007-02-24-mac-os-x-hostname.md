@@ -3,7 +3,6 @@ title: Mac OS X Hostname
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 02/24/2007 05:13:21 AM
     text: >
       Yup! It works! :-)

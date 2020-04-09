@@ -3,7 +3,6 @@ title: Mo domains mo data
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 01/11/2007 06:13:51 PM
     text: >
       Easy enough to install, though it lacks a full domain name database model. I need something more thorough, including registrant, the ability to enumerate domain registrars, and things of that nature.

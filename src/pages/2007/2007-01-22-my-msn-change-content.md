@@ -3,7 +3,6 @@ title: My MSN Change Content
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 01/23/2007 12:28:33 PM
     text: >
       Finally got it to work. I had to do it via live.com, no msn.com. Furthermore, it wouldn't work in Camino, I did it via Q (QEMU) and Windows XP, but then found it works in regular Firefox too, even Deer Park! Cool. Now hopefully this site will have better exposure in Microsoft's search engine SERPS.

@@ -3,7 +3,6 @@ title: Google Coop
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 12/10/2006 12:52:11 PM
     text: >
       I have a sinking suspicion that this search functionality will upset some people. Picture this: using Google coop, sites can essentially "feature" content from other sites, who may not want to be "featured" on other sites. I bet there will be lawsuits, but in the end, Google will have more people "opting-in".

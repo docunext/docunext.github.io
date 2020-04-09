@@ -3,7 +3,6 @@ title: Image Magick
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 01/06/2007 07:30:42 AM
     text: >
       I just found these old notes:<br/>The best command I've found so far:<br/>convert −size 762x612 −compress LZW file.tif file.pdf<br/>convert −colorspace cmyk −compress LZW file.tif file.pdf<br/>Convert a PDF to a series of JPG files:<br/>convert −size 576x432 Mitchell.pdf −rotate 90 −resize 576x432! Slide.jpg<br/><br/>The −rotate 90 is for landscape pdfs.

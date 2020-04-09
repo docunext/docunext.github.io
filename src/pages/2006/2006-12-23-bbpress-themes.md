@@ -3,7 +3,6 @@ title: bbpress themes
 comments:
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 12/23/2006 03:13:38 PM
     text: >
       Actually I have to take it back, integrating isn't as hard as it seemed. With a little hacking, I've been able to use my existing WP theme. Awesome! Still having issues with the login fields, but I think I can fix it.<br/>

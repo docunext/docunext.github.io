@@ -8,13 +8,11 @@ comments:
       Tried to email back to your email but<br/>" mail for docunext.com loops back to myself"<br/>My reply was<br/><br/>actually we have already some similar rules<br/>in postfix.conf.<br/>Could you please describe a bit more on when a given error code is reported, and may be if there is sense to merge them all into 1 filter?
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 12/04/2006 04:10:19 PM
     text: >
       Absolutely. Thanks for the heads up re document email.
   - author: admin
     email: albert.lash@savonix.com
-    url: http://www.docunext.com/
     date: 12/13/2006 11:00:20 AM
     text: >
       Just wrote back to yarikoptik:<br/><br/>Thanks for your response. The idea behind these rules is to use fail2ban as a dnsrbl "cache" of sorts. There are some spammers who keep on attempting to email our servers even though they are denied again and again. Therefore, I give them a few times to figure it out, then block them for 24 hours, reducing  load on the server and the remote dnsbl server.<br/><br/>The other important one is the unknown user, to prevent dictionary spams, which go through everyname@example.com. This is very different because many times legitimate senders will get the email wrong several times in a row. Therefore, the number of errors is much higher than usual. Also, the timeout is much shorter.<br/><br/>What's nice about this is there is also the ability to easily "whitelist" ip blocks using ignore.<br/><br/>Neither of these appropriate for locking out legitimate users, so I don't know if they can be combined. But that may be because of my lack of fail2ban knowledge. I'm very impressed with the software and like it very much.
