@@ -1,0 +1,55 @@
+---
+title: Ditz the Ruby Git Issue Tracker and Ruby 1.9.1
+date: 2010-05-01
+tags: git,"issue management"
+---
+Simple Defects, the distributed issue tracking system written in Perl with hooks into Git, has been on my radar screen for awhile. I've installed it and run a few tests and it worked well, but I just don't have the familiarity I want to have with Perl yet.
+
+I started to look around for a Ruby-based equivalent to SD and found [this article by Tom Morris](http://tommorris.org/blog/2010/04/26).
+
+I haven't fully tested it out yet, but it sounds terrific. Its open source, and the code is available at Gitorious:
+
+* <http://gitorious.org/ditz>
+* <http://github.com/docunext/ditz>
+
+Its a Ruby forge project too:
+
+* <http://ditz.rubyforge.org/>
+
+More pages about ditz:
+
+* <http://all-thing.net/old26>
+
+Hmm... I've run into a little trouble with ditz:
+
+<pre class="sh_sh">
+multiple assignment in conditional (SyntaxError)
+</pre>
+
+I've forked it and might have fixed the issues.... DOH!
+
+<pre class="sh_sh">
+/home/albertlash/src/docu-ditz/lib/ditz.rb:71:in `run_pager': uninitialized constant PLATFORM (NameError)
+</pre>
+
+It has to do with WIN32 so I just deleted it, but actually I'll comment it out. Yup, looks like its working OK now....
+
+[Tracker](http://tracker.rubyforge.org/) looks nice too!
+
+Looking around at ditz some more I see its actually quite an interesting little package. It uses yaml for marshalling / serializing the issue objects in the git repository. With respect to Git, I really like the idea of [using flat files for storage](http://www.docunext.com/2010/01/lets-use-flat-files-for-storage.html), and even combining files to keep management simpler. With a command line parser / interface, it totally makes sense.
+
+But why YAML? Personally I would have preferred XML or JSON, but not a problem - it might even be possible to change which serialization method it uses.
+
+Ooooh - there is a fresher fork of ditz stuff (and patches too):
+
+* <http://github.com/ohac/ditz>
+* <http://github.com/ohac/ditz-patches>
+
+Looks like there might even be a sinatra app in there!
+
+Another good reason I like JSON:
+
+* <http://rdoc.info/projects/brianmario/yajl-ruby>
+
+CONCLUSION: I think Ditz just might be the direction I want to go!
+

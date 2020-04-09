@@ -1,0 +1,19 @@
+---
+title: ALIX 1C
+comments:
+  - author: Chris Hodapp
+    email: Hodapp87@gmail.com
+    url: http://hodapp.wordpress.com
+    date: 05/10/2008 08:36:29 PM
+    text: >
+      I also have an ALIX1C, and will probably be using it as a server as soon as I get it working properly. Have you gotten this board to boot Debian without a monitor attached?
+  - author: Albert
+    date: 05/11/2008 10:35:39 AM
+    text: >
+      Hi Chris - absolutely! I had no problem at all to install debian onto a 2GB or so compact flash card and run the ALIX1c without a monitor.<br/><br/>Where are you in the process of setting up the ALIX1c? Are you using a solid state drive (compact flash, etc.) or a real hard drive?
+date: 2008-03-24
+---
+I'm back installing debian on an ALIX1C - the lx800 wonder from PC Engines that uses only 5W of power! I'm using a compact flash disk as the hard drive and I'm planning to also use an NFS share for extra storage.
+
+¥
+
