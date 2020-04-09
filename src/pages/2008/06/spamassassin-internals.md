@@ -14,5 +14,5 @@ In reviewing the spamassassin code, I just noticed you can store the scores in m
 
 <pre lang="perl">$conf-&gt;{$ruletype}-&gt;{rkhashes} = { };</pre>
 
-Glad to see more of that style, in <a href="http://www.docunext.com/2008/06/more-perl-thoughts.html">my last post about perl</a>, I wondered if that technique was commonplace.
+Glad to see more of that style, in <a href="http://www.docunext.com/2008/06/more-perl-thoughts/">my last post about perl</a>, I wondered if that technique was commonplace.
 

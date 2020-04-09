@@ -16,7 +16,7 @@ Anyway, to retain mysql stuff through a reboot, I use this:
 
 <pre>tmpdir      = /var/lib/mysql/tmp</pre>
 
-More database replication info: <a href="http://www.docunext.com/wiki/MySQL_Database_Replication">MySQL Database Replication</a>
+More database replication info: <a href="http://www.docunext.com/">MySQL Database Replication</a>
 
 ¥
 

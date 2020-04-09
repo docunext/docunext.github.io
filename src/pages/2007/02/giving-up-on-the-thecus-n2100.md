@@ -16,7 +16,7 @@ notebook with 512mb of ram, a 60gb hd, and a much more powerful processor from W
 Is there a quality NAS that has a reliable serial connection? While I'm very glad that the Thecus n2100 had a serial connection, it was really difficult to access, requiring the removal and replacement of the hard drive chassis. According to this page on <a href="http://david.thg.se/n2100/addserial.html">
 adding a serial connection to the Thecus n2100</a>
 , the later boards don't even come with the pin-outs! What's worse, I could not get a consistent read on the serial connection from the Thecus. I tried a real null modem db9 serial cable, but since it didn't work, I ended up using
-<a href="http://www.docunext.com/2007/02/more-thecus-n2100-pics.html">simple wires to make the serial connection to the Thecus</a>.
+<a href="http://www.docunext.com/2007/02/more-thecus-n2100-pics/">simple wires to make the serial connection to the Thecus</a>.
 
 The Buffalo Linkstation doesn't have a built-in standard serial pinout, nor does the NSLU2. Do any of these work with a USB2Serial adapter? Not likely. <b>
 Alternatives</b>

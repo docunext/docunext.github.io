@@ -3,7 +3,7 @@ title: No route matches action destroy
 date: 2010-10-31
 tags: datamapper,rails3
 ---
-My recent post about [whether or not to use scaffolding](http://www.docunext.com/2010/10/just-say-no-to-scaffolding.html) has come home to roost!
+My recent post about [whether or not to use scaffolding](http://www.docunext.com/2010/10/just-say-no-to-scaffolding/) has come home to roost!
 
 *This only has to do with generating a controller, but it embodies some of my opinions of automatically generating code.*
 

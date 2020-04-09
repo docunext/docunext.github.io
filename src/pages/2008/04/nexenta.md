@@ -73,7 +73,7 @@ UPDATE: I've got moinmoin installed so I can really test out the platform.
 
 More notes:
 
-<a href="http://www.docunext.com/wiki/Nexenta">Nexenta Notes at Docunext
+<a href="http://www.docunext.com/">Nexenta Notes at Docunext
 </a>
 
 ¥

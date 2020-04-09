@@ -68,5 +68,5 @@ With a little tweaking and tuning here and there, this DRBD / OCFS2 setup will b
 
 http://listas.softwarelivre.org/pipermail/psl-go/2005-December/002462.html
 
-<a href="http://www.docunext.com/wiki/DRBD8">DRBD8 + OCFS2 on Debian Howto / Disorganized Notes</a>
+<a href="http://www.docunext.com/8">DRBD8 + OCFS2 on Debian Howto / Disorganized Notes</a>
 

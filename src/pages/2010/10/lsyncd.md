@@ -53,5 +53,5 @@ Yup! That worked. I bet there are plenty of situations where some tweaks are nee
 
 #### More information:
 
-* [lsyncd](http://www.docunext.com/wiki/Lsyncd)
+* [lsyncd](http://www.docunext.com/)
 

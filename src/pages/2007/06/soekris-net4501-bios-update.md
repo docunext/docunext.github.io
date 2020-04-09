@@ -5,7 +5,7 @@ tags: bios,m0n0wall,soekris
 ---
 ## <strong>Updating the BIOS on a Soekris net4801</strong>
 
-I found out why my <a href="http://www.docunext.com/2007/06/soekris-net4501-m0n0wall-error.html">net4501 was going slow</a>: the latest bios had the cpu cache disabled. :-) Its so nice when you finally get to the bottom of something.
+I found out why my <a href="http://www.docunext.com/2007/06/soekris-net4501-m0n0wall-error/">net4501 was going slow</a>: the latest bios had the cpu cache disabled. :-) Its so nice when you finally get to the bottom of something.
 
 To update the bios, I had to use linux. Even though Mac OS X runs BSD, I couldn't get the bios to update using minicom or lrzsz. :-(
 

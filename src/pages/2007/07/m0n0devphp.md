@@ -20,5 +20,5 @@ OK I just rebuilt everything and still no luck. Darn.
 
 Related links:
 
-<a href="http://www.docunext.com/2007/06/m0n0wall-development-environment.html">m0n0wall development environment</a>
+<a href="http://www.docunext.com/2007/06/m0n0wall-development-environment/">m0n0wall development environment</a>
 

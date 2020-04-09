@@ -7,9 +7,9 @@ tags: dav,fuse,google,s3
 
 I'm going to set this up today and see if this item on my "to-do" list works:
 
-<a href="http://www.docunext.com/2010/08/to-do-test-apache2s3-as-a-dav-proxy-with-davfs2.html" class="h3 strong">To-Do: Test Apache2::S3 as a DAV Proxy with DAVFS2</a>
+<a href="http://www.docunext.com/2010/08/to-do-test-apache2s3-as-a-dav-proxy-with-davfs2/" class="h3 strong">To-Do: Test Apache2::S3 as a DAV Proxy with DAVFS2</a>
 
-Alas, it didn't work. I didn't use davfs2, but actually that's what encouraged me to try this today! After tinkering around the [Lucid Lynx Ubuntu system](http://www.docunext.com/2010/08/some-ubuntu-customizations-im-using-with-lucid-lynx-1004.html) I recently setup on my [Lenovo G555](http://www.my-tech-deals.com/blog/2010/08/review-of-the-lenovo-g555.html) I noticed something that sounded familiar but hadn't actually seen before: **.gvfs**.
+Alas, it didn't work. I didn't use davfs2, but actually that's what encouraged me to try this today! After tinkering around the [Lucid Lynx Ubuntu system](http://www.docunext.com/2010/08/some-ubuntu-customizations-im-using-with-lucid-lynx-1004/) I recently setup on my [Lenovo G555](http://www.my-tech-deals.com/blog/2010/08/review-of-the-lenovo-g555.html) I noticed something that sounded familiar but hadn't actually seen before: **.gvfs**.
 
 ## What is GVFS?
 
@@ -26,7 +26,7 @@ ii  gvfs-fuse                             1.6.1-0ubuntu1build1                  
 ii  libgvfscommon0
 </pre>
 
-Get the idea? Good! I'll elaborate anyway! Docunext readers may be familiar with [FUSE](http://www.docunext.com/wiki/FUSE), I know I am - I've been using SSHFS to mount filesystems over the SSH protocol for years, though I've been using NFS more often these days. I still use FUSE all the time for Encfs, too.
+Get the idea? Good! I'll elaborate anyway! Docunext readers may be familiar with [FUSE](http://www.docunext.com/), I know I am - I've been using SSHFS to mount filesystems over the SSH protocol for years, though I've been using NFS more often these days. I still use FUSE all the time for Encfs, too.
 
 Anyway, from what I've learned so far, gvfs is a set of tools, abstraction layers, and programming interfaces to provide tighter integration of FUSE, as well as other filesystem backends, with Gnome. While reading up on gvfs, I discovered that [Thibault Saunier is working on a Google Docs interface to gvfs](http://thiblahute.blogspot.com/2010/01/good-news-about-google-documents-gvfs.html)! Believe in the gDrive! The [gPhone](http://www.soggyblogger.com/blog/2010/08/droid-x-review.html) came true!!
 

@@ -19,5 +19,5 @@ One very cool thing about filters like markdown and source-highlight is that it 
 
 And a quick note relating to my general web server plans - my path prefixes: * /a/ = admin and/or application pages, usually password protected* /s/ = static files, can be sent with public cache headers and longer expires* /p/ = proxied data, mainly for filtering purposes
 
-UPDATE: Yes, even <a href="http://www.docunext.com/wiki/Apache2_mod_ext_filter_and_Imagemagick">imagemagick can be used to dynamically resize images via an Apache mod_ext_filter</a>.
+UPDATE: Yes, even <a href="http://www.docunext.com/2_mod_ext_filter_and_Imagemagick">imagemagick can be used to dynamically resize images via an Apache mod_ext_filter</a>.
 

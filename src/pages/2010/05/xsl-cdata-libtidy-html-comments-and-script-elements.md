@@ -38,5 +38,5 @@ I read up on when comment or CDATA tags are required for script tags and decided
 
 So now the default behavior is that libTidy is escaping script tag contents with CDATA tags, and libXSLT escapes their content, dropping the CDATA tags. Works fine as long as there aren't any entities in there!
 
-UPDATE: After wrestling with the comment, I found [the strangest bug I've ever encountered](http://www.docunext.com/2010/05/the-strangest-bug-ive-ever-encountered.html).
+UPDATE: After wrestling with the comment, I found [the strangest bug I've ever encountered](http://www.docunext.com/2010/05/the-strangest-bug-ive-ever-encountered/).
 

@@ -7,7 +7,7 @@ More to-dos:
 
 * Try out ldap authentication with Apache - does it support digest? Unfortunately no, should again review building mod_authn_dbd with mysql support.
 * Try setting up ldap to use mysql as a back end again - I did it once before but didn't find much use for it now I can fully appreciate the value that ldap brings to the table. Still, I use MySQL for so much it would make my life easier if I had a single back-end data store to manage
-* Try out pure-ftpd - DONE - ran into an interesting issue, it requires some kernel capabilities - see <a href="http://www.docunext.com/wiki/OpenVZ#Kernel_Capabilities">this</a>.
+* Try out pure-ftpd - DONE - ran into an interesting issue, it requires some kernel capabilities - see <a href="http://www.docunext.com/#Kernel_Capabilities">this</a>.
 * Try out mod_proxy_ftp - DONE, unfortunately, you can't specify the username and password in the proxy url directive like this:
 
 <pre class="sh_sh">

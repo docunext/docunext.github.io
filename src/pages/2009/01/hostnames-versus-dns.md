@@ -17,5 +17,5 @@ Thanks to unbound, a dns resolver with a lot to offer, and dnsmasq, a simple and
 
 Unbound on the other hand, even if you give it a bunch of local-data A records, its not going to provide you with an automatic reverse lookup, it really needs a PTR record.
 
-Hopefully my understanding at this point is correct - I'm figuring all this out as I work on <a href="http://www.yodnsconf.com/web/">YoDNSConf - an open source DNS and network management system</a>, as well as <a href="http://www.docunext.com/wiki/Puppet">starting to experiment with Puppet</a>.
+Hopefully my understanding at this point is correct - I'm figuring all this out as I work on <a href="http://www.yodnsconf.com/web/">YoDNSConf - an open source DNS and network management system</a>, as well as <a href="http://www.docunext.com/">starting to experiment with Puppet</a>.
 

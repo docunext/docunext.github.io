@@ -29,8 +29,8 @@ I didn't realize this before, but Tokyo Tyrant supports the memcached protocol. 
 * Replication
 
 ## Docunext Wiki Pages
-* [Tokyo Tyrant](http://www.docunext.com/wiki/Tokyo_Tyrant)
-* [Redis](http://www.docunext.com/wiki/Redis)
+* [Tokyo Tyrant](http://www.docunext.com/)
+* [Redis](http://www.docunext.com/)
 
 ## External Links
 * [MemcacheDB, Tokyo Tyrant, Redis performance test](http://timyang.net/data/mcdb-tt-redis/)

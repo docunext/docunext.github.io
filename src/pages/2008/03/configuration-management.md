@@ -18,7 +18,7 @@ comments:
   - author: Albert
     date: 03/27/2008 12:37:29 PM
     text: >
-      I started a wiki page on the subject here:<br/><br/><a href="http://www.docunext.com/wiki/Systems_Configuration_Management" rel="nofollow">http://www.docunext.com/wiki/Systems_Configuration_Management</a>
+      I started a wiki page on the subject here:<br/><br/><a href="http://www.docunext.com/" rel="nofollow">http://www.docunext.com/wiki/Systems_Configuration_Management</a>
   - author: Andrey Nordin
     email: anrienord@gmail.com
     url: http://abstracthack.wordpress.com/

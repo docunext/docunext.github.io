@@ -3,7 +3,7 @@ title: Hypens and Underscores
 date: 2009-12-19
 tags: css,hyphens,underscores
 ---
-As a quick update to [Trends in Technical Syntax: Hyphens and Underscores](http://www.docunext.com/2009/07/trends-in-technical-syntax-hyphens-and-underscores.html), I'm just posting to say that I'm now pretty much using hyphens in all my CSS classes and id tags.
+As a quick update to [Trends in Technical Syntax: Hyphens and Underscores](http://www.docunext.com/2009/07/trends-in-technical-syntax-hyphens-and-underscores/), I'm just posting to say that I'm now pretty much using hyphens in all my CSS classes and id tags.
 
 And for URLs - always underscores for real files. For url "tokens" (references to resources, but not real files), I'll probably continue to use hyphens, though with the help of rewrite tools, I'm starting to use forward slashes, too.
 

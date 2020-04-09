@@ -135,7 +135,7 @@ I'm happy to report that Amazon.com replaced the power pack at no charge, and th
 
 #### UPDATE September 29, 2007:
 
-<a href="http://www.docunext.com/2007/08/solar-powered-dectop.html">Solar Powered Dectop</a>
+<a href="http://www.docunext.com/2007/08/solar-powered-dectop/">Solar Powered Dectop</a>
 
 #### References:
 

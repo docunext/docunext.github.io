@@ -3,7 +3,7 @@ title: SquashFS and UnionFS
 date: 2008-03-20
 tags: file systems,hp,nfs,nodows,ram,squashfs
 ---
-Today I upgraded an <a href="http://www.docunext.com/wiki/hardware/hp/hp_t5725/">HP t5725 thin client</a> to use as a desktop at my office. Previously this machine was configured as a server, but considering its graphics capabilities and silent nature, I decided it was better as a desktop machine.
+Today I upgraded an <a href="http://www.docunext.com//hp/hp_t5725/">HP t5725 thin client</a> to use as a desktop at my office. Previously this machine was configured as a server, but considering its graphics capabilities and silent nature, I decided it was better as a desktop machine.
 
 Since it came with only a 512MB Flash drive, I decided to use NFS to store the /usr/, /var/lib/ and /var/cache directories. That got me thinking about SquashFS and UnionFS again.
 

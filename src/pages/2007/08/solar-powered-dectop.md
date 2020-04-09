@@ -5,7 +5,7 @@ tags: alix,energy
 ---
 My solar panel charge regulator arrived this week so I plugged it into my solar panel and my battery pack, then plugged my dectop into the battery pack, and voila, we are operating under solar power! :-)
 
-This is basically just a test right now to see how well the charger works. The dectop takes about 10 watts of power, which might be too much for the solar panel to recharge the battery with. I'll probably switch to using a <a href="http://www.docunext.com/2007/07/pc-engines-wrap-successor-alix.html">PC Engines ALIX board</a> instead, but I only have one right now. That one is happy using a CF as a drive, only consumes about 4-6 watts of power, and has both an onboard nic and a miniPCI card for a wireless network.
+This is basically just a test right now to see how well the charger works. The dectop takes about 10 watts of power, which might be too much for the solar panel to recharge the battery with. I'll probably switch to using a <a href="http://www.docunext.com/2007/07/pc-engines-wrap-successor-alix/">PC Engines ALIX board</a> instead, but I only have one right now. That one is happy using a CF as a drive, only consumes about 4-6 watts of power, and has both an onboard nic and a miniPCI card for a wireless network.
 
 I had originally thought of using a NSLU2 "slug" for this project, but they are better off doing network storage.
 

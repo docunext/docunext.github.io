@@ -21,5 +21,5 @@ I've done this before so it shouldn't be too bad.
 
 UPDATE: I've done it! Most of my notes are over at the Docunext Wiki, so check 'em out:
 
-* [Dovecot](http://www.docunext.com/wiki/Dovecot)
+* [Dovecot](http://www.docunext.com/)
 

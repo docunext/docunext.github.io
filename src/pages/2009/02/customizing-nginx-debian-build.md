@@ -21,7 +21,7 @@ NGX_GCC_OPT="-Os"
 
 CPU_OPT="-march=geode"</pre><del>I also added "-mtune=geode" to the debian/rules file</del>. In the case that I use a machine with an intel atom (i686 or the like) or a via c7[1] (-march=i686 -mmmx -msse -msse2 -msse3), I would obviously change the -march flag. [<a href="http://gcc.gnu.org/onlinedocs/gcc/i386-and-x86_002d64-Options.html">2</a>]
 
-I also removed the ssl module from the configure line in debian/rules as I want to use pound as an ssl proxy - it can use specific openssl engines, as described <a href="http://www.docunext.com/wiki/Via_Padlock_OCF-Linux_Integration">here</a>[<a href="http://www.docunext.com/wiki/Via_Padlock_OCF-Linux_Integration">3</a>]. I also removed the flv module.
+I also removed the ssl module from the configure line in debian/rules as I want to use pound as an ssl proxy - it can use specific openssl engines, as described <a href="http://www.docunext.com/">here</a>[<a href="http://www.docunext.com/wiki/Via_Padlock_OCF-Linux_Integration">3</a>]. I also removed the flv module.
 
 Example resulting command:
 
@@ -34,5 +34,5 @@ References:
 
 2. <a href="http://gcc.gnu.org/onlinedocs/gcc/i386-and-x86_002d64-Options.html">http://gcc.gnu.org/onlinedocs/gcc/i386-and-x86_002d64-Options.html</a>
 
-3. <a href="http://www.docunext.com/wiki/Via_Padlock_OCF-Linux_Integration">Via Padlock OCF-Linux Integration</a>
+3. <a href="http://www.docunext.com/">Via Padlock OCF-Linux Integration</a>
 

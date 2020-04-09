@@ -35,7 +35,7 @@ It sure sounds to me that the filter is ONLY added if the URL is found, and the 
 
 This is a feature I really liked in lighttpd, and blogged about it awhile back:
 
-<a href="http://www.docunext.com/2006/12/lighttd-webserver.html">Caching with lighttpd webserver</a>
+<a href="http://www.docunext.com/2006/12/lighttd-webserver/">Caching with lighttpd webserver</a>
 
 I just added options for disk caching, seems to be working OK as well. UPDATE: No it isn't working well. :-( I ran into a problem with Wordpress which caused a blank page to display. It probably has something to do with the internal caching setup in Wordpress. Doh! I've turned it off for now on our main blogs, but I'm keeping it on for a smaller server with less crucial content.
 

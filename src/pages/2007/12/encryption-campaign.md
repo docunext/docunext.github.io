@@ -12,7 +12,7 @@ Zeth at command line warriors has launched a campaign for laptop users to encryp
 
 I don't encrypt my laptop, but I also never let it leave my personal proximity. Yes, I bring it into dunkin donuts when I get my coffee, and I bring it into restaurants with me, and so on.
 
-My macbook doesn't have encryption acceleration, but laptops like the <a href="http://www.my-tech-deals.com/blog/2007/09/everex-nc1501-back-in-stock-at-walmart-for-43800.html">Everex NC1501 with the VIA C7 CPU</a> have encryption acceleration, and combined with the <a href="http://www.docunext.com/wiki/Via_Padlock_OCF-Linux_Integration">OCF-Linux patches</a>, an encrypted home directory should have very little performance impact, if any.
+My macbook doesn't have encryption acceleration, but laptops like the <a href="http://www.my-tech-deals.com/blog/2007/09/everex-nc1501-back-in-stock-at-walmart-for-43800.html">Everex NC1501 with the VIA C7 CPU</a> have encryption acceleration, and combined with the <a href="http://www.docunext.com/">OCF-Linux patches</a>, an encrypted home directory should have very little performance impact, if any.
 
 ¥
 

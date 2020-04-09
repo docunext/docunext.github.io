@@ -5,7 +5,7 @@ tags: debian,google,puppet
 ---
 Planet Debian recently featured a post by <a href="http://www.milliways.fr/2010/09/19/google-summer-of-code-2010-debian-report/" rel="nofollow">Obey Arthur Liu about the Google Summer of Code</a>.
 
-The section about the Debian GNU/Hurd port by Jérémie Koenig especially interested me. It included work on a cross-platform [Busybox](http://www.docunext.com/wiki/Busybox) port and the "de-Linux-ization" of the Debian installer, which will definitely help other ports:
+The section about the Debian GNU/Hurd port by Jérémie Koenig especially interested me. It included work on a cross-platform [Busybox](http://www.docunext.com/) port and the "de-Linux-ization" of the Debian installer, which will definitely help other ports:
 
 * Debian GNU/kFreeBSD
 * Debian GNU/kNetBSD

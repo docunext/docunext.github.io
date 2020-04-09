@@ -14,5 +14,5 @@ How much power does all this use? Around 160 watts it looks like so far. I'm sur
 
 Considering that with most of my computers I try to keep the power consumption under 40 watts, this might seem way too high. But keep in mind this is a high-performance server. This is one of the first servers I've measured, but I think for the most part, they use a much higher magnitude of power than desktop computers and workstations.
 
-I'll be sure to post more information as it becomes available. UPDATE: <a href="http://www.docunext.com/wiki/Intel_Xeon_L5410">Wiki page on the Xeon L5410</a>.
+I'll be sure to post more information as it becomes available. UPDATE: <a href="http://www.docunext.com/5410">Wiki page on the Xeon L5410</a>.
 

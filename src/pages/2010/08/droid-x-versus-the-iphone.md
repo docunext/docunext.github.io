@@ -5,7 +5,7 @@ tags: droid,iphone,"verizon wireless"
 ---
 I used to be such an Apple fan, and believe it or not, it was the iPod and its eventually closed-nature which bothered me so much that I stopped buying Apple products.
 
-I expected its successor, the [iPhone](http://www.docunext.com/blog/iphone.html), to be a total failure, but I was wrong - it was a smashing success.
+I expected its successor, the [iPhone](http://www.docunext.com/blog/iphone/), to be a total failure, but I was wrong - it was a smashing success.
 
 Still, I am wary to purchase anything made by Apple, so when Google came out with Android, I was very interested.
 

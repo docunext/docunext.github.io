@@ -8,7 +8,7 @@ Forum spam with the PhunkyBB forums system hasn't been much of a problem due to 
 
 However, I plan to loosen up the mod_spamhaus plugin at some point, as well as setup anonymous commenting with PhunkyBB. Thus I'll have to take a serious look at how to defend against forum spam.
 
-First of all, I'd like to revisit my tests of using <a href="http://www.docunext.com/wiki/Using_Spamassassin_to_filter_http_POSTs">spamassassin to inspect HTTP POST requests</a>.
+First of all, I'd like to revisit my tests of using <a href="http://www.docunext.com/">spamassassin to inspect HTTP POST requests</a>.
 
 Next, I'm going to review filters for HTTP POSTS, which can cleanse and alter incoming posts, to remove javascript, external img references, and limit the number of outgoing links.
 

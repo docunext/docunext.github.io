@@ -5,7 +5,7 @@ tags: bridging,debian,qemu,vde,virtualization
 ---
 <b>UPDATE</b>
 
-These notes have been succeeded by <a title="QEMU machines connected to a virtual switch connected to tap0 bridged with a LAN-connected nic card." href="http://www.docunext.com/2007/07/qemu-vde-notes-revisited.html">QEMU  vde Notes Revisited</a>
+These notes have been succeeded by <a title="QEMU machines connected to a virtual switch connected to tap0 bridged with a LAN-connected nic card." href="http://www.docunext.com/2007/07/qemu-vde-notes-revisited/">QEMU  vde Notes Revisited</a>
 
 
 #### <b>Note to self</b>
@@ -77,7 +77,7 @@ iface eth0 inet static
         netmask 255.255.255.0
 </pre>
 
-Amazingly, it works! Now this machine is the little <a href="http://www.docunext.com/2007/06/dectop-debian-tips.html">dectop running debian</a>, so I'm a little wary about running QEMU / KQEMU on it, but what the heck - I did just increase the RAM to 256MB, and the hard drive to 80GB! A 300MB QEMU file shouldn't be too much to handle. <div id="bridging">QEMU Bridging Specifics
+Amazingly, it works! Now this machine is the little <a href="http://www.docunext.com/2007/06/dectop-debian-tips/">dectop running debian</a>, so I'm a little wary about running QEMU / KQEMU on it, but what the heck - I did just increase the RAM to 256MB, and the hard drive to 80GB! A 300MB QEMU file shouldn't be too much to handle. <div id="bridging">QEMU Bridging Specifics
 
 Phenomenal! Even the dectop can do virtualization. :-) And oh so cool. Bridging brings the virtual machines into the real world lan, no need to have another lan behind another NAT layer. This is really really cool. I used some <a href="http://compsoc.dur.ac.uk/~djw/qemu.html">debian qemu directions</a> on how to setup the bridge to connect with qemu. I'm running vde_switch, but I'm not sure if I need to be. Here's the command I eventually used after modifying /etc/qemu-ifup:
 

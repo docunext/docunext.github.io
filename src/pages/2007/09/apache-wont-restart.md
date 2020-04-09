@@ -70,7 +70,7 @@ Andrew Tridgell wrote:
 
 Links:
 
-* <a href="http://www.docunext.com/wiki/Linux_and_entropy">http://www.docunext.com/wiki/Linux_and_entropy</a>
+* <a href="http://www.docunext.com/">http://www.docunext.com/wiki/Linux_and_entropy</a>
 * <a href="http://www.linuxcertified.com/hw_random.html">http://www.linuxcertified.com/hw_random.html</a>
 * <http://en.wikipedia.org/wiki/Hardware_random_number_generator>
 * <a href="http://kerneltrap.org/node/7439">http://kerneltrap.org/node/7439</a>

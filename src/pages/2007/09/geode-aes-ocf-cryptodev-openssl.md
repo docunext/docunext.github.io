@@ -49,7 +49,7 @@ comments:
   - author: Albert
     date: 02/19/2008 11:41:50 AM
     text: >
-      This is a real problem - it appears that every use of the geode-aes module results in problems. Its very hard to say where the problem lies, but my gut is pointing me towards OpenBSD so that I can try out their driver. I just pasted the man page here:<br/><br/><a href="http://www.docunext.com/wiki/Geode_LX_AES_Security_Block" rel="nofollow">http://www.docunext.com/wiki/Geode_LX_AES_Security_Block</a>
+      This is a real problem - it appears that every use of the geode-aes module results in problems. Its very hard to say where the problem lies, but my gut is pointing me towards OpenBSD so that I can try out their driver. I just pasted the man page here:<br/><br/><a href="http://www.docunext.com/" rel="nofollow">http://www.docunext.com/wiki/Geode_LX_AES_Security_Block</a>
   - author: Albert
     date: 02/19/2008 11:42:15 AM
     text: >
@@ -73,7 +73,7 @@ tags: alix
 ---
 Just finished up some more tests of the Geode security block using OCF-linux, cryptodev, and OpenSSL. The results are awesome. Check 'em out on the Docunext Wiki:
 
-<a href="http://www.docunext.com/wiki/My_Notes_on_Patching_2.6.22_with_OCF#The_Results">Geode AES + OCF + Cryptodev + OpenSSL = Wicked fast encryption</a>
+<a href="http://www.docunext.com/2.6.22_with_OCF#The_Results">Geode AES + OCF + Cryptodev + OpenSSL = Wicked fast encryption</a>
 
 ¥
 

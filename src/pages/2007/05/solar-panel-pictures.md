@@ -9,7 +9,7 @@ comments:
   - author: admin
     date: 05/29/2007 12:14:11 PM
     text: >
-      I'm building a <a href="http://www.docunext.com/2007/05/solar-powered-slug.html" rel="nofollow">Solar Powered Slug</a>!
+      I'm building a <a href="http://www.docunext.com/2007/05/solar-powered-slug/" rel="nofollow">Solar Powered Slug</a>!
 date: 2007-05-24
 tags: energy
 ---

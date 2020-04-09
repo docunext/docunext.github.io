@@ -5,7 +5,7 @@ tags: nexista,php
 ---
 <div id="notice" style="border: 2px; border-color: #FF6699; border-style: solid; background: #FFCCCC; padding: 2px;">SPECIAL NOTE: If you happen upon this page searching for information about Representational State Transfer (REST), please also visit the <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">wikipedia article on Representational State Transfer (REST) web development architectures</a>. If you know anything about REST, please contribute it to that page. That page needs help! </div>
 
-I previously blogged about my <a href="http://www.docunext.com/2007/04/separating-functionality.html">theories on separation of functionality</a> and how I wanted to setup a RESTful app API methodology in the <a href="http://www.nexista.com/">nexista PHP / XSL / XML framework </a>.
+I previously blogged about my <a href="http://www.docunext.com/2007/04/separating-functionality/">theories on separation of functionality</a> and how I wanted to setup a RESTful app API methodology in the <a href="http://www.nexista.com/">nexista PHP / XSL / XML framework </a>.
 
 Its now in motion and its working well. Here's some quick updates on the matter:
 

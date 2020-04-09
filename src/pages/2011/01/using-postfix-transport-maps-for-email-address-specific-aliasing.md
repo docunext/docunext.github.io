@@ -46,6 +46,6 @@ support:    external.email@gmail.com
 
 I haven't rolled this solution out to my backup MX servers, though I plan to do so once I test this solution out some more.
 
-* <http://www.docunext.com/2009/01/mail-gateways-are-good-to-me.html>
-* <http://www.docunext.com/2010/09/the-necessity-of-a-comprehensive-list-of-all-emails-accepted-at-an-mx-host.html>
+* <http://www.docunext.com/2009/01/mail-gateways-are-good-to-me/>
+* <http://www.docunext.com/2010/09/the-necessity-of-a-comprehensive-list-of-all-emails-accepted-at-an-mx-host/>
 

@@ -16,7 +16,7 @@ The problem is that they are using NGX_PREFIX, which isn't configured with the d
 
 Another small issue I ran into was the shell script to create the cache directories, but thankfully someone contributed a <a href="http://code.google.com/p/ncache/issues/detail?id=32" rel="nofollow">solution</a>.
 
-I'll probably fork this and make lots of changes to learn more about caching and nginx modules. I've added a wiki page about it <a href="http://www.docunext.com/wiki/NGINX_ncache_module">here</a>.
+I'll probably fork this and make lots of changes to learn more about caching and nginx modules. I've added a wiki page about it <a href="http://www.docunext.com/">here</a>.
 
 Unfortunately I still had problems getting this to work. :-(
 

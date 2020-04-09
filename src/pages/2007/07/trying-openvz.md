@@ -38,5 +38,5 @@ Yee-haw, just got a gentoo vm setup! :-) Too bad you can't run FreeBSD inside an
 
 Related:
 
-<a href="http://www.docunext.com/wiki/OpenVZ">OpenVZ Docunext Wiki Page</a>
+<a href="http://www.docunext.com/">OpenVZ Docunext Wiki Page</a>
 

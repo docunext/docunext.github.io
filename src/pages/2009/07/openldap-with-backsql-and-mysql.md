@@ -16,5 +16,5 @@ I really like that concept - managing data in a relational database, and exporti
 
 Links:
 
-<ul><li><a href="http://www.docunext.com/wiki/Backsql">BackSQL at Docunext</a></li></ul>
+<ul><li><a href="http://www.docunext.com/">BackSQL at Docunext</a></li></ul>
 

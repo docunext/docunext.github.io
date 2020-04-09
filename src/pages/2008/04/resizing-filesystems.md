@@ -18,7 +18,7 @@ ACTIVE            '/dev/big_space/bart' [3.91 GB] inherit
 ACTIVE            '/dev/big_space/homer' [10.00 GB] inherit
 ACTIVE            '/dev/big_space/misc' [2.00 GB] inherit</pre>
 
-Let's make bart bigger. <a href="http://www.docunext.com/2008/03/my-practices-with-openvz.html">Bart is like sid</a>
+Let's make bart bigger. <a href="http://www.docunext.com/2008/03/my-practices-with-openvz/">Bart is like sid</a>
  - he'll probably break stuff.
 
 Now, according to <a href="http://www.grep.be/blog/en/computer/cluebat/actually_you_can">Wouter, I can do something like this</a>:
@@ -52,7 +52,7 @@ The filesystem on /dev/mapper/big_space-bart is now 1286144 blocks long.</pre>
 
 Wow, that took hardly any time at all! I even did it again with the ve still running, that's very impressive. I've been using lvm2 for awhile without too much fanfare, thought I had heard so many good things about it, and had definitely run into problems where my filesystems were the wrong size enough times I tried it out. Now I'm a believer. :-)
 
-More: <a href="http://www.docunext.com/wiki/LVM">LVM at the Docunext Wiki</a>
+More: <a href="http://www.docunext.com/">LVM at the Docunext Wiki</a>
 
 Note - Slightly different with reiserfs:
 

@@ -21,5 +21,5 @@ Here are some other businesses that are involved, at least to some degree, with 
 
 Other companies whose employees make contributions to the linux kernel include: Novell, Intel, Oracle and HP. Even Microsoft is getting in on the fun! In July of 2009, Microsoft made its first GPLv2 code contribution to the linux kernel!
 
-It will be interesting to see how the open source software business model evolves. To keep track of the changes, I'm starting to include <a href="http://www.docunext.com/wiki/Category:Technology_Companies">technology companies</a> in the Docunext wiki.
+It will be interesting to see how the open source software business model evolves. To keep track of the changes, I'm starting to include <a href="http://www.docunext.com/:Technology_Companies">technology companies</a> in the Docunext wiki.
 

@@ -3,7 +3,7 @@ title: How When and Why NGINX Rocks
 date: 2009-11-05
 tags: nginx,"open source"
 ---
-I'm a big fan of NGINX. I've racked up some serious notes on my experience with it on the [NGINX pages of the Docunext wiki](http://www.docunext.com/wiki/NGINX), but just recently, I was even more impressed with NGINX.
+I'm a big fan of NGINX. I've racked up some serious notes on my experience with it on the [NGINX pages of the Docunext wiki](http://www.docunext.com/), but just recently, I was even more impressed with NGINX.
 
 I've started using the resource limitation features of NGINX, mostly the rate limiting features but also the connection limiting features. What really struck me was that the documentation explained that the author of NGINX, Igor Sysoev, took the trouble to support hashing the remote ip in binary form, to conserve memory.
 

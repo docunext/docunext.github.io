@@ -3,7 +3,7 @@ title: Fun with Pocoo
 date: 2008-01-19
 tags: python,sql
 ---
-I'm <a href="http://www.docunext.com/wiki/Pocoo">wrestling with Pocoo</a>. Maybe the well documented code isn't as good as I thought. The bugs I'm running into are probably due to some disorganization on mercurial / cheeseshop revision inconsistencies. Hmmm.
+I'm <a href="http://www.docunext.com/">wrestling with Pocoo</a>. Maybe the well documented code isn't as good as I thought. The bugs I'm running into are probably due to some disorganization on mercurial / cheeseshop revision inconsistencies. Hmmm.
 
 I have to give up on Pocoo for now. Not sure what the deal is... I tried both the built in webserver and the command line interface, and I keep getting errors about the request not having a user attribute, as well as jinja not being able to find the template.
 

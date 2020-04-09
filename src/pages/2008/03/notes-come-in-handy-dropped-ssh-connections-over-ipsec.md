@@ -10,7 +10,7 @@ tags: fios,m0n0wall,network,pfsense,ssh
 ---
 I just got <a href="http://www.cabotplace.net/blog/2008/03/fios-is-in-the-place.html">FIOS at my office</a> and I'm trying to debug an ssh problem with a **VPN** I've setup between my office and my home.
 
-<a href="http://www.docunext.com/2007/06/soekris-net4501-m0n0wall-error.html">Soekris net4501 m0n0wall error</a>
+<a href="http://www.docunext.com/2007/06/soekris-net4501-m0n0wall-error/">Soekris net4501 m0n0wall error</a>
 
 "It is happening again."  (Fast forward to 4:33)
 

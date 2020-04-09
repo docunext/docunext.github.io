@@ -62,7 +62,7 @@ Thanks to Askozia, I learned a lot about setting up a FreeBSD jail, and also fou
 
 This <a href="https://neon1.net/misc/minibsd.html">post</a> is also very useful.
 
-If you like, feel free to read about my efforts to build a <a href="http://www.docunext.com/wiki/M0n0jabber">m0n0wall-based ejabberd server</a>.
+If you like, feel free to read about my efforts to build a <a href="http://www.docunext.com/0n0jabber">m0n0wall-based ejabberd server</a>.
 
 m0n0dev.php is another great php command line script. You don't find a lot of command line php scripts - but there is PEAR and symfony.
 

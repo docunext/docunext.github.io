@@ -25,7 +25,7 @@ Though this could have been caused by the swap size. See comment below.
 
 <ol><li>Downloaded putty, which is a terminal client.</li><li>Started debian installation at aprox. 1:45</li><li>The partitioning process took around 15 minutes</li><li>Installed the base system from 2:20-3:05 (approx 1 hour)</li><li>Select and install software 3:07-3:08 (general system installed)
 </li></ol>
-Total time to install <a href="http://www.docunext.com/wiki/Debian">Debian</a> onto a Linksys <a href="http://www.my-tech-deals.com/blog/2008/01/linksys-nslu2-price-drop.html">NSLU2</a>: less than two hours (we have a pretty fast network).
+Total time to install <a href="http://www.docunext.com/">Debian</a> onto a Linksys <a href="http://www.my-tech-deals.com/blog/2008/01/linksys-nslu2-price-drop.html">NSLU2</a>: less than two hours (we have a pretty fast network).
 
 ¥
 

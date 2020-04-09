@@ -3,7 +3,7 @@ title: Ruby DataMapper Associations
 date: 2009-11-23
 tags: datamapper,orm,ruby,sinatra
 ---
-After some initial excitement [learning about DataMapper](http://www.docunext.com/wiki/DataMapper), I became concerned that it might not be all it that I thought it was.
+After some initial excitement [learning about DataMapper](http://www.docunext.com/), I became concerned that it might not be all it that I thought it was.
 
 Thankfully, it is!
 

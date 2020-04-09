@@ -10,7 +10,7 @@ I've been using pfSense for about 3 years now, and I use it everyday. It is part
 
 If you have considered using pfSense but haven't gotten around to it yet, take my positive experience into consideration. You might like it as much as I do!
 
-<a href="http://www.docunext.com/wiki/PfSense">pfSense on the Docunext Wiki</a>
+<a href="http://www.docunext.com/">pfSense on the Docunext Wiki</a>
 
 <a href="http://www.docunext.com/blog/category/pfsense/">pfSense Category at this Docunext Blog</a>
 

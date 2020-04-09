@@ -13,7 +13,7 @@ The modularity of Drupal proves its value and worth to me by the fact that so ma
 
 Another co-worker of mine described Joomla! along these lines: "Joomla works fine with one large component, functionally with two large components, but starts to break down with three or more large components."
 
-While that's somewhat besides the point for this article, I recently wrote an [article comparing Joomla, Drupal and Wordpress](http://www.docunext.com/2010/09/joomla-versus-drupal-and-wordpress.html), referencing Debian's policy towards the three content management systems. In the article I stated how much I value the opinion of the Debian community, and I have to echo that sentiment in this post. (Also, don't mistake this as a diss to Joomla, I've worked a bunch with it and found the experience quite satisfactory.)
+While that's somewhat besides the point for this article, I recently wrote an [article comparing Joomla, Drupal and Wordpress](http://www.docunext.com/2010/09/joomla-versus-drupal-and-wordpress/), referencing Debian's policy towards the three content management systems. In the article I stated how much I value the opinion of the Debian community, and I have to echo that sentiment in this post. (Also, don't mistake this as a diss to Joomla, I've worked a bunch with it and found the experience quite satisfactory.)
 
 More specifically, I reference the **dh-make-drupal** package that is available in the Debian Squeeze repository. What is the dh-make-drupal package? Let's find out:
 

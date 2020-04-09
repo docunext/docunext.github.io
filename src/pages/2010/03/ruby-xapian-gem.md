@@ -39,7 +39,7 @@ Nice!
 
 What will I be indexing? Just apt data to start, thanks to "apt-xapian-index".
 
-Hah, I just noticed that the page by Taylor Luk also mentions the use of Xapian with CouchDB. Cool! [I've chosen MongoDB over CouchDB](http://www.docunext.com/2010/03/debian-and-nosql-storage-systems.html), and it looks like there is [interest in bridging MongoDB with Xapian, too](http://jira.mongodb.org/browse/SERVER-380). Cool!
+Hah, I just noticed that the page by Taylor Luk also mentions the use of Xapian with CouchDB. Cool! [I've chosen MongoDB over CouchDB](http://www.docunext.com/2010/03/debian-and-nosql-storage-systems/), and it looks like there is [interest in bridging MongoDB with Xapian, too](http://jira.mongodb.org/browse/SERVER-380). Cool!
 ## External Links
 
 * <http://xapian.org/docs/bindings/ruby/>

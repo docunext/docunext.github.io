@@ -9,7 +9,7 @@ It worked fine and I'm pleased with the results, so much that I wanted to expand
 
 Today I got my answer: <a href="http://memcachedb.org/" rel="nofollow">MemcacheDB</a>!
 
-So far I've only [experimented with it using the Ruby memcache library](http://www.docunext.com/2009/10/ruby-memcached.html), but the results were as I'd hoped, so I plan to migrate some tools over soon.
+So far I've only [experimented with it using the Ruby memcache library](http://www.docunext.com/2009/10/ruby-memcached/), but the results were as I'd hoped, so I plan to migrate some tools over soon.
 
 Oh yeah, when I was experimenting I realized that memcachedb supports namespaces, which makes everything much easier!
 

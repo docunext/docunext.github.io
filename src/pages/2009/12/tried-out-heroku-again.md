@@ -20,5 +20,5 @@ I guess I shouldn't complain, seeing how I'm using the free version. But I have 
 
 UPDATE: Its back working again. I should note that the problem didn't cause my application to stop working, I just couldn't update it.
 
-Also, based on how awesome Heroku deployment is, I've investigated other [Ruby deployment tools](http://www.docunext.com/wiki/Ruby#Ruby_Deployment_Tools), and have decided to go with [Vlad](http://www.docunext.com/wiki/Vlad) for now.
+Also, based on how awesome Heroku deployment is, I've investigated other [Ruby deployment tools](http://www.docunext.com/#Ruby_Deployment_Tools), and have decided to go with [Vlad](http://www.docunext.com/wiki/Vlad) for now.
 

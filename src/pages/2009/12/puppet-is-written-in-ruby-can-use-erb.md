@@ -13,7 +13,7 @@ I was also interested in the storage of data for use with puppet / erb templates
 
 But that's for advanced use. Let's focus on a simple erb template using an in-context variable / parameter: the hostname of the client requesting a file.
 
-I use Varnish a ton (see my notes on [Varnish](http://www.docunext.com/wiki/Varnish)), and here's an example of how I use Puppet with an erb template:
+I use Varnish a ton (see my notes on [Varnish](http://www.docunext.com/)), and here's an example of how I use Puppet with an erb template:
 
 <pre class="sh_c">
 sub vcl_fetch {

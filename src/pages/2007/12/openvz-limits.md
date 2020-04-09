@@ -10,5 +10,5 @@ I am still having a bit of trouble figuring out the right limits for virtual env
 
 One problem I have yet to figure out is that when I restart a virtual environment that has a mysql clone running on it, it won't start the clone automatically. I have to login to mysql and start it. I seem to think that regular machines will start automatically, right?
 
-UPDATE - I just figured out what the problem was with <a href="http://www.docunext.com/wiki/MySQL_Database_Replication#Bin_Log_Errors">mysql replication auto-start on openvz</a>.
+UPDATE - I just figured out what the problem was with <a href="http://www.docunext.com/#Bin_Log_Errors">mysql replication auto-start on openvz</a>.
 

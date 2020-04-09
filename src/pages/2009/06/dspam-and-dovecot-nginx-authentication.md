@@ -5,7 +5,7 @@ tags: dovecot,imap,ldap,nginx,sasl,smtp
 ---
 #### **DSpam**
 
-I've wanted to try DSpam for a long time. Well today I finally installed it. I still have to actually use it, but I'm taking one step at a time. I'm a little annoyed that it appears that I have to use clamav with it, but whatever. More detailed notes about my experience with DSpam can be found at the <a href="http://www.docunext.com/wiki/DSpam">DSpam page at Docunext</a>.
+I've wanted to try DSpam for a long time. Well today I finally installed it. I still have to actually use it, but I'm taking one step at a time. I'm a little annoyed that it appears that I have to use clamav with it, but whatever. More detailed notes about my experience with DSpam can be found at the <a href="http://www.docunext.com/">DSpam page at Docunext</a>.
 
 #### **Dovecot Authentication**
 

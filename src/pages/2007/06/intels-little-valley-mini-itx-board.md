@@ -29,11 +29,11 @@ comments:
   - author: admin
     date: 06/25/2007 10:55:51 AM
     text: >
-      I still haven't hooked mine up yet, but believe me I'm going to as soon as possible! In the meantime, I've snaps a few photographs so you can get a better look:<br/><br/><a href="http://www.docunext.com/2007/06/intel-little-valley-photos.html" rel="nofollow">http://www.docunext.com/2007/06/intel-little-valley-photos.html</a>
+      I still haven't hooked mine up yet, but believe me I'm going to as soon as possible! In the meantime, I've snaps a few photographs so you can get a better look:<br/><br/><a href="http://www.docunext.com/2007/06/intel-little-valley-photos/" rel="nofollow">http://www.docunext.com/2007/06/intel-little-valley-photos.html</a>
   - author: admin
     date: 06/28/2007 10:17:33 PM
     text: >
-      I've hooked it up now, here's a new post:<br/><br/><a href="http://www.docunext.com/2007/06/intel-little-valley-photos.html" rel="nofollow">http://www.docunext.com/2007/06/intel-little-valley-photos.html</a>
+      I've hooked it up now, here's a new post:<br/><br/><a href="http://www.docunext.com/2007/06/intel-little-valley-photos/" rel="nofollow">http://www.docunext.com/2007/06/intel-little-valley-photos.html</a>
   - author: Rich
     email: n7viy@yahoo.com
     date: 07/08/2007 01:06:40 AM
@@ -144,7 +144,7 @@ comments:
   - author: admin
     date: 10/08/2007 06:09:46 PM
     text: >
-      Its mini-itx (6.7x6.7 inches) for LxW, and 2 inches high:<br/><br/><a href="http://www.docunext.com/2007/06/intel-little-valley-photos.html" rel="nofollow">http://www.docunext.com/2007/06/intel-little-valley-photos.html</a>
+      Its mini-itx (6.7x6.7 inches) for LxW, and 2 inches high:<br/><br/><a href="http://www.docunext.com/2007/06/intel-little-valley-photos/" rel="nofollow">http://www.docunext.com/2007/06/intel-little-valley-photos.html</a>
   - author: forumworx
     email: forumworx@gmail.com
     date: 10/09/2007 05:07:54 PM
@@ -258,7 +258,7 @@ Depending on whether the box is destined to be an embedded network appliance (i.
 
 Is this fun or what?
 
-<a href="http://www.docunext.com/2007/06/intel-little-valley-photos.html">Intel Little Valley D201GLY Pictures</a>
+<a href="http://www.docunext.com/2007/06/intel-little-valley-photos/">Intel Little Valley D201GLY Pictures</a>
 
 ¥
 

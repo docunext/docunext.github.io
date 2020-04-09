@@ -32,7 +32,7 @@ tags: debian,dkim,docunext,errors,postfix,sasl,smtp
 ---
 This is a blog post about an error I found in my /var/log/mail.log file reported by postfix: "**SASL authentication failure: cannot connect to saslauthd server: No such file or directory**", and the solution I used to resolve it.
 
-First off, this turned out to be a very interesting error! As I explained on the Docunext Wiki Postfix page in the section about using [Postfix and Saslauthd on Debian](http://www.docunext.com/wiki/Postfix#Postfix_and_SASL), Postfix processes must run under a chroot.
+First off, this turned out to be a very interesting error! As I explained on the Docunext Wiki Postfix page in the section about using [Postfix and Saslauthd on Debian](http://www.docunext.com/#Postfix_and_SASL), Postfix processes must run under a chroot.
 
 While the submission service (port 587) in /etc/postfix/master.cf usual runs under a chroot, I had added a new submission directive to relay outgoing messages through dkimproxy:
 

@@ -46,7 +46,7 @@ OPTIONS = [ :class_name, :child_key, :parent_key, :min, :max, :through ]
 
 and guessed ":class_name" might work. Indeed it does! Nice. I have to remark that working with datamapper is intellectually rewarding.
 
-UPDATE: <a href="http://datamapper.lighthouseapp.com/projects/20609-datamapper/tickets/1146-minor-inconsistency-with-docs-and-reality" rel="nofollow">Issue has been logged</a>! Lighthouse looks nice, too. I'd previously only heard of it via my [work with SD](http://www.docunext.com/wiki/SD).
+UPDATE: <a href="http://datamapper.lighthouseapp.com/projects/20609-datamapper/tickets/1146-minor-inconsistency-with-docs-and-reality" rel="nofollow">Issue has been logged</a>! Lighthouse looks nice, too. I'd previously only heard of it via my [work with SD](http://www.docunext.com/).
 
 ¥
 

@@ -26,5 +26,5 @@ Speaking of which, I bought a book about using Ruby for systems administration a
 
 I definitely have to give this book a review!
 
-More information: <a href="http://www.docunext.com/wiki/Ruby_Pony">Ruby Pony @ Docunext</a>
+More information: <a href="http://www.docunext.com/">Ruby Pony @ Docunext</a>
 

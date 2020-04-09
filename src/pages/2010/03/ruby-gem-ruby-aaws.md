@@ -103,7 +103,7 @@ Thanks for this sweet gem!
 
 PS - I've blogged about the gem, too:
 
-http://www.docunext.com/2010/03/ruby-gem-ruby-aaws.html
+http://www.docunext.com/2010/03/ruby-gem-ruby-aaws/
 
 Still not sure what the problem is with UTF-8 and caching....
 

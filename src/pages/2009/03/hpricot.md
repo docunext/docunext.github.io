@@ -10,5 +10,5 @@ But just how fast is it? And can it be separated from Ruby? Should it be? It loo
 
 I'm confused by the fact that there is java code in the repository. Hmmm.
 
-More notes at the <a href="http://www.docunext.com/wiki/Hpricot">Hpricot Docunext Wikipage</a>.
+More notes at the <a href="http://www.docunext.com/">Hpricot Docunext Wikipage</a>.
 

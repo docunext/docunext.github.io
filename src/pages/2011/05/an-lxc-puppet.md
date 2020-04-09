@@ -3,9 +3,9 @@ title: A GNU Debian LXC Puppet
 date: 2011-05-22
 tags: lxc
 ---
-As a continuation to my post on setting up [Rails 3 apps via RVM, CentOS on OpenVZ, Mastered by Puppet](http://www.docunext.com/2011/04/rails-3-apps-via-rvm-centos-on-openvz-defined-by-puppet.html), this is an entry about doing something similar with [LXC](http://www.docunext.com/wiki/LXC).
+As a continuation to my post on setting up [Rails 3 apps via RVM, CentOS on OpenVZ, Mastered by Puppet](http://www.docunext.com/2011/04/rails-3-apps-via-rvm-centos-on-openvz-defined-by-puppet/), this is an entry about doing something similar with [LXC](http://www.docunext.com/).
 
-I will first mention that the networking configuration I'm using is sub-optimal. I've setup lxc on my notebook which uses wireless, and bridging doesn't like it (in fact, it surprisingly appears that recent updates to the linux kernel do not support bridging with wireless devices). See the [Docunext wiki page about LXC for more information about my LXC networking configuration, as well as building the container itself](http://www.docunext.com/wiki/LXC).
+I will first mention that the networking configuration I'm using is sub-optimal. I've setup lxc on my notebook which uses wireless, and bridging doesn't like it (in fact, it surprisingly appears that recent updates to the linux kernel do not support bridging with wireless devices). See the [Docunext wiki page about LXC for more information about my LXC networking configuration, as well as building the container itself](http://www.docunext.com/).
 
 After installing RVM in the container and using it to download, configure, compile, and install Ruby 1.9.2, I then proceeded to use apt-get to install Puppet.
 

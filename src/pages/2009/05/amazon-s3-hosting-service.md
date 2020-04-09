@@ -11,6 +11,6 @@ My plan is to use Amazon S3 as a static image backup and fail-over, not a direct
 
 I've chosen a few tools to use and made some preliminary notes over at Docunext:
 
-<ul><li><a href="http://www.docunext.com/wiki/S3cmd">s3cmd</a></li><li><a href="http://www.docunext.com/wiki/Apache2::S3">Apache2::S3</a></li></ul>
+<ul><li><a href="http://www.docunext.com/3cmd">s3cmd</a></li><li><a href="http://www.docunext.com/wiki/Apache2::S3">Apache2::S3</a></li></ul>
 I should also note that I reviewed Flickr and Picasa as potential image hosting services, but both have terms of service which involve providing an overreaching license to uploaded content. I'm quite surprised that they don't offer a commercial alternative to that clause. I also researched other image hosting services, but the market is so saturated with low-cost, no-cost limited solutions, I gave up!
 

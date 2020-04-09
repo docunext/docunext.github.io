@@ -11,5 +11,5 @@ Since I had a handful of clients, I setup a C-class, 192.168.x.0/26, 255.255.255
 
 I've got three Debian GNU/Linux clients setup with this configuration and plan to use it in a variety of ways... but first I'm going to make sure everything is super stable. I've definitely had to do some tweaking since I first setup it up, so there may be more. I've definitely learned a lot in the process!
 
-For more information on my setup, check out the [Docunext OpenVPN wiki page where I've uploaded screenshots](http://www.docunext.com/wiki/OpenVPN).
+For more information on my setup, check out the [Docunext OpenVPN wiki page where I've uploaded screenshots](http://www.docunext.com/).
 

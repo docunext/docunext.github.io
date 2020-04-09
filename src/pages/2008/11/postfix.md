@@ -15,5 +15,5 @@ I setup the following features:
 
 All in all, its awesome!
 
-<a href="http://www.docunext.com/wiki/Postfix">More Postfix Information at the Docunext Wiki</a>
+<a href="http://www.docunext.com/">More Postfix Information at the Docunext Wiki</a>
 

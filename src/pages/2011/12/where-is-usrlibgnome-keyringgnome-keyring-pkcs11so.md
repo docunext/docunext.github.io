@@ -13,5 +13,5 @@ root@asee-mm-02:/usr/lib/gnome-keyring# ln -s /usr/lib/pkcs11/gnome-keyring-pkcs
 
 I don't like to do these types of workarounds, but a softlink isn't too bad.
 
-I got fed up with gnome keyring sufficiently that I again installed keychain. Perhaps its what's caused [this](http://www.docunext.com/2011/12/gnome-keyring-daemon1907-unsupported-key-algorithm-in-certificate-128401004521.html)?
+I got fed up with gnome keyring sufficiently that I again installed keychain. Perhaps its what's caused [this](http://www.docunext.com/2011/12/gnome-keyring-daemon1907-unsupported-key-algorithm-in-certificate-128401004521/)?
 

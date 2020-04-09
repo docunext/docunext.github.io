@@ -3,9 +3,9 @@ title: 2006 2007 Cryptography News
 date: 2007-09-10
 tags: alix,amd,encryption,geode
 ---
-In the past few years, there's been some exciting news in the world of cryptography. As mentioned in our post about the <a href="http://www.docunext.com/2007/09/via-padlock.html">VIA padlock, the use of the padlock as an engine for OpenSSL yields some very impressive results</a>.
+In the past few years, there's been some exciting news in the world of cryptography. As mentioned in our post about the <a href="http://www.docunext.com/2007/09/via-padlock/">VIA padlock, the use of the padlock as an engine for OpenSSL yields some very impressive results</a>.
 
-Then last night I realized that the AMD Geode LX800 (the same chip used in the new <a href="http://www.docunext.com/2007/07/alix.html">PC Engines ALIX boards which I've been blogging about</a>) also has a hardware random number generator (RNG) as well as a built in AES Security Block engine. That is really cool!
+Then last night I realized that the AMD Geode LX800 (the same chip used in the new <a href="http://www.docunext.com/2007/07/alix/">PC Engines ALIX boards which I've been blogging about</a>) also has a hardware random number generator (RNG) as well as a built in AES Security Block engine. That is really cool!
 
 Riding on the excitement that the AMD Geode LX800 has these great new features, I did some serious diggin' in the net and found some even more cool stuff! :-)
 
@@ -25,7 +25,7 @@ So that got me wanting to test it out, but the linux CryptoAPI is low-level, and
 
 So I did some more research, and found information on <a href="http://ocf-linux.sourceforge.net/">how to get OpenSSL to use the linux CryptoAPI as its engine</a>.
 
-Here's information on how to get <a href="http://www.docunext.com/wiki/My_Notes_on_Patching_2.6.22_with_OCF">your linux kernel patched with the ocf crypto device, especially good for use with AMD Geode lx800 processors</a>.
+Here's information on how to get <a href="http://www.docunext.com/2.6.22_with_OCF">your linux kernel patched with the ocf crypto device, especially good for use with AMD Geode lx800 processors</a>.
 
 #### What processors to use where
 
@@ -37,5 +37,5 @@ At this point in time, to design some heavy duty infrastructure, I would use the
 
 Because the AMD Geode and Via C7 chips are so low power and security centric, they are my choice for high-availability failover perimeter systems. Behind them, the intel celeron and at least one corresponding motherboard can handle sleep states very well in linux, and could potentially be used to setup an energy efficient, scalable load-balance farm. When demand is high, they wake, bake, and serve, and when demand is low, they nap. Sounds good, right?
 
-<a href="http://www.docunext.com/wiki/PfSense_test_results_of_the_padlock_kernel_driver_on_a_VIA_C7">PfSense test results of the padlock kernel driver on a VIA C7</a>
+<a href="http://www.docunext.com/7">PfSense test results of the padlock kernel driver on a VIA C7</a>
 

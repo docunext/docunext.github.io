@@ -18,5 +18,5 @@ Hope that helps.
 
 I had an odd computer occurrence recently - my ctrl + shift key combo stopped working, so I could not longer copy and paste to and from terminal emulator windows.
 
-It turns out that when I was [troubleshooting zenburn](http://www.docunext.com/2012/10/zenburn-tmux.html) I installed xterm to check out zenburn colors in it, and *that* was the culprit.
+It turns out that when I was [troubleshooting zenburn](http://www.docunext.com/2012/10/zenburn-tmux/) I installed xterm to check out zenburn colors in it, and *that* was the culprit.
 

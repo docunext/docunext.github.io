@@ -14,7 +14,7 @@ comments:
 date: 2008-05-17
 tags: debian,programming
 ---
-Awhile back I wrote about how <a href="http://www.docunext.com/2008/04/the-people-who-live-on-planet-debian.html">I don't think software development is a team sport</a>. True, there are many different roles in a complete software project, from designers, to DBAs, to programmers, to qa and usability testers, but their processes are not mutually dependent and can occur independently of one another. That's really the point I was making.
+Awhile back I wrote about how <a href="http://www.docunext.com/2008/04/the-people-who-live-on-planet-debian/">I don't think software development is a team sport</a>. True, there are many different roles in a complete software project, from designers, to DBAs, to programmers, to qa and usability testers, but their processes are not mutually dependent and can occur independently of one another. That's really the point I was making.
 
 Russell Coker wrote an interesting post about the subject of software development teams, arguing that <a href="http://etbe.coker.com.au/2008/04/16/software-development-team-sport/">software development is a team sport</a>. I really liked how he mentioned that the success of software can sometimes depend upon how well a developer can work with others.
 

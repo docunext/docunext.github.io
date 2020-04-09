@@ -11,7 +11,7 @@ I've definitely converted subversion repositories to git before, but no ikiwiki 
 
 #### **Why convert from Subversion to Git?**
 
-I want to convert from Subversion to Git because Git is very efficient when it comes to storage, and I'm also interested in using Grit, the Ruby git library, to some degree. I sure have had a good time using [Git-wiki](http://www.docunext.com/wiki/Git-wiki)!
+I want to convert from Subversion to Git because Git is very efficient when it comes to storage, and I'm also interested in using Grit, the Ruby git library, to some degree. I sure have had a good time using [Git-wiki](http://www.docunext.com/)!
 
 That might seem like a little ironic, seeing how Ikiwiki is written in Perl, but it really shouldn't matter.
 
@@ -29,5 +29,5 @@ More specifically, the ikiwiki configuration file specifies a repository url as 
 
 #### UPDATE
 
-I've converted a bunch of subversion based ikiwiki wikis and I'm way glad I did! I can actually use [git-wiki](http://www.docunext.com/wiki/Git-wiki) to edit them, and ikiwiki to publish them. How cool is that!!
+I've converted a bunch of subversion based ikiwiki wikis and I'm way glad I did! I can actually use [git-wiki](http://www.docunext.com/) to edit them, and ikiwiki to publish them. How cool is that!!
 

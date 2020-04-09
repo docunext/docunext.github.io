@@ -38,6 +38,6 @@ CREATE TABLE migrate_version (	repository_id VARCHAR(255) NOT NULL, 	repository_
 CREATE TABLE projects (	id INTEGER NOT NULL, 	name VARCHAR(60) NOT NULL, 	user_id INTEGER NOT NULL, 	PRIMARY KEY (id), 	 FOREIGN KEY(user_id) REFERENCES users (id) ON DELETE cascade, 	 UNIQUE (user_id, name));
 CREATE TABLE users (	id INTEGER NOT NULL, 	username VARCHAR(128), 	email VARCHAR(128), 	password VARCHAR(20), 	settings BLOB, 	quota INTEGER, 	amount_used INTEGER, 	PRIMARY KEY (id), 	 UNIQUE (username));</pre>
 
-I'm working on a page in the wiki here: <a href="http://www.docunext.com/wiki/Bespin">
+I'm working on a page in the wiki here: <a href="http://www.docunext.com/">
 Bespin at the Docunext Wiki</a>
 

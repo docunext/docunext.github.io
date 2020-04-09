@@ -3,7 +3,7 @@ title: A more complicated .deb package
 date: 2008-03-14
 tags: debian,dpkg,packaging
 ---
-I'm going to try and build a package for libapache2-mod-transform. I like it better than libapache2-modxslt, but only modxslt has a package in the debian repositories. Why don't I like modxslt? <a href="http://www.docunext.com/2007/10/apache2-xslt.html">Read here</a>.
+I'm going to try and build a package for libapache2-mod-transform. I like it better than libapache2-modxslt, but only modxslt has a package in the debian repositories. Why don't I like modxslt? <a href="http://www.docunext.com/2007/10/apache2-xslt/">Read here</a>.
 
 Whoa, just take a look inside the source package debian folder:
 

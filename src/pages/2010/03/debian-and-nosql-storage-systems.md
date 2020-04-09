@@ -3,7 +3,7 @@ title: Debian and NoSQL Storage Systems
 date: 2010-03-01
 tags: debian,mongodb,nosql,redis
 ---
-After reviewing a bunch of "NoSQL" style [document-based](http://www.docunext.com/2010/02/redis-memcachedb-or-couchdb.html) / [key-value](http://www.docunext.com/2010/02/redis-and-tokyo-tyrant.html) storage systems, I decided to move forward with four of them and install them on production and demonstration machines.
+After reviewing a bunch of "NoSQL" style [document-based](http://www.docunext.com/2010/02/redis-memcachedb-or-couchdb/) / [key-value](http://www.docunext.com/2010/02/redis-and-tokyo-tyrant.html) storage systems, I decided to move forward with four of them and install them on production and demonstration machines.
 
 On the production machines, I stuck with Debian's "testing" repository, currently dubbed "Squeeze". As such, I installed MemcacheDB and Redis.
 

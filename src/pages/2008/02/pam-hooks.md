@@ -26,5 +26,5 @@ DOH!:
 
 UPDATE: Why was I taking notes on these libraries? See here:
 
-<a href="http://www.docunext.com/wiki/My_Email_Services_Configurations">My Email Services Configurations</a>
+<a href="http://www.docunext.com/">My Email Services Configurations</a>
 

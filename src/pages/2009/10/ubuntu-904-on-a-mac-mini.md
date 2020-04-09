@@ -9,5 +9,5 @@ Recently a dist-upgrade broke X11 beyond repair and since I was helping my cousi
 
 In short, it was incredibly simple and straightforward, and I even ended up with grub on it!
 
-I have another Mac mini which runs Mac OS X only at the moment and I'm definitely going to install Ubuntu on it as well - maybe even with [Xen](http://www.docunext.com/wiki/Xen)!
+I have another Mac mini which runs Mac OS X only at the moment and I'm definitely going to install Ubuntu on it as well - maybe even with [Xen](http://www.docunext.com/)!
 

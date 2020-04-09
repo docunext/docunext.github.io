@@ -52,7 +52,7 @@ I'm surprised there isn't a REQUEST\_URI key, but you can create one by concaten
 
 I'm also keeping ongoing notes about my learning curve with python here:
 
-<a href="http://www.docunext.com/wiki/Python_Notes">Python Notes</a>
+<a href="http://www.docunext.com/">Python Notes</a>
 
 ¥
 

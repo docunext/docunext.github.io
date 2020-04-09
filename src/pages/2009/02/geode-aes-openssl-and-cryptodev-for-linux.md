@@ -33,7 +33,7 @@ crypto/cryptodev.c:77: error: (near initialization for crypto_cipher_modes)
 Obviously a lot has changed in the kernel from 2.6.8. I'm not sure how to proceed - maybe I should look at the 2.6.8 code, or I should just start editing the cryptodev.c / cryptodev.h.
 
 There might be a chance that Michal's code gets adopted into the kernel. That would be awesome. More info:
-<a href="http://www.docunext.com/wiki/Michal_Ludvig_Cryptodev">http://www.docunext.com/wiki/Michal_Ludvig_Cryptodev
+<a href="http://www.docunext.com/">http://www.docunext.com/wiki/Michal_Ludvig_Cryptodev
 </a>
 
 ¥

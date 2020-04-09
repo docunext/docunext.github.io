@@ -24,5 +24,5 @@ Then I added this:
 </pre>
 at the beginning. I might remove that as the post another post about blocking proxies said that some of them strip out my ads and insert their own. That's not cool!
 
-But one problem with all this: since I use Varnish, the legitimate requests have some of those headers already. I'm going to try and come up with a regular expression to allow forwarding from my Varnish proxies, but block other ones. This will also help with <a href="http://www.docunext.com/wiki/Mod_extract_forwarded">mod_extract_forwarded</a>!
+But one problem with all this: since I use Varnish, the legitimate requests have some of those headers already. I'm going to try and come up with a regular expression to allow forwarding from my Varnish proxies, but block other ones. This will also help with <a href="http://www.docunext.com/">mod_extract_forwarded</a>!
 

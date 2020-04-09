@@ -12,7 +12,7 @@ tags: catalyst,xslt
 ---
 I had refrained from using MVC web application frameworks like Rails because they didn't include View support for XSLT.
 
-Catalyst, an MVC framework written in Perl, does support XSLT views with the help of  <a href="http://www.docunext.com/wiki/Catalyst::View::XSLT">Catalyst::View::XSLT</a>.
+Catalyst, an MVC framework written in Perl, does support XSLT views with the help of  <a href="http://www.docunext.com/::View::XSLT">Catalyst::View::XSLT</a>.
 
 I'd tested this out a little before, but now I'm digging with with [EvenBooks](http://www.evenbooks.com/blog/), a port of [PBooks](http://www.pbooks.org/blog/) to Catalyst.
 

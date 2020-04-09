@@ -55,7 +55,7 @@ This is helpful:
 
 <a href="http://wiki.pylonshq.com/display/pylonscookbook/Creating+a+Debian+package+from+your+Pylons+project">debianize a pylons project</a>
 
-<a href="http://www.docunext.com/wiki/Python">Docunext Python Wikipage</a>
+<a href="http://www.docunext.com/">Docunext Python Wikipage</a>
 
 ¥
 

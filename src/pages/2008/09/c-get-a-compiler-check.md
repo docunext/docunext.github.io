@@ -9,7 +9,7 @@ comments:
   - author: Albert
     date: 10/01/2008 08:58:59 PM
     text: >
-      Also:<br/><br/><a href="http://www.docunext.com/wiki/CPlusPlus" rel="nofollow">http://www.docunext.com/wiki/CPlusPlus</a>
+      Also:<br/><br/><a href="http://www.docunext.com/" rel="nofollow">http://www.docunext.com/wiki/CPlusPlus</a>
 date: 2008-09-26
 tags: none
 author: Rachel Furst

@@ -28,7 +28,7 @@ comments:
   - author: Albert
     date: 12/16/2009 04:43:37 PM
     text: >
-      It does! pfSense uses RRD to track network usage. Here's and example:<br/><br/><a href="http://www.docunext.com/wiki/PfSense#rrd_Graphs">http://www.docunext.com/wiki/PfSense#rrd_Graphs</a>
+      It does! pfSense uses RRD to track network usage. Here's and example:<br/><br/><a href="http://www.docunext.com/#rrd_Graphs">http://www.docunext.com/wiki/PfSense#rrd_Graphs</a>
 date: 2007-06-21
 tags: debian,"load balancer",m0n0wall,pfsense,soekris
 ---

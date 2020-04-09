@@ -13,7 +13,7 @@ Second of all, the GMail delete function does not work as an IMAP server should.
 
 Lastly, and this has to do with Microsoft's support for IMAP, the combination of Google's IMAP service and Outlook is not acceptable. It seems like every open source IMAP client I have used can easily handle massive amounts of email over IMAP, but not Outlook, and the first issue I raised - the "All Mail" folder, causes it to utterly disappoint. My experience has led me to believe that volunteers are able to make higher performance software than Microsoft. What do you think of that?
 
-As a solution, I'm planning on modifying my client's Outlook IMAP settings to change the way [Outlook synchronizes with the server](http://www.docunext.com/2010/05/outlook-offline-mode-for-imap-over-slow-connections.html), including which folders to check for new messages, and which folders to subscribe to.
+As a solution, I'm planning on modifying my client's Outlook IMAP settings to change the way [Outlook synchronizes with the server](http://www.docunext.com/2010/05/outlook-offline-mode-for-imap-over-slow-connections/), including which folders to check for new messages, and which folders to subscribe to.
 
 If that does not alleviate the situation, I'm not sure what else to do. Any ideas?
 

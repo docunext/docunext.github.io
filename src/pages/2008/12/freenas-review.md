@@ -13,5 +13,5 @@ Since I wanted to test FreeNAS, I setup a local mirror of some debian repositori
 
 Check out the post I wrote when I first setup the FreeNAS server:
 
-<a href="http://www.docunext.com/2007/06/freenas-on-a-asus-terminator-c3.html">FreeNAS on an ASUS Terminator</a>
+<a href="http://www.docunext.com/2007/06/freenas-on-a-asus-terminator-c3/">FreeNAS on an ASUS Terminator</a>
 

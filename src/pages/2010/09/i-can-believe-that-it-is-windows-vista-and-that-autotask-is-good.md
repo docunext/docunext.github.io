@@ -20,9 +20,9 @@ While the circumstances surrounding my use of this machine have been pleasant, u
 
 There are some software packages I'd like to thank for making the experience bearable:
 
-* [jEdit](http://www.docunext.com/wiki/Jedit)
-* [Cygwin](http://www.docunext.com/wiki/Cygwin)
-* [Mintty](http://www.docunext.com/wiki/Mintty)
+* [jEdit](http://www.docunext.com/)
+* [Cygwin](http://www.docunext.com/)
+* [Mintty](http://www.docunext.com/)
 
 I'm hoping to stop using this workstation as-is very soon, and instead install Ubuntu and run Windows Vista (or better yet, Windows 7) as a kqemu virtual machine within Ubuntu.
 

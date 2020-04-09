@@ -162,9 +162,9 @@ Its running 2.4.28-grsec-2.1.0. I'm now updating to a non-grsec kernel : sys-ker
 <strong>*hope*</strong> it will be OK. I'm not sure exactly what kernel configuration I'll need though, so I'm very thankful that I have this machine hooked up to a KVM over IP box so I can easily choose the original kernel. :-)
 
 I'll probably check to see if I have a config for my 2.4 kernel, but I'm doubtful that it would be friendly to the 2.6 menuconfig. Since I compiled the 2.4 kernel, I've learned a lot about how its done. Gentoo was the platform I really learned how to compile a kernel on my own, but I've since done it many many times on my various debian boxes, to
-<a href="http://www.docunext.com/wiki/OCF_Linux">enable /dev/crypto via ocf-linux
+<a href="http://www.docunext.com/">enable /dev/crypto via ocf-linux
 </a> as well as trying to enable better
-<a href="http://www.docunext.com/wiki/hardware/pc_chips_v21g___40__v1.0c__41___via_c7/">via C7 acpi cpufreq capabilities
+<a href="http://www.docunext.com//pc_chips_v21g___40__v1.0c__41___via_c7/">via C7 acpi cpufreq capabilities
 </a>. Thankfully, they do have a
 <a href="http://www.gentoo.org/doc/en/migration-to-2.6.xml" rel="nofollow">Gentoo migration to 2.6 guide
 </a>. Most of it doesn't relate to me, but I was glad to read it anyway, at least to learn that make oldconfig won't work.

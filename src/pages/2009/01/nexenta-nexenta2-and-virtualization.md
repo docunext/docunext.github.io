@@ -4,7 +4,7 @@ date: 2009-01-04
 tags: none
 author: Albert Lash
 ---
-I had problems with Nexenta2 beta with QEMU and KVM, but then I tried VirtualBox, and it worked! For me, <a href="http://www.docunext.com/wiki/Upgrading_Nexenta">Nexenta2 works with VirtualBox</a>. Hooray!
+I had problems with Nexenta2 beta with QEMU and KVM, but then I tried VirtualBox, and it worked! For me, <a href="http://www.docunext.com/">Nexenta2 works with VirtualBox</a>. Hooray!
 
 So far, it doesn't seem too much different than the stable elatta version 1 of Nexenta.
 

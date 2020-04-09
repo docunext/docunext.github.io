@@ -63,7 +63,7 @@ Related info:
 
 <a href="http://blog.pfsense.org/?p=137">http://blog.pfsense.org/?p=137</a>
 
-<a href="http://www.docunext.com/2007/06/lvs-ipvs-fin-wait.html">How I use Apache behind pfSense (including FIN_WAIT gotchas)</a>
+<a href="http://www.docunext.com/2007/06/lvs-ipvs-fin-wait/">How I use Apache behind pfSense (including FIN_WAIT gotchas)</a>
 
 ¥
 

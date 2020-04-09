@@ -12,5 +12,5 @@ So far I've only managed to setup a puppetmaster and a puppet, and following the
 
 I still get to create some home grown components, too. From what I can tell, puppet doesn't have a web interface for generating configuration data, which is where I can help. I'm actually already working on a configuration data management and configuration file rendering system called <a href="http://www.hypermagnet.com/blog/">Hypermagnet</a>. It still has a ways to go, but I think the two can work well together.
 
-Here's a link to <a href="http://www.docunext.com/wiki/Puppet">my notes on starting with puppet</a>.
+Here's a link to <a href="http://www.docunext.com/">my notes on starting with puppet</a>.
 

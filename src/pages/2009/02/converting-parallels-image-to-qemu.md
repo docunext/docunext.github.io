@@ -3,7 +3,7 @@ title: Converting Parallels Image to QEMU
 date: 2009-02-13
 tags: parallels,qemu,virtualization
 ---
-I had spent some serious time trying to get <a href="http://www.docunext.com/2007/06/converting-parallels-machines-to-vmware-fusion.html">qemu-img to convert a parallels image to a more open standard</a>, and thankfully, qemu-img now supports the parallels format!
+I had spent some serious time trying to get <a href="http://www.docunext.com/2007/06/converting-parallels-machines-to-vmware-fusion/">qemu-img to convert a parallels image to a more open standard</a>, and thankfully, qemu-img now supports the parallels format!
 
 <pre class="sh_sh">
 $ qemu-img

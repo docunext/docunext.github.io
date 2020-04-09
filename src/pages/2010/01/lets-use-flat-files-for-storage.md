@@ -3,7 +3,7 @@ title: Let s Use Flat Files For Storage
 date: 2010-01-15
 tags: git,ledger-cli,pfsense,postfix,xml
 ---
-I ran out of time while writing the blog post titled "[What's Up CouchDB, Ledger, XML, BNF, Ragel, and Git?](http://www.docunext.com/2010/01/whats-up-ledger-xml-bnf-ragel-and-git.html)", so I had to end it before I got to one of the more important points: using flat files as storage.
+I ran out of time while writing the blog post titled "[What's Up CouchDB, Ledger, XML, BNF, Ragel, and Git?](http://www.docunext.com/2010/01/whats-up-ledger-xml-bnf-ragel-and-git/)", so I had to end it before I got to one of the more important points: using flat files as storage.
 
 Obviously not the best for real time data management, but in many cases it might work really well.
 

@@ -58,7 +58,7 @@ Timing buffered disk reads:   98 MB in  2.33 seconds =  42.13 MB/sec
 Note: I have 1GB of memory in the machine, and the machine is using an onboard realtek gigabit ethernet adapter (re0 - RealTek 8169S Single-chip Gigabit Ethernet). The drive inside is a real SCSI drive (SEAGATE ST39236LWV 0010), using an Adaptec PCI-X card in a 32-bit PCI slot (ahc0: <Adaptec 29160 Ultra160 SCSI adapter> port 0xf400-0xf4ff mem 0xfbffa000-0xfbffafff irq 16 at device 13.0 on pci0). The machine is an AOpen XC-Cube. Unfortunately, this machine has a low-efficiency power supply, so at idle with only one hard drive, the system still consumes at least 57 watts. :-(
 
 
-I have to admit, I'm already thinking about using these devices as members of RAID sets! Since <a href="http://www.docunext.com/2007/06/freenas-on-a-asus-terminator-c3.html">NFS doesn't work out of the box on FreeNSD (it does work, but you have to hack the config file)</a>, the iSCSI initiator makes it a really awesome solution.
+I have to admit, I'm already thinking about using these devices as members of RAID sets! Since <a href="http://www.docunext.com/2007/06/freenas-on-a-asus-terminator-c3/">NFS doesn't work out of the box on FreeNSD (it does work, but you have to hack the config file)</a>, the iSCSI initiator makes it a really awesome solution.
 
 Unfortunately, when I try the same steps on an ASUS Terminator C3 running FreeNas - the entire process gets messed up. My guess is that the problems stem from the fact the machine is running a gigabit ethernet card in a PCI slot. However, I don't see how the AOpen device would do any better with the SCSI card in a PCI slot. There must be some heavy duty RAM caching going on I'm not aware of - as a buffer between the drive and the nic.
 

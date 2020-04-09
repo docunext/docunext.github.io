@@ -11,5 +11,5 @@ Meanwhile, I happened upon the "Dust" theme from Ubuntu, installed it, and am co
 
 It feels a bit zippier too. Now if I can only figure out how to get the xfwm4 clone to install on Xubuntu.... turns out I didn't need to use the xfwm4 theme, I just used the gtk2 theme and it worked.
 
-<a href="http://www.docunext.com/wiki/SquirrelFish">My SquirrelFish efforts</a>.
+<a href="http://www.docunext.com/">My SquirrelFish efforts</a>.
 

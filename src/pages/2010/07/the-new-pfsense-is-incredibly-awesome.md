@@ -40,5 +40,5 @@ The multi-wan feature has greatly improved. I'm not taking full advantage of thi
 
 Awesome!!
 
-**UPDATE**: I've started a new wiki page focusing solely on [pfSense 2](http://www.docunext.com/wiki/PfSense_2).
+**UPDATE**: I've started a new wiki page focusing solely on [pfSense 2](http://www.docunext.com/2).
 

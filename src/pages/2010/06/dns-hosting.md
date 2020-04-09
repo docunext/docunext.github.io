@@ -5,7 +5,7 @@ tags: dns,linode,zerigo
 ---
 I'm reviewing my DNS hosting configurations. Until recently, I'd used mostly NSD3 servers, plus one BIND9 server.
 
-Then I started reading about [MaxMind's GeoIP database](http://www.docunext.com/2010/06/side-effects-of-maxminds-geolocation-database.html), and learned that the BIND9 that ships with Debian has support for it!
+Then I started reading about [MaxMind's GeoIP database](http://www.docunext.com/2010/06/side-effects-of-maxminds-geolocation-database/), and learned that the BIND9 that ships with Debian has support for it!
 
 I also learned that for some reason, my NSD3 servers would not return glue for nameservers which were subdomains of other domains, but BIND9 would. For example, if example.com had ns1.example.net as a nameserver, this would cause an extra lookup with NSD3. Not a big deal, but it helped me make the decision to switch to BIND9.
 

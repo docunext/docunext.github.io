@@ -47,7 +47,7 @@ I was able to confirm this thanks to this post by [Robin Clarke about switching 
 
 I use NGINX in front of Varnish so I simply proxied requests to squirrelmail around Varnish, to yet another proxy server, lighttpd, which does more host-specific routing.
 
-Also noteworthy - I hadn't used lighttpd that much at all before now, but I've certainly dabbled with it. I don't think its proxy capabilities are as extensive as NGINX, but it does have mod_magnet with built in Lua scripting, which is really awesome. I've even wrote up [a Lua script to load a JSON hash of hosts to redirect](http://www.docunext.com/wiki/Mod_magnet) - I'm definitely planning on extending that. I sort of wish they used more standard interfaces though, something along the lines of Rack or wsapi with app, env, and so on - instead they use the lighty object as the interface.
+Also noteworthy - I hadn't used lighttpd that much at all before now, but I've certainly dabbled with it. I don't think its proxy capabilities are as extensive as NGINX, but it does have mod_magnet with built in Lua scripting, which is really awesome. I've even wrote up [a Lua script to load a JSON hash of hosts to redirect](http://www.docunext.com/) - I'm definitely planning on extending that. I sort of wish they used more standard interfaces though, something along the lines of Rack or wsapi with app, env, and so on - instead they use the lighty object as the interface.
 
 Lighttpd also has dynamically loaded modules and compression caching, something which NGINX does not have (though NGINX has gzip precompression, but its not a standard module on Debian - my OS of choice).
 

@@ -3,7 +3,7 @@ title: Squid3
 date: 2009-10-09
 tags: proxies,squid
 ---
-Its been such a long time since I've used [Squid](http://www.docunext.com/wiki/Squid) that I didn't even know that there was a version 3 out!
+Its been such a long time since I've used [Squid](http://www.docunext.com/) that I didn't even know that there was a version 3 out!
 
 I decided to try squid3 and then found that I was unable to use icp for some reason with squid 2.6.
 

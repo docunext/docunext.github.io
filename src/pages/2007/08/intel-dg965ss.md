@@ -42,7 +42,7 @@ comments:
   - author: admin
     date: 09/24/2007 03:02:01 PM
     text: >
-      Hi Forumworx, the dg965ss uses a significant amount of more energy than the D201GLY, at least 45 watts, compared to the 25 watts on the D201GLY.<br/><br/>Those prices seem pretty high, especially for the picoPSU, you should be able to find it cheaper, though maybe you are including shipping costs. The D201GLY includes the processor, which makes is a total bargain, but if you need more that 1 PCI slot or 1GB or RAM, its not the right board.<br/><br/>The power supply is actually very important in determining the power consumption. I've tested some power supplies that add an additional 20 watts to a system.<br/><br/>These days since I'm running so many computers, I prefer to have fewer 120V to 12V transformers, and only use power supplies like the picoPSU when I need 5v.<br/><br/>You might also want to check out the ALIX board:<br/><br/><a href="http://www.docunext.com/2007/07/alix.html" rel="nofollow">http://www.docunext.com/2007/07/alix.html</a><br/><br/>What is your application?
+      Hi Forumworx, the dg965ss uses a significant amount of more energy than the D201GLY, at least 45 watts, compared to the 25 watts on the D201GLY.<br/><br/>Those prices seem pretty high, especially for the picoPSU, you should be able to find it cheaper, though maybe you are including shipping costs. The D201GLY includes the processor, which makes is a total bargain, but if you need more that 1 PCI slot or 1GB or RAM, its not the right board.<br/><br/>The power supply is actually very important in determining the power consumption. I've tested some power supplies that add an additional 20 watts to a system.<br/><br/>These days since I'm running so many computers, I prefer to have fewer 120V to 12V transformers, and only use power supplies like the picoPSU when I need 5v.<br/><br/>You might also want to check out the ALIX board:<br/><br/><a href="http://www.docunext.com/2007/07/alix/" rel="nofollow">http://www.docunext.com/2007/07/alix.html</a><br/><br/>What is your application?
   - author: forumworx
     email: forumworx@gmail.com
     date: 09/24/2007 03:22:58 PM
@@ -188,7 +188,7 @@ Err, guess that wasn't necessary. I just switched to a newer kernel and it works
 
 Related links:
 
-<a href="http://www.docunext.com/wiki/Intel_DG965SS_dmesg">intel DG965SS dmesg from debian / ubuntu</a>
+<a href="http://www.docunext.com/965SS_dmesg">intel DG965SS dmesg from debian / ubuntu</a>
 
 <a href="http://intellinuxgraphics.org/">intellinuxgraphics.org/</a>
 

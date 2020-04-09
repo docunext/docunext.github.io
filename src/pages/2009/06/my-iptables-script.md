@@ -13,7 +13,7 @@ Since I run debian, I put this into /etc/rc.local:
 
 <pre class="bash">/sbin/iptables-restore /etc/iptables.sh</pre>
 
-<a href="http://www.docunext.com/wiki/Iptables">Docunext Iptables Page</a>
+<a href="http://www.docunext.com/">Docunext Iptables Page</a>
 
-<a href="http://www.docunext.com/wiki/Iptables_hashtable">Docunext Iptables Hashtable Page</a>
+<a href="http://www.docunext.com/">Docunext Iptables Hashtable Page</a>
 

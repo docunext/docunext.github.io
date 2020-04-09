@@ -10,7 +10,7 @@ There are only a few ssh servers accessible via public ip addresses, and those a
 
 Still, I went through the process of regenerating keys on almost all my servers.
 
-This episode reminds me of the challenge that I've faced with entropy / randomness from time to time - servers don't have keyboards or mice to generate randomness. FreeBSD has the high quality yarrow prng and can also gather entropy from the network, and while it is possible, most linux network drivers do not use network activity as a randomness source. Without a keyboard and mouse, there is still disk activity, but when compiling my own kernels, I <a href="http://www.docunext.com/wiki/Linux_and_entropy">patch the drivers to offer network entropy as a source of randomness</a>.
+This episode reminds me of the challenge that I've faced with entropy / randomness from time to time - servers don't have keyboards or mice to generate randomness. FreeBSD has the high quality yarrow prng and can also gather entropy from the network, and while it is possible, most linux network drivers do not use network activity as a randomness source. Without a keyboard and mouse, there is still disk activity, but when compiling my own kernels, I <a href="http://www.docunext.com/">patch the drivers to offer network entropy as a source of randomness</a>.
 
 Would upstream do the same? I have no idea, and due to my personality, I'm just not apt to go promoting the idea upstream either.
 

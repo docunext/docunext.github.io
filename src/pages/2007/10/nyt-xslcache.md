@@ -3,7 +3,7 @@ title: NYT xslcache
 date: 2007-10-26
 tags: php,xml,xsl
 ---
-<a href="http://www.docunext.com/2007/10/nyt-xslcache.html">
+<a href="http://www.docunext.com/2007/10/nyt-xslcache/">
 
 The New York Times has released a modified xsl module for php5 which caches xsl transformations. I just built it on ubuntu and debian:
 
@@ -52,5 +52,5 @@ Depends: php5-common (&gt;=5.2), php5-xsl
 Maintainer: Albert Lash
 Description: PHP 5 XSLTCache Similar to php5-xslt, php5-xsltcache caches xsl documents in  permanent memory, but keeps an eye on modification time of  referenced file. See: http://code.nytimes.com/projects/xslcache</pre>
 
-UPDATE November 1, 2007: Apache can do this stuff too! See my post on <a href="http://www.docunext.com/2007/11/mod-transform.html">mod_transform</a>!
+UPDATE November 1, 2007: Apache can do this stuff too! See my post on <a href="http://www.docunext.com/2007/11/mod-transform/">mod_transform</a>!
 

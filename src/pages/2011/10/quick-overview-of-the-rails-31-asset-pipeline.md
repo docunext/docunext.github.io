@@ -23,7 +23,7 @@ tags: asset pipeline
 ---
 The Rails 3.1 asset pipeline has had some twists and turns lately. The community seems to me to be a little overdramatic about the state of affairs, but that's not what this post is about.
 
-I'm writing this post to check in on the last post I wrote about the pipeline: [A Problem with the Rails 3.1 Asset Pipeline](http://www.docunext.com/2011/09/a-problem-with-the-rails-31-asset-pipeline.html). In that post, I examined the issue when trying to change the prefix for asset paths with this:
+I'm writing this post to check in on the last post I wrote about the pipeline: [A Problem with the Rails 3.1 Asset Pipeline](http://www.docunext.com/2011/09/a-problem-with-the-rails-31-asset-pipeline/). In that post, I examined the issue when trying to change the prefix for asset paths with this:
 
 <pre class="sh_sh">
 config.assets.prefix = "/s"

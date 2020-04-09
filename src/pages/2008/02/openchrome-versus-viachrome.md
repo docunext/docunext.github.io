@@ -39,7 +39,7 @@ Common subdirectories: viachrome/src and openchrome/src
 Files viachrome/stamp-h1 and openchrome/stamp-h1 differ
 Only in openchrome/: .svn</pre>
 
-Wow that is only the tip of the iceberg! I did do a little touch up to the <a href="http://www.docunext.com/wiki/A_diff_of_my_changes_to_openchrome_in_an_effort_to_get_panel_mode_working_on_P4M900">openchrome files in an effort to enable panel mode for the P4M900</a>, but it didn't work. I'm just not familiar enough with C or the codebase.
+Wow that is only the tip of the iceberg! I did do a little touch up to the <a href="http://www.docunext.com/4M900">openchrome files in an effort to enable panel mode for the P4M900</a>, but it didn't work. I'm just not familiar enough with C or the codebase.
 
 I also wish I had found this page earlier:
 

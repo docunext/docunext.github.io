@@ -13,7 +13,7 @@ Make no mistake, I'm also really interested in both mini_httpd and lighttpd, but
 
 For years I used mod_php4/5, but then more recently as I started to use other cgi scripts such as python (for trac) and perl, it made sense to use fastcgi. Since I use debian, there are two choices, mod_fastcgi and mod_fcgid. mod_fastcgi is considered non-free because of some wacky licensing issues, and in my experience mod_fcgid is much much faster, though I may have misconfigured mod_fastcgi. By using fastcgi, you can use the mpm worker, which has improved performance and memory management over mpm prefork. This is due to the fact that while php5 is threadsafe, third party modules are not likely to be. Also, by using mod_fastcgi, you end up being able to use a variety of different scripting languages, ruby, python, php5, php4, perl, and even compiled C and C++ binaries.
 
-Setting up mod_fcgid was really frustrating to me for awhile, so I'm posting my experience in the <a href="http://www.docunext.com/wiki/Apache_FastCGI">Docunext Wiki under Apache FastCGI</a>.
+Setting up mod_fcgid was really frustrating to me for awhile, so I'm posting my experience in the <a href="http://www.docunext.com/">Docunext Wiki under Apache FastCGI</a>.
 <h3>php5-cgi</h3>
 
 PHP5 is a great scripting language in my opinion. I like it not only for the syntax and capabilities, but also the community and external libraries.

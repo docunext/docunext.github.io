@@ -23,9 +23,9 @@ to get the method, then only do the dnsbl lookup if the method is configured to 
 
 See:
 
-<a href="http://www.docunext.com/2007/10/server-based-comment-spam-protection.html">Server Based Comment Spam Protection</a> (Papa Smurf tells it like it is.)
+<a href="http://www.docunext.com/2007/10/server-based-comment-spam-protection/">Server Based Comment Spam Protection</a> (Papa Smurf tells it like it is.)
 
-<a href="http://www.docunext.com/wiki/Protecting_Against_Bad_Bots">Protecting against bad bots</a>
+<a href="http://www.docunext.com/">Protecting against bad bots</a>
 
 Also:
 

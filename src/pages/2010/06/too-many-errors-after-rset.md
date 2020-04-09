@@ -7,7 +7,7 @@ I was again bit by this error which appears to be caused by Norton security soft
 
 #### **Background**
 
-I ran into this error once before when a client reported to me that [his computer was popping up warning from some Norton security software whenever he tried to send an email](http://www.docunext.com/2009/08/symantec-norton-email-smtp-problems.html). I tried to figure out what was going on, but in the end had to switch to port 587.
+I ran into this error once before when a client reported to me that [his computer was popping up warning from some Norton security software whenever he tried to send an email](http://www.docunext.com/2009/08/symantec-norton-email-smtp-problems/). I tried to figure out what was going on, but in the end had to switch to port 587.
 
 #### **New Report**
 

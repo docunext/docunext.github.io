@@ -3,7 +3,7 @@ title: Apache2 GeoIP Module For Blocking Unwanted HTTP POSTs
 date: 2010-06-13
 tags: apache
 ---
-For some time I've used [mod_spamhaus](http://www.docunext.com/wiki/Mod_spamhaus) to block comment spam, similar to how I deflect email spam. I'm OK with this because it only blocks POST, PUT, DELETE, and CONNECT requests, not GET requests.
+For some time I've used [mod_spamhaus](http://www.docunext.com/) to block comment spam, similar to how I deflect email spam. I'm OK with this because it only blocks POST, PUT, DELETE, and CONNECT requests, not GET requests.
 
 Still, email spam is different than comment spam, so I setup mod_geoip to block users from anonymous proxies (that's the "A1" in the rewrite rule below). I'm also tracking countries codes in the logs to see if I can find out where most of the POSTs are coming from.
 

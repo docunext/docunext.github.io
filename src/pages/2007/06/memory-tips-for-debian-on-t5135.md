@@ -42,7 +42,7 @@ Edit /etc/default/acpid:
 
 <pre>MODULES="processor button thermal"</pre>
 
-For more info like this, check out <a href="http://www.docunext.com/2007/06/dectop-debian-tips.html">dectop Debian tips</a>
+For more info like this, check out <a href="http://www.docunext.com/2007/06/dectop-debian-tips/">dectop Debian tips</a>
 
 ¥
 

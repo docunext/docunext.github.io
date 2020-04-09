@@ -3,7 +3,7 @@ title: Ruby Classes Modules Objects and Blocks
 date: 2009-11-22
 tags: ruby
 ---
-I've just written up some notes on [running Sinatra on Debian over at Docunext](http://www.docunext.com/2009/11/using-sinatra-on-debian-part-i.html).
+I've just written up some notes on [running Sinatra on Debian over at Docunext](http://www.docunext.com/2009/11/using-sinatra-on-debian-part-i/).
 
 While I finally got some Rack middleware operational between my Sinatra application and the Thin webserver, it took me too long to figure it out.
 

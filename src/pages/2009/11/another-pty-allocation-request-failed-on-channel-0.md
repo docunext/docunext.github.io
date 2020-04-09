@@ -18,5 +18,5 @@ kernel: udev: missing sysfs features; please update the kernel or disable the ke
 
 I updated to 2-6-30 and was able to login without any issues. I still have devpts in my fstab, so I guess I should remove it and test it again. I'll do it next week. :-)
 
-RELATED: [Ssh Error: PTY allocation request failed on channel 0](http://www.docunext.com/2009/06/ssh-error-pty-allocation-request-failed-on-channel-0.html)
+RELATED: [Ssh Error: PTY allocation request failed on channel 0](http://www.docunext.com/2009/06/ssh-error-pty-allocation-request-failed-on-channel-0/)
 

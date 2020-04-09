@@ -8,5 +8,5 @@ I finally got around to trying out the tesseract optical character recognition s
 
 There are debian packages for both tesseract and leptonica, but I wanted to try out Ocropus too because it has page layout capabilities. And so I had to download and install a few items, thankfully, <a href="http://www.nubae.com/ocropus---the-next-gen-linux-ocr-software-1">this page</a> supplied all the information I needed.
 
-<a href="http://www.docunext.com/wiki/Ocroscript">Ocroscript at the Docunext Wiki</a>
+<a href="http://www.docunext.com/">Ocroscript at the Docunext Wiki</a>
 

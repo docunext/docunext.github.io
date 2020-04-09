@@ -4,7 +4,7 @@ date: 2007-12-09
 tags: none
 author: Albert Lash
 ---
-I just got an email from NetFirms letting me know my account was up for renewal. I responded saying that I <a href="http://www.docunext.com/2007/04/canceling-netfirms-account.html">canceled my Netfirms account back in April of this year</a>, over six months ago.
+I just got an email from NetFirms letting me know my account was up for renewal. I responded saying that I <a href="http://www.docunext.com/2007/04/canceling-netfirms-account/">canceled my Netfirms account back in April of this year</a>, over six months ago.
 
 Then I just received another email from them alleging that my account was not properly closed, and that they only process account cancellations over the phone. I responded quickly, as well as forwarded them the email I sent in April of 2007.
 

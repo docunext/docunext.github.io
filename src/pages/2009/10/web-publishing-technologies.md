@@ -20,8 +20,8 @@ Dynamic scripts are almost always the most inefficient manner of publishing data
 
 There are three primary ways of running dynamic scripts:
 
-* [FastCGI](http://www.docunext.com/wiki/FastCGI)
-* [CGI](http://www.docunext.com/wiki/CGI)
+* [FastCGI](http://www.docunext.com/)
+* [CGI](http://www.docunext.com/)
 * Web server modules or built in processors
 
 There is also a "SpeedyCGI" method of running scripts, but as far as I'm aware, it can only be used on Perl scripts.

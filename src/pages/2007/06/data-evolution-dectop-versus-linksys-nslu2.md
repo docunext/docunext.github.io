@@ -19,7 +19,7 @@ comments:
   - author: admin
     date: 07/30/2007 10:42:03 AM
     text: >
-      Actually its pretty easy - you just have to use a USB CD-ROM drive:<br/><br/><a href="http://www.docunext.com/2007/04/build-your-own-external-cd-burner.html" rel="nofollow">Build Your Own USB CD-ROM Drive</a><br/><br/>And then follow the debian install as usual. I had problems with the HD that was inside the DecTOP, so I replaced it with a different one.<br/><br/>Can you describe where you are having trouble with the debian install?
+      Actually its pretty easy - you just have to use a USB CD-ROM drive:<br/><br/><a href="http://www.docunext.com/2007/04/build-your-own-external-cd-burner/" rel="nofollow">Build Your Own USB CD-ROM Drive</a><br/><br/>And then follow the debian install as usual. I had problems with the HD that was inside the DecTOP, so I replaced it with a different one.<br/><br/>Can you describe where you are having trouble with the debian install?
 date: 2007-06-23
 tags: debian,dectop,energy,nslu2,slug
 ---

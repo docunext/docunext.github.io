@@ -78,5 +78,5 @@ Rather than having to keep track of every little thing that is happening in the 
 
 I'm curious if whether this type of control structure is more efficient than using if/then statements to check for success or failure or certain functions. I'll try and setup a benchmark comparison, but until then, if you know anything about this topic, please share!
 
-**UPDATE**: After writing this blog entry post, I re-factored [Rack-XSLView](http://www.docunext.com/wiki/Rack-XSLView). The change was substantial and in my humble opinion, a major improvement.
+**UPDATE**: After writing this blog entry post, I re-factored [Rack-XSLView](http://www.docunext.com/). The change was substantial and in my humble opinion, a major improvement.
 

@@ -291,6 +291,6 @@ and I agreed. Thankfully, in Rails4, its in there.
 
 
 [asset-pipeline-controller]: http://guides.rubyonrails.org/asset_pipeline.html#how-to-use-the-asset-pipeline
-[golang-deps]: http://www.docunext.com/2013/01/between-the-empire-and-the-rebellion.html 
+[golang-deps]: http://www.docunext.com/2013/01/between-the-empire-and-the-rebellion/ 
 [rack-policy]: https://github.com/peter-murach/rack-policy
 

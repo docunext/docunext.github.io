@@ -12,7 +12,7 @@ Thankfully Galeon works, at least some of the time.
 
 Ah yes - I've been trying to keep track of what I've installed, what works and what doesn't:
 
-<a href="http://www.docunext.com/wiki/Debian_GNU/kFreeBSD">Debian GNU/kFreeBSD</a>
+<a href="http://www.docunext.com//kFreeBSD">Debian GNU/kFreeBSD</a>
 
 And...:
 

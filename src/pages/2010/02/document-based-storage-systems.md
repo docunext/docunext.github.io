@@ -3,7 +3,7 @@ title: Document Based Storage Systems
 date: 2010-02-25
 tags: c++,couchdb,erlang,json,memcache,nosql
 ---
-After posting [Redis, MemcacheDB, or CouchDB?](http://www.docunext.com/2010/02/redis-memcachedb-or-couchdb.html), I did some work with MemcacheDB.
+After posting [Redis, MemcacheDB, or CouchDB?](http://www.docunext.com/2010/02/redis-memcachedb-or-couchdb/), I did some work with MemcacheDB.
 
 The convenience was really cool, but the limitations became quickly apparent.
 
@@ -54,6 +54,6 @@ initialSyncCompleted: 1
 
 Related Posts:
 
-* [Interesting MongoDB Ruby Gems](http://www.docunext.com/2010/02/interesting-mongodb-ruby-gems.html)
-* [dm-mongo-adapter versus the Bare MongoDB Driver](http://www.docunext.com/2010/02/dm-mongo-adapter-versus-the-bare-mongodb-driver.html)
+* [Interesting MongoDB Ruby Gems](http://www.docunext.com/2010/02/interesting-mongodb-ruby-gems/)
+* [dm-mongo-adapter versus the Bare MongoDB Driver](http://www.docunext.com/2010/02/dm-mongo-adapter-versus-the-bare-mongodb-driver/)
 

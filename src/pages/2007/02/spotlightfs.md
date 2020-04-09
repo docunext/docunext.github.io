@@ -3,7 +3,7 @@ title: SpotlightFS
 date: 2007-02-06
 tags: fuse,mac
 ---
-This is awesome! This is a quick way to make some of the <a href="http://www.docunext.com/2007/01/tech-laggards.html">filesystem features</a> I've been looking for. Very very cool.
+This is awesome! This is a quick way to make some of the <a href="http://www.docunext.com/2007/01/tech-laggards/">filesystem features</a> I've been looking for. Very very cool.
 
 <a href="http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SPOTLIGHTFS">SpotlightFS</a>
 

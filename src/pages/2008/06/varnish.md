@@ -23,7 +23,7 @@ Trying out Varnish is easy. I edited /etc/default/varnish to route requests to b
 
 #### <b>References and External Links</b>
 
-* <a href="http://www.docunext.com/wiki/Varnish">http://www.docunext.com/wiki/Varnish</a>
+* <a href="http://www.docunext.com/">http://www.docunext.com/wiki/Varnish</a>
 * <a href="http://en.wikipedia.org/wiki/Varnish_cache">http://en.wikipedia.org/wiki/Varnish_cache</a>
 * <a href="http://www.w3.org/TR/esi-lang">http://www.w3.org/TR/esi-lang</a>
 * <a href="http://varnish.projects.linpro.no/">http://varnish.projects.linpro.no/</a>

@@ -22,7 +22,7 @@ comments:
   - author: Albert
     date: 04/29/2009 01:08:08 AM
     text: >
-      Ah, OK. I just found this other post:<br/><br/><a href="http://www.docunext.com/2008/07/14/aolserver4-nsmysql/" rel="nofollow">http://www.docunext.com/2008/07/14/aolserver4-nsmysql/</a><br/><br/>And I'm posting the emails we exchanged in the wiki:<br/><br/><a href="http://www.docunext.com/wiki/The_Emails_Between_Dossy_and_I_about_AOLServer_and_MySQL" rel="nofollow">http://www.docunext.com/wiki/The_Emails_Between_Dossy_and_I_about_AOLServer_and_MySQL</a>
+      Ah, OK. I just found this other post:<br/><br/><a href="http://www.docunext.com/2008/07/14/aolserver4-nsmysql/" rel="nofollow">http://www.docunext.com/2008/07/14/aolserver4-nsmysql/</a><br/><br/>And I'm posting the emails we exchanged in the wiki:<br/><br/><a href="http://www.docunext.com/" rel="nofollow">http://www.docunext.com/wiki/The_Emails_Between_Dossy_and_I_about_AOLServer_and_MySQL</a>
 date: 2008-07-12
 ---
 Finally figured this one out, I think. I was trying to compile aolserver4-nsmysql on debian, using the package source, but I kept hitting that error. then <a href="https://bugzilla.novell.com/show_bug.cgi?id=218406">I found some bug about openSUSE related to this</a>, and the workaround for x86 was to do this:

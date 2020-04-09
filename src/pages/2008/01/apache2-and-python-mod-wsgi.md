@@ -24,5 +24,5 @@ But now I'm wondering how to architect WSGI requests. Maybe I should use paste o
 I finally figured out what's up with __call__. Imagine you have a class. You create an object instance of it. class car, my_car = car(), and when my_car is created, __init__ is called. If you want to run my_car as a function, you can call my_car(), but you'll need a __call__ function. I'm not really sure what the benefit of this is, but I imagine its good for something.
 </div>
 
-<a href="http://www.docunext.com/wiki/Apache_2_and_mod_wsgi">Apache 2 and mod_wsgi</a>
+<a href="http://www.docunext.com/2_and_mod_wsgi">Apache 2 and mod_wsgi</a>
 

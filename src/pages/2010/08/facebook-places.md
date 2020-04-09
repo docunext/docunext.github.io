@@ -13,7 +13,7 @@ Oh people, come on? Let's have some quality conversations with our parents, sibl
 
 #### So why has Facebook created "Places"?
 
-And who was the marketing genius who came up with the "Places" moniker? Did they also come up with the creative "Windows" term for Microsoft. As it turned out, Windows as a term is so generic a federal judge threatened to void their trademark in their lawsuit of infringement against "Lindows". The case was subsequently dropped, resulting in [Microsoft paying out the nose to Lindows to get them to change their name to Linspire](http://www.docunext.com/wiki/Lindows).
+And who was the marketing genius who came up with the "Places" moniker? Did they also come up with the creative "Windows" term for Microsoft. As it turned out, Windows as a term is so generic a federal judge threatened to void their trademark in their lawsuit of infringement against "Lindows". The case was subsequently dropped, resulting in [Microsoft paying out the nose to Lindows to get them to change their name to Linspire](http://www.docunext.com/).
 
 My answer is... I have no idea. Facebook, like Google, is something of a one-trick pony, struggling to do more. Google has definitely succeeded with some minor successes, like [GMail](http://www.docunext.com/blog/gmail/) and their domain services, but still falters from time to time, as seen with their surprise announcement that of [Google Wave has closed](http://www.soggyblogger.com/blog/2010/08/wave-goodbye.html).
 

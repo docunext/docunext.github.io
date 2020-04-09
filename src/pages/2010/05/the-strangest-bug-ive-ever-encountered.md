@@ -13,5 +13,5 @@ Anyone have **any** idea why this might happen?
 
 UPDATE: I found a solution, but I still don't know why this was happening:
 
-[Strange Fix for the Strangest Bug](http://www.docunext.com/2010/06/strange-fix-for-the-strangest-bug.html)
+[Strange Fix for the Strangest Bug](http://www.docunext.com/2010/06/strange-fix-for-the-strangest-bug/)
 

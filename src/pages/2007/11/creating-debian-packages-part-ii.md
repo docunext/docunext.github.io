@@ -4,7 +4,7 @@ date: 2007-11-11
 tags: debian,packages,php,xslt
 ---
 
-As a follow-up to my post about the <a href="http://www.docunext.com/2007/10/nyt-xslcache.html">New York Times XSLT cache package</a>, I emailed the debian mentors list asking for some help in packaging it correctly.
+As a follow-up to my post about the <a href="http://www.docunext.com/2007/10/nyt-xslcache/">New York Times XSLT cache package</a>, I emailed the debian mentors list asking for some help in packaging it correctly.
 
 Felipe Augusto van de Wiel was kind enough to write back to me with a few tips. Here's a new control file:
 

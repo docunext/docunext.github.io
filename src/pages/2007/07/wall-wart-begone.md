@@ -9,5 +9,5 @@ The one question that's burning in my mind is whether using one converter from A
 
 <a href="http://www.my-tech-deals.com/blog/2007/07/mini-itx-power-supplies.html">Mini-ITX Power Supplies</a>
 
-UPDATE August 16, 2007: I've had the multi-port 12V power supply up and running for about 3 weeks now without issue, so I'd venture to guess its ready to go in to the staging environment now. Cool, now I just have to get my hands on more <a href="http://www.docunext.com/2007/07/alix.html">ALIX boards</a>! (though I'll probably use <a href="http://www.my-tech-deals.com/blog/2007/08/more-intel-little-valley-motherboards.html">intel little valley motherboards</a> as well.
+UPDATE August 16, 2007: I've had the multi-port 12V power supply up and running for about 3 weeks now without issue, so I'd venture to guess its ready to go in to the staging environment now. Cool, now I just have to get my hands on more <a href="http://www.docunext.com/2007/07/alix/">ALIX boards</a>! (though I'll probably use <a href="http://www.my-tech-deals.com/blog/2007/08/more-intel-little-valley-motherboards.html">intel little valley motherboards</a> as well.
 

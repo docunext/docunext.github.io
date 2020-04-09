@@ -8,5 +8,5 @@ Thankfully there are some existing resources I've found which have helped me wor
 
 Its not a debian package (yet), but it was easy enough for me to configure. I've written my notes down at the Docunext Wiki, so check 'em out if you're interested:
 
-<a href="http://www.docunext.com/wiki/Mod_extract_forwarded">mod_extract_forwarded notes at the Docunext Wiki</a>
+<a href="http://www.docunext.com/">mod_extract_forwarded notes at the Docunext Wiki</a>
 

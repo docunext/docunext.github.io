@@ -10,13 +10,13 @@ comments:
   - author: Albert
     date: 03/19/2011 12:10:53 PM
     text: >
-      Gabriel, thanks for commenting. Its been awhile, and I can't remember where I was doing my testing, but I do remember thinking that it would be more efficient to simply start over with a goal in mind, than try to retain and glean any value from my experiments.<br/><br/>Also, regarding Sinatra - I recently read through the codebase again and was surprised how much it has grown over the past year. I loved how bare and low-level it was! I haven't actually used the newer version yet, but given how modular Rails 3 is now, I might just use that instead, because I'm doing a lot more Rails development in general these days.<br/><br/>If the NGINX authentication script could be done very simply, I might just create it using the Ruby FastCGI library. Here's an example:<br/><br/><a href="http://www.docunext.com/wiki/Example_Ruby_FastCGI_Script" rel="nofollow">http://www.docunext.com/wiki/Example_Ruby_FastCGI_Script</a>
+      Gabriel, thanks for commenting. Its been awhile, and I can't remember where I was doing my testing, but I do remember thinking that it would be more efficient to simply start over with a goal in mind, than try to retain and glean any value from my experiments.<br/><br/>Also, regarding Sinatra - I recently read through the codebase again and was surprised how much it has grown over the past year. I loved how bare and low-level it was! I haven't actually used the newer version yet, but given how modular Rails 3 is now, I might just use that instead, because I'm doing a lot more Rails development in general these days.<br/><br/>If the NGINX authentication script could be done very simply, I might just create it using the Ruby FastCGI library. Here's an example:<br/><br/><a href="http://www.docunext.com/" rel="nofollow">http://www.docunext.com/wiki/Example_Ruby_FastCGI_Script</a>
 date: 2010-10-05
 tags: apache,cram-md5,imap,mysql,nginx,postgres,proxies,sasl,sinatra,sqlite
 ---
 I am a big fan of Sinatra, the adept development framework for building small and tight web applications.
 
-So recently when I was setting up [Dovecot](http://www.docunext.com/wiki/Dovecot) with LDAP authentication on an [OpenVZ virtual server](http://www.docunext.com/wiki/OpenVZ), I gave the [NGINX](http://www.docunext.com/wiki/NGINX) IMAP proxy a try.
+So recently when I was setting up [Dovecot](http://www.docunext.com/) with LDAP authentication on an [OpenVZ virtual server](http://www.docunext.com/wiki/OpenVZ), I gave the [NGINX](http://www.docunext.com/wiki/NGINX) IMAP proxy a try.
 
 While I got it working, I found the authentication module a bit clunky at first. It passes credentials from the user to an authentication system using HTTP, expecting HTTP headers back about whether the users' credentials were legitimate and where to proxy their connection.
 

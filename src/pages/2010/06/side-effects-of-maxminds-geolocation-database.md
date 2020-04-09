@@ -2,7 +2,7 @@
 title: Side Effects of MaxMind s GeoLocation Database
 date: 2010-06-14
 ---
-I've recently started to test the use of MaxMind's GeoLocation database to have BIND9 respond differently based on the source or the DNS request, as well as use it to [block HTTP POST requests from anonymous proxies](http://www.docunext.com/2010/06/apache2-geoip-module-for-blocking-unwanted-http-posts.html).
+I've recently started to test the use of MaxMind's GeoLocation database to have BIND9 respond differently based on the source or the DNS request, as well as use it to [block HTTP POST requests from anonymous proxies](http://www.docunext.com/2010/06/apache2-geoip-module-for-blocking-unwanted-http-posts/).
 
 My goal with the DNS is to simply distribute requests more deliberately, rather than randomly, potentially resulting in better performance for users. Furthermore, some IP addresses are not globally routed (though I'm not sure why).
 

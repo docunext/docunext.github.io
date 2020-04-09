@@ -14,11 +14,11 @@ comments:
   - author: admin
     date: 07/26/2007 08:37:12 AM
     text: >
-      Thanks for that tip Mate - totally appreciate it. I actually nuked my machine that was giving me those issues and now use it as a LTSP client, but its good to know. Hopefully your tip will help charlie above.<br/><br/>Instead of xubuntu, I'm now using debian with fluxbox, even lighter and simpler than xubuntu. A little harder to setup but not by much.<br/><br/><a href="http://www.docunext.com/2007/07/minideb.html" rel="nofollow">http://www.docunext.com/2007/07/minideb.html</a>
+      Thanks for that tip Mate - totally appreciate it. I actually nuked my machine that was giving me those issues and now use it as a LTSP client, but its good to know. Hopefully your tip will help charlie above.<br/><br/>Instead of xubuntu, I'm now using debian with fluxbox, even lighter and simpler than xubuntu. A little harder to setup but not by much.<br/><br/><a href="http://www.docunext.com/2007/07/minideb/" rel="nofollow">http://www.docunext.com/2007/07/minideb.html</a>
 date: 2007-05-31
 tags: ubuntu,x11
 ---
-<a href="http://www.docunext.com/2007/05/xfonts-scalable-bug.html" title="xubuntu fonts are all squares">
+<a href="http://www.docunext.com/2007/05/xfonts-scalable-bug/" title="xubuntu fonts are all squares">
 </a>
 
 <pre>Setting up xfonts-scalable (1.0.0-6) ...

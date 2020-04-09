@@ -13,7 +13,7 @@ Dreamhost recently upgraded their panel and it looks great! Only problem is that
 
 Dreamhost Spam Policies</strong>SPAM is one of the worst things about the internet, and it has had an impact on the service Dreamhost can offer its customers. The person who introduced me to dreamhost.com over 4 years ago is now leaving dreamhost because of their email list limitations. <strong>
 
-The Problem with <a href="http://www.docunext.com/blog/shared-hosting.html">Shared Hosting</a></strong>
+The Problem with <a href="http://www.docunext.com/blog/shared-hosting/">Shared Hosting</a></strong>
 March 23, 2007
 Yesterday, all my domains that I host at Dreamhost.com were unavailable for the majority of the day. I emailed support and about 4 hours later they responded with this message:
 

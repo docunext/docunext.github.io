@@ -36,7 +36,7 @@ It has to do with WIN32 so I just deleted it, but actually I'll comment it out. 
 
 [Tracker](http://tracker.rubyforge.org/) looks nice too!
 
-Looking around at ditz some more I see its actually quite an interesting little package. It uses yaml for marshalling / serializing the issue objects in the git repository. With respect to Git, I really like the idea of [using flat files for storage](http://www.docunext.com/2010/01/lets-use-flat-files-for-storage.html), and even combining files to keep management simpler. With a command line parser / interface, it totally makes sense.
+Looking around at ditz some more I see its actually quite an interesting little package. It uses yaml for marshalling / serializing the issue objects in the git repository. With respect to Git, I really like the idea of [using flat files for storage](http://www.docunext.com/2010/01/lets-use-flat-files-for-storage/), and even combining files to keep management simpler. With a command line parser / interface, it totally makes sense.
 
 But why YAML? Personally I would have preferred XML or JSON, but not a problem - it might even be possible to change which serialization method it uses.
 

@@ -15,5 +15,5 @@ NGINX, on the other hand, does, and I've recently decided to put NGINX on the fr
 
 My plan now is to organize by servers and proxies to offer uncompressed and compressed data on different ports. Before I start choosing which ports are for which data streams, I'm going to review my existing guidelines and document my new decisions.
 
-[My Web Server Port Number Configurations](http://www.docunext.com/wiki/Web_Servers#Port_Numbers)
+[My Web Server Port Number Configurations](http://www.docunext.com/#Port_Numbers)
 

@@ -13,7 +13,7 @@ mknod /dev/kqemu c 250 0
 
 chmod 666 /dev/kqemu
 
-Here's some updated <a href="http://www.docunext.com/2007/07/qemu-notes.html">QEMU notes</a>:<ol><li>vde_switch -tap tap0 -daemon</li><li>ifconfig tap0 up</li><li>brctl addif br0 tap0</li><li>sudo vdeqemu -m 512 -vnc :2 -net nic,macaddr=00:11:22:ee:ff:44 -net vde deb4vde.raw &</li></ol>
+Here's some updated <a href="http://www.docunext.com/2007/07/qemu-notes/">QEMU notes</a>:<ol><li>vde_switch -tap tap0 -daemon</li><li>ifconfig tap0 up</li><li>brctl addif br0 tap0</li><li>sudo vdeqemu -m 512 -vnc :2 -net nic,macaddr=00:11:22:ee:ff:44 -net vde deb4vde.raw &</li></ol>
 
 NOTE: You will have to come up with unique mac addresses for each virtual machine you attach to the vde switch!
 

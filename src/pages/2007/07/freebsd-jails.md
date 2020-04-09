@@ -3,7 +3,7 @@ title: FreeBSD Jails
 date: 2007-07-24
 tags: freebsd,virtualization
 ---
-After some serious fun with <a href="http://www.docunext.com/wiki/OpenVZ">OpenVZ</a>, I've been reading about <a href="http://www.docunext.com/wiki/FreeBSD">FreeBSD</a> jails. I really need to read the <a href="http://www.docunext.com/wikiFreeBSD_man_jail">jail manual</a>.
+After some serious fun with <a href="http://www.docunext.com/">OpenVZ</a>, I've been reading about <a href="http://www.docunext.com/wiki/FreeBSD">FreeBSD</a> jails. I really need to read the <a href="http://www.docunext.com/wikiFreeBSD_man_jail">jail manual</a>.
 
 And a page about BSD jails:
 

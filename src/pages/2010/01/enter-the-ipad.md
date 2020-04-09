@@ -30,7 +30,7 @@ Apple has publicly disclosed its new tablet:
 ## What I Want to Know More About
 
 * A4 Chip
-    * Was it designed by [PA Semi](http://www.docunext.com/2008/01/pa-semi.html)?
+    * Was it designed by [PA Semi](http://www.docunext.com/2008/01/pa-semi/)?
     * Does it run on a PowerPC architecture?
     * Might be... A4 is kind of like G3 / G4 / G5
     * It could be the ARM platform

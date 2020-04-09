@@ -9,7 +9,7 @@ After setting up a CentOS virtual private server, I found it used very little me
 
 The smallest FreeBSD I've used would have to be m0n0wall, and that needed at least 64 megabytes of RAM - but that included mini-httpd and PHP.
 
-I bet it could go much smaller. I wish there were more [FreeBSD VPS](http://www.docunext.com/2009/09/freebsd-vps.html) hosting companies out there.
+I bet it could go much smaller. I wish there were more [FreeBSD VPS](http://www.docunext.com/2009/09/freebsd-vps/) hosting companies out there.
 
 **Memory Usage**
 

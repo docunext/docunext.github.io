@@ -11,5 +11,5 @@ So far, for checking and downloading emails and attachments, its working fine.
 
 One of my co-workers has the bright idea to convert the Exchange format emails to regular mail, so that we could continue to use the standard TMail gem for parsing and data processing.
 
-I would have preferred to use [DavMail to continue to use POP3 or an IMAP client](http://www.docunext.com/2011/04/davmail-for-exchange.html), but Viewpoint seems fine for now.
+I would have preferred to use [DavMail to continue to use POP3 or an IMAP client](http://www.docunext.com/2011/04/davmail-for-exchange/), but Viewpoint seems fine for now.
 

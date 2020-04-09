@@ -86,7 +86,7 @@ Argh. I just couldn't get this working, but I did learn a lot about ipsec on ubu
 
 IPSec Related links:
 
-* [IPSec Docunext Wiki Page](http://www.docunext.com/wiki/IPSec)
+* [IPSec Docunext Wiki Page](http://www.docunext.com/)
 * <a href="http://www.ipsec-howto.org/t1.html">http://www.ipsec-howto.org/t1.html</a>
 * <a href="http://foodfight.org/log/Interweb/ipsec-1">http://foodfight.org/log/Interweb/ipsec-1</a>
 

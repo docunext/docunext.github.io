@@ -24,7 +24,7 @@ Notes:
 
 After getting this running on some very lightweight hardware, I'm much more confident in its value. The gears are now turning on a more sophisticated and powerful setup, one with a cluster or NFS, MySQL, and Apache servers. Already I've seen what a pain in the neck it can be to keep the two load balanced Apache servers synchronized, and I'm even using the same MySQL back-end on both servers.
 
-I've never setup an NFS server before, so that will be a new skill for me. MySQL clustering? I've setup a primary / secondary arrangement, but never a primary / primary, so that will be a new skill as well. If and when I build this cluster, I'd like to plan the hardware as appropriately as possible, so that it is energy efficient. I keep a lot of notes about this topic at the <a href="http://www.docunext.com/wiki/Main_Page">Green Computing Wiki about Energy Efficient Technology</a>.
+I've never setup an NFS server before, so that will be a new skill for me. MySQL clustering? I've setup a primary / secondary arrangement, but never a primary / primary, so that will be a new skill as well. If and when I build this cluster, I'd like to plan the hardware as appropriately as possible, so that it is energy efficient. I keep a lot of notes about this topic at the <a href="http://www.docunext.com/">Green Computing Wiki about Energy Efficient Technology</a>.
 
 Related stuff:
 

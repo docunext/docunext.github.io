@@ -19,7 +19,7 @@ group serverfarm{...}</pre>
 
 Hopefully it gets fixed soon!
 
-I had gotten it to work last year as described here: <a href="http://www.docunext.com/2008/03/csync2-on-debian.html">http://www.docunext.com/2008/03/csync2-on-debian.html</a>
+I had gotten it to work last year as described here: <a href="http://www.docunext.com/2008/03/csync2-on-debian/">http://www.docunext.com/2008/03/csync2-on-debian.html</a>
 
 ¥
 

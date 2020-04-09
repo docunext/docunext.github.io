@@ -174,7 +174,7 @@ See any typos or areas of improvement? Use the comment form below to sound off.
 
 #### See Also
 
-* [Metaprogramming with Ruby](http://www.docunext.com/wiki/ruby/ruby-metaprogramming.html)
+* [Metaprogramming with Ruby](http://www.docunext.com//ruby-metaprogramming/)
 
 #### Footnotes
 

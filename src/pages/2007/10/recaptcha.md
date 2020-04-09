@@ -25,7 +25,7 @@ That's one of the more ridiculous fine prints I've read in awhile. How in the wo
 
 Sorry Carnegie Mellon, everybody doesn't win, especially with wacky terms like the ones you are including in your service.
 
-I believe that the <a href="http://www.docunext.com/2007/10/server-based-comment-spam-protection.html">mod_defensible solution described here is a better solution than both Spam Karma 2 and reCAPTCHA</a>. Of course I'll have to try it out!
+I believe that the <a href="http://www.docunext.com/2007/10/server-based-comment-spam-protection/">mod_defensible solution described here is a better solution than both Spam Karma 2 and reCAPTCHA</a>. Of course I'll have to try it out!
 
 ¥
 

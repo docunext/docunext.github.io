@@ -21,7 +21,7 @@ A couple of ideas regarding server event management:
 * logcheck
 * Other file scanning - fail2ban
 * rungetty
-* <a href="http://www.docunext.com/wiki/Daemontools">daemontools</a>
+* <a href="http://www.docunext.com/">daemontools</a>
 * knockd
 * ldirectord
 * csync2

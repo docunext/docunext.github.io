@@ -4,7 +4,7 @@ date: 2009-03-24
 ---
 I've been evaluating different strategies for caching parts of an XHTML page, like a header, footer, or sidebar. I've come to the conclusion that the best way to do this is to store the xhtml as a dom object in javascript. It could also be stored as plain XHTML, but then there are issues with multi-line strings in javascript.
 
-It would be possible to use <a href="http://www.docunext.com/wiki/E4X">E4X (EMCAscript for XML)</a>, but that is not widely supported by browsers yet.
+It would be possible to use <a href="http://www.docunext.com/4X">E4X (EMCAscript for XML)</a>, but that is not widely supported by browsers yet.
 
 So anyway back to Javascript DOM code. Its not as simple to write as HTML, and there are many convenience packages to help this, but I'm under the impression that may reduce its efficiency.
 
@@ -14,7 +14,7 @@ Then there is the issue that I don't have a server-side javascript interpreter s
 
 Here is a link to the first revision of <a href="http://www.pbooks.org/trac/browser/trunk/apps/pbooks/templates/js/dom_generator.js.xsl">xhtml2dom.xsl</a>.
 
-I like how this is working. For some reason, I'm now thinking about javascript parsers. Does such a thing exist? I think it would be possible to create one using <a href="/wiki/Ragel">Ragel</a>. Here is one implemented in Ruby: <a href="http://idontsmoke.co.uk/2005/rbnarcissus/">rbNarcissus</a> (and a backup of the code <a href="http://www.docunext.com/wiki/Rbnarcissus.rb">here</a>).
+I like how this is working. For some reason, I'm now thinking about javascript parsers. Does such a thing exist? I think it would be possible to create one using <a href="/wiki/Ragel">Ragel</a>. Here is one implemented in Ruby: <a href="http://idontsmoke.co.uk/2005/rbnarcissus/">rbNarcissus</a> (and a backup of the code <a href="http://www.docunext.com/.rb">here</a>).
 
 UPDATE: Instead of the translate function for newlines, I'm using the <a href="http://www.xmlplease.com/whitespace">normalize-whitespace function suggested here at xmlplease.com/whitespace</a>.
 

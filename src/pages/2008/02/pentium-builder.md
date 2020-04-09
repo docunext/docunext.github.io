@@ -13,5 +13,5 @@ I'm trying it out now with libxml2, but I'm already noticing this:
 
 I just edited /usr/bin/gcc and g++ to comment out -march. This is a very cool package. I hope it gets updated, maybe I'll take a look at updating it.
 
-<a href="http://www.docunext.com/wiki/Pentium-builder">Docunext Wiki Page on the Pentium Builder Package</a>
+<a href="http://www.docunext.com/">Docunext Wiki Page on the Pentium Builder Package</a>
 

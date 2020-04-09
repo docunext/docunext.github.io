@@ -11,7 +11,7 @@ In short, online video has come of age, and is really awesome.
 
 To many, this has been obvious for quite some time! YouTube and their competitors have been bursting at the seams with UGC (user generated content), and perhaps that's why its taken me awhile to tap in - some, err - a lot, of UGC is not that compelling or interesting.
 
-And so thanks to some comments on an old post here on Docunext about <a href="http://www.docunext.com/2007/09/hyperengine-av.html">Hyperengine AV</a>, I got interested in the current state of open source video editing software.
+And so thanks to some comments on an old post here on Docunext about <a href="http://www.docunext.com/2007/09/hyperengine-av/">Hyperengine AV</a>, I got interested in the current state of open source video editing software.
 
 Turns out there is some decent open source video editing products out there! The first one that really caught my attention was kdenlive.
 

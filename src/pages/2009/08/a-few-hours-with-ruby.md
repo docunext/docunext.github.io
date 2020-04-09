@@ -9,7 +9,7 @@ Its taken me way too long for me to get my hands dirty with it, but finally I'm 
 
 I've heard so many people say things like "this script only has x amount of lines and does all this!"
 
-That type of statement is hard for me to understand unless I'm able to experience it myself, and tonight, I was able to do so. I don't think that my particular instance exemplifies this light bulb, "aha" moment, very well, but here's what I came up with while writing a script to <a href="http://www.docunext.com/blog/rbldns.html">lookup some rbl dns servers</a>, to reverse an ip address:
+That type of statement is hard for me to understand unless I'm able to experience it myself, and tonight, I was able to do so. I don't think that my particular instance exemplifies this light bulb, "aha" moment, very well, but here's what I came up with while writing a script to <a href="http://www.docunext.com/blog/rbldns/">lookup some rbl dns servers</a>, to reverse an ip address:
 
 <pre class="sh_ruby">cmds = cmda.reverse().join(".")</pre>
 

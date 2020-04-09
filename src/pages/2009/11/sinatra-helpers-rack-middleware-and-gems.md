@@ -6,7 +6,7 @@ tags: gems,rack,ruby,sinatra
 **Sinatra Helpers**
 --------------------------
 
-I had just about finished my first Sinatra helper module ([Sinatra-XSLView](http://www.docunext.com/wiki/Sinatra-XSLView)) when I realized what I was trying to achieve would be better written as a Rack Middleware module. Oh well, it was still a useful exercise, and it may prove to be useful in ways I hadn't originally foreseen.
+I had just about finished my first Sinatra helper module ([Sinatra-XSLView](http://www.docunext.com/)) when I realized what I was trying to achieve would be better written as a Rack Middleware module. Oh well, it was still a useful exercise, and it may prove to be useful in ways I hadn't originally foreseen.
 
 **Rack Middleware**
 -----------------------------

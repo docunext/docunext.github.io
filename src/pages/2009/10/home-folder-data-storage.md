@@ -9,7 +9,7 @@ comments:
 date: 2009-10-02
 tags: configuration
 ---
-I recently blogged about [home folder configuration settings storage](http://www.docunext.com/2009/07/home-folder-configuration-files.html), and now I'm thinking about how data could be stored.
+I recently blogged about [home folder configuration settings storage](http://www.docunext.com/2009/07/home-folder-configuration-files/), and now I'm thinking about how data could be stored.
 
 Thinking about data too, I wonder if .config is the best name for a "top level" storage folder. Maybe something generic like ".storage" might be more appropriate.
 

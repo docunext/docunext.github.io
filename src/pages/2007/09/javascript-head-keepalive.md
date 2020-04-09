@@ -49,7 +49,7 @@ The benefits of the referer header? As a webmaster, its nice to know where your 
 
 As a result of today's work, I've decided to turn off sending the request header on my browsers. At least it will save a little bandwidth! :-) To do so yourself, its easy to do in Firefox, but I couldn't figure out how to set it up in IE or Safari - I also noticed that Safari won't let AJAX override its User-Agent. For Mozilla / Firefox clients, just type "about:config" into your menu bar, the search for referer, and change the 2 to a 0.
 
-* <http://www.docunext.com/wiki/Comet>
+* <http://www.docunext.com/>
 * <http://kb.mozillazine.org/Network.http.sendRefererHeader>
 * <http://httpd.apache.org/docs/2.0/mod/core.html#keepalivetimeout>
 * <http://pbbakkum.com/print.php?type=articles&amp;id=7>

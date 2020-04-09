@@ -11,5 +11,5 @@ Many companies have and are investing in "**cloud infrastructure**", including *
 
 I'm only using it minimally though - I have my own content distribution network which I prefer for most situation.
 
-For the technical details on my setup, check out the Docunext page on [Amazon's S3](http://www.docunext.com/wiki/S3) and [Cloud Front services](http://www.docunext.com/wiki/Cloud_Front).
+For the technical details on my setup, check out the Docunext page on [Amazon's S3](http://www.docunext.com/3) and [Cloud Front services](http://www.docunext.com/wiki/Cloud_Front).
 

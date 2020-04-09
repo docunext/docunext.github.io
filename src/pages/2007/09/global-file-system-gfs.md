@@ -9,7 +9,7 @@ comments:
 date: 2007-09-02
 tags: debian,drbd
 ---
-[ <b>UPDATE: In the future, I will instead go with <a href="http://www.docunext.com/2007/09/drbd-and-ocfs2.html">OCFS2</a>, it worked well and was much easier to setup and get operational.</b> ]
+[ <b>UPDATE: In the future, I will instead go with <a href="http://www.docunext.com/2007/09/drbd-and-ocfs2/">OCFS2</a>, it worked well and was much easier to setup and get operational.</b> ]
 
 Build drbd module one two machines, setup storage on each machine... setup drbd.conf (in my process, I had already formatted as ext3, but I'm planning to switch to gfs somehow).
 

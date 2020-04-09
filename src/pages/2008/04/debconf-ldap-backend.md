@@ -3,7 +3,7 @@ title: Debconf LDAP Backend
 date: 2008-04-26
 tags: debian,ldap
 ---
-Awhile back, I wrote about wanting a <a href="http://www.docunext.com/2008/02/wishlist-network-based-configuration.html">method to use LDAP to store configuration files</a>, so I was really pleased when I read that there is an experimental backend for debconf which uses LDAP.
+Awhile back, I wrote about wanting a <a href="http://www.docunext.com/2008/02/wishlist-network-based-configuration/">method to use LDAP to store configuration files</a>, so I was really pleased when I read that there is an experimental backend for debconf which uses LDAP.
 
 I *have* to try this out!
 

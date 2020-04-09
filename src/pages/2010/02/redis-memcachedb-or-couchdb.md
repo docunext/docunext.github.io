@@ -25,7 +25,7 @@ There are three different NoSQL servers that I am aware of, though I'm sure ther
 
 **Redis** is new to the scene, but its been getting rave reviews.
 
-**CouchDB** is from the awesome folks at the Apache Foundation and can likely support traffic the likes of Facebook, hence more than I need. <del>Its Java based and for me that's a drawback.</del> Its based on Erlang, which is cool with me. Thanks [grant](http://www.docunext.com/2010/02/redis-memcachedb-or-couchdb.html#comment-5213)!
+**CouchDB** is from the awesome folks at the Apache Foundation and can likely support traffic the likes of Facebook, hence more than I need. <del>Its Java based and for me that's a drawback.</del> Its based on Erlang, which is cool with me. Thanks [grant](http://www.docunext.com/2010/02/redis-memcachedb-or-couchdb/#comment-5213)!
 
 **MemcacheDB** is right up my alley. (I'm actually already using it, though for some fairly simple reasons; not for full "documents".) Its based on the rock solid and simple as can be memcache protocol from the folks at Danga. Its been around for a few years and I see that as a very good thing.
 

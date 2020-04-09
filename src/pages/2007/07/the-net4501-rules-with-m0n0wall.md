@@ -14,7 +14,7 @@ date: 2007-07-08
 tags: m0n0wall,net4501,soekris
 ---
 
-If all you need is a simple bridge for bandwidth management, the net4501 is a good choice. While I had some problems with the <a href="http://www.docunext.com/2007/06/soekris-net4501-m0n0wall-error.html">net4501 webgui being very slow,</a> an <a href="http://www.docunext.com/2007/06/soekris-net4501-bios-update.html">update to Soekris bios 1.31b - b4501_131b.bin</a> solved the problem, and now it works great. This network appliance is relatively inexpensive, running approximately $175, depending on configurations and quantities.
+If all you need is a simple bridge for bandwidth management, the net4501 is a good choice. While I had some problems with the <a href="http://www.docunext.com/2007/06/soekris-net4501-m0n0wall-error/">net4501 webgui being very slow,</a> an <a href="http://www.docunext.com/2007/06/soekris-net4501-bios-update.html">update to Soekris bios 1.31b - b4501_131b.bin</a> solved the problem, and now it works great. This network appliance is relatively inexpensive, running approximately $175, depending on configurations and quantities.
 
 The nice thing about this machine is that is is pretty much ready to go. You can easily purchase a case and power supply for it, and it includes a compact flash slot for booting an operating system. With the board limited to 64MB of ram, your choices for operating systems are limited, but fortunately there is <a href="http://m0n0.ch/wall/" rel="nofollow">m0n0wall - the rock-solid freeBSD-based firewall system with the power to server</a>.
 

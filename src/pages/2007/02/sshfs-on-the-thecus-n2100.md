@@ -31,5 +31,5 @@ the fuse-source file isn't relevant anymore.
 
 Thought it still looks like there is generally trouble with fuse on debian:
 
-<a href="http://www.docunext.com/acc/nxwiki/view/Installing-sshfs-on-Quantact-Debian-VPS.html" title="http://www.docunext.com/acc/nxwiki/view/Installing-sshfs-on-Quantact-Debian-VPS.html">Installing sshfs on Quantact Debian VPS</a>
+<a href="http://www.docunext.com/acc/nxwiki/view/Installing-sshfs-on-Quantact-Debian-VPS/" title="http://www.docunext.com/acc/nxwiki/view/Installing-sshfs-on-Quantact-Debian-VPS.html">Installing sshfs on Quantact Debian VPS</a>
 

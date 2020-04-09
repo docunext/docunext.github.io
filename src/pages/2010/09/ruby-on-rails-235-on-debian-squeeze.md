@@ -3,7 +3,7 @@ title: Ruby on Rails 2.3.5 on Debian Squeeze
 date: 2010-09-11
 tags: 1.9,rails,ruby
 ---
-Judging by the recent, nasty bug I ran into using [Ruby 1.9.1 on Debian Squeeze](http://www.docunext.com/2010/08/installed-spec-directories-undefined-method-path-for-gemmodule-nomethoderror.html) *and* the recent announcement that Debian Squeeze is frozen, I was concerned that Squeeze will "ship" with 1.9.1 instead of 1.9.2.
+Judging by the recent, nasty bug I ran into using [Ruby 1.9.1 on Debian Squeeze](http://www.docunext.com/2010/08/installed-spec-directories-undefined-method-path-for-gemmodule-nomethoderror/) *and* the recent announcement that Debian Squeeze is frozen, I was concerned that Squeeze will "ship" with 1.9.1 instead of 1.9.2.
 
 Then I noticed there is a Debian package page with this:
 

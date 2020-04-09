@@ -31,5 +31,5 @@ conn.perror("search")
 conn.unbind
 </pre>
 
-[ldaplink]: http://www.docunext.com/wiki/LDAP
+[ldaplink]: http://www.docunext.com/
 

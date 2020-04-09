@@ -14,6 +14,6 @@ Technology has changed, evolved, improved since Newton, even the iphone would ea
 I see some critical success factors for an Apple tablet to succeed:
 
 * A tablet-specific app store
-* Long battery life ([hybrid displays?](http://www.docunext.com/2010/01/hybrid-displays.html))
+* Long battery life ([hybrid displays?](http://www.docunext.com/2010/01/hybrid-displays/))
 * Handwriting recognition
 

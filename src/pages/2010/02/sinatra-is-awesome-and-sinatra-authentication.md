@@ -7,7 +7,7 @@ I keep harping on this, but I love the fact that when I approach a task with Sin
 
 While some may scoff, I *love* that aspect of Sinatra.
 
-I'm currently reviewing Sinatra sessions, which are based off of [Rack::Sessions](http://www.docunext.com/wiki/Rack_Sessions), for the purpose of authentication and user interface customization.
+I'm currently reviewing Sinatra sessions, which are based off of [Rack::Sessions](http://www.docunext.com/), for the purpose of authentication and user interface customization.
 
 Apart from the bare metal authentication mechanisms available from Rack, we are on our own!
 

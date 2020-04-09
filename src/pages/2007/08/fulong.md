@@ -18,7 +18,7 @@ This thing looks great:
 
 <a href="http://www.cyrius.com/journal/2007/03/08">cyrius.com &gt; Pictures of the Lemote Fulong</a>
 
-That is a link to Martin Michlmayr's blog, which I have visited many a time in my wrestling Debian onto the Thecus N2100. Unfortunately, the Thecus isn't a very green computer for what its capable of, especially compared to the alternatives for the price, like the <a href="http://www.docunext.com/2007/06/intels-little-valley-mini-itx-board.html">little valley intel d201gly mini-itx</a> (25+ Watts), or the <a href="http://www.docunext.com/2007/07/alix.html">pc engines alix1c mini-itx</a> (5 Watts).
+That is a link to Martin Michlmayr's blog, which I have visited many a time in my wrestling Debian onto the Thecus N2100. Unfortunately, the Thecus isn't a very green computer for what its capable of, especially compared to the alternatives for the price, like the <a href="http://www.docunext.com/2007/06/intels-little-valley-mini-itx-board/">little valley intel d201gly mini-itx</a> (25+ Watts), or the <a href="http://www.docunext.com/2007/07/alix.html">pc engines alix1c mini-itx</a> (5 Watts).
 
 Anyway back to the Fulong, the really interesting thing is that it has a MIPS chip, like the ones you find in low power routers and stuff. I *believe* that the ARM chips found in the Thecus and the Linksys NSLU2 are compatible, in the packages can be used on both platforms, I'm not positive on that at all though. :-)
 

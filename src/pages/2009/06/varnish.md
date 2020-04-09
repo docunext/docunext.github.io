@@ -14,6 +14,6 @@ I'm a huge fan of Varnish because I use it on my servers and it has served me we
 
 More information about Varnish:
 
-<ul><li><a href="http://www.docunext.com/wiki/Varnish">Docunext Wiki Page on Varnish</a></li><li><a href="http://www.proxy-sys.com/blog/varnish/">Proxy Systems Varnish Category</a></li><li><a href="http://varnish.projects.linpro.no/wiki/">Varnish Wiki at Linpro</a>
+<ul><li><a href="http://www.docunext.com/">Docunext Wiki Page on Varnish</a></li><li><a href="http://www.proxy-sys.com/blog/varnish/">Proxy Systems Varnish Category</a></li><li><a href="http://varnish.projects.linpro.no/wiki/">Varnish Wiki at Linpro</a>
 </li></ul>
 

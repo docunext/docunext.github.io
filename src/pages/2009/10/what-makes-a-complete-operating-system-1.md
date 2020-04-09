@@ -20,7 +20,7 @@ More recently in my escapades I've learned about how some BSD operating systems 
 
 At first I didn't think that this was a big deal at all, but lately I've been finding this to be very interesting.
 
-It has put operating systems into a new light for me; almost like hardware. I love the idea that NetBSD has a kernel and userland in the same boat, especially since [NetBSD has impressive Xen support](http://www.docunext.com/2009/09/a-case-for-debian-gnuknetbsd.html). Although I love to tinker with machines, when I build a server, I most often refrain from making any adjustments because "if it isn't broken, don't try and fix it".
+It has put operating systems into a new light for me; almost like hardware. I love the idea that NetBSD has a kernel and userland in the same boat, especially since [NetBSD has impressive Xen support](http://www.docunext.com/2009/09/a-case-for-debian-gnuknetbsd/). Although I love to tinker with machines, when I build a server, I most often refrain from making any adjustments because "if it isn't broken, don't try and fix it".
 
 When it comes to software, things can "break" if a security vulnerability is discovered, so updates are important. But what if a software update impairs the operability of a system? I can't tell you how many times a software update has bit me.
 

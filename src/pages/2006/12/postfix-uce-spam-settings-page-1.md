@@ -23,7 +23,7 @@ The spam fighting process I use (in order):
 
 <b>iptables</b> - iptables is an extreme method of blocking email. From the sender's perspective, the host is down. However, in several cases, it can be used effectively, like blocking certain countries and eternally black holes. See <a href="http://www.okean.com/">http://www.okean.com/</a> for more information.
 
-On page 2 in this series, we'll discuss <a href="http://www.docunext.com/2006/12/defending-against-unsolicited-commercial-email-uce-also-known-as-spam-page-2-postfix.html" rel="next">fighting spam with Postfix with client, helo, sender, and recipient restrictions</a>.
+On page 2 in this series, we'll discuss <a href="http://www.docunext.com/2006/12/defending-against-unsolicited-commercial-email-uce-also-known-as-spam-page-2-postfix/" rel="next">fighting spam with Postfix with client, helo, sender, and recipient restrictions</a>.
 
 ¥
 

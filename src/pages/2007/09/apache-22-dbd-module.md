@@ -16,7 +16,7 @@ tags: apache,ssl
 ---
 The new Apache 2.2 DBD module, at least the one that's included in Debian's package repository, isn't ready for prime time yet, but its close.
 
-Yesterday I spent the day getting <a href="http://www.docunext.com/wiki/Apache_DBD">Apache compiled with DBD and apr_dbd_mysql.c</a>. My notes are a mess but they may be of use to you, I'm sure they'll be useful to me pretty soon!
+Yesterday I spent the day getting <a href="http://www.docunext.com/">Apache compiled with DBD and apr_dbd_mysql.c</a>. My notes are a mess but they may be of use to you, I'm sure they'll be useful to me pretty soon!
 
 What's this new module all about? It provides access to SQL databases. What's the big deal with that? Well it will provide much better resource management, meaning a more efficient web server. **It will also provide the ability to tie easily managed  authentication to your apache web server**. This is a good thing TM. Most people don't want to have to manage dbm hash and or htpasswd files all over the place, so they use a rdbms to store their user's credentials which would usually require a scripting language module or cgi program to access. There are a couple of problems with that, if there is an error in the scripting language or a configuration change on the server, a malfunction could cause a security breach, and it also uses system resources inefficiently. Most of the time this is not a big deal, but since the practice of authenticating web users has become so commonplace, its nice to know that this optimized module can be used very soon.
 

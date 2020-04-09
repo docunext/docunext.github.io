@@ -3,7 +3,7 @@ title: Additional Information Regarding Google Apps for Business
 date: 2010-12-28
 tags: dovecot,gmail,google,imap,outlook
 ---
-I'm writing this post as a quick follow-up to my [recent review of Google Apps for Business](http://www.docunext.com/2010/12/review-of-google-apps-for-business-aka-gmail-imap.html), adding an additional, external, link and a note-to-self to read it in more detail.
+I'm writing this post as a quick follow-up to my [recent review of Google Apps for Business](http://www.docunext.com/2010/12/review-of-google-apps-for-business-aka-gmail-imap/), adding an additional, external, link and a note-to-self to read it in more detail.
 
 After providing significant support for Google Apps for Business, I have to say I'm very disappointed about an apparent incompatibility with Outlook 2007 and Gmail's delete functionality. In a nutshell - there is no trash folder, and that is unacceptable to some of my customers.
 

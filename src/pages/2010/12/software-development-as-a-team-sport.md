@@ -2,7 +2,7 @@
 title: Software Development as a Team Sport
 date: 2010-12-03
 ---
-I love developing software. Its a passion. I engage without much encouragement or convincing, and as such, often pursue my vocation on my own. I've previously written about [these](http://www.docunext.com/2008/05/playing-nicely-and-benefitting-without-belonging.html) [factors](http://www.docunext.com/2008/04/the-people-who-live-on-planet-debian.html).
+I love developing software. Its a passion. I engage without much encouragement or convincing, and as such, often pursue my vocation on my own. I've previously written about [these](http://www.docunext.com/2008/05/playing-nicely-and-benefitting-without-belonging/) [factors](http://www.docunext.com/2008/04/the-people-who-live-on-planet-debian.html).
 
 Nowadays my work has taken me to a situation where software development simply has to be a team sport.
 

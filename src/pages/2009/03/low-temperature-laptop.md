@@ -6,7 +6,7 @@ With the warmer seasons approaching here in North America, I'm starting to think
 
 I'm using the usual tools: powertop, iotop, laptop-mode-tools, and of course the increasingly common laptop cooler. The laptop cooler is just a product which sits under the laptop, separating it from my lap / table / whatever.
 
-Turns out I was running a lot of programs I didn't need to be, so I removed those. Also, my <a href="http://www.docunext.com/wiki/My_Energy_Settings">rc.local script</a> wasn't working right so my vm settings weren't working right. After those fixes, the fan isn't turning on as much, which is nice, but I'd rather lower the temperature at which the fan turns on. Unfortunately, my BIOS don't support doing so. :-(
+Turns out I was running a lot of programs I didn't need to be, so I removed those. Also, my <a href="http://www.docunext.com/">rc.local script</a> wasn't working right so my vm settings weren't working right. After those fixes, the fan isn't turning on as much, which is nice, but I'd rather lower the temperature at which the fan turns on. Unfortunately, my BIOS don't support doing so. :-(
 
 Should I patch ACPI? Maybe... maybe not.
 

@@ -29,5 +29,5 @@ The docs are a bit sparse, so here's an example of how I'm using it:
 TidyFFI::Tidy.new(output, :show_body_only => 1, :output_xml => 1, :numeric_entities => 1).clean
 </pre>
 
-Basically, [tidy options](http://www.labs.docunext.com/demo/dlabzapp2/debdocs/view/tidy-doc/index.html) can be used when their hyphens (-) are switched with underscores (\_).
+Basically, [tidy options](http://www.labs.docunext.com/demo/dlabzapp2/debdocs/view/tidy-doc/index/) can be used when their hyphens (-) are switched with underscores (\_).
 

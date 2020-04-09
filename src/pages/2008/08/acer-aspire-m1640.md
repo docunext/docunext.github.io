@@ -6,5 +6,5 @@ I've just purchased an ACER Aspire M1640. After unboxing it, I installed debian 
 
 I still have a bunch of testing to do and more documentation to write up, but so far so good. I'm glad this machine is efficient and flexible.
 
-<a href="http://www.docunext.com/wiki/ACER_Aspire_M1640">Wiki page on the ACER Aspire M1640</a>
+<a href="http://www.docunext.com/1640">Wiki page on the ACER Aspire M1640</a>
 

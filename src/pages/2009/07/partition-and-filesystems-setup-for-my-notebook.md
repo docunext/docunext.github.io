@@ -33,5 +33,5 @@ I may setup autofs for the vz mount, as I rarely use it. I've just recently star
 
 To summarize, I usually use a partition of around ten gigabytes for root. I mount /home separately using relatime because apparently mutt is one app which likes atimes. I use ext3 because it has worked for me near 100% of the time. I mount a lot of the tmp folders as tmpfs to keep the disk spun down if possible.
 
-And oh yeah, one more thing - <a href="http://www.docunext.com/wiki/LVM">LVM</a> is awesome.
+And oh yeah, one more thing - <a href="http://www.docunext.com/">LVM</a> is awesome.
 

@@ -57,7 +57,7 @@ INFO  DJabberd.Authen.LDAP                     Account albert not found.
 
 DEBUG DJabberd.Connection.ClientIn             DISCONNECT: 1</pre>
 
-UPDATE: See <a href="http://www.docunext.com/wiki/DJabberd_on_Debian">DJabberd on Debian</a>
+UPDATE: See <a href="http://www.docunext.com/">DJabberd on Debian</a>
 
 ¥
 

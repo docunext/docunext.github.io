@@ -23,5 +23,5 @@ Duh, took me awhile to figure it out, but I finally used ktorrent to connect to 
 
 <a href="http://hightechsorcery.com/2008/02/bittorrent-tracker-debian-and-ubuntu">http://hightechsorcery.com/2008/02/bittorrent-tracker-debian-and-ubuntu</a>
 
-<a href="http://www.docunext.com/wiki/BitTorrent">http://www.docunext.com/wiki/BitTorrent</a>
+<a href="http://www.docunext.com/">http://www.docunext.com/wiki/BitTorrent</a>
 

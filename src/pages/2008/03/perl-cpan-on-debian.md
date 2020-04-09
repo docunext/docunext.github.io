@@ -36,7 +36,7 @@ Again I am installing djabberd on debian via cpan, have to install make, gcc, li
 
 I couldn't get Net::SSLeay to install from CPAN, so I used libnet-ssleay-perl from debian.
 
-UPDATE: See <a href="http://www.docunext.com/wiki/DJabberd_on_Debian">DJabberd on Debian</a>
+UPDATE: See <a href="http://www.docunext.com/">DJabberd on Debian</a>
 
 ¥
 

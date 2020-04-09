@@ -44,7 +44,7 @@ I'm taking a closer look at the hardware their service uses. First thing that ca
 
 I did some research and it appears to be true: the M600 as well as the 1855 blades lack hardware based random number generators. Doh!
 
-This [lack of a HWRNG might cause problems for folks running linux with SSL](http://www.docunext.com/wiki/Linux_and_entropy).
+This [lack of a HWRNG might cause problems for folks running linux with SSL](http://www.docunext.com/).
 
 **Customizing the Setup**
 -------------------------------------

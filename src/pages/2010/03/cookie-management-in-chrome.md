@@ -9,7 +9,7 @@ In addition to being annoying to clear out, they also cause proxy caches to not 
 
 So here's what I've done:
 
-* [Set Squid to "anonymize" http requests](http://www.docunext.com/wiki/Squid_3_To_Block_HTTP_Headers)
+* [Set Squid to "anonymize" http requests](http://www.docunext.com/3_To_Block_HTTP_Headers)
 * Set Google Chrome to block sites from storing any data
 
 Many web applications require cookies, so I use the "Exceptions" feature to allow them to store cookies.

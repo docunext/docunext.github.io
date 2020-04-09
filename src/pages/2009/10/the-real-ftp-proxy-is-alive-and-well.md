@@ -2,7 +2,7 @@
 title: The REAL FTP Proxy is Alive and Well 
 date: 2009-10-30
 ---
-Responding to a comment on the [Docunext blog about pfSense and its FTP helper](http://www.docunext.com/2009/01/pfsense-proftpd-and-the-ftp-helper.html), I mentioned FTP Proxy.
+Responding to a comment on the [Docunext blog about pfSense and its FTP helper](http://www.docunext.com/2009/01/pfsense-proftpd-and-the-ftp-helper/), I mentioned FTP Proxy.
 
 I hadn't visited the website for awhile so I stopped by just to refresh my memory when to my surprise the current maintainer has published two new releases. Awesome!
 

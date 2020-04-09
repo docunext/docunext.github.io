@@ -8,5 +8,5 @@ For some reason, this site doesn't seem indexed by popular search engines:
 
 This is a cool idea - its a port of the linux netfilter software to the minix operating system. Minix could be a quality operating system for routers and firewalls, but if I understand correctly it still needs some work before its ready.
 
-Since the author released his thesis under the GPL, I've mirrored it in HTML <a href="http://www.docunext.com/archives/minixwall/index.html">here</a>.
+Since the author released his thesis under the GPL, I've mirrored it in HTML <a href="http://www.docunext.com/archives/minixwall/index/">here</a>.
 

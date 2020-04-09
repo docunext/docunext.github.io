@@ -18,7 +18,7 @@ UPDATE: The new nvidia driver didn't work with my old school GeForce 460, so I h
 
 Thanks: <a rel="nofollow" href="http://ubuntuforums.org/showthread.php?t=330657&amp;page=2">http://ubuntuforums.org/showthread.php?t=330657&amp;page=2</a>
 
-UPDATE Jan. 30 2008 - I added more RAM (128MB up to 384) and the glxgears FPS rate shot up to 3000+, but I also reduced the color depth to 16bit. Not sure which helped more, but to make sure I added another 128MB of RAM since this machine is my active desktop now. Next up - <a href="http://www.docunext.com/wiki/Libpam-ssh">libpam-ssh</a>!
+UPDATE Jan. 30 2008 - I added more RAM (128MB up to 384) and the glxgears FPS rate shot up to 3000+, but I also reduced the color depth to 16bit. Not sure which helped more, but to make sure I added another 128MB of RAM since this machine is my active desktop now. Next up - <a href="http://www.docunext.com/">libpam-ssh</a>!
 
 UPDATE February 4, 2008 - Fonts in XFCE / X11 can really be tricky. Even though my monitor resolution is 96, I've found that using the 100dpi font setting in the XFCE user interface control panel to work much better.
 

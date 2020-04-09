@@ -14,7 +14,7 @@ comments:
   - author: Albert
     date: 03/13/2008 05:18:32 PM
     text: >
-      FYI I took a bunch of notes (I added the link to the post too):<br/><br/><a href="http://www.docunext.com/wiki/Disassembling_php-cache-lite" rel="nofollow">http://www.docunext.com/wiki/Disassembling_php-cache-lite</a>
+      FYI I took a bunch of notes (I added the link to the post too):<br/><br/><a href="http://www.docunext.com/" rel="nofollow">http://www.docunext.com/wiki/Disassembling_php-cache-lite</a>
 date: 2008-03-12
 tags: dpkg,nexista,pear
 ---
@@ -22,7 +22,7 @@ I'm now making another attempt to make better debian packages of my own projects
 
 I'll start with a debian source package, modify it, then make the package and install it. :-)
 
-UPDATE March 13, 2008: I actually started with php-cache-lite and used the guts to create a nexista package. I think this is the first real debian package I've created! Here are my <a href="http://www.docunext.com/wiki/Disassembling_php-cache-lite">notes</a> on doing so.
+UPDATE March 13, 2008: I actually started with php-cache-lite and used the guts to create a nexista package. I think this is the first real debian package I've created! Here are my <a href="http://www.docunext.com/">notes</a> on doing so.
 
 ¥
 

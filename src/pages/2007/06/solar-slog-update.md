@@ -18,5 +18,5 @@ Seeing how the system will be setup, I'm going to get a power conditioner for th
 
 <center><iframe src="http://rcm.amazon.com/e/cm?t=inforbanki-20&o=1&p=8&l=as1&asins=B0006JO0XI&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></center>
 
-NOTE: This is a follow up to my post about my plans for a <a href="http://www.docunext.com/2007/05/solar-powered-slug.html">Solar Powered Computer</a>
+NOTE: This is a follow up to my post about my plans for a <a href="http://www.docunext.com/2007/05/solar-powered-slug/">Solar Powered Computer</a>
 

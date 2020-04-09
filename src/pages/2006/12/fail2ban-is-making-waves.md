@@ -42,7 +42,7 @@ My email to the package maintainer:
 
 Here are some rules I use on Debian for fail2ban to block relentless spammers. This is not for protection against password crack attempts, but more for reducing traffic and generally blocking bad ips. I've posted more information here:
 
-<a href="http://www.docunext.com/2006/12/fail2ban-is-making-waves.html">fail2ban is making waves</a>
+<a href="http://www.docunext.com/2006/12/fail2ban-is-making-waves/">fail2ban is making waves</a>
 
 Thanks,
 

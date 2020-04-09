@@ -55,7 +55,7 @@ This is a useful command for me:
 </pre>
 
 Here's the output of "phpinfo()":
-<iframe width="100%" src="http://www.docunext.com/2008/05/roadsend_phpinfo.html" class="wp-syntax">
+<iframe width="100%" src="http://www.docunext.com/2008/05/roadsend_phpinfo/" class="wp-syntax">
 </iframe>
 
 So far so good, I've been coding up a little web app, nothing fancy, just to try it out. One strange thing though, when using ob_flush, the output of the HTML includes this:
@@ -150,5 +150,5 @@ This page is helpful:
 
 In researching this topic, I discovered that there are a few other php implementations out there. Parrot is the new perl 6 vm which is designed to support a variety of interpreted languages, and quercus is a java application server which can also interpret php. Project Zero and Quercus are Java CLI VMs - very interesting. At this point, PHC simply parses PHP code, but does not compile it into anything else, AFAIK.
 </div><div>
-</div><div><a href="http://www.docunext.com/wiki/Roadsend_PHP_Compiler">Roadsend PHP Compiler</a></div>
+</div><div><a href="http://www.docunext.com/">Roadsend PHP Compiler</a></div>
 

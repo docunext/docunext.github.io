@@ -27,7 +27,7 @@ Still not sure, but I think the answer is that it is designed to be used as both
 
 <a href="http://www.jigsawmusicgroup.com/blog/2008/07/09/crystal-method/">Bound too long by the Crystal Method is a great song!</a>
 
-UPDATE: I'm now using <a href="http://www.docunext.com/wiki/NSD">NSD3</a>, and it is excellent!
+UPDATE: I'm now using <a href="http://www.docunext.com/">NSD3</a>, and it is excellent!
 
 ¥
 

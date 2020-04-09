@@ -7,7 +7,7 @@ I've been exploring **Rails 3.1** for a couple weeks now and last night I focuse
 
 Note: I'm not fully versed in **Arel** as of yet, but as far as I understand, it's related to what I figured out last night.
 
-I've written about [scopes in Rails 3](http://www.docunext.com/2011/03/rails-3-activerecord-scope-and-chainability-helpers.html) before, but nowadays I'm keener on class methods, like this one:
+I've written about [scopes in Rails 3](http://www.docunext.com/2011/03/rails-3-activerecord-scope-and-chainability-helpers/) before, but nowadays I'm keener on class methods, like this one:
 
 <pre class="sh_ruby">
 1 class Entry < ActiveRecord::Base

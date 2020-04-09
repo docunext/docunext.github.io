@@ -3,7 +3,7 @@ title: A Plan to Use Remote Assistance to Troubleshoot Outlook IMAP to GMail Pro
 date: 2010-12-04
 tags: gmail,imap,outlook,performance
 ---
-One of my clients is experiencing [performance issues with Outlook accessing Google's IMAP service](http://www.docunext.com/2010/12/review-of-google-apps-for-business-aka-gmail-imap.html).
+One of my clients is experiencing [performance issues with Outlook accessing Google's IMAP service](http://www.docunext.com/2010/12/review-of-google-apps-for-business-aka-gmail-imap/).
 
 To fix this situation, I'm planning to use remote assistance to control their PC and make the necessary configuration changes.
 

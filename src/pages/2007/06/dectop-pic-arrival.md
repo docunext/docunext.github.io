@@ -93,7 +93,7 @@ The Everex costs four times as much, but has much better resale value. That's it
 
 I have another decTop which I'm going to install linux onto using a compact flash or disk-on-module chip.
 
-With the specs as they are, this device is really only good for surfing the web. That being said, I believe I'm going to try and install puppy or dsl again. In the meantime, here are some <a href="http://www.docunext.com/2007/06/dectop-debian-tips.html">decTop Debian Tips</a>
+With the specs as they are, this device is really only good for surfing the web. That being said, I believe I'm going to try and install puppy or dsl again. In the meantime, here are some <a href="http://www.docunext.com/2007/06/dectop-debian-tips/">decTop Debian Tips</a>
 
 ¥
 

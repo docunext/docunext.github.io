@@ -13,7 +13,7 @@ The reason why I was using a previous swf format is due to ming. In my humble op
 
 But what about Haxe? It apparently can bridge the swf format version divide. I've been reading up on it the past few days, and converting the open source WP-Cumulus project to Haxe seems like an manageable opportunity to do something really cool while learning about Actionscript 3 and Haxe.
 
-Let's get started! As a second step, I'm following the [guidelines on the Haxe website to migrate AS3 to Haxe](http://haxe.org/doc/start/flash/as3migration). My first step was to try and compile as3tohaxe, but I hit a wall with ["Could not find module `Text.Parsec.Expr': "](http://www.docunext.com/2009/11/could-not-find-module-textparsecexpr.html). If I can eventually get it to compile, I certainly give it a try, but in the meantime, I'll go the manual route with WP-Cumulus.
+Let's get started! As a second step, I'm following the [guidelines on the Haxe website to migrate AS3 to Haxe](http://haxe.org/doc/start/flash/as3migration). My first step was to try and compile as3tohaxe, but I hit a wall with ["Could not find module `Text.Parsec.Expr': "](http://www.docunext.com/2009/11/could-not-find-module-textparsecexpr/). If I can eventually get it to compile, I certainly give it a try, but in the meantime, I'll go the manual route with WP-Cumulus.
 
 **Initial Notes**
 

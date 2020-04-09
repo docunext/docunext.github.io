@@ -39,7 +39,7 @@ And everything worked fine again. Hope that helps!
 
 UPDATE: Hit another snag on another update:
 
-<a href="http://www.docunext.com/2008/04/lenny-courier-woes.html">Lenny Courier Woes</a>
+<a href="http://www.docunext.com/2008/04/lenny-courier-woes/">Lenny Courier Woes</a>
 
 ¥
 

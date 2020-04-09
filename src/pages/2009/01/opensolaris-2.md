@@ -8,5 +8,5 @@ Nexenta was the first OpenSolaris that caught my eye, and since then I've tried 
 
 I wish it were available pre-installed on some cheap notebook - I'd definitely give it a run. Supposedly it will be available on some Toshiba laptops at some point, but I'm not holding my breath!
 
-<a href="http://www.docunext.com/wiki/OpenSolaris">http://www.docunext.com/wiki/OpenSolaris</a>
+<a href="http://www.docunext.com/">http://www.docunext.com/wiki/OpenSolaris</a>
 

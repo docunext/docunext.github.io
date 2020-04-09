@@ -45,7 +45,7 @@ And one last note, if you are looking for information about the QEMU virtualizat
 
 <a href="http://qemu-forum.ipi.fi/viewtopic.php?t=930&amp;start=105">KQEMU on Mac OS X</a> dated Sun Oct 08, 2006 9:42 am. I'm surprised there isn't more interest in KQEMU on Mac OS X now that its GPL, but then again I'm not qualified to say how much work would be involved in creating the kernel extension. Perhaps the nice folks at the fantastic <a href="http://code.google.com/p/macfuse/">Google MacFUSE</a> project would know how to create that kernel extension?
 
-Also <a href="http://www.docunext.com/2007/08/kqemu-on-mac-os-x.html">KQEMU on Mac OS X?</a>
+Also <a href="http://www.docunext.com/2007/08/kqemu-on-mac-os-x/">KQEMU on Mac OS X?</a>
 
 Anyway that link to the QEMU forums quotes Fabrice, the creator of QEMU saying this:
 

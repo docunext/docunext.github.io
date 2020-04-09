@@ -26,5 +26,5 @@ What do you think is the best filename extension for markdown formatted files? F
 
 Related:
 
-* <http://www.docunext.com/wiki/Docunext-forked-nesta>
+* <http://www.docunext.com/>
 

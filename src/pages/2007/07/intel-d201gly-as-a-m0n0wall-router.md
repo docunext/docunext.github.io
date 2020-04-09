@@ -11,5 +11,5 @@ Combine that with a mini-box m300 ($60), a stick of ram ($30), a compact flash c
 
 If energy consumption is a big deal, then this probably isn't the right machine for you, as it uses about 25 watts of power. </blockquote>
 
-<a href="http://www.docunext.com/2007/06/intels-little-valley-mini-itx-board.html">More information about the intel d201gly</a>
+<a href="http://www.docunext.com/2007/06/intels-little-valley-mini-itx-board/">More information about the intel d201gly</a>
 
