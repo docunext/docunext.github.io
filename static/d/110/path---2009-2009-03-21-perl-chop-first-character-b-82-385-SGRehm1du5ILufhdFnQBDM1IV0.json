@@ -1,1 +1,0 @@
-{"data":{"markdownRemark":{"html":"<p>I can't believe this isn't easier to find.</p>\n<p>Probably an easier way:</p>\n<pre class=\"sh_perl\">substr($string,1,length($string))</pre>\n<p>¥</p>","frontmatter":{"title":"Perl Chop First Character"}}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"/2009/2009-03-21-perl-chop-first-character/"}}
