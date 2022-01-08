@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-blog-post-js","path":"/2008/04/hello-world/","result":{"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Debian has almost 20,000 packages in their repositories, but many of them do the same thing. I've been thinking about making a distribution that has a smaller subset of packages.</p>\n<p>¥</p>","fields":{"slug":"/2008/04/hello-world/"},"frontmatter":{"title":"Minimal Debian","date":"April 30th, 2008","tags":null}}},"pageContext":{"slug":"/2008/04/hello-world/"}},"staticQueryHashes":["3159585216","758480095"]}
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/2008/04/hello-world/",
+    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Debian has almost 20,000 packages in their repositories, but many of them do the same thing. I've been thinking about making a distribution that has a smaller subset of packages.</p>\n<p>¥</p>","fields":{"slug":"/2008/04/hello-world/"},"frontmatter":{"title":"Minimal Debian","date":"April 30th, 2008","tags":null}}},"pageContext":{"slug":"/2008/04/hello-world/"}},
+    "staticQueryHashes": ["3159585216","758480095"]}
