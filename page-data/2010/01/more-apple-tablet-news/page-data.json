@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2010/01/more-apple-tablet-news/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Wireless connectivity on the Apple tablet will be important for the device to succeed.</p>\n<p>Probably not crucial though. I wouldn't consider switching to AT&#x26;T just to get an iPhone because in my opinion Verizon Wireless has superior connectivity - at least in the Northeastern part of the United States. But obviously, other people want an iPhone enough to use one anyway.</p>\n<p>Regardless of which network has better connectivity, Apple is reportedly in talks with both Verizon Wireless and AT&#x26;T Wireless. I will be surprised if they go with both carriers from the outset.</p>","fields":{"slug":"/2010/01/more-apple-tablet-news/"},"frontmatter":{"title":"More Apple Tablet News","date":"January 22nd, 2010","tags":null}}},"pageContext":{"slug":"/2010/01/more-apple-tablet-news/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
