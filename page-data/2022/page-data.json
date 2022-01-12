@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-year-js",
     "path": "/2022",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"5493f1ae-3829-565d-8f56-ca4c6b701f03","fields":{"slug":"/2022/01/time-flies/"},"frontmatter":{"title":"My How Time Flies","date":"08 January, 2022"},"excerpt":"I'm amazed with how quickly time seems to be flying by these days. While life\nwith COVID-19 is really quite challenging, I'm doing my best…"}}]}},"pageContext":{"dir":"/pages\\/2022/"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"8136baa9-ab4f-5aec-bac1-21282bf25190","fields":{"slug":"/2022/01/time-flies/"},"frontmatter":{"title":"My How Time Flies","date":"08 January, 2022"},"excerpt":"I'm amazed with how quickly time seems to be flying by these days. While life\nwith COVID-19 is really quite challenging, I'm doing my best…"}}]}},"pageContext":{"dir":"/pages\\/2022/"}},
     "staticQueryHashes": ["3159585216","758480095"]}
