@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2022/01/snake-game/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<iframe src=\"/nuzaq.html\" height=\"360\" width=\"480\"></iframe>","fields":{"slug":"/2022/01/snake-game/"},"frontmatter":{"title":"Snake Game","date":"January 22nd, 2022","tags":null}}},"pageContext":{"slug":"/2022/01/snake-game/"}},
+    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I re-wrote the classic snake game in a single html file. Check it out here:</p>\n<p><a href=\"/nuzaq.html\">Snake Game</a></p>","fields":{"slug":"/2022/01/snake-game/"},"frontmatter":{"title":"Snake Game","date":"January 22nd, 2022","tags":null}}},"pageContext":{"slug":"/2022/01/snake-game/"}},
     "staticQueryHashes": ["3159585216","758480095"]}
