@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Nuzaq</title>
+	<style>
+		* { padding: 0px; margin: 0px; }
+		body { background: #ccc; }
+		canvas { background: #eee; display: block; margin: 0 auto; }
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="480" height="360"></canvas>
+</body>
+<script>
+	let canvas = document.getElementById("myCanvas");
+	let ctx = canvas.getContext("2d");
+	let i = 0;
+	let j = 0;
+	let ii = 0;
+	let jj = 0;
+	let width = 13;
+	let height = 9;
+	let snakeHeadX = 0;
+	let snakeHeadY = 0;
+	let direction = "ArrowRight";
+	let snakeLength = 3;
+	let snake = [];
+	let snakeTail = [];
+	let appleX;
+	let appleY;
+	
+		
+	function init() {
+		while (j < height) {
+			i = 0;
+			while (i < width) {
+				console.log(i, j);
+				ctx.beginPath();
+				ctx.rect(35 * i + 20,35 * j + 20,25,25);
+				ctx.strokeStyle = "#000";
+				ctx.stroke();
+				ctx.fillStyle = "#fff";
+				ctx.fill();
+				ctx.closePath();
+				i++;
+			}
+			j++;
+		}
+		drawApple();
+	}
+	function drawApple() {
+		appleX = Math.floor(Math.random() * width);
+		appleY = Math.floor(Math.random() * height);
+		snake.forEach((snakeCell) => {
+			if(snakeCell[0] == appleX && snakeCell[1] == appleY) {
+				drawApple();
+			}
+		});
+		ctx.beginPath();
+		ctx.rect(35 * appleX + 20,35 * appleY + 20,25,25);
+		ctx.fillStyle = "#00ff";
+		ctx.fill();
+		ctx.closePath();
+	}
+	function draw() {
+		move();
+		ctx.beginPath();
+		ctx.rect(35 * snakeHeadX + 20,35 * snakeHeadY + 20,25,25);
+		ctx.fillStyle = "#000";
+		ctx.fill();
+		ctx.closePath();
+		if (snake.length > snakeLength) {
+			snakeTail = snake.shift(); 
+			ctx.beginPath();
+			ctx.rect(35 * snakeTail[0] + 20,35 * snakeTail[1] + 20,25,25);
+			ctx.fillStyle = "#fff";
+			ctx.fill();
+			ctx.closePath();
+		}
+		if (snakeHeadX == appleX && snakeHeadY == appleY) {
+			snakeLength++;
+			drawApple();
+		}
+		
+	}
+	const opposites = {
+		"ArrowUp": "ArrowDown",
+		"ArrowDown": "ArrowUp",
+		"ArrowLeft": "ArrowRight",
+		"ArrowRight": "ArrowLeft"
+	}
+	function setDirection(e) {
+		console.log(e.code);
+		if (e.code.startsWith("Arrow") && opposites[e.code] !== direction) {
+			direction = e.code;
+		}
+	}
+	function move() {
+		//console.log(snakeHeadX, snakeHeadY);
+		switch(direction) {
+			case "ArrowUp":
+				if (snakeHeadY > 0) {
+					snakeHeadY = snakeHeadY - 1;
+				} else {
+					gameOver();
+				}
+				break;
+			case "ArrowDown":
+				if (snakeHeadY < height - 1) {
+					snakeHeadY = snakeHeadY + 1;
+				} else {
+					gameOver();
+				}
+				break;
+			case "ArrowLeft":
+				if (snakeHeadX > 0) {
+					snakeHeadX = snakeHeadX - 1;
+				} else {
+					gameOver();
+				}
+				break;
+			case "ArrowRight":
+				if (snakeHeadX < width - 1) {
+					snakeHeadX = snakeHeadX + 1;
+				} else {
+					gameOver();
+				}
+				break;
+		}
+		snake.forEach((snakeCell) => {
+			if(snakeCell[0] == snakeHeadX && snakeCell[1] == snakeHeadY) {
+				gameOver();
+			}
+		});
+		snake.push([snakeHeadX, snakeHeadY]);
+	}
+	function gameOver() {
+		alert('Game over');
+		clearInterval(drawInterval);
+	}
+	init();
+	let interval = 150;
+	let drawInterval = setInterval(draw, interval);
+	document.addEventListener('keyup', setDirection);
+	
+</script>
+</html>
