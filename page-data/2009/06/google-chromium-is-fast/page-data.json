@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/06/google-chromium-is-fast/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Google has finally released a linux version of their chromium browser! The first version didn't work for me at all, but the second version is screaming fast. There are a few minor glitches I've found, but its quickly becoming my browser of choice.<div></p>\n</div><div>My favorite thing about it so far is that its fast, but the fact that it keeps my laptop running cooler by being more efficient is really awesome too. Thanks Google, Apple, and the rest of the WebKit developers!</div>","fields":{"slug":"/2009/06/google-chromium-is-fast/"},"frontmatter":{"title":"Google Chromium is FAST","date":"June 23rd, 2009","tags":"apple,chromium,webkit"}}},"pageContext":{"slug":"/2009/06/google-chromium-is-fast/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

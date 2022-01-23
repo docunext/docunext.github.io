@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2007/08/colo-reset/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Franklin crashed tonight with a Memory Check Exception error, so I was unable to do a remote reboot and had to travel into Cambridge to reset the machine.</p>\n<p>I'm really curious about what caused this error. :-(</p>\n<p>While I was at Level3, I tried to make the best of my time there and installed a vz kernel (successful), restarted the vpn gateway (I had accidentally shutdown the vpn machine a few weeks ago - no big deal, but inconvenient) as well as setup a VLAN on the cisco switch to separate the private network with the public ips.</p>","fields":{"slug":"/2007/08/colo-reset/"},"frontmatter":{"title":"Colo Reset","date":"August 25th, 2007","tags":null}}},"pageContext":{"slug":"/2007/08/colo-reset/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

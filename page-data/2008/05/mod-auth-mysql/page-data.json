@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/05/mod-auth-mysql/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Yay! Mod_auth_mysql is back in action in debian!</p>\n<p><a href=\"http://www.infodrom.org/~joey/log/?200805151718\"><a href=\"http://www.infodrom.org/~joey/log/?200805151718\">http://www.infodrom.org/~joey/log/?200805151718</a></a></p>\n<p>I've previously used mod_auth_mysql before etch, but have since stopped after upgrading held back so much. I was able to switch to mod_auth_pam and pam_mysql, but I wasn't too crazy about that.</p>\n<p>Hopefully Apache's mod_dbd in Debian will soon ship with the mysql driver. The licensing issues have been placated, but the code is still MIA. :-(</p>","fields":{"slug":"/2008/05/mod-auth-mysql/"},"frontmatter":{"title":"mod auth mysql","date":"May 15th, 2008","tags":null}}},"pageContext":{"slug":"/2008/05/mod-auth-mysql/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

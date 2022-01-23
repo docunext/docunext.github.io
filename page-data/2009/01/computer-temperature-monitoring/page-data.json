@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/01/computer-temperature-monitoring/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Just found some helpful utilities for monitoring computer temperatures:<ul><li>sensors</li><li>hddtemp</li></ul></p>\n<p>I install them on my debian machines like this:</p>\n<pre>apt-get install lm-sensors hddtemp</pre>\n<p>And on my newer intel machines, I use the coretemp driver:</p>\n<pre>modprobe coretemp</pre>\n<p>These command output:</p>\n<pre># sensorscoretemp-isa-0000\n\nAdapter: ISA adapter\n\nCore 0:      +60.0°C  (high = +80.0°C, crit = +100.0°C) # hddtemp /dev/sda/dev/sda: TOSHIBA MK6032GSX: 36°C</pre>\n<p>Cool, huh? I guess it depends on the temperature.</p>","fields":{"slug":"/2009/01/computer-temperature-monitoring/"},"frontmatter":{"title":"Computer Temperature Monitoring","date":"January 21st, 2009","tags":null}}},"pageContext":{"slug":"/2009/01/computer-temperature-monitoring/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

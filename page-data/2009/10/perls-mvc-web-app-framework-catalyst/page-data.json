@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/10/perls-mvc-web-app-framework-catalyst/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I have to admit that Catalyst, the Perl MVC (model view controller) web application framework, is growing on me. I especially like that it is written in Perl, and that there are so many libraries out there available for Perl.</p>\n<p>I'm using it as a custom contact database solution for a client, and for that purpose it has been perfect. I've been able to quickly and rapidly create something usable and maintainable.</p>\n<p>It works with FastCGI, too!</p>","fields":{"slug":"/2009/10/perls-mvc-web-app-framework-catalyst/"},"frontmatter":{"title":"Perl s MVC Web App Framework Catalyst","date":"October 6th, 2009","tags":"catalyst,cpan,fcgi,perl"}}},"pageContext":{"slug":"/2009/10/perls-mvc-web-app-framework-catalyst/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

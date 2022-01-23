@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-year-js",
-    "path": "/2019",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"6d10ee50-b0e3-5197-8350-20bf1472ff9f","fields":{"slug":"/2019/06/mux-and-vim/"},"frontmatter":{"title":"Windows Subsystem Linux, tmux and vim","date":"30 June, 2019"},"excerpt":"Phew! I had quite the adventure through an interesting array of tech yesterday,\nand I'm pleased to report I survived, and the prognosis was…"}}]}},"pageContext":{"dir":"/pages\\/2019/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

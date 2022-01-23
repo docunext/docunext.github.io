@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/10/hotel-internet-access/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Accessing the internet while on the road can be tough, but it shouldn't be impossible. One thing to keep in mind is the hotels that offer free wireless or wired internet access. Personally, I bring a wireless router / VPN along with me whenever I travel, but that's because I'm always online, and like to be connected to my office network.</p>\n<p>As far as hotels that offer free internet access, every Courtyard Marriott I've stayed in has offered free wired or wireless internet access. Good stuff if you ask me - its a good hotel to start with, and the internet access just makes it better!</p>","fields":{"slug":"/2008/10/hotel-internet-access/"},"frontmatter":{"title":"Hotel Internet Access","date":"October 21st, 2008","tags":null}}},"pageContext":{"slug":"/2008/10/hotel-internet-access/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

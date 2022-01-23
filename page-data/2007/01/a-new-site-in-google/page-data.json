@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2007/01/a-new-site-in-google/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>On the 15th of January, 2007, the domain name docunext.com was registered. For a day or two shortly thereafter, the domain's single page of content was indexed into Google's search engine. Then, it was gone. No problem, there was hardly any information there.</p>\n<p>Since then, 20 pages were published, all with quality, unique information covering the hosting marketplace. These pages were added to a sitemap and sumitted to Google's \"tools for webmaster's\" service. Now Google has automatically re-indexed the homepage. Its January 23rd, 2007, so that is pretty good.</p>\n<p><a href=\"http://www.docunext.com\">Informed Hosting</a></p>\n<p>¥</p>","fields":{"slug":"/2007/01/a-new-site-in-google/"},"frontmatter":{"title":"A new site in Google","date":"January 23rd, 2007","tags":null}}},"pageContext":{"slug":"/2007/01/a-new-site-in-google/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

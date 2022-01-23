@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/01/debian-mysql-replication-and-tmpfs-tmp/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I finally nailed down a problem I've been having with MySQL replication on debian. I usually use tmpfs for /tmp, so when the machine restarts, /tmp is gone. That's why I call it tmp!</p>\n<p>Anyway, to retain mysql stuff through a reboot, I use this:</p>\n<pre>tmpdir      = /var/lib/mysql/tmp</pre>\n<p>More database replication info: <a href=\"http://www.docunext.com/\">MySQL Database Replication</a></p>\n<p>¥</p>","fields":{"slug":"/2008/01/debian-mysql-replication-and-tmpfs-tmp/"},"frontmatter":{"title":"Debian MySQL Replication and tmpfs tmp","date":"January 3rd, 2008","tags":"file systems,mysql,replication"}}},"pageContext":{"slug":"/2008/01/debian-mysql-replication-and-tmpfs-tmp/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/07/varnish-cdb/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I added a feature request to the Varnish Trac site recently: the ability to look up values in a cdb file.</p>\n<p>That would really be awesome as it would enable fast look ups of key-value pairs. Would it be fast enough for every request? I think it would be, cdb is the fastest hash reference that I'm aware of. It would be nice for keeping urls consistent over time, without having to rely on complex regular expressions for everything. Regular expressions are great for some url rewriting schemes, but sometimes all you need is a simple key-value pair.</p>","fields":{"slug":"/2009/07/varnish-cdb/"},"frontmatter":{"title":"Varnish CDB","date":"July 29th, 2009","tags":"proxies"}}},"pageContext":{"slug":"/2009/07/varnish-cdb/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

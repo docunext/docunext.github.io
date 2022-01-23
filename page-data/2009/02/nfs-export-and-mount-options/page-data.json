@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/02/nfs-export-and-mount-options/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I keep getting lockups and hanging delays with my NFS setup, so I continue to experiment.</p>\n<p>Server /etc/exports:</p>\n<pre>/var/www  *(rw,sync,fsid=0,no_acl,insecure,insecure_locks,no_subtree_check,no_root_squash)</pre>\n<p>Client /etc/fstab:</p>\n<pre>\n192.168.8.91:/dev/ /mnt/imports/dev-91-gl  nfs4    rsize=1024,wsize=1024,hard,rw,timeo=4,intr,proto=udp 0 0</pre>\n<p>¥</p>","fields":{"slug":"/2009/02/nfs-export-and-mount-options/"},"frontmatter":{"title":"NFS Export and Mount Options","date":"February 6th, 2009","tags":null}}},"pageContext":{"slug":"/2009/02/nfs-export-and-mount-options/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

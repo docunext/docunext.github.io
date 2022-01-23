@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/07/fsckvps-pandela-and-vexxhost/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I'm evaluating some more Xen VPS hosts.</p>\n<p>FsckVPS looked promising because they offer a discount for open source developers. I liked that and emailed an inquiry. They sent me a coupon code and only later I discovered it did not apply to Xen accounts. There is the danger of mis-communication. I doubt they meant to, but I ended up feeling like I missed an opportunity somehow.</p>\n<p>Pandela and VexxHost both look good, but I've never heard of them before so I'll have to do some research before moving forward with them.</p>\n<p>Neosurge.com looks interesting too.</p>","fields":{"slug":"/2009/07/fsckvps-pandela-and-vexxhost/"},"frontmatter":{"title":"FsckVPS Pandela and VexxHost","date":"July 24th, 2009","tags":"vps"}}},"pageContext":{"slug":"/2009/07/fsckvps-pandela-and-vexxhost/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

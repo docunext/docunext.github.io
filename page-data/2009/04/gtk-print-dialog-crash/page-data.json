@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/04/gtk-print-dialog-crash/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Anyone else getting this? It happened to me once before when I was trying some gtk libs from sid, so I back-graded to lenny and it worked again.</p>\n<p>It happens with all print dialog boxes, but with Iceweasel its instantaneous. I had previously tried to diagnose this but strace revealed little and I didn't know what else to try...</p>\n<p>Hmm, looks like Iceweasel is randomly crashing too. I just recently upgraded it, so there must be something funky going on. Seems to be related to my openvz kernel??? (The random crashes, not the print dialog crashes.)</p>\n<p>UPDATE: For some unknown reason - the crash is no longer happening. :-)</p>","fields":{"slug":"/2009/04/gtk-print-dialog-crash/"},"frontmatter":{"title":"GTK Print Dialog Iceweasel Crash","date":"April 30th, 2009","tags":null}}},"pageContext":{"slug":"/2009/04/gtk-print-dialog-crash/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

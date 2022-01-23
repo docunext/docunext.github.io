@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/02/macbook-cd-dvd-drive/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I'm glad to report that the battery charged to 100% yesterday and my Macbook is back in action, still minus the CD / DVD drive. Unfortunately, the DVD drive is packed away from owner's prying hands. Its a Matshita DVD-R UJ-857. I wonder if there are instructions anywhere to replace it?</p>\n<p>What do you know, there is! <a href=\"http://www.ifixit.com/Guide/Mac/MacBook-Core-Duo/Optical-Drive-Replacement/86/9/\">Installing Optical Drive Replacement</a></p>\n<p>I'm not going to bother with this now, but its nice to know that its possible.</p>","fields":{"slug":"/2008/02/macbook-cd-dvd-drive/"},"frontmatter":{"title":"Macbook CD DVD Drive","date":"February 14th, 2008","tags":null}}},"pageContext":{"slug":"/2008/02/macbook-cd-dvd-drive/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

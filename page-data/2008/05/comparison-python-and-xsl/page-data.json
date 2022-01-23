@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/05/comparison-python-and-xsl/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I love XSL. Its incredible standard, focused, and limited. When things don't work, they completely don't work.</p>\n<p>After working with XSL for a few years, I've developed a few styles I like: clean indenting, well organized structures, and helpful comments.</p>\n<p>Yesterday I realized that these characteristics I like about XSL are also present in python! I've tried a few times to start programming in python, but as a matter of convenience I keep plugging away with PHP.</p>","fields":{"slug":"/2008/05/comparison-python-and-xsl/"},"frontmatter":{"title":"Comparison Python and XSL","date":"May 24th, 2008","tags":null}}},"pageContext":{"slug":"/2008/05/comparison-python-and-xsl/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

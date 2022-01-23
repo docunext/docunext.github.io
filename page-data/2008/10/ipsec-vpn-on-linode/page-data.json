@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/10/ipsec-vpn-on-linode/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I was able to setup a IPSec VPN on a Linode virtual server without too much trouble. They make it easy to add an extra network device as well as a private IP address, so after that, I did the usual /etc/racoon/racoon.conf to match up with a pfSense box on the other side, and voila!</p>\n<p>One thing I overlooked was that I only want my single private IP address to be able to connect to my private network, not the entire Linode private IP space! I fixed that, but also need to add more rules to my firewall to make sure that other Linodes are securely blocked from mine.</p>\n<p>This is a great thing because I'm now able to easily expand on my main network.</p>\n<p>¥</p>","fields":{"slug":"/2008/10/ipsec-vpn-on-linode/"},"frontmatter":{"title":"IPSec VPN on Linode","date":"October 26th, 2008","tags":"vpn"}}},"pageContext":{"slug":"/2008/10/ipsec-vpn-on-linode/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

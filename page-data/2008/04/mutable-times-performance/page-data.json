@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/04/mutable-times-performance/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I originally setup Mutable Times to use a remote MySQL database, but even with some <a href=\"http://www.cabotplace.net/blog/2008/03/04/fios-is-in-the-place/\">pretty fat pipes thanks to FIOS</a>, the performance was almost unbearable.</p>\n<p>I moved the Mutable Times install to a server with a 100Mbit connection to the MySQL database and the performance difference is phenomenal.</p>\n<p>My guess is that the perl MySQL driver configuration I tried was not optimized for a remote database. Oh well, no big deal.</p>\n<p>The fcgid setup works great on both setups though.</p>","fields":{"slug":"/2008/04/mutable-times-performance/"},"frontmatter":{"title":"Mutable Times Performance","date":"April 1st, 2008","tags":null}}},"pageContext":{"slug":"/2008/04/mutable-times-performance/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

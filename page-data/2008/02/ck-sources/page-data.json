@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2008/02/ck-sources/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>As luck would have it, I'm giving the CK kernel source patches a try right when CK quits the kernel development team. Oh well, should be interesting.</p>\n<p>I'm also trying some other new settings - a  higher timer frequency, no dynamic ticks, and the aggressive block scheduler.</p>\n<p>UPDATE Feb 16, 2008: The new kernel definitely feels faster, even with the ondemand governor. This is good! One thing I'm confused about is that even though I turned off dynamic ticks, I'm still getting this mesage in dmesg:</p>\n<pre>[   63.241000] Clocksource tsc unstable (delta = -63768515 ns)</pre>","fields":{"slug":"/2008/02/ck-sources/"},"frontmatter":{"title":"CK Sources","date":"February 15th, 2008","tags":"kernel"}}},"pageContext":{"slug":"/2008/02/ck-sources/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

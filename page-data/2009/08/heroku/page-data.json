@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/08/heroku/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Heroku is a new Ruby application hosting platform. I signed up for their free service - looks really nice. They support Rails, Merb, Sinatra, and raw Rack applications.</p>\n<p>The service uses Varnish and NGINX, Postgres, even an Erlang system for managing their grid! One nice thing about erlang is it apparently very stable and resilient.</p>\n<p><a href=\"http://heroku.com/\">Heroku</a></p>\n<p>¥</p>","fields":{"slug":"/2009/08/heroku/"},"frontmatter":{"title":"Heroku","date":"August 18th, 2009","tags":"erlang,heroku,postgres,rails,ruby"}}},"pageContext":{"slug":"/2009/08/heroku/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

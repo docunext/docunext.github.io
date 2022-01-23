@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2006/08/nano-and-screen/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>On a few distributions (not to name names, but RedHat and Debian), nano comes with an annoying configuration, where backspace is a forward delete.</p>\n<p>To fix this, uncomment the following line in /etc/nanorc:\n<pre>#set rebinddelete</pre></p>\n<p>The GNU screen software has a similar issue. When I hit &quot;delete&quot; it barks &quot;Wuff! Wuff!&quot;. You can make your screen delete work again by calling TERM=screen screen. Add alias screen='TERM=screen screen' to your bash profile to simplify your life.</p>","fields":{"slug":"/2006/08/nano-and-screen/"},"frontmatter":{"title":"Nano and Screen","date":"August 14th, 2006","tags":null}}},"pageContext":{"slug":"/2006/08/nano-and-screen/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

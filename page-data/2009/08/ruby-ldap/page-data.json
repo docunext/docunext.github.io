@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2009/08/ruby-ldap/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>This is example on how to use the ruby <a href=\"http://www.docunext.com/\">LDAP</a> library:</p>\n<pre class=\"sh_ruby\">\n#!/usr/bin/ruby\nrequire 'ldap'\n$MYHOST = '127.0.0.11'\nbase = 'dc=example,dc=com'\nscope = LDAP::LDAP_SCOPE_SUBTREE\nfilter = '(objectclass=person)'\nattrs = ['sn', 'cn', 'mail']\nconn = LDAP::Conn.new($MYHOST, LDAP::LDAP_PORT)\nconn.set_option( LDAP::LDAP_OPT_PROTOCOL_VERSION, 3 )\nbegin\n  conn.search(base, scope, filter, attrs) { |entry|\n     p entry.dn\n     p entry.attrs\n     p entry.vals('sn')\n     p entry.vals('mail')\n     p entry.to_hash\n  }\nrescue LDAP::ResultError\n  conn.perror(\"search\")\n  exit\nend\nconn.perror(\"search\")\nconn.unbind\n</pre>","fields":{"slug":"/2009/08/ruby-ldap/"},"frontmatter":{"title":"Ruby LDAP","date":"August 30th, 2009","tags":"ruby"}}},"pageContext":{"slug":"/2009/08/ruby-ldap/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

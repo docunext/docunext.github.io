@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2007/09/mysql-sockets-versus-network/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I've always used MySQL network connections instead of sockets as of late, but then I read that sockets are faster for local connections. Then I found more compelling evidence at the MySQL performance blog:</p>\n<p><a href=\"http://www.mysqlperformanceblog.com/2006/08/09/cache-performance-comparison/\">Cache Performance Comparison - MySQL, Memcached, and various PHP caches</a></p>\n<p>I tried it out and got it to work using Wordpress, and I got it to work, but I haven't tested out the performance yet. I was surprised you need to put \":\" before the path to the socket, which on debian is /var/run/mysqld/mysqld.sock.</p>","fields":{"slug":"/2007/09/mysql-sockets-versus-network/"},"frontmatter":{"title":"MySQL Sockets versus Network","date":"September 15th, 2007","tags":"memcache,mysql"}}},"pageContext":{"slug":"/2007/09/mysql-sockets-versus-network/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

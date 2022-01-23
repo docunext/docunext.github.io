@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2007/08/web-application-testing-in-ruby/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Also known as WATIR, web application testing in Ruby is pretty cool. I've just recently started reading <a href=\"http://www.docunext.com/2007/07/practical-ruby-for-system-administrators/\">a book about Ruby</a> and I like what I've learned so far.</p>\n<p>I'm scoping out WATIR and comparing it to Selenium. It seems more complicated but also more powerful. It doesn't use javascript like Selenium Core, so you don't have to have the core library on the same server as the application under test.</p>\n<p>All I've managed to do so far is open a new window. Woo hoo! :-)</p>","fields":{"slug":"/2007/08/web-application-testing-in-ruby/"},"frontmatter":{"title":"Web Application Testing in Ruby","date":"August 13th, 2007","tags":null}}},"pageContext":{"slug":"/2007/08/web-application-testing-in-ruby/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}

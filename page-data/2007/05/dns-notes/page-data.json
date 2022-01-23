@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2007/05/dns-notes/",
-    "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p><b>DNS Introduction</b></p>\n<p>Should I use \"www\" before my domain names? I say yes, but there are many cases where this is not necessary.</p>\n<p>To \"www\" or not \"www\", that is the question!</p>\n<p>¥</p>","fields":{"slug":"/2007/05/dns-notes/"},"frontmatter":{"title":"DNS Notes","date":"May 15th, 2007","tags":null}}},"pageContext":{"slug":"/2007/05/dns-notes/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}
