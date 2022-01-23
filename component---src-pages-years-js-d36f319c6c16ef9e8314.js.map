@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-years-js-d36f319c6c16ef9e8314.js","mappings":"uIAGA,mBAAe,KAAGA,KAAH,OACb,gBAAC,IAAD","sources":["webpack://docunext/./src/pages/years.js"],"sourcesContent":["import React from \"react\"\nimport Layout from \"../components/layout\"\n\nexport default ({ data }) => (\n  <Layout />\n)\n"],"names":["data"],"sourceRoot":""}

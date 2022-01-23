@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/01/everex-nc1501-wireless-switch/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I'm going to try using the Everex NC1501 full time as my MacBook is having problems. In setting up the wireless, I had to figure out that the switch is fn+F2. Duh. <a href=\"http://www.everexforum.com/forum/index.php?a=topic&#x26;t=5418\">http://www.everexforum.com/forum/index.php?a=topic&#x26;t=5418</a></p>\n<p>¥</p>","fields":{"slug":"/2008/01/everex-nc1501-wireless-switch/"},"frontmatter":{"title":"Everex NC1501 Wireless Switch","date":"January 22nd, 2008","tags":null}}},"pageContext":{"slug":"/2008/01/everex-nc1501-wireless-switch/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

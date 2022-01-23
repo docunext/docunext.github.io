@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2009/09/xsl-formatting-guidelines/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I've finally come up with my guidelines for XSL based XHTML template that I'm very pleased with:</p>\n<ul>\n<li>Keep everything within 80 characters wide, life feed at attributes with no indent.</li>\n<li>Separate XHTML-only and XHTML+XSL blocks with one line feed.</li>\n<li>Include two line feeds after &#x3C;xsl:template> lines and before &#x3C;/xsl:template> blocks.</li>\n<li>Use two spaces for indentation.</li>\n<li>Don't use XPath for i18n. I've done it in the past and while its reliable and robust, it makes XSL templates look like garbage.</li>\n</ul>\n<p>I'm writing these down for my own personal use.</p>","fields":{"slug":"/2009/09/xsl-formatting-guidelines/"},"frontmatter":{"title":"XSL Formatting Guidelines","date":"September 30th, 2009","tags":"xsl"}}},"pageContext":{"slug":"/2009/09/xsl-formatting-guidelines/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

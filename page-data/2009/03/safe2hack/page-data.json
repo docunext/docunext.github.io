@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2009/03/safe2hack/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I'm realizing that by using web server proxies to servers which run inside virtual machines, its much safer to hack up code and libraries. If something gets messed up, its much easier to recover, or avoid a failure altogether. That's nice.</p>\n<p>As it so happens, I'm currently messing around with a bunch of libraries trying to get the perl web::svn package working. Its an awesome package but the libraries behind it seem all out of sorts.</p>\n<p>What's this mean specifically? I'm going to <a href=\"http://wiki.openvz.org/Gentoo_template_creation\">setup a Genoo container</a>!</p>","fields":{"slug":"/2009/03/safe2hack/"},"frontmatter":{"title":"Safe2Hack","date":"March 21st, 2009","tags":null}}},"pageContext":{"slug":"/2009/03/safe2hack/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

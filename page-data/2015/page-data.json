@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-year-js",
     "path": "/2015",
     "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"1bcb162b-61f7-52d7-ad9d-5e5147624611","fields":{"slug":"/2015/06/reading-upon-flux/"},"frontmatter":{"title":"Facebook Flux Notes","date":"04 June, 2015"},"excerpt":"http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html \"This results in software that is more maintainable…"}}]}},"pageContext":{"dir":"/pages\\/2015/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

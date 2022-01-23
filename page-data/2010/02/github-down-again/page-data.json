@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2010/02/github-down-again/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Whoa - this is kind of odd. I was just perusing recent blog posts I made, saw the one about <a href=\"http://www.docunext.com/2010/02/github-down/\">Github being down</a>, and remembered I wanted to do some software development. I went to visit Github.com and found it to be down again! Eerie.</p>\n<p>I'm not complaining too much about Github's service though. Although I pay them for some private repositories, its still a rocking cool service, and git itself makes it possible to stay somewhat productive during temporary outages.</p>\n<p>UPDATE: By the time I finished this post, github was back up. Nice!</p>","fields":{"slug":"/2010/02/github-down-again/"},"frontmatter":{"title":"Github Down Again","date":"February 9th, 2010","tags":"git,github,hosting,outages"}}},"pageContext":{"slug":"/2010/02/github-down-again/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2009/05/phunkybb-03-alpha-live-on-all-our-sites/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I've completed updating all of our sites which run PhunkyBB, so I'm going to go ahead with releasing 0.3 when I find a little more time.</p>\n<p>I don't think anyone else was using 0.2 so I'm going to stop development on that branch, and focus only on 0.3 and the future.</p>\n<p>I've written an XSL template which generates most of the SQL necessary to upgrade the database from 0.2 to 0.3, but I won't maintain the script moving forward and 0.2 will officially become deprecated and unsupported.</p>\n<p>Once 0.3 is released, that's it for 0.2!</p>","fields":{"slug":"/2009/05/phunkybb-03-alpha-live-on-all-our-sites/"},"frontmatter":{"title":"PhunkyBB 0.3 Alpha Live on All Our Sites","date":"May 6th, 2009","tags":null}}},"pageContext":{"slug":"/2009/05/phunkybb-03-alpha-live-on-all-our-sites/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

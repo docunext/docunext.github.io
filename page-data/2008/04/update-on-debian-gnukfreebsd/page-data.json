@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/04/update-on-debian-gnukfreebsd/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Yesterday I took my Debian GNU/kFreeBSD machine out for a spin. Its always cool to see the debian logo in ascii upon boot! :-)</p>\n<p>Anyway I did an apt-get update and an apt-get upgrade and all went totally smooth. I'm still getting the inotify error and a couple other I can't remember upon boot, but it is really so cool to use this new operating system combo.</p>\n<p>My Debian GNU/kFreeBSD setup:* intel d201gly* vesa x11 driver* standard i386 install* gnome desktop environment</p>","fields":{"slug":"/2008/04/update-on-debian-gnukfreebsd/"},"frontmatter":{"title":"Update on Debian GNU kFreeBSD","date":"April 26th, 2008","tags":null}}},"pageContext":{"slug":"/2008/04/update-on-debian-gnukfreebsd/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

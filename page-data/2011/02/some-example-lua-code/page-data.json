@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2011/02/some-example-lua-code/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Lua is a perfect scripting language for quick and lightweight logic - for proxies, middleware applications, and application level routing.</p>\n<p>I wrote this small lua script as a test for redirecting one domain host to another:</p>\n<pre class=\"sh_lua\">\njson = require(\"json\")\ntestString = [[ { \"example.com\": \"example.org\" } ]]\no = json.decode(testString)\ntable.foreach(o,print)\nmyhost = lighty.request[\"Host\"]\nif (o[myhost]) then\n    lighty.header[\"Location\"] = \"http://www.\" .. o[myhost]\n    return 301\nend\n</pre>","fields":{"slug":"/2011/02/some-example-lua-code/"},"frontmatter":{"title":"Some Example Lua Code","date":"February 10th, 2011","tags":"lua"}}},"pageContext":{"slug":"/2011/02/some-example-lua-code/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

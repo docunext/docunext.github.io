@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2009/01/sysdep-sa-len-unknown-sa-family/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I'm trying out isakmpd on a xen box at slicehost, its amd64, and I'm getting this error:</p>\n<pre>sysdep_sa_len: unknown sa family</pre>\n<p>Not sure what's up. Found <a href=\"http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=412893\">this</a>.</p>\n<p>¥</p>","fields":{"slug":"/2009/01/sysdep-sa-len-unknown-sa-family/"},"frontmatter":{"title":"sysdep sa len unknown sa family","date":"January 17th, 2009","tags":"ipsec,xen"}}},"pageContext":{"slug":"/2009/01/sysdep-sa-len-unknown-sa-family/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

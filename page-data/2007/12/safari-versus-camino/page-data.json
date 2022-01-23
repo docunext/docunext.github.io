@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/12/safari-versus-camino/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I've been trying to switch to Safari after several pleasant years using Camino. Why? Only because Safari supports multiple usernames and passwords for a single domain, where Camino does not. Unfortunately, I really don't like Safari compared to the rest of Camino. Camino has better tab switching, more pleasant rendering behaviors, and better user interface widgets.</p>\n<p>Guess I'll stick with Camino, and figure out a way to work around the username and password issue.</p>","fields":{"slug":"/2007/12/safari-versus-camino/"},"frontmatter":{"title":"Safari versus Camino","date":"December 1st, 2007","tags":null}}},"pageContext":{"slug":"/2007/12/safari-versus-camino/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/05/problem-with-debian-roundcube/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>The RoundCube debian package ships with its own customized version of Net_SMTP, which gets used by other non-Roundcube applications, even if there is a PEAR Net_SMTP package installed. That's no good. :-(</p>\n<p>I kept getting \"undisclosed-recipients:, \" in the to field of emails I was testing out, and when I search for it, up came RoundCube. Hmmm.</p>\n<p>UPDATE! The title used to say Problem with Debian Roundcube, but I was wrong, there is no problem, but I still can't figure out why Net_SMTP won't take the recipient!</p>","fields":{"slug":"/2008/05/problem-with-debian-roundcube/"},"frontmatter":{"title":"No Problem with Debian Roundcube","date":"May 16th, 2008","tags":null}}},"pageContext":{"slug":"/2008/05/problem-with-debian-roundcube/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

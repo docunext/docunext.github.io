@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2010/03/submodules/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I use Vlad to deploy my web applications that use git as their code management system, so I haven't used submodules much.</p>\n<p>Today I decided to find out if Vlad supports submodules - it was recently added!</p>\n<pre class=\"sh_sh\">\ngit submodule add git@github.com:docunext/1bb02b59.git views/xsl/1bb02b59\ngit submodule init\ngit submodule update\ngit add .gitmodules\ngit commit -m \"sm\" !$\n</pre>\n<p>That's a read / write path which requires authentication.</p>\n<p>I'm wonder if there is a process for deciding between authenticated and read-only anonymous access for git submodules?</p>","fields":{"slug":"/2010/03/submodules/"},"frontmatter":{"title":"Git Submodules","date":"March 7th, 2010","tags":"git,submodules"}}},"pageContext":{"slug":"/2010/03/submodules/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

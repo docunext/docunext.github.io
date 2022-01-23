@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/05/w-gpg-error-httpsecuritydebianorg-etchupdates-release-unknown-error-executing-gpgv/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<pre>W: GPG error: http://security.debian.org etch/updates Release: Unknown error executing gpgv</pre>\n<p>My system time was all messed up. Installed ntpdate, synced, and error went away. :-)</p>\n<p>¥</p>","fields":{"slug":"/2007/05/w-gpg-error-httpsecuritydebianorg-etchupdates-release-unknown-error-executing-gpgv/"},"frontmatter":{"title":"W GPG error http security.debian.org etch updates Release Unknown error executing gpgv","date":"May 12th, 2007","tags":"debian,gpg"}}},"pageContext":{"slug":"/2007/05/w-gpg-error-httpsecuritydebianorg-etchupdates-release-unknown-error-executing-gpgv/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

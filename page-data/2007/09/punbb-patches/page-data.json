@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/09/punbb-patches/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I've forked punbb to support multiple sites within one codebase, as well as use two different mysql data sources - one primary and one replicant.</p>\n<p>The database has some problems:</p>\n<ul>\n<li>posts show up twice</li>\n<li>show new posts doesn't work</li>\n</ul>\n<p>I'll fix these, and release the modified codebase and maybe patches too.</p>\n<p>UPDATE: September 17, 2007: I think I fixed the double post issue - just needed a \"DISTINCT\" keyword in the SQL.</p>\n<p>UPDATE 2: Punbb admin requires the use of the http_referer request header. Doh! Hopefully I can remove that dependency.</p>","fields":{"slug":"/2007/09/punbb-patches/"},"frontmatter":{"title":"Punbb Patches","date":"September 7th, 2007","tags":"mysql,sql"}}},"pageContext":{"slug":"/2007/09/punbb-patches/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

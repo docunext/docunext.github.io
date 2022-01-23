@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/03/disable-sound-in-ubuntu/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Hooray! I finally disabled sound altogether in Ubuntu! It was surprisingly difficult... but in the end all I did was copy the noALSA.modprobe.conf file to /etc/modprobe.d/:</p>\n<pre>cp /lib/linux-sound-base/noALSA.modprobe.conf /etc/modprobe.d/</pre>\n<p>Helpful Link:</p>\n<p><a href=\"http://ubuntuforums.org/showthread.php?p=1824685\"><a href=\"http://ubuntuforums.org/showthread.php?p=1824685\">http://ubuntuforums.org/showthread.php?p=1824685</a></a></p>\n<p>¥</p>","fields":{"slug":"/2007/03/disable-sound-in-ubuntu/"},"frontmatter":{"title":"Disable Sound in Ubuntu","date":"March 6th, 2007","tags":null}}},"pageContext":{"slug":"/2007/03/disable-sound-in-ubuntu/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

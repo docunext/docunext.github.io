@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/06/cpu-frequency-scaling-on-hp-thin-clients/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>The HP thin clients use VIA processors, for low power goodness. I can use the longhaul cpufreq driver without a hitch on my t5000 as it uses the VIA C3 chip, but I can't get anything to work on my t5135, as is uses the newer VIA Ester C7 Eden chip.</p>\n<p>I've done a bunch of research and some have said it might be available in 2.6.21, but its not there yet. The most promising candidates are longhaul and e_powersaver. I'm just looking to keep the temperature down when possible.</p>\n<p>¥</p>","fields":{"slug":"/2007/06/cpu-frequency-scaling-on-hp-thin-clients/"},"frontmatter":{"title":"CPU Frequency Scaling on HP Thin Clients","date":"June 7th, 2007","tags":"acpi,c7,energy,hp,power,via"}}},"pageContext":{"slug":"/2007/06/cpu-frequency-scaling-on-hp-thin-clients/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

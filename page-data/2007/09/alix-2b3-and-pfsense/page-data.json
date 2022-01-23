@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/09/alix-2b3-and-pfsense/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Nice... the new ALIX boards I ordered from PC Engines arrived today! I just fired it up with a pfSense 1.2-RC2 but that didn't work so I downloaded the snapshot as suggested at the <a href=\"http://blog.pfsense.org/?p=139\">pfSense blog</a>, which worked. The board is going great so far.</p>\n<p>¥</p>","fields":{"slug":"/2007/09/alix-2b3-and-pfsense/"},"frontmatter":{"title":"ALIX 2B3 and pfSense","date":"September 17th, 2007","tags":"alix"}}},"pageContext":{"slug":"/2007/09/alix-2b3-and-pfsense/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

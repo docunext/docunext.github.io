@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/02/missing-gentoo/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>My first introduction to linux was redhat, and then I switched to Windows 2000, then switched to Mac OS X with its BSD-ish core. During my time with Mac OS X, I used Gentoo for my servers. After struggling with upgrades, I decided to switch to Debian at the suggestion of a colleague.</p>\n<p>I haven't looked back after switching to debian, but now that I'm using linux on the desktop, I'm wondering if I should give gentoo another chance. I find myself constantly wanting to optimize my computing experience!</p>\n<p>¥</p>","fields":{"slug":"/2008/02/missing-gentoo/"},"frontmatter":{"title":"Missing Gentoo","date":"February 12th, 2008","tags":"gentoo,mac"}}},"pageContext":{"slug":"/2008/02/missing-gentoo/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

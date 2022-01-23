@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/02/comcast-workplace/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Seth from Dynamic Solutions ( a Comcast contractor ) just left after installing my new Comcast Workplace. He did a great job, was fast and polite, and I'm satisfied with his service. Now I've got 6Mbps down and 768k up. Sweet!</p>\n<p>Pictured here is the SMC router and my new Thecus n2100 Yesbox with Debian installed, which will be the first thing I put on this new network.</p>\n<p>The <a href=\"http://www.soggyblogger.com/blog/2007/02/23/comcast-disables-vpn-on-smc8014/\">Comcast Workplace Business IP Gateway is an SMC Network 8014 4-port router with built-in firewall</a>. Not a bad device.</p>","fields":{"slug":"/2007/02/comcast-workplace/"},"frontmatter":{"title":"Comcast Workplace","date":"February 10th, 2007","tags":null}}},"pageContext":{"slug":"/2007/02/comcast-workplace/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

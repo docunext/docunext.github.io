@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2010/11/rss2json/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>The other day I was about to integrate an RSS feed onto a web page using jQuery.</p>\n<p>To ease the way in which jQuery accessed the feed, I decided to write a quick <tt>fopen</tt> proxy, and then I figured... hey, why not convert this to JSON while I'm at it?</p>\n<p>I did a quick search for \"convert rss to json with php\", and turned up a bunch of stuff that wasn't what I was looking for. So I opted out of the lazy web approach and decided to think for a moment... aha, this is much easier!</p>\n<pre class=\"sh_php\">\n$json = json_encode(simplexml_load_string($rss));\n</pre>\n<p>Wow. Who says you can't do useful stuff with PHP in one single line??</p>","fields":{"slug":"/2010/11/rss2json/"},"frontmatter":{"title":"RSS2JSON","date":"November 19th, 2010","tags":"jquery,json,php"}}},"pageContext":{"slug":"/2010/11/rss2json/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

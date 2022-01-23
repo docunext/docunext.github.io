@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2006/11/nexista/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Nexista is a PHP framework written by yoga-master Joshua Savage. He's since stopped working on it and I continue to use it. I'm planning on continuing the development of Nexista, though in the near term I may end up trimming it down a bit to make it more simple than it already is.</p>\n<p>From there I'd really like to create more documentation, and a sample site. However, I just don't have time for that right at the moment. Hopefully soon.</p>\n<p>Here's the info Joshua had put together:</p>\n<p><a href=\"http://www.docs.nexista.org\">Nexista Documentation</a></p>","fields":{"slug":"/2006/11/nexista/"},"frontmatter":{"title":"Nexista","date":"November 21st, 2006","tags":null}}},"pageContext":{"slug":"/2006/11/nexista/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/12/jquery/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>In thinking about <a href=\"http://www.phunkybb.com/blog/2008/10/what-makes-phunkybb-different.html\">what makes PhunkyBB different</a>, I also need to mention that it makes heavy use of the jQuery javascript library - \"new wave javascript\"!</p>\n<p>I'd like to eventually use polling to automatically update forums as new posts are made. I'd also like to use it for pagination. Actually it is used for pagination with the user administration.</p>\n<p>In the meantime, jQuery is only used for basic user interface updates.</p>","fields":{"slug":"/2008/12/jquery/"},"frontmatter":{"title":"jQuery","date":"December 19th, 2008","tags":null}}},"pageContext":{"slug":"/2008/12/jquery/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

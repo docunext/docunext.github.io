@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/11/traffic-shaping/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Note to self: today you updated the traffic shaping rules on the m0n0wall net4501 to prioritize the in-office public server, and penalize the office local area network. Keep an eye on this rule to see if there are any negative results.</p>\n<p>¥</p>","fields":{"slug":"/2007/11/traffic-shaping/"},"frontmatter":{"title":"Traffic Shaping","date":"November 26th, 2007","tags":"bandwidth,net4501,soekris"}}},"pageContext":{"slug":"/2007/11/traffic-shaping/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

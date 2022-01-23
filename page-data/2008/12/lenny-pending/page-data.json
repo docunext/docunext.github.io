@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/12/lenny-pending/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Seems like things are calming down with Lenny, even though Debian planet is very active with discussions about the release process in general. I don't mind that the Debian project takes things slow, that's actually one of the reasons why I really like the project.</p>\n<p>There are plenty of linux distributions which stay on the cutting edge, and in many cases, I prefer to take things slow and steady. I embraced Lenny early only because of the kernels available in it. These newer kernels have support for energy saving features of newer CPUs, so I couldn't resist!</p>","fields":{"slug":"/2008/12/lenny-pending/"},"frontmatter":{"title":"Lenny Pending","date":"December 20th, 2008","tags":null}}},"pageContext":{"slug":"/2008/12/lenny-pending/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

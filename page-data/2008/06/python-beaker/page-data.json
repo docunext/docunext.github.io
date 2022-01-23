@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/06/python-beaker/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Python's Beaker package is actually quite nice. After wrestling with sessions in perl for awhile, its refreshing to find a package that \"just works\".</p>\n<p>I'll have to research SQLAlchemy some more, because I still am having a hard time working with python db-api. I get the feeling though that SQLAlchemy makes databases \"pythonic\", kind of like how lxml handles libxml2. I haven't bought into that concept yet, I'm a big fan of SQL \"as-is\", in my opinion there is no need to change it at the moment.</p>\n<p>Chances are I'll continue with adoDB (actually its working fine for me now), then try out SQLRelay, then try SQLAlchemy.</p>","fields":{"slug":"/2008/06/python-beaker/"},"frontmatter":{"title":"Python Beaker","date":"June 29th, 2008","tags":null}}},"pageContext":{"slug":"/2008/06/python-beaker/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

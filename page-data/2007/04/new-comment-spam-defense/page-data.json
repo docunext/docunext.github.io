@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2007/04/new-comment-spam-defense/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I'm trying out a new comment spam defense: Spam Karma 2. This is in addition to Bad Behavior, and I probably don't need both, but Bad Behavior wasn't doing enough. Since last night when I activated the Wordpress plugin, I've received no spam.</p>\n<p>I also tried Hash-cash, but was unable to post a comment at all.</p>\n<p>¥</p>","fields":{"slug":"/2007/04/new-comment-spam-defense/"},"frontmatter":{"title":"New Comment Spam Defense","date":"April 10th, 2007","tags":"spam"}}},"pageContext":{"slug":"/2007/04/new-comment-spam-defense/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

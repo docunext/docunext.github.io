@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-about-js",
     "path": "/about/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Docunext"}}},"pageContext":{}},
-    "staticQueryHashes": ["3159585216"]}
+    "result": {"pageContext":{}},
+    "staticQueryHashes": ["2191495970","4224293195"]}

@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2008/12/data-models-in-xsl/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>Just a quick note here (I'm in the middle of programming, don't want to get too distracted!) about a new practice I'm trying out: the design of data models using XSL to output SQL customized for different database engines.</p>\n<p>So far I've only been working with MySQL and SQLite, but I believe it could work for many more engines. If you think this is an interesting idea, please comment on this post, thanks!</p>\n<p>As a specific reference to what I'm describing, see the <a href=\"http://www.private-wiki.com/trac/browser/trunk/apps/private-wiki/data/model/private_wiki.sql.xsl\">data model for Private Wiki</a>.</p>","fields":{"slug":"/2008/12/data-models-in-xsl/"},"frontmatter":{"title":"Data Models in XSL","date":"December 8th, 2008","tags":null}}},"pageContext":{"slug":"/2008/12/data-models-in-xsl/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}

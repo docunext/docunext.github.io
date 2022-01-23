@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-post-js",
     "path": "/2009/02/tesseract-ocr-and-ocropus/",
     "result": {"data":{"site":{"siteMetadata":{"domain":"https://www.docunext.com"}},"markdownRemark":{"html":"<p>I finally got around to trying out the tesseract optical character recognition software. It works way better than any other OCR software I've used, and I've used quite a bit.</p>\n<p>There are debian packages for both tesseract and leptonica, but I wanted to try out Ocropus too because it has page layout capabilities. And so I had to download and install a few items, thankfully, <a href=\"http://www.nubae.com/ocropus---the-next-gen-linux-ocr-software-1\">this page</a> supplied all the information I needed.</p>\n<p><a href=\"http://www.docunext.com/\">Ocroscript at the Docunext Wiki</a></p>","fields":{"slug":"/2009/02/tesseract-ocr-and-ocropus/"},"frontmatter":{"title":"Tesseract OCR and Ocropus","date":"February 26th, 2009","tags":null}}},"pageContext":{"slug":"/2009/02/tesseract-ocr-and-ocropus/"}},
-    "staticQueryHashes": ["3159585216","758480095"]}
+    "staticQueryHashes": ["2191495970","4224293195"]}
