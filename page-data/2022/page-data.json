@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-year-js",
     "path": "/2022",
     "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"id":"e9bd2edb-4be6-5976-ac69-bb8da228fb96","fields":{"slug":"/2022/01/snake-game/"},"frontmatter":{"title":"Snake Game","date":"22 January, 2022"},"excerpt":"I re-wrote the classic snake game in a single html file. Check it out here: Snake Game Here's another version, merged into a this blog site…"}},{"node":{"id":"5493f1ae-3829-565d-8f56-ca4c6b701f03","fields":{"slug":"/2022/01/time-flies/"},"frontmatter":{"title":"My How Time Flies","date":"08 January, 2022"},"excerpt":"I'm amazed with how quickly time seems to be flying by these days. While life\nwith COVID-19 is really quite challenging, I'm doing my best…"}}]}},"pageContext":{"dir":"/pages\\/2022/"}},
-    "staticQueryHashes": ["2191495970","4224293195"]}
+    "staticQueryHashes": ["4224293195"]}
