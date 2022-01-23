@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-year-js",
+    "path": "/2020",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"id":"e973c4a7-5cac-5f77-bca1-7ace256973e5","fields":{"slug":"/2020/07/hp-color-laser-printer/"},"frontmatter":{"title":"Setup Wifi on HP Laser Color Printer 150nw","date":"14 July, 2020"},"excerpt":"In case someone else finds it difficult to setup wifi (or the printer in\ngeneral), here are some notes from my experience. The default…"}},{"node":{"id":"bdfcdd5f-a6a6-566e-aefc-00e38989db6e","fields":{"slug":"/2020/05/mousecam/"},"frontmatter":{"title":"Mousecam","date":"07 May, 2020"},"excerpt":"My wife and I are having a terrific time here in London doing some gardening. We\nhave a walled garden so we didn't expect any critters to…"}}]}},"pageContext":{"dir":"/pages\\/2020/"}},
+    "staticQueryHashes": ["4224293195"]}
