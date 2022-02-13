@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/albertlincoln
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://docunext.com
+  * I am albertlincoln (https://keybase.io/albertlincoln) on keybase.
+  * I have a public key ASAUHWvHIQj2MWna5nGZ420s6_OT_BT5QkFfsy6MFbxCKgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012005a4b8b47e6815aa90392434fffd345e51c3710a617c8d4b64fa0028c8f2d65b0a",
+      "host": "keybase.io",
+      "kid": "0120141d6bc72108f63169dae67199e36d2cebf393fc14f942415fb32e8c15bc422a0a",
+      "uid": "89ba0b3bcd2b45f0e8e194d538097b19",
+      "username": "albertlincoln"
+    },
+    "merkle_root": {
+      "ctime": 1644712792,
+      "hash": "106969c8c07c1d1cb337ea2795d1dd065fd5e06e0001ac56a164ab35cd00512a648ba791473b84a489a0aa8c9cf6387d2d3df7571252fb4a8357e4afd15727a3",
+      "hash_meta": "a12874b1e07c088da2980acdf47fdb18c8983122cc2162944842fca7a3ebd98e",
+      "seqno": 21860162
+    },
+    "service": {
+      "entropy": "mwc6Kvzp9CY1rSsWiG54gJgd",
+      "hostname": "docunext.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1644712814,
+  "expire_in": 504576000,
+  "prev": "0d4bd8f570c84fa95c23023610f29b731e1c63b16b1508726b65562e017826f1",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFB1rxyEI9jFp2uZxmeNtLOvzk/wU+UJBX7MujBW8QioKp3BheWxvYWTESpcCEcQgDUvY9XDIT6lcIwI2EPKbcx4cY7FrFQhya2VWLgF4JvHEILgOBNf4FmRt2E5TsfIP90ESLFjCIFPsMO6YmoAQyOq4AgHCo3NpZ8RADHlYbQlLQK0dEaINqqI0pbiK97BADepe7tPy1p6jGmrIUXrBPz4MhRWZZ2LrrewVHe+RtIfJeZGB8q/DSqLAAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMXNPAk/jMiittMs8cqAoLbUK8eknl+Wwbhq9T1G5UpLo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/albertlincoln
+
+==================================================================
